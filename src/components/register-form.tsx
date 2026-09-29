@@ -2,24 +2,24 @@ import { useState } from "react";
 import { company, destinations } from "@/lib/site-data";
 
 const field =
-  "w-full rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm text-slate-900 outline-none transition-all hover:bg-white focus:border-uni-orange focus:bg-white focus:ring-2 focus:ring-orange-500/10";
+  "w-full rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm text-slate-900 outline-none transition-all hover:bg-white focus:border-red-600 focus:bg-white focus:ring-2 focus:ring-red-500/10";
 const label = "mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700";
 
 const serviceOptions = [
-  "Study Abroad Consultation (Cyprus, UK, Malaysia, Malta, Australia, Canada, USA, Europe)",
-  "Cyprus Special Admission Package (Tuition from €2,500, Without IELTS)",
-  "UK 1-Year Masters & 2-Year PSW Application",
-  "Study Gap & Without IELTS European Solutions",
-  "IELTS Academic & General Preparation (Band 7.5+)",
-  "Spoken English Fluency & Embassy Interview Coaching",
-  "Kids' English Academy (Ages 6–14)",
+  "Study in Japan — Language School Admission (Tokyo, Osaka, Kyoto, Nagoya, Fukuoka)",
+  "Japanese Language Course N5 (Beginner to JLPT/NAT 5Q)",
+  "Japanese Language Course N4 (Elementary / SSW Eligible)",
+  "Japanese Language Course N3 (Intermediate & Vocational Track)",
+  "SSW (Specified Skilled Worker) Career & Technical Visa Support",
+  "Japanese Embassy & School Interview Mock Preparation",
+  "Global Admissions (UK 1-Yr Masters, Malaysia Dual Degree, Australia, Canada, Europe)",
+  "IELTS Academic & Spoken English Fluency Batch",
 ];
 
 const officeOptions = [
-  "Principal Head Office (92, Ali Bhaban 7th Floor, Kazi Nazrul Islam Ave, Dhaka)",
-  "Farmgate Branch (RH Home Centre Unit-211, Green Road, Dhaka)",
-  "Habiganj Branch (Townhall Ground Floor, Town Hall Road, Habiganj)",
-  "UK Liaison Office (Romford Road, London, UK)",
+  "Principal Head Office (Gemcon EL Mercado, Lift-09, Shop 114, Mirpur-10, Dhaka)",
+  "OneTech Japanese Academy Studio (Gemcon EL Mercado, Lift-09, Mirpur-10)",
+  "Tokyo Liaison & Student Welfare Desk (Shinjuku, Tokyo, Japan)",
   "Online Consultation (WhatsApp / Zoom / Phone Call)",
 ];
 
@@ -30,8 +30,8 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
     email: "",
     phone: "",
     service: serviceOptions[0],
-    destination: "Cyprus",
-    currentStatus: "HSC / A-Level Completed (Bachelor's Aspirant)",
+    destination: "Japan",
+    currentStatus: "HSC / A-Level Completed (Language School & Bachelor's Aspirant)",
     office: officeOptions[0],
     message: "",
   });
@@ -64,19 +64,19 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
   if (sent) {
     return (
       <div className="py-10 text-center space-y-4">
-        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-orange-100 text-4xl shadow-inner">
+        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-red-100 text-4xl shadow-inner">
           ✅
         </div>
         <h3 className="font-display text-2xl font-black text-slate-900">Appointment Requested! 🎉</h3>
         <p className="mx-auto max-w-md text-sm text-slate-600 leading-relaxed">
           Thank you, <strong className="text-slate-900">{form.name}</strong>! Your consultation request has been registered. An expert counselor from <strong>{company.name}</strong> will contact you on{" "}
-          <strong className="text-uni-orange">{form.phone}</strong> shortly.
+          <strong className="text-red-600">{form.phone}</strong> shortly.
         </p>
-        <div className="mt-2 rounded-2xl border border-orange-200 bg-orange-50/50 p-4 text-xs text-slate-800 text-left space-y-1">
-          <p>✔ 92, Ali Bhaban (7th Floor), Kazi Nazrul Islam Avenue, Dhaka</p>
-          <p>✔ Honesty is Our Commitment (সততাই আমাদের অঙ্গীকার)</p>
-          <p>✔ Cyprus, UK, Malaysia, Malta & European Admissions</p>
-          <p>✔ Without IELTS & Study Gap Accepted</p>
+        <div className="mt-2 rounded-2xl border border-red-200 bg-red-50/50 p-4 text-xs text-slate-800 text-left space-y-1">
+          <p>✔ {company.address.full}</p>
+          <p>✔ Connecting Possibilities (পসিবিলিটিজ কানেক্ট করে জাপানে ভবিষ্যৎ গড়া)</p>
+          <p>✔ Study in Japan: Language Schools, Senmon Gakko & Universities</p>
+          <p>✔ Japanese Language Academy (N5/N4/N3) & SSW Work Visas</p>
         </div>
         <div className="pt-2 flex flex-col gap-2">
           <a
@@ -104,14 +104,14 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
   return (
     <form onSubmit={handleSubmit} className="space-y-4 text-left">
       <div className="border-b border-slate-100 pb-3 mb-2">
-        <span className="text-[0.68rem] font-extrabold uppercase tracking-wider text-uni-orange">
+        <span className="text-[0.68rem] font-extrabold uppercase tracking-wider text-red-600">
           {company.name} ({company.taglineBangla})
         </span>
         <h3 className="font-display text-xl font-black text-slate-900">
-          Book Your Free Assessment & Profile Evaluation
+          Book Your Free Japan Assessment & Language Evaluation
         </h3>
         <p className="text-xs text-slate-500 mt-0.5">
-          Principal HQ: 92 Ali Bhaban (7th Floor), Dhaka · Honesty is Our Commitment
+          Principal HQ: {company.address.short} · Hotlines: {company.phones[0]} / {company.phones[1]}
         </p>
       </div>
 
@@ -195,20 +195,22 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
             onChange={set("currentStatus")}
             className={field}
           >
-            <option value="HSC / A-Level Completed (Bachelor's Aspirant)">
-              HSC / A-Level Completed (Bachelor's)
+            <option value="HSC / A-Level Completed (Language School & Bachelor's Aspirant)">
+              HSC / A-Level Completed (Language School & Bachelor's)
             </option>
-            <option value="Bachelor's Graduate (Master's Aspirant)">
-              Bachelor's Graduate (Master's)
+            <option value="Bachelor's Graduate (Language School / Master's / Senmon Gakko)">
+              Bachelor's Graduate (Master's / Senmon Gakko)
             </option>
-            <option value="Diploma / Polytechnic Holder">Diploma / Polytechnic Graduate</option>
-            <option value="Working Professional (Study Gap / Career)">
-              Working Professional (Study Gap / Career)
+            <option value="Diploma / Polytechnic Graduate (Japan Technical & SSW Track)">
+              Diploma / Polytechnic Graduate (Japan Technical / SSW)
             </option>
-            <option value="Parent for Kids English Course">
-              Parent inquiring for Kids English
+            <option value="Working Professional (Japan Career / SSW / Study Gap)">
+              Working Professional (Japan Career / SSW / Study Gap)
             </option>
-            <option value="Other">Other</option>
+            <option value="Student for Japanese Language Course Only (N5/N4)">
+              Japanese Language Course Aspirant (N5/N4)
+            </option>
+            <option value="Other / Need Guidance">Other / Need Guidance</option>
           </select>
         </div>
 

@@ -9,28 +9,34 @@
   --font-serif: "Playfair Display", Georgia, serif;
   --font-bangla: "Hind Siliguri", "Plus Jakarta Sans", sans-serif;
 
-  /* UNI CONSULTANTS Official Brand Palette (Signature Orange #F37021, Deep Navy #0F172A & Slate) */
-  --color-uni-orange: #f37021;
-  --color-uni-orange-dark: #ea580c;
-  --color-uni-orange-deep: #c2410c;
-  --color-uni-orange-light: #fb923c;
-  --color-uni-orange-soft: #fff7ed;
+  /* ONETECH EDUCATION Official Brand Palette (Japanese Crimson Red #DC2626 / #E11D48 & Deep Midnight Navy #0B0F19) */
+  --color-onetech-red: #dc2626;
+  --color-onetech-red-dark: #b91c1c;
+  --color-onetech-red-deep: #991b1b;
+  --color-onetech-red-light: #ef4444;
+  --color-onetech-red-soft: #fef2f2;
 
-  --color-uni-navy: #0f172a;
-  --color-uni-navy-dark: #020617;
-  --color-uni-navy-light: #1e293b;
+  --color-uni-orange: #dc2626;
+  --color-uni-orange-dark: #b91c1c;
+  --color-uni-orange-deep: #991b1b;
+  --color-uni-orange-light: #ef4444;
+  --color-uni-orange-soft: #fef2f2;
+
+  --color-uni-navy: #0b0f19;
+  --color-uni-navy-dark: #050811;
+  --color-uni-navy-light: #161f30;
   --color-uni-navy-soft: #f8fafc;
 
-  --color-hsc-navy: #0f172a;
-  --color-hsc-navy-dark: #020617;
-  --color-hsc-navy-midnight: #090c1f;
-  --color-hsc-navy-light: #1e293b;
+  --color-hsc-navy: #0b0f19;
+  --color-hsc-navy-dark: #050811;
+  --color-hsc-navy-midnight: #070b16;
+  --color-hsc-navy-light: #161f30;
   --color-hsc-navy-soft: #f8fafc;
 
-  --color-hsc-gold: #f37021;
-  --color-hsc-gold-bright: #fb923c;
-  --color-hsc-gold-dark: #ea580c;
-  --color-hsc-gold-soft: #fff7ed;
+  --color-hsc-gold: #dc2626;
+  --color-hsc-gold-bright: #ef4444;
+  --color-hsc-gold-dark: #b91c1c;
+  --color-hsc-gold-soft: #fef2f2;
 
   --color-hsc-blue: #0ea5e9;
   --color-hsc-blue-light: #38bdf8;

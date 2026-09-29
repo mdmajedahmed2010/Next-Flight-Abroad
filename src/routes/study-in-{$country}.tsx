@@ -90,7 +90,7 @@ function DestinationPage() {
                   <span className="text-slate-500 block text-xs font-medium">
                     Post-Study Work Visa:
                   </span>
-                  <span className="font-bold text-uni-orange mt-1 block">{d.pswv}</span>
+                  <span className="font-bold text-red-600 mt-1 block">{d.pswv}</span>
                 </div>
                 <div className="rounded-2xl bg-slate-50 p-4 border border-slate-200">
                   <span className="text-slate-500 block text-xs font-medium">Major Intakes:</span>
@@ -98,16 +98,16 @@ function DestinationPage() {
                 </div>
                 <div className="rounded-2xl bg-slate-50 p-4 border border-slate-200">
                   <span className="text-slate-500 block text-xs font-medium">Scholarships / Perks:</span>
-                  <span className="font-bold text-uni-orange mt-1 block">{d.scholarships}</span>
+                  <span className="font-bold text-red-600 mt-1 block">{d.scholarships}</span>
                 </div>
                 <div className="rounded-2xl bg-slate-50 p-4 border border-slate-200">
                   <span className="text-slate-500 block text-xs font-medium">
                     Language / Test Requirement:
                   </span>
                   <span
-                    className={`font-bold mt-1 block ${d.withoutIelts ? "text-uni-orange" : "text-slate-700"}`}
+                    className={`font-bold mt-1 block ${d.withoutIelts ? "text-red-600" : "text-slate-700"}`}
                   >
-                    {d.withoutIelts ? "Available (MOI / Internal Test)" : "Language Test / IELTS"}
+                    {d.withoutIelts ? "Available (N5 / NAT / Without IELTS)" : "Language Test / IELTS"}
                   </span>
                 </div>
               </div>
@@ -135,7 +135,7 @@ function DestinationPage() {
                     key={uni}
                     className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4"
                   >
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-lg shadow-sm border border-orange-200 text-uni-orange">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-red-50 text-lg shadow-sm border border-red-200 text-red-600">
                       🎓
                     </span>
                     <span className="text-xs font-bold text-slate-800">{uni}</span>
@@ -147,16 +147,16 @@ function DestinationPage() {
 
           {/* Right Sidebar: Assessment Form & Hotlines */}
           <aside className="space-y-6">
-            <div className="rounded-3xl p-6 sm:p-8 sticky top-24 border border-orange-200 bg-white shadow-md space-y-4">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-orange-50 border border-orange-200 px-3 py-1 text-xs font-bold text-uni-orange">
+            <div className="rounded-3xl p-6 sm:p-8 sticky top-24 border border-red-200 bg-white shadow-md space-y-4">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-red-50 border border-red-200 px-3 py-1 text-xs font-bold text-red-700">
                 Official Senior Counselor Support
               </span>
               <h3 className="font-display text-lg font-black text-slate-900">
                 Apply for {d.name} with {company.name}
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                Connect directly with our senior foreign education counselors for university shortlisting,
-                Without IELTS options, study gap assessment, and fast-track visa filing.
+                Connect directly with our senior foreign education counselors for institution shortlisting,
+                Japanese language proficiency guidance, study gap assessment, and fast-track COE & visa filing.
               </p>
 
               <div className="space-y-2.5 pt-2">
@@ -181,18 +181,15 @@ function DestinationPage() {
                   <strong>📍 Principal Dhaka HQ:</strong> {company.address.full}
                 </p>
                 <p>
-                  <strong>📍 Farmgate Branch:</strong> {company.branches[1]?.address}
+                  <strong>⛩️ Language Academy:</strong> {company.branches[1]?.address}
                 </p>
                 <p>
-                  <strong>📍 Habiganj Branch:</strong> {company.branches[2]?.address}
-                </p>
-                <p>
-                  <strong>🇬🇧 London UK Office:</strong> {company.branches[3]?.address}
+                  <strong>🇯🇵 Tokyo Support Desk:</strong> {company.branches[2]?.address}
                 </p>
                 <p>
                   <strong>🕒 Counseling Hours:</strong> {company.hours}
                 </p>
-                <p className="text-uni-orange font-bold">
+                <p className="text-red-600 font-bold">
                   ✓ Free 1-on-1 Profile Assessment guaranteed
                 </p>
               </div>

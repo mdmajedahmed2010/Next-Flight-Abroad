@@ -11,25 +11,24 @@ import { Testimonials } from "@/components/testimonials";
 import { CtaBand, IconSparkles } from "@/components/ui-blocks";
 import { faqs, company } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
-import { ScrollReveal } from "@/components/scroll-reveal";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: `${company.name} | Study Abroad Consultancy & Language Academy | Dhaka, Bangladesh`,
+        title: `${company.name} | Study in Japan, Japanese Language Academy & SSW Work Visas | Mirpur-10, Dhaka`,
       },
       {
         name: "description",
         content:
-          `${company.name} — One Stop Solution for Study Abroad Education. Honesty is Our Commitment. Study in Cyprus, UK, Malaysia, Malta, Finland, Australia, Canada with or without IELTS. Dhaka Principal Office: 92, Ali Bhaban (7th Floor), Kazi Nazrul Islam Avenue, Dhaka 1215. Hotlines: +880 1335-065544, +880 1335-065540.`,
+          `${company.name} — ${company.tagline}. Study in Japan: Language Schools, Universities & SSW Visas. Japanese N5/N4/N3 Academy in Mirpur-10, Dhaka. Principal Office: Gemcon EL Mercado, Lift-09 (Shop 114), Senpara Parbata, Mirpur-10, Dhaka-1216. Hotlines: 01345-918515, 01345-918516.`,
       },
-      { property: "og:title", content: `${company.name} — Honesty is Our Commitment | Study Abroad & Language Academy` },
+      { property: "og:title", content: `${company.name} — Study in Japan & Japanese Language Academy` },
       {
         property: "og:description",
         content:
-          "One Stop Solution for Study Abroad Education. Flagship admissions in Cyprus, UK, Malaysia, Malta with or without IELTS. Principal Office: 92, Ali Bhaban (7th Floor), Kazi Nazrul Islam Avenue, Dhaka 1215.",
+          "Connecting Possibilities. Top Japanese Language School admissions, SSW work visa guidance, N5/N4 courses, and 28 hrs/week legal part-time work rights. Principal Office: Gemcon EL Mercado (Lift-09), Mirpur-10, Dhaka.",
       },
     ],
   }),
@@ -42,10 +41,10 @@ function Home() {
 
   const faqCategories = [
     "All",
-    "Cyprus & Europe",
-    "With / Without IELTS",
-    "UK & Global",
-    "Language Academy",
+    "Study in Japan",
+    "Japanese Academy (N5/N4)",
+    "SSW Work Visa",
+    "Part-Time Work & Living",
     "Offices & Contact",
   ];
 
@@ -53,67 +52,67 @@ function Home() {
     activeFaqCategory === "All"
       ? faqs
       : faqs.filter((f) => {
-          if (activeFaqCategory === "Cyprus & Europe")
+          if (activeFaqCategory === "Study in Japan")
             return (
-              f.q.toLowerCase().includes("cyprus") ||
-              f.a.toLowerCase().includes("cyprus") ||
-              f.q.toLowerCase().includes("europe") ||
-              f.a.toLowerCase().includes("europe") ||
-              f.a.toLowerCase().includes("malta")
+              f.q.toLowerCase().includes("japan") ||
+              f.a.toLowerCase().includes("japan") ||
+              f.q.toLowerCase().includes("intake") ||
+              f.a.toLowerCase().includes("intake")
             );
-          if (activeFaqCategory === "With / Without IELTS")
+          if (activeFaqCategory === "Japanese Academy (N5/N4)")
             return (
-              f.q.toLowerCase().includes("ielts") ||
-              f.a.toLowerCase().includes("without ielts") ||
-              f.a.toLowerCase().includes("moi")
+              f.q.toLowerCase().includes("language") ||
+              f.q.toLowerCase().includes("n5") ||
+              f.q.toLowerCase().includes("jlpt") ||
+              f.a.toLowerCase().includes("n5") ||
+              f.a.toLowerCase().includes("nat-test")
             );
-          if (activeFaqCategory === "UK & Global")
+          if (activeFaqCategory === "SSW Work Visa")
             return (
-              f.q.toLowerCase().includes("uk") ||
-              f.a.toLowerCase().includes("uk") ||
-              f.q.toLowerCase().includes("malaysia") ||
-              f.a.toLowerCase().includes("malaysia")
+              f.q.toLowerCase().includes("ssw") ||
+              f.a.toLowerCase().includes("ssw") ||
+              f.a.toLowerCase().includes("tokutei")
             );
-          if (activeFaqCategory === "Language Academy")
+          if (activeFaqCategory === "Part-Time Work & Living")
             return (
-              f.q.toLowerCase().includes("academy") ||
-              f.q.toLowerCase().includes("spoken") ||
-              f.q.toLowerCase().includes("kids") ||
-              f.a.toLowerCase().includes("speaking") ||
-              f.a.toLowerCase().includes("ielts")
+              f.q.toLowerCase().includes("work") ||
+              f.a.toLowerCase().includes("28 hours") ||
+              f.a.toLowerCase().includes("part-time") ||
+              f.a.toLowerCase().includes("¥")
             );
           if (activeFaqCategory === "Offices & Contact")
             return (
               f.q.toLowerCase().includes("office") ||
               f.q.toLowerCase().includes("located") ||
               f.q.toLowerCase().includes("contact") ||
-              f.a.toLowerCase().includes("bhaban") ||
-              f.a.toLowerCase().includes("dhaka")
+              f.q.toLowerCase().includes("book") ||
+              f.a.toLowerCase().includes("mercado") ||
+              f.a.toLowerCase().includes("mirpur")
             );
           return true;
         });
 
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden bg-[#070B16] text-slate-100 selection:bg-orange-500 selection:text-white">
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-[#070B16] text-slate-100 selection:bg-red-600 selection:text-white">
       {/* 1. Grand Opening: Hero Showcase with Double-Bezel Concierge & Banner Lightbox */}
       <HeroShowcase />
 
-      {/* 2. The Proof Stage: Real Metrics & Accredited Institutions */}
+      {/* 2. The Proof Stage: Real Metrics & Accredited Japanese Institutions */}
       <ProofAndCredentials />
 
-      {/* 3. Asymmetrical Flagship Destination Bento Grid (Cyprus, UK, Malaysia, Malta, Global) */}
+      {/* 3. Asymmetrical Flagship Destination Bento Grid (Japan, SSW, UK, Malaysia, Global) */}
       <DestinationBento />
 
       {/* 4. The Facebook Video Reels Cinema Theater Mode */}
       <VideoReelsCinema />
 
-      {/* 5. UNI Language Academy Interactive Learning Studio */}
+      {/* 5. OneTech Japanese Language Academy Studio */}
       <AcademyStudio />
 
-      {/* 6. Strategic Presence: 4 Physical Branches Spatial Switcher */}
+      {/* 6. Strategic Presence: Mirpur-10 Principal Office & Facilities */}
       <OfficesHub />
 
-      {/* 7. The Honesty Manifesto: Why Students Trust UNI Consultants */}
+      {/* 7. The OneTech Standard & Values */}
       <HonestyManifesto />
 
       {/* 8. Voice of Real Students: Testimonials */}
@@ -123,15 +122,15 @@ function Home() {
       <section className="bg-[#0A1020] py-20 sm:py-28 border-t border-white/10 text-white">
         <div className="section-shell">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 rounded-full bg-orange-500/15 border border-orange-500/30 px-3.5 py-1 text-xs font-bold text-orange-400 mb-2.5">
-              <IconSparkles className="w-3.5 h-3.5 text-orange-400" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-red-500/15 border border-red-500/30 px-3.5 py-1 text-xs font-bold text-red-400 mb-2.5">
+              <IconSparkles className="w-3.5 h-3.5 text-red-400" />
               <span>Transparent Answers</span>
             </div>
             <h2 className="font-display text-3xl sm:text-5xl font-black text-white tracking-tight">
-              Frequently Asked <span className="text-orange-400">Questions</span>
+              Frequently Asked <span className="text-red-500">Questions</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 mt-2 font-medium">
-              Direct, transparent answers regarding admissions, With / Without IELTS pathways, tuition fees, and our branch offices.
+              Direct, transparent answers regarding studying in Japan, Japanese language N5/N4 courses, SSW work visas, and our Mirpur-10 office.
             </p>
           </div>
 
@@ -155,7 +154,7 @@ function Home() {
                   {isActive && (
                     <motion.div
                       layoutId="activeFaqPill"
-                      className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-500 to-amber-500 shadow-md"
+                      className="absolute inset-0 rounded-full bg-gradient-to-r from-red-600 to-rose-600 shadow-md"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -175,7 +174,7 @@ function Home() {
                   className={cn(
                     "rounded-2xl border transition-all duration-300 overflow-hidden",
                     isOpen
-                      ? "bg-white/[0.06] border-orange-500 shadow-lg ring-1 ring-orange-500/30"
+                      ? "bg-white/[0.06] border-red-500 shadow-lg ring-1 ring-red-500/30"
                       : "bg-white/[0.02] border-white/10 hover:border-white/20 hover:bg-white/[0.04]",
                   )}
                 >
@@ -191,7 +190,7 @@ function Home() {
                       className={cn(
                         "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold transition-transform duration-300",
                         isOpen
-                          ? "bg-orange-500 text-white rotate-180"
+                          ? "bg-red-600 text-white rotate-180"
                           : "bg-white/10 text-slate-400",
                       )}
                     >
@@ -208,7 +207,7 @@ function Home() {
                         transition={{ duration: 0.25, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed font-medium border-t border-white/5">
+                        <div className="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed font-medium border-t border-white/5 whitespace-pre-line">
                           {faq.a}
                         </div>
                       </motion.div>

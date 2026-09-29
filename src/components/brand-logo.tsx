@@ -2,9 +2,9 @@ import { cn } from "@/lib/utils";
 import { company } from "@/lib/site-data";
 
 /**
- * UNI CONSULTANTS — Official Brand Logo Component.
- * Displays the verified logo badge (stylized "uni" with graduation cap on the 'i' & "CONSULTANTS")
- * and the verified brand tagline "HONESTY IS OUR COMMITMENT".
+ * ONETECH EDUCATION — Official Brand Logo Component.
+ * Displays the verified logo badge (/logo.jpg) with the circular red emblem,
+ * official brand name "ONETECH EDUCATION", and the verified tagline "CONNECTING POSSIBILITIES".
  */
 export function BrandLogo({
   className,
@@ -46,10 +46,10 @@ export function BrandLogo({
           <div className="flex items-center gap-1.5 leading-none">
             <span
               className={cn(
-                "font-display font-black text-lg sm:text-xl md:text-2xl tracking-tight text-[#f37021]",
+                "font-display font-black text-lg sm:text-xl md:text-2xl tracking-tight text-[#dc2626]",
               )}
             >
-              UNI
+              ONETECH
             </span>
             <span
               className={cn(
@@ -57,16 +57,16 @@ export function BrandLogo({
                 variant === "dark" ? "text-white" : "text-[#0f172a]",
               )}
             >
-              CONSULTANTS
+              EDUCATION
             </span>
           </div>
           <span
             className={cn(
-              "font-display font-bold text-[0.62rem] sm:text-[0.68rem] tracking-[0.06em] uppercase truncate max-w-[200px] xs:max-w-[250px] sm:max-w-none mt-0.5",
-              variant === "dark" ? "text-amber-400" : "text-[#ea580c]",
+              "font-display font-bold text-[0.62rem] sm:text-[0.68rem] tracking-[0.08em] uppercase truncate max-w-[200px] xs:max-w-[250px] sm:max-w-none mt-0.5",
+              variant === "dark" ? "text-red-400" : "text-[#dc2626]",
             )}
           >
-            HONESTY IS OUR COMMITMENT
+            {company.tagline || "CONNECTING POSSIBILITIES"}
           </span>
           <span
             className={cn(
@@ -74,7 +74,7 @@ export function BrandLogo({
               variant === "dark" ? "text-slate-400" : "text-slate-500",
             )}
           >
-            {subtitle || "Dhaka · Farmgate · Habiganj · London"}
+            {subtitle || "Mirpur-10, Dhaka · Japan Specialist"}
           </span>
         </div>
       )}

@@ -8,43 +8,43 @@ const pillars = [
     number: "01",
     title: "Zero Hidden Processing Fees",
     bengali: "কোনো গোপন বা অপ্রত্যাশিত চার্জ নেই",
-    desc: "Every statutory tuition fee, embassy visa charge, and university deposit is declared transparently in writing before you sign any agreement.",
+    desc: "Every statutory Japanese language school fee, immigration submission charge, and translation cost is declared transparently in writing before you begin.",
     icon: "💎",
   },
   {
     number: "02",
-    title: "Transparent & Honest Counseling",
-    bengali: "অবাস্তব প্রতিশ্রুতির পরিবর্তে শতভাগ সৎ পরামর্শ",
-    desc: "We never sell false guarantees. Sovereign visa approvals are granted by foreign embassies; our commitment is meticulous, bulletproof file preparation that maximizes success.",
+    title: "Strict Nyukan Immigration Compliance",
+    bengali: "জাপান ইমিগ্রেশনের শতভাগ সঠিক নিয়ম অনুসরণ",
+    desc: "We never sell false guarantees. Sovereign visa approvals are granted by the Japanese Immigration Bureau (Nyukan); our commitment is meticulous, bulletproof file preparation that maximizes success.",
     icon: "🛡️",
   },
   {
     number: "03",
-    title: "Genuine Without-IELTS Pathways",
-    bengali: "আইইএলটিএস ছাড়া ভর্তির সঠিক ও বৈধ পদ্ধতি",
-    desc: "We work directly with foreign universities that officially recognize Medium of Instruction (MOI) certificates from Bangladeshi universities and colleges.",
-    icon: "📜",
+    title: "Dedicated Mirpur-10 Language Academy",
+    bengali: "একই ছাদের নিচে প্রফেশনাল জাপানিজ ভাষা শিক্ষা",
+    desc: "In-house Japanese N5, N4, and N3 training led by experienced Senseis with Minna no Nihongo curriculum, interactive audio facilities, and JLPT/NAT mock exams.",
+    icon: "⛩️",
   },
   {
     number: "04",
-    title: "Study Gap (Up to 10+ Years) Accepted",
-    bengali: "দীর্ঘ স্টাডি গ্যাপের বাস্তবসম্মত সমাধান",
-    desc: "Legitimate employment affidavits, professional career histories, and portfolio evidence to legally explain academic gaps for undergraduate and postgraduate applicants.",
+    title: "Study Gap (Up to 5–10 Years) Accepted",
+    bengali: "দীর্ঘ স্টাডি গ্যাপের বাস্তবসম্মত ও বৈধ সমাধান",
+    desc: "Legitimate employment affidavits, professional career histories, and portfolio evidence to legally explain academic gaps for Japanese Language School applicants.",
     icon: "⏳",
   },
   {
     number: "05",
-    title: "Direct London Liaison Office",
-    bengali: "যুক্তরাজ্যের লন্ডন অফিসের সার্বক্ষণিক সহায়তা",
-    desc: "Our Citygate Business Centre London office on Romford Road provides post-landing student support, BRP collection guidance, and emergency liaison in the UK.",
-    icon: "🇬🇧",
+    title: "SSW & Technical Career Pathways",
+    bengali: "এসএসডব্লিউ ওয়ার্ক ভিসায় নিশ্চিত ক্যারিয়ারের সুযোগ",
+    desc: "Direct guidance on Specified Skilled Worker (Tokutei Ginou) exams in Caregiving, Food Service, Hospitality, Agriculture, and employer matching in Japan.",
+    icon: "💼",
   },
   {
     number: "06",
-    title: "Integrated UNI Language Academy",
-    bengali: "একই ছাদের নিচে আন্তর্জাতিক মানের ভাষা প্রশিক্ষণ",
-    desc: "In-house Cambridge-aligned IELTS Academic (Target Band 7.5+), Spoken English, and Kids English courses taught by experienced instructors at our Dhaka classrooms.",
-    icon: "🎓",
+    title: "Tokyo Student Welfare & Arrival Liaison",
+    bengali: "জাপানে পৌঁছানোর পর সার্বক্ষণিক লোকাল সাপোর্ট",
+    desc: "Our Tokyo liaison coordinator assists students with airport reception, resident registration (Juminhyo), Japanese bank accounts, and finding legal part-time jobs (Arubaito).",
+    icon: "✈️",
   },
 ];
 
@@ -64,7 +64,7 @@ export function HonestyManifesto() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="pointer-events-none absolute -top-32 right-1/4 h-[500px] w-[500px] rounded-full bg-orange-600/10 blur-[150px]"
+        className="pointer-events-none absolute -top-32 right-1/4 h-[500px] w-[500px] rounded-full bg-red-600/10 blur-[150px]"
       />
       <motion.div
         animate={{
@@ -77,7 +77,7 @@ export function HonestyManifesto() {
           ease: "easeInOut",
           delay: 2,
         }}
-        className="pointer-events-none absolute bottom-0 left-1/4 h-[400px] w-[400px] rounded-full bg-amber-600/10 blur-[130px]"
+        className="pointer-events-none absolute bottom-0 left-1/4 h-[400px] w-[400px] rounded-full bg-rose-600/10 blur-[130px]"
       />
 
       <div className="section-shell relative z-10 px-4 sm:px-6">
@@ -87,10 +87,10 @@ export function HonestyManifesto() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 rounded-full bg-orange-500/15 border border-orange-500/30 px-4 py-1 text-xs font-bold text-orange-300 mb-3 backdrop-blur-md"
+            className="inline-flex items-center gap-2 rounded-full bg-red-500/15 border border-red-500/30 px-4 py-1 text-xs font-bold text-red-300 mb-3 backdrop-blur-md"
           >
-            <IconSparkles className="w-3.5 h-3.5 text-orange-400" />
-            <span>The UNI Consultants Difference</span>
+            <IconSparkles className="w-3.5 h-3.5 text-red-400" />
+            <span>The OneTech Education Standard</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 14 }}
@@ -99,17 +99,8 @@ export function HonestyManifesto() {
             transition={{ delay: 0.1 }}
             className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-white tracking-tight"
           >
-            &quot;HONESTY IS OUR COMMITMENT&quot;
+            Why Ambitious Students Trust <span className="text-red-500">OneTech Education</span>
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.15 }}
-            className="mt-2 font-serif italic text-base sm:text-xl text-amber-300 font-medium"
-          >
-            সততাই আমাদের একমাত্র অঙ্গীকার ও মূল দর্শন
-          </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -117,21 +108,21 @@ export function HonestyManifesto() {
             transition={{ delay: 0.2 }}
             className="mt-3 text-xs sm:text-sm text-slate-300 font-medium max-w-xl mx-auto leading-relaxed"
           >
-            In an industry often clouded by exaggerated promises, {company.name} stands apart through uncompromising transparency, authentic university admissions, and genuine student care.
+            Built on transparency, certified language coaching, and authentic representation of premier Japanese institutions.
           </motion.p>
         </div>
 
-        {/* 6 Pillars Double-Bezel Grid */}
-        <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {/* 6 Pillars Grid with Double-Bezel Architecture & Framer Motion Stagger */}
+        <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {pillars.map((p, idx) => (
             <motion.div
-              key={p.title}
+              key={p.number}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.08, duration: 0.5 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="group relative rounded-3xl bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-1.5 border border-white/10 shadow-lg hover:border-orange-500/50 hover:shadow-2xl transition-colors"
+              className="group relative rounded-3xl bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-1.5 border border-white/10 shadow-lg hover:border-red-500/50 hover:shadow-2xl transition-all"
             >
               <div className="rounded-[1.35rem] bg-[#0A1020] p-5 sm:p-7 h-full flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
@@ -139,70 +130,68 @@ export function HonestyManifesto() {
                     <span className="text-2xl sm:text-3xl p-2 rounded-2xl bg-white/[0.05] border border-white/10">
                       {p.icon}
                     </span>
-                    <span className="font-display text-sm font-black text-orange-400/80">
+                    <span className="font-display font-black text-xl sm:text-2xl text-red-500/40 group-hover:text-red-400 transition-colors">
                       {p.number}
                     </span>
                   </div>
 
-                  <div>
-                    <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-orange-400 transition-colors">
-                      {p.title}
-                    </h3>
-                    <p className="text-xs font-semibold text-amber-300/90 font-bangla mt-0.5">
-                      {p.bengali}
-                    </p>
-                  </div>
-
+                  <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-red-400 transition-colors">
+                    {p.title}
+                  </h3>
+                  <p className="font-bangla text-xs font-semibold text-rose-300">
+                    {p.bengali}
+                  </p>
                   <p className="text-xs text-slate-300 leading-relaxed font-medium">
                     {p.desc}
                   </p>
                 </div>
 
-                <div className="border-t border-white/5 pt-3 flex items-center gap-1.5 text-[11px] text-emerald-400 font-bold">
-                  <IconCheck className="w-3.5 h-3.5" />
-                  <span>Verified Agency Standard</span>
+                <div className="pt-3 border-t border-white/5 flex items-center gap-1.5 text-[11px] font-bold text-slate-400 group-hover:text-red-400 transition-colors">
+                  <IconCheck className="w-3.5 h-3.5 text-red-500" />
+                  <span>Verified OneTech Commitment</span>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Closing Action Strip */}
+        {/* Bottom Reassurance Band */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 sm:mt-16 rounded-3xl bg-gradient-to-r from-orange-500/20 via-amber-500/10 to-orange-500/20 border border-orange-500/30 p-6 sm:p-10 text-center max-w-4xl mx-auto space-y-4 shadow-2xl"
+          className="mt-12 sm:mt-16 rounded-3xl bg-gradient-to-r from-red-600/15 via-rose-600/10 to-transparent p-6 sm:p-8 border border-red-500/20 backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-6"
         >
-          <h3 className="font-display text-xl sm:text-3xl font-black text-white">
-            Experience Honest Education Counseling Today
-          </h3>
-          <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
-            Visit our Dhaka Principal Office at 92 Ali Bhaban (7th Floor), Kazi Nazrul Islam Avenue, or message us on WhatsApp for a complete, cost-free profile assessment.
-          </p>
-          <div className="pt-2 flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4">
+          <div className="space-y-1.5 text-center md:text-left">
+            <h4 className="font-display text-lg sm:text-xl font-bold text-white">
+              Ready to Begin Your Japan Journey?
+            </h4>
+            <p className="text-xs sm:text-sm text-slate-300 font-medium">
+              Schedule a free profile assessment with our senior Japan counselors at Gemcon EL Mercado (Lift-09), Mirpur-10.
+            </p>
+          </div>
+
+          <div className="flex flex-col xs:flex-row gap-3 shrink-0 w-full md:w-auto">
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
               type="button"
               onClick={open}
-              className="btn-primary w-full xs:w-auto text-xs py-3 px-6 font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg cursor-pointer"
+              className="btn-primary text-xs py-3 px-6 font-bold rounded-full flex items-center justify-center gap-2 shadow-lg cursor-pointer bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white border-none"
             >
-              <span>Book In-Person Counseling</span>
+              <span>Book Free Consultation</span>
               <IconArrowRight className="w-3.5 h-3.5" />
             </motion.button>
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                "Hello UNI Consultants! I want to consult about admission options.",
-              )}`}
+              href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello OneTech Education! I want to book a free counseling appointment.")}`}
               target="_blank"
               rel="noreferrer"
-              className="w-full xs:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 border border-white/20 px-6 py-3 text-xs font-bold text-white hover:bg-white/20 transition-colors"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-xs font-bold text-white hover:bg-white/10 hover:border-red-500 transition-colors"
             >
               <IconWhatsApp className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Direct WhatsApp Hotline</span>
+              <span>WhatsApp Counselor</span>
             </motion.a>
           </div>
         </motion.div>

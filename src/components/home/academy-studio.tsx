@@ -13,7 +13,7 @@ export function AcademyStudio() {
 
   return (
     <section className="relative bg-[#070B16] py-16 sm:py-24 lg:py-32 text-white overflow-hidden border-t border-white/10">
-      {/* Animated Soft Glow Ambient Orbs */}
+      {/* Animated Soft Glow Ambient Orbs (Crimson & Amber) */}
       <motion.div
         animate={{
           scale: [1, 1.2, 1],
@@ -24,7 +24,7 @@ export function AcademyStudio() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="pointer-events-none absolute top-10 left-10 h-[450px] w-[450px] rounded-full bg-orange-600/15 blur-[140px]"
+        className="pointer-events-none absolute top-10 left-10 h-[450px] w-[450px] rounded-full bg-red-600/15 blur-[140px]"
       />
       <motion.div
         animate={{
@@ -37,7 +37,7 @@ export function AcademyStudio() {
           ease: "easeInOut",
           delay: 1.5,
         }}
-        className="pointer-events-none absolute bottom-10 right-10 h-[450px] w-[450px] rounded-full bg-amber-600/15 blur-[140px]"
+        className="pointer-events-none absolute bottom-10 right-10 h-[450px] w-[450px] rounded-full bg-rose-600/15 blur-[140px]"
       />
 
       <div className="section-shell relative z-10 px-4 sm:px-6">
@@ -48,10 +48,10 @@ export function AcademyStudio() {
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] border border-white/15 px-3.5 py-1 text-xs font-bold text-orange-400 backdrop-blur-md"
+              className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] border border-white/15 px-3.5 py-1 text-xs font-bold text-red-400 backdrop-blur-md"
             >
-              <IconSparkles className="w-3.5 h-3.5 text-orange-400" />
-              <span>Language & Fluency Studio</span>
+              <IconSparkles className="w-3.5 h-3.5 text-red-400" />
+              <span>Japanese Language & Fluency Studio</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 14 }}
@@ -60,7 +60,7 @@ export function AcademyStudio() {
               transition={{ delay: 0.1 }}
               className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight"
             >
-              UNI Language <span className="text-orange-400">Academy</span>
+              OneTech Japanese <span className="text-red-500">Academy</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 14 }}
@@ -69,7 +69,7 @@ export function AcademyStudio() {
               transition={{ delay: 0.2 }}
               className="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed"
             >
-              Target Band 7.5+ in IELTS, conquer foreign embassy visa interviews, and empower young minds with interactive English phonics at our Dhaka classrooms.
+              Master Japanese N5/N4/N3 with certified Senseis at our Mirpur-10 multimedia studio. Ace the JLPT, NAT-TEST, and Japanese Embassy & School interview drills.
             </motion.p>
           </div>
 
@@ -81,7 +81,7 @@ export function AcademyStudio() {
           >
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 text-xs font-bold text-white hover:bg-white/10 hover:border-orange-500 transition-all active:scale-95"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 text-xs font-bold text-white hover:bg-white/10 hover:border-red-500 transition-all active:scale-95"
             >
               <span>View All Academy Courses</span>
               <IconArrowRight className="w-3.5 h-3.5" />
@@ -94,7 +94,7 @@ export function AcademyStudio() {
           <div className="rounded-[1.5rem] sm:rounded-[2rem] bg-[#0A1020]/95 border border-white/10 p-4 sm:p-7 lg:p-10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)]">
             {/* Interactive Course Selection Tabs with Framer Motion layoutId */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-2.5 pb-6 sm:pb-8 border-b border-white/10">
-              {courses.map((c, idx) => {
+              {courses.slice(0, 4).map((c, idx) => {
                 const active = activeCourseIdx === idx;
                 return (
                   <button
@@ -103,21 +103,21 @@ export function AcademyStudio() {
                     onClick={() => setActiveCourseIdx(idx)}
                     className={`relative p-3 sm:p-4 rounded-2xl border text-left transition-all duration-300 cursor-pointer ${
                       active
-                        ? "border-orange-500/80 text-white shadow-md ring-1 ring-orange-500/40"
+                        ? "border-red-500/80 text-white shadow-md ring-1 ring-red-500/40"
                         : "bg-white/[0.03] border-white/10 text-slate-400 hover:bg-white/[0.06] hover:text-white"
                     }`}
                   >
                     {active && (
                       <motion.div
                         layoutId="activeAcademyTab"
-                        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500/25 to-amber-500/15"
+                        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-red-600/30 to-rose-600/20"
                         transition={{ type: "spring", stiffness: 350, damping: 30 }}
                       />
                     )}
                     <div className="relative z-10">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-xl sm:text-2xl">{c.icon || "🎓"}</span>
-                        <span className="rounded-full bg-white/10 px-2 py-0.5 text-[9px] sm:text-[10px] font-bold text-orange-300">
+                        <span className="text-xl sm:text-2xl">{c.icon || "⛩️"}</span>
+                        <span className="rounded-full bg-white/10 px-2 py-0.5 text-[9px] sm:text-[10px] font-bold text-rose-300">
                           {c.badge}
                         </span>
                       </div>
@@ -147,12 +147,12 @@ export function AcademyStudio() {
                 <div className="space-y-5 sm:space-y-6">
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="text-2xl">{currentCourse.icon || "🎓"}</span>
+                      <span className="text-2xl">{currentCourse.icon || "⛩️"}</span>
                       <h3 className="font-display text-xl sm:text-3xl font-black text-white">
                         {currentCourse.title}
                       </h3>
                     </div>
-                    <p className="text-xs sm:text-sm font-semibold text-orange-300 mt-1">
+                    <p className="text-xs sm:text-sm font-semibold text-rose-300 mt-1">
                       {currentCourse.subtitle || currentCourse.tagline}
                     </p>
                     <p className="text-xs sm:text-sm text-slate-300 mt-2.5 sm:mt-3 leading-relaxed font-medium">
@@ -168,7 +168,7 @@ export function AcademyStudio() {
                     </div>
                     <div className="rounded-xl bg-white/[0.04] p-2.5 sm:p-3 border border-white/10">
                       <span className="text-[10px] text-slate-400 block">Classes:</span>
-                      <strong className="text-orange-400 block mt-0.5 text-xs sm:text-sm">{currentCourse.classesCount}</strong>
+                      <strong className="text-red-400 block mt-0.5 text-xs sm:text-sm">{currentCourse.classesCount}</strong>
                     </div>
                     <div className="rounded-xl bg-white/[0.04] p-2.5 sm:p-3 border border-white/10">
                       <span className="text-[10px] text-slate-400 block">Mock Tests:</span>
@@ -188,7 +188,7 @@ export function AcademyStudio() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                       {(currentCourse.highlights ?? currentCourse.features ?? []).slice(0, 4).map((h) => (
                         <div key={h} className="flex items-start gap-2 rounded-xl bg-white/[0.03] p-2.5 border border-white/5 text-slate-300">
-                          <IconCheck className="w-3.5 h-3.5 text-orange-400 shrink-0 mt-0.5" />
+                          <IconCheck className="w-3.5 h-3.5 text-red-400 shrink-0 mt-0.5" />
                           <span className="text-[11px] leading-snug">{h}</span>
                         </div>
                       ))}
@@ -202,7 +202,7 @@ export function AcademyStudio() {
                       whileTap={{ scale: 0.97 }}
                       type="button"
                       onClick={open}
-                      className="btn-primary text-xs py-3 px-5 font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg cursor-pointer"
+                      className="btn-primary text-xs py-3 px-5 font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg cursor-pointer bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white border-none"
                     >
                       <span>Book Free Assessment Class</span>
                       <IconArrowRight className="w-3.5 h-3.5" />
@@ -211,7 +211,7 @@ export function AcademyStudio() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.97 }}
                       href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                        `Hello UNI Consultants! I want to enroll in the ${currentCourse.title} batch.`,
+                        `Hello OneTech Education! I want to enroll in the ${currentCourse.title} batch at Mirpur-10.`,
                       )}`}
                       target="_blank"
                       rel="noreferrer"
@@ -229,8 +229,8 @@ export function AcademyStudio() {
                     <h4 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-white">
                       Curriculum Modules ({currentCourse.modules.length})
                     </h4>
-                    <span className="text-xs text-orange-400 font-semibold">
-                      Cambridge Aligned
+                    <span className="text-xs text-rose-400 font-semibold">
+                      JLPT & NAT Standard
                     </span>
                   </div>
 
@@ -253,12 +253,12 @@ export function AcademyStudio() {
                     ))}
                   </div>
 
-                  <div className="rounded-xl bg-orange-500/10 border border-orange-500/20 p-3 text-xs text-slate-300 space-y-1">
-                    <span className="text-orange-300 font-bold block text-xs">
-                      Class Format & Location:
+                  <div className="rounded-xl bg-red-500/10 border border-red-500/20 p-3 text-xs text-slate-300 space-y-1">
+                    <span className="text-rose-300 font-bold block text-xs">
+                      Class Format & Academy Location:
                     </span>
                     <p className="text-[11px] leading-relaxed">
-                      {currentCourse.classSchedule || currentCourse.schedule} · Classroom training at 92 Ali Bhaban (7th Fl), Dhaka & Live Online Zoom.
+                      {currentCourse.classSchedule || currentCourse.schedule} · Classroom training at Gemcon EL Mercado (Lift-09), Mirpur-10, Dhaka & Live Online Zoom.
                     </p>
                   </div>
                 </div>

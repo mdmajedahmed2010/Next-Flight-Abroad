@@ -6,15 +6,15 @@ import { company } from "@/lib/site-data";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: `Contact Us | ${company.name} — Principal HQ 92 Ali Bhaban, Dhaka & Branches` },
+      { title: `Contact Us | ${company.name} — Gemcon EL Mercado (Lift-09), Mirpur-10, Dhaka` },
       {
         name: "description",
-        content: `Contact ${company.name} (${company.taglineBangla}). Principal Head Office: ${company.address.full}. Farmgate Branch, Habiganj Branch & UK Liaison Office. Official Hotlines: ${company.phones[0]}, ${company.phones[1]}, ${company.phones[2]}. Email: ${company.email}.`,
+        content: `Contact ${company.name} (${company.taglineBangla}). Principal Head Office: ${company.address.full}. Hotlines: ${company.phones[0]}, ${company.phones[1]}. Email: ${company.email}. Near Mirpur-10 Metro Rail Station.`,
       },
-      { property: "og:title", content: `Contact ${company.name} — Dhaka & Regional Offices` },
+      { property: "og:title", content: `Contact ${company.name} — Mirpur-10 Dhaka HQ & Tokyo Desk` },
       {
         property: "og:description",
-        content: `Visit our Principal Dhaka HQ at 92 Ali Bhaban, Farmgate, Habiganj, or London offices for genuine study abroad counseling, Cyprus & UK admissions, Without IELTS options, and language training.`,
+        content: `Visit our Principal Dhaka HQ at Gemcon EL Mercado (Lift-09), Mirpur-10 for genuine Japan higher education counseling, Japanese Language Academy (N5/N4/N3), and SSW work visas.`,
       },
     ],
   }),
@@ -26,8 +26,8 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    program: "Cyprus Affordable Admission & Visa (Without IELTS)",
-    destination: "Cyprus 🇨🇾",
+    program: "Study in Japan — Language School Admission (Tokyo/Osaka)",
+    destination: "Japan 🇯🇵",
     notes: "",
   });
 
@@ -44,34 +44,34 @@ function Contact() {
   return (
     <>
       <PageHero
-        eyebrow="Global & National Contact Desks"
+        eyebrow="National & Global Contact Desks"
         title={`Connect With ${company.name}`}
-        subtitle="আমাদের ঢাকা প্রধান কার্যালয় (৯২, আলী ভবন, ৭ম তলা, কাজী নজরুল ইসলাম এভিনিউ), ফার্মগেট শাখা, হবিগঞ্জ শাখা কিংবা ইউকে অফিসে সরাসরি আসুন অথবা যেকোনো প্রয়োজনে হোয়াটসঅ্যাপে যোগাযোগ করুন। সততাই আমাদের অঙ্গীকার।"
+        subtitle="আমাদের ঢাকা প্রধান কার্যালয় ও ল্যাঙ্গুয়েজ স্টুডিও (জেমকন এল মেরকাডো, ৯ম তলা, শপ ১১৪, সেনপাড়া পর্বতা, মিরপুর-১০, ঢাকা-১২১৬) এ সরাসরি আসুন অথবা যেকোনো প্রয়োজনে হোয়াটসঅ্যাপে যোগাযোগ করুন। Connecting Possibilities."
         image="/banner.png"
         imageAlt={`${company.name} consultation centers`}
       >
         <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Contact Us" }]} />
       </PageHero>
 
-      {/* 4 Official Office Branches Section */}
+      {/* Official Office Branches Section */}
       <section className="section-shell py-12">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="badge-clean badge-orange text-xs">Official Office Network</span>
           <h2 className="mt-2 font-display text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Visit Any of Our 4 Strategic Locations
+            Visit Our Headquarters & Consultation Desks
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-slate-600">
-            Meet our certified international education counselors for transparent profile assessments and visa filing.
+            Meet our certified Japan education counselors and language Senseis for transparent profile assessments and COE filing.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 md:grid-cols-3 max-w-6xl mx-auto">
           {company.branches.map((branch) => (
             <div
               key={branch.name}
               className={`card-clean rounded-3xl p-6 border flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover-lift ${
                 branch.primary
-                  ? "border-orange-300 bg-gradient-to-b from-orange-50/40 via-white to-white shadow-md ring-1 ring-orange-200"
+                  ? "border-red-300 bg-gradient-to-b from-red-50/40 via-white to-white shadow-md ring-1 ring-red-200"
                   : "border-slate-200 bg-white shadow-sm"
               }`}
             >
@@ -99,7 +99,7 @@ function Contact() {
                     <strong>📞 Phone:</strong>{" "}
                     <a
                       href={`tel:${branch.phone.replace(/[^0-9+]/g, "")}`}
-                      className="text-slate-900 hover:text-uni-orange font-semibold"
+                      className="text-slate-900 hover:text-red-600 font-semibold"
                     >
                       {branch.phone}
                     </a>
@@ -121,7 +121,7 @@ function Contact() {
                 </a>
                 <a
                   href={`tel:${branch.phone.replace(/[^0-9+]/g, "")}`}
-                  className="rounded-xl border border-slate-200 bg-slate-50 py-2 text-center text-xs font-semibold text-slate-700 hover:border-orange-300 transition-colors"
+                  className="rounded-xl border border-slate-200 bg-slate-50 py-2 text-center text-xs font-semibold text-slate-700 hover:border-red-300 transition-colors"
                 >
                   📞 Direct Call
                 </a>
@@ -143,14 +143,14 @@ function Contact() {
                     Principal Dhaka HQ Map
                   </h3>
                   <p className="text-xs text-slate-500 mt-0.5">
-                    92, Ali Bhaban (7th Floor), Kazi Nazrul Islam Avenue, Dhaka
+                    Gemcon EL Mercado, Lift-09 (Shop 114), Mirpur-10, Dhaka
                   </p>
                 </div>
                 <a
                   href={company.mapsUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-xs font-bold text-uni-orange hover:underline inline-flex items-center gap-1"
+                  className="text-xs font-bold text-red-600 hover:underline inline-flex items-center gap-1"
                 >
                   <span>Google Maps ↗</span>
                 </a>
@@ -172,26 +172,26 @@ function Contact() {
           <div className="rounded-3xl border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 p-6 text-white shadow-sm">
             <div className="flex items-center gap-2">
               <span className="badge-clean badge-orange text-xs">{company.tagline}</span>
-              <span className="text-xs text-orange-400 font-bold">{company.taglineBangla}</span>
+              <span className="text-xs text-red-400 font-bold">{company.taglineBangla}</span>
             </div>
             <h3 className="font-display font-bold text-lg text-white mt-2">
               Why Consult With {company.name}?
             </h3>
             <ul className="mt-3 text-xs text-slate-300 space-y-2 leading-relaxed">
-              <li>• <strong>Cyprus Flagship Pathway:</strong> Tuition from €2,500/year, without IELTS, and exceptional visa approval records.</li>
-              <li>• <strong>UK 1-Year Masters & 2-Year PSW:</strong> Direct admission with standard entry requirements and spouse visa facilities.</li>
-              <li>• <strong>Study Gap & Without IELTS Solutions:</strong> MOI acceptance and justifiable study gap support across top European universities.</li>
-              <li>• <strong>UNI Language Academy:</strong> IELTS Academic & General (Band 7.5+), Spoken English Fluency, and Kids English Academy (Ages 6–14).</li>
-              <li>• <strong>4 Verified Physical Offices:</strong> Dhaka Principal HQ (92 Ali Bhaban), Farmgate, Habiganj, and London UK.</li>
-              <li>• <strong>Transparent Guidance:</strong> No false commitments, straightforward fee structures, and dedicated post-visa support.</li>
+              <li>• <strong>Japan Flagship Pathway:</strong> 99%+ COE approval record, 28 hours/week legal part-time work rights (¥1,100–¥1,400/hr).</li>
+              <li>• <strong>OneTech Japanese Academy:</strong> JLPT & NAT-TEST N5, N4, N3 interactive courses and embassy mock drills in Mirpur-10.</li>
+              <li>• <strong>SSW Work Visas:</strong> Direct employment matching in Caregiving, Food Service, Hospitality, and Construction in Japan.</li>
+              <li>• <strong>Tokyo Student Welfare Desk:</strong> Airport reception, resident registration, and initial part-time job assistance in Japan.</li>
+              <li>• <strong>Mirpur-10 Metro Proximity:</strong> Located at Gemcon EL Mercado (Lift-09), right next to Mirpur-10 Metro Rail Station.</li>
+              <li>• <strong>Transparent Guidance:</strong> Direct counselor discussion, zero hidden file-opening charges, and genuine sponsorship guidance.</li>
             </ul>
             <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
-              <span className="text-slate-400">Official Page: @UNIConsultantsbd</span>
+              <span className="text-slate-400">Official Page: @OneTechEducation</span>
               <a
                 href={company.social.facebook}
                 target="_blank"
                 rel="noreferrer"
-                className="text-uni-orange font-bold hover:underline"
+                className="text-red-400 font-bold hover:underline"
               >
                 Facebook Page ↗
               </a>
@@ -213,7 +213,7 @@ function Contact() {
 
           {submitted ? (
             <div className="py-12 text-center space-y-4">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 text-3xl text-uni-orange">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-red-100 text-3xl text-red-600">
                 ✓
               </div>
               <h3 className="font-display text-xl font-bold text-slate-900">
@@ -243,8 +243,8 @@ function Contact() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="e.g. Tanvir Ahmed"
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-uni-orange focus:bg-white transition-colors"
+                  placeholder="e.g. Tanzimul Islam"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-red-600 focus:bg-white transition-colors"
                 />
               </div>
 
@@ -257,8 +257,8 @@ function Contact() {
                   required
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  placeholder="e.g. 01335-XXXXXX"
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-uni-orange focus:bg-white transition-colors"
+                  placeholder="e.g. 01345-XXXXXX"
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-red-600 focus:bg-white transition-colors"
                 />
               </div>
 
@@ -270,17 +270,17 @@ function Contact() {
                   <select
                     value={formData.program}
                     onChange={(e) => setFormData({ ...formData, program: e.target.value })}
-                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-uni-orange focus:bg-white transition-colors"
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-red-600 focus:bg-white transition-colors"
                   >
-                    <option value="Cyprus Affordable Admission & Visa (Without IELTS)">🇨🇾 Cyprus Special Admission (Low Tuition)</option>
-                    <option value="UK 1-Year Masters & 2-Year PSW">🇬🇧 UK Masters & Bachelors (2-Yr PSW)</option>
-                    <option value="Malaysia Dual Degree / EMGS Visa">🇲🇾 Malaysia International Campuses</option>
-                    <option value="Malta Schengen Study & Work Rights">🇲🇹 Malta Schengen Study & Work</option>
-                    <option value="Australia & Canada Admissions">🇦🇺 🇨🇦 Australia / Canada Advisory</option>
-                    <option value="Finland & European Tuition Free / Low Fee">🇫🇮 Europe High-Tech Admissions</option>
-                    <option value="IELTS Academic / General Coaching (Band 7.5+)">📖 IELTS Coaching (Band 7.5+)</option>
-                    <option value="Spoken English Fluency & Embassy Interview">🗣️ Spoken English & Interview Prep</option>
-                    <option value="Kids English Academy (Ages 6-14)">🧒 Kids English Academy (Ages 6-14)</option>
+                    <option value="Study in Japan — Language School Admission (Tokyo/Osaka)">🇯🇵 Japan Language School Admission</option>
+                    <option value="Japanese Language Course N5 (JLPT/NAT 5Q)">⛩️ Japanese N5 Course (Beginner)</option>
+                    <option value="Japanese Language Course N4 (SSW Ready)">⛩️ Japanese N4 Course (Elementary)</option>
+                    <option value="Japanese Language Course N3 (Career Track)">⛩️ Japanese N3 Course (Intermediate)</option>
+                    <option value="SSW (Specified Skilled Worker) Career Support">💼 SSW Japan Career & Work Visa</option>
+                    <option value="Japanese Embassy & School Interview Prep">🎙️ School & Embassy Interview Drills</option>
+                    <option value="UK 1-Year Masters & 2-Year PSW">🇬🇧 UK 1-Year Masters & PSW</option>
+                    <option value="Malaysia Dual Degree & EMGS Visa">🇲🇾 Malaysia International Campuses</option>
+                    <option value="IELTS Academic Coaching (Band 7.5+)">📖 IELTS Coaching (Band 7.5+)</option>
                   </select>
                 </div>
 
@@ -291,17 +291,16 @@ function Contact() {
                   <select
                     value={formData.destination}
                     onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
-                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-uni-orange focus:bg-white transition-colors"
+                    className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-red-600 focus:bg-white transition-colors"
                   >
-                    <option value="Cyprus 🇨🇾">Cyprus 🇨🇾</option>
+                    <option value="Japan 🇯🇵">Japan 🇯🇵 (Flagship Destination)</option>
                     <option value="United Kingdom 🇬🇧">United Kingdom 🇬🇧</option>
                     <option value="Malaysia 🇲🇾">Malaysia 🇲🇾</option>
-                    <option value="Malta 🇲🇹">Malta 🇲🇹</option>
-                    <option value="Finland 🇫🇮">Finland 🇫🇮</option>
                     <option value="Australia 🇦🇺">Australia 🇦🇺</option>
                     <option value="Canada 🇨🇦">Canada 🇨🇦</option>
-                    <option value="United States 🇺🇸">United States 🇺🇸</option>
-                    <option value="Italy 🇮🇹">Italy 🇮🇹</option>
+                    <option value="Finland 🇫🇮">Finland 🇫🇮</option>
+                    <option value="Cyprus 🇨🇾">Cyprus 🇨🇾</option>
+                    <option value="Malta 🇲🇹">Malta 🇲🇹</option>
                   </select>
                 </div>
               </div>
@@ -314,8 +313,8 @@ function Contact() {
                   rows={3}
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  placeholder="e.g. Completed HSC / Bachelor's in 2022. CGPA 3.2. Interested in Cyprus or UK admissions, Without IELTS options, or IELTS batch enrollment..."
-                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-uni-orange focus:bg-white transition-colors"
+                  placeholder="e.g. Completed HSC / Bachelor's in 2023. Interested in Japan April/October Intake, N5/N4 batch enrollment, or SSW Caregiving..."
+                  className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-red-600 focus:bg-white transition-colors"
                 />
               </div>
 
@@ -329,7 +328,7 @@ function Contact() {
               </div>
 
               <p className="text-[0.68rem] text-slate-500 text-center pt-1">
-                🔒 Direct 1-on-1 counseling · 92, Ali Bhaban (7th Floor), Kazi Nazrul Islam Avenue, Dhaka.
+                🔒 Direct 1-on-1 counseling · Gemcon EL Mercado (Lift-09, Shop 114), Mirpur-10, Dhaka.
               </p>
             </form>
           )}

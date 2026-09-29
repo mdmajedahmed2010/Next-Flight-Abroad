@@ -20,10 +20,10 @@ export function OfficesHub() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 rounded-full bg-orange-100/80 border border-orange-200 px-3.5 py-1 text-xs font-bold text-orange-900 mb-3"
+            className="inline-flex items-center gap-2 rounded-full bg-red-100/80 border border-red-200 px-3.5 py-1 text-xs font-bold text-red-900 mb-3"
           >
-            <IconSparkles className="w-3.5 h-3.5 text-orange-600" />
-            <span>4 Physical Office Locations</span>
+            <IconSparkles className="w-3.5 h-3.5 text-red-600" />
+            <span>Mirpur-10 Principal Office & Facilities</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 14 }}
@@ -32,7 +32,7 @@ export function OfficesHub() {
             transition={{ delay: 0.1 }}
             className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-slate-900 tracking-tight"
           >
-            Meet Our Senior Counselors In Person
+            Meet Our Senior Japan Counselors In Person
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
@@ -41,12 +41,12 @@ export function OfficesHub() {
             transition={{ delay: 0.2 }}
             className="mt-2.5 text-xs sm:text-sm text-slate-600 font-medium max-w-xl mx-auto leading-relaxed"
           >
-            Visit any of our fully staffed offices across Dhaka, Sylhet region, or our UK liaison office for transparent profile evaluations and document verification.
+            Visit our principal headquarters and multimedia Japanese language academy at Gemcon EL Mercado (Lift-09), Mirpur-10, Dhaka for transparent profile evaluation and visa guidance.
           </motion.p>
         </div>
 
-        {/* 4 Branch Selector Cards with Framer Motion layoutId */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 mb-6 sm:mb-8">
+        {/* Branch Selector Cards with Framer Motion layoutId */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-4 mb-6 sm:mb-8">
           {branches.map((b, idx) => {
             const active = activeBranchIdx === idx;
             return (
@@ -59,7 +59,7 @@ export function OfficesHub() {
                 className={`relative p-3.5 sm:p-5 rounded-2xl sm:rounded-3xl border text-left transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden ${
                   active
                     ? "bg-slate-900 border-slate-900 text-white shadow-xl"
-                    : "bg-white border-slate-200 text-slate-800 hover:border-orange-400 hover:shadow-md"
+                    : "bg-white border-slate-200 text-slate-800 hover:border-red-400 hover:shadow-md"
                 }`}
               >
                 {active && (
@@ -74,8 +74,8 @@ export function OfficesHub() {
                     <span
                       className={`rounded-full px-2 py-0.5 text-[9px] sm:text-[10px] font-bold ${
                         active
-                          ? "bg-orange-500 text-white"
-                          : "bg-orange-50 text-orange-700 border border-orange-200"
+                          ? "bg-red-600 text-white"
+                          : "bg-red-50 text-red-700 border border-red-200"
                       }`}
                     >
                       {b.tag}
@@ -120,7 +120,7 @@ export function OfficesHub() {
                 <div className="space-y-5 sm:space-y-6">
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="rounded-full bg-orange-500 text-white px-3 py-0.5 text-xs font-bold">
+                      <span className="rounded-full bg-red-600 text-white px-3 py-0.5 text-xs font-bold">
                         {currentBranch.tag}
                       </span>
                       <span className="text-xs font-semibold text-slate-500">{currentBranch.city}</span>
@@ -144,7 +144,7 @@ export function OfficesHub() {
                       <span className="text-slate-500 block text-[11px] font-medium">Direct Office Hotline:</span>
                       <a
                         href={`tel:${currentBranch.phone.replace(/[^0-9]/g, "")}`}
-                        className="font-bold text-orange-600 block mt-1 hover:underline text-sm"
+                        className="font-bold text-red-600 block mt-1 hover:underline text-sm"
                       >
                         {currentBranch.phone}
                       </a>
@@ -152,12 +152,12 @@ export function OfficesHub() {
                   </div>
 
                   {/* Consultation Commitment */}
-                  <div className="rounded-2xl bg-orange-50/50 border border-orange-200/80 p-3.5 sm:p-4 text-xs text-slate-700 space-y-1">
-                    <span className="text-orange-900 font-bold block text-xs">
-                      Free 1-on-1 Profile Assessment Guaranteed:
+                  <div className="rounded-2xl bg-red-50/50 border border-red-200/80 p-3.5 sm:p-4 text-xs text-slate-700 space-y-1">
+                    <span className="text-red-900 font-bold block text-xs">
+                      Free 1-on-1 Profile Assessment & Japanese Language Counseling:
                     </span>
                     <p className="text-[11px] leading-relaxed text-slate-600">
-                      Bring your academic certificates, transcripts, and passport. Our senior counselors will perform an instant eligibility audit for Cyprus, UK, Malaysia, Malta, and wider destinations.
+                      Bring your academic certificates, transcripts, and passport. Our senior counselors will perform an instant eligibility audit for Japanese Language Schools, Universities, and SSW work visas.
                     </p>
                   </div>
 
@@ -168,7 +168,7 @@ export function OfficesHub() {
                       whileTap={{ scale: 0.97 }}
                       type="button"
                       onClick={open}
-                      className="btn-primary text-xs py-3 px-5 font-bold rounded-xl flex items-center justify-center gap-2 shadow-md cursor-pointer"
+                      className="btn-primary text-xs py-3 px-5 font-bold rounded-xl flex items-center justify-center gap-2 shadow-md cursor-pointer bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white border-none"
                     >
                       <span>Schedule In-Person Appointment</span>
                       <IconArrowRight className="w-3.5 h-3.5" />
@@ -178,14 +178,14 @@ export function OfficesHub() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.97 }}
                       href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                        `Hello UNI Consultants! I want to book an in-person appointment at your ${currentBranch.name}.`,
+                        `Hello OneTech Education! I want to book an in-person appointment at your Mirpur-10 office.`,
                       )}`}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-xs font-bold text-slate-800 hover:border-orange-500 hover:text-orange-600 transition-colors"
+                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-xs font-bold text-slate-800 hover:border-red-500 hover:text-red-600 transition-colors"
                     >
                       <IconWhatsApp className="w-3.5 h-3.5 text-emerald-600" />
-                      <span>WhatsApp Branch Desk</span>
+                      <span>WhatsApp Mirpur-10 Desk</span>
                     </motion.a>
                   </div>
                 </div>
@@ -194,7 +194,7 @@ export function OfficesHub() {
                 <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 p-5 sm:p-6 space-y-4">
                   <div className="flex items-center justify-between border-b border-slate-200 pb-3">
                     <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
-                      Branch Coordinates & Verification
+                      Office Coordinates & Verification
                     </span>
                     <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
                       Active Walk-in Center
@@ -215,8 +215,8 @@ export function OfficesHub() {
                     <div className="flex items-center gap-3">
                       <span className="text-base shrink-0">📞</span>
                       <div>
-                        <span className="text-slate-500 block text-[10px]">Hotline:</span>
-                        <span className="font-bold text-slate-800 text-xs">{currentBranch.phone}</span>
+                        <span className="text-slate-500 block text-[10px]">Hotlines:</span>
+                        <span className="font-bold text-slate-800 text-xs">01345-918515 · 01345-918516</span>
                       </div>
                     </div>
 
@@ -234,9 +234,9 @@ export function OfficesHub() {
                       href={company.mapsUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-xs font-bold text-orange-600 hover:text-orange-700 flex items-center justify-between"
+                      className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center justify-between"
                     >
-                      <span>Open Headquarters in Google Maps</span>
+                      <span>Open Mirpur-10 Office in Google Maps</span>
                       <span>↗</span>
                     </a>
                   </div>

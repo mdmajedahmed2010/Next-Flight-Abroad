@@ -15,6 +15,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { RegisterModalProvider } from "@/components/register-modal";
 import { ChatWidget } from "@/components/chat-widget";
+import { MobileDock } from "@/components/mobile-dock";
 import { company } from "@/lib/site-data";
 
 function NotFoundComponent() {
@@ -99,12 +100,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "EducationalOrganization",
           name: company.legalName,
-          alternateName: "UNI Consultants (@UNIConsultantsbd)",
+          alternateName: "OneTech Education (@OneTechEducation)",
           slogan: company.slogan,
           description:
-            "UNI Consultants is a premier overseas education consultancy and language academy based at 92, Ali Bhaban (7th Floor), Kazi Nazrul Islam Avenue, Dhaka 1215. Specializing in study abroad admissions for Cyprus, UK, Malaysia, Malta, Finland, Australia, and Canada, with Free Expert Consultation, With/Without IELTS options, and IELTS/Spoken English prep.",
+            "OneTech Education is a premier Japan higher education consultancy and Japanese language academy located at Gemcon EL Mercado, Lift-09 (Shop 114), Senpara Parbata, Mirpur-10, Dhaka-1216. Specializing in Study in Japan admissions (Tokyo, Osaka, Kyoto, Nagoya, Fukuoka), Japanese Language Academy (JLPT & NAT-TEST N5/N4/N3), SSW work visas, and global university admissions.",
           foundingDate: "Verified Consultancy",
-          areaServed: ["Bangladesh", "Dhaka", "Sylhet", "Habiganj", "United Kingdom", "Worldwide"],
+          areaServed: ["Bangladesh", "Dhaka", "Mirpur", "Japan", "Tokyo", "Worldwide"],
           email: company.email,
           telephone: company.phones,
           openingHours: "Sa-Th 10:00-19:00",
@@ -139,7 +140,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="min-h-screen w-full overflow-x-hidden bg-background font-sans antialiased text-foreground selection:bg-orange-500 selection:text-white">
+      <body className="min-h-screen w-full overflow-x-hidden bg-background font-sans antialiased text-foreground selection:bg-red-600 selection:text-white">
         {children}
         <Scripts />
       </body>
@@ -160,6 +161,7 @@ function RootComponent() {
           </main>
           <SiteFooter />
           <ChatWidget />
+          <MobileDock />
         </div>
       </RegisterModalProvider>
     </QueryClientProvider>

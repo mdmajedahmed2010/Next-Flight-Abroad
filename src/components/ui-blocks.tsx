@@ -211,9 +211,9 @@ export function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#0B1528] via-[#0F1E36] to-[#0B1528] text-white py-12 sm:py-16 lg:py-20 border-b border-sky-950">
-      <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-sky-500/15 blur-[120px]" />
-      <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-orange-500/15 blur-[120px]" />
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#070B16] via-[#0A1020] to-[#070B16] text-white py-12 sm:py-16 lg:py-20 border-b border-white/10">
+      <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-orange-500/15 blur-[140px]" />
+      <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-amber-500/15 blur-[140px]" />
 
       {image ? (
         <div
@@ -231,8 +231,8 @@ export function PageHero({
         >
           <div>
             {eyebrow ? (
-              <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-sky-400/40 bg-sky-500/15 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-sky-300 backdrop-blur-md">
-                <IconSparkles className="w-3.5 h-3.5 text-sky-400" />
+              <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-orange-400/40 bg-orange-500/15 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-orange-300 backdrop-blur-md">
+                <IconSparkles className="w-3.5 h-3.5 text-orange-400" />
                 <span>{eyebrow}</span>
               </div>
             ) : null}
@@ -263,10 +263,10 @@ export function PageHero({
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white">
-                    <span className="rounded-full bg-slate-950/85 px-3 py-1 font-bold backdrop-blur-md border border-white/20 text-orange-300">
-                      92, Ali Bhaban (7th Floor), Kazi Nazrul Islam Avenue, Dhaka
+                    <span className="rounded-full bg-slate-950/85 px-3 py-1 font-bold backdrop-blur-md border border-white/20 text-red-300">
+                      {company.address.short}
                     </span>
-                    <span className="rounded-full bg-orange-600 px-3 py-1 font-bold text-white shadow-sm">
+                    <span className="rounded-full bg-red-600 px-3 py-1 font-bold text-white shadow-sm">
                       ● {company.name}
                     </span>
                   </div>
@@ -510,17 +510,17 @@ export function CtaBand() {
         viewport={{ once: true }}
         className="section-shell relative z-10 text-center max-w-3xl mx-auto space-y-6"
       >
-        <div className="inline-flex items-center gap-2 rounded-full border border-orange-500/40 bg-orange-500/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-orange-300">
-          <IconGlobe className="w-3.5 h-3.5 text-uni-orange" />
+        <div className="inline-flex items-center gap-2 rounded-full border border-red-500/40 bg-red-500/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-red-300">
+          <IconGlobe className="w-3.5 h-3.5 text-red-400" />
           <span>{company.name} ({company.taglineBangla}) · {company.tagline}</span>
         </div>
 
         <h2 className="font-display text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
-          Study Abroad · Without IELTS · <span className="text-uni-orange">Achieve</span>
+          Study in Japan · Language Academy · <span className="text-red-500">Connecting Possibilities</span>
         </h2>
 
         <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed font-medium">
-          Book your free advisory session with {company.name}. 100% genuine guidance across Cyprus, UK, Malaysia, Malta, Australia, Canada, USA, and Europe. Benefit from Without IELTS options, study gap acceptance, and premier UNI Language Academy.
+          Book your free advisory session with {company.name}. 100% genuine guidance for Study in Japan (Tokyo, Osaka, Kyoto, Nagoya, Fukuoka), Japanese Language Academy (N5/N4/N3), and SSW career matching. Free profile evaluation at Mirpur-10 HQ.
         </p>
 
         <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 pt-2">
@@ -531,14 +531,14 @@ export function CtaBand() {
             onClick={open}
             className="btn-primary w-full xs:w-auto text-xs sm:text-sm py-3.5 px-8 shadow-xl cursor-pointer font-bold flex items-center justify-center gap-2"
           >
-            <span>Book Free Assessment</span>
+            <span>Book Free Japan Assessment</span>
             <IconArrowRight className="w-4 h-4" />
           </motion.button>
           <motion.a
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.97 }}
             href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-              `Hello ${company.name}! I would like to book a free consultation for Study Abroad admissions and language courses.`,
+              `Hello ${company.name}! I would like to book a free consultation for Study in Japan and Japanese language courses.`,
             )}`}
             target="_blank"
             rel="noreferrer"

@@ -3,45 +3,52 @@ import { BrandLogo } from "@/components/brand-logo";
 
 const recentActivities = [
   {
-    flag: "🇨🇾",
-    student: "Tanvir A. (Dhaka)",
-    action: "Cyprus University Admission Confirmed (Without IELTS)",
-    subtext: "UNI Consultants · Honesty is Our Commitment",
-    time: "3 mins ago",
+    flag: "🇯🇵",
+    student: "Tanvir H. (Mirpur, Dhaka)",
+    action: "Japan COE (Certificate of Eligibility) Received",
+    subtext: "Akamonkai Language School, Tokyo · OneTech Education",
+    time: "2 mins ago",
   },
   {
-    flag: "🇬🇧",
-    student: "Sultana R. (Farmgate, Dhaka)",
-    action: "UK Master's Admission & CAS Letter Received",
-    subtext: "UNI Consultants · 1-Yr Masters & 2-Yr PSW",
-    time: "11 mins ago",
+    flag: "⛩️",
+    student: "Sumiya A. (Dhaka)",
+    action: "Enrolled in Japanese N5 Morning Intensive Batch",
+    subtext: "OneTech Japanese Academy · Gemcon EL Mercado Lift-09",
+    time: "9 mins ago",
   },
   {
-    flag: "🇲🇾",
-    student: "Mahfuz H. (Sylhet)",
-    action: "Malaysia EMGS Student Visa Approval Received",
-    subtext: "UNI Consultants · Fast Visa Processing",
-    time: "24 mins ago",
+    flag: "🇯🇵",
+    student: "Mehedi H. (Gazipur)",
+    action: "Japan Student Visa Stamped Successfully",
+    subtext: "Kansai College of Business, Osaka · OneTech Education",
+    time: "18 mins ago",
   },
   {
-    flag: "🇲🇹",
-    student: "Kamrul I. (Habiganj)",
-    action: "Malta (Schengen) Higher Education Visa Approved",
-    subtext: "UNI Consultants · European Education Wing",
-    time: "42 mins ago",
+    flag: "💼",
+    student: "Rakib K. (Dhaka)",
+    action: "SSW Caregiving Employer Interview Passed",
+    subtext: "Tokutei Ginou Track, Nagoya · OneTech Education",
+    time: "32 mins ago",
   },
   {
-    flag: "🗣️",
-    student: "Farzana K. (Dhaka)",
-    action: "Enrolled in IELTS Academic Band 7.5+ Masterclass",
-    subtext: "UNI Consultants · Language Academy Wing",
+    flag: "📜",
+    student: "Anika T. (Uttara, Dhaka)",
+    action: "NAT-TEST 5Q Passed with Top Percentile",
+    subtext: "OneTech Japanese Academy · Mirpur-10 Studio",
+    time: "48 mins ago",
+  },
+  {
+    flag: "🇯🇵",
+    student: "Kamrul I. (Dhaka)",
+    action: "Japan April Major Intake File Approved",
+    subtext: "Sendagaya Japanese Institute, Tokyo · OneTech Education",
     time: "1 hour ago",
   },
   {
-    flag: "🇫🇮",
-    student: "Ayaan M. (Dhaka)",
-    action: "Finland Residence Permit Approved (Nordic Quality)",
-    subtext: "UNI Consultants · 92 Ali Bhaban Dhaka HQ",
+    flag: "🇬🇧",
+    student: "Farzana S. (Dhaka)",
+    action: "UK 1-Year Masters Admission & CAS Granted",
+    subtext: "University Partner · OneTech Global Desk",
     time: "2 hours ago",
   },
 ];
@@ -104,8 +111,8 @@ export function LiveActivityToast() {
 
         <div className="flex-1 min-w-0 pr-4">
           <div className="flex items-center justify-between gap-1">
-            <span className="text-[0.65rem] font-black uppercase tracking-wider text-orange-600 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-orange-600 animate-pulse" />
+            <span className="text-[0.65rem] font-black uppercase tracking-wider text-red-600 flex items-center gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-red-600 animate-pulse" />
               Verified Success
             </span>
             <span className="text-[0.62rem] text-slate-400 font-medium">{current.time}</span>
