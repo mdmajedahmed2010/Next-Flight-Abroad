@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export function MobileDock() {
   const { open } = useRegisterModal();
 
-  const primaryPhone = company.phones[0] || "01345-918515";
+  const primaryPhone = company.phones[0] || "01781-545490";
   const whatsappClean = company.whatsapp.replace(/[^0-9]/g, "");
 
   return (
@@ -18,15 +18,15 @@ export function MobileDock() {
           href={`tel:${primaryPhone.replace(/[^0-9]/g, "")}`}
           className="flex flex-col items-center justify-center gap-1 py-2 px-1 rounded-xl bg-white/[0.06] border border-white/10 text-slate-200 active:bg-white/10 transition-colors"
         >
-          <IconPhone className="w-4 h-4 text-red-500" />
-          <span className="text-[10px] font-extrabold uppercase tracking-tight">Call Office</span>
+          <IconPhone className="w-4 h-4 text-sky-400" />
+          <span className="text-[10px] font-extrabold uppercase tracking-tight">Call Campus</span>
         </motion.a>
 
         {/* 2. Direct WhatsApp Fast-Track */}
         <motion.a
           whileTap={{ scale: 0.94 }}
           href={`https://wa.me/${whatsappClean}?text=${encodeURIComponent(
-            `Hello ${company.name}! I am on your website and want to check my admission and visa eligibility for the upcoming intake.`,
+            `Hello ${company.name}! I am on your website and want to check my IELTS batch admission and study abroad eligibility in Beanibazar.`,
           )}`}
           target="_blank"
           rel="noreferrer"
@@ -41,7 +41,7 @@ export function MobileDock() {
           whileTap={{ scale: 0.94 }}
           type="button"
           onClick={() => open()}
-          className="flex flex-col items-center justify-center gap-1 py-2 px-1 rounded-xl bg-gradient-to-r from-red-600 to-rose-600 text-white shadow-lg shadow-red-600/30 active:opacity-90 font-bold"
+          className="flex flex-col items-center justify-center gap-1 py-2 px-1 rounded-xl bg-gradient-to-r from-sky-600 to-cyan-500 text-white shadow-lg shadow-sky-600/30 active:opacity-90 font-bold cursor-pointer"
         >
           <span className="text-sm leading-none">✨</span>
           <span className="text-[10px] font-extrabold uppercase tracking-tight">Apply Free</span>

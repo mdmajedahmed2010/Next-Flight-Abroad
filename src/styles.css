@@ -9,41 +9,61 @@
   --font-serif: "Playfair Display", Georgia, serif;
   --font-bangla: "Hind Siliguri", "Plus Jakarta Sans", sans-serif;
 
-  /* ONETECH EDUCATION Official Brand Palette (Japanese Crimson Red #DC2626 / #E11D48 & Deep Midnight Navy #0B0F19) */
-  --color-onetech-red: #dc2626;
-  --color-onetech-red-dark: #b91c1c;
-  --color-onetech-red-deep: #991b1b;
-  --color-onetech-red-light: #ef4444;
-  --color-onetech-red-soft: #fef2f2;
+  /* MILESTONE BEANIBAZAR Official Brand Palette */
+  /* Cyan / Sky Blue (#0098DA / #0284C7), Emerald Green (#16A34A / #65A30D), Golden Amber (#F59E0B) & Deep Slate Navy (#0B1120) */
+  --color-milestone-cyan: #0098da;
+  --color-milestone-cyan-dark: #0369a1;
+  --color-milestone-cyan-deep: #075985;
+  --color-milestone-cyan-light: #38bdf8;
+  --color-milestone-cyan-soft: #f0f9ff;
 
-  --color-uni-orange: #dc2626;
-  --color-uni-orange-dark: #b91c1c;
-  --color-uni-orange-deep: #991b1b;
-  --color-uni-orange-light: #ef4444;
-  --color-uni-orange-soft: #fef2f2;
+  --color-milestone-green: #16a34a;
+  --color-milestone-green-dark: #15803d;
+  --color-milestone-green-deep: #166534;
+  --color-milestone-green-light: #4ade80;
+  --color-milestone-green-soft: #f0fdf4;
 
-  --color-uni-navy: #0b0f19;
+  --color-milestone-gold: #f59e0b;
+  --color-milestone-gold-dark: #d97706;
+  --color-milestone-gold-bright: #fbbf24;
+  --color-milestone-gold-soft: #fffbeb;
+
+  --color-milestone-purple: #7e22ce;
+  --color-milestone-purple-dark: #6b21a8;
+  --color-milestone-purple-soft: #faf5ff;
+
+  --color-milestone-orange: #ea580c;
+  --color-milestone-orange-dark: #c2410c;
+  --color-milestone-orange-soft: #fff7ed;
+
+  --color-uni-orange: #0098da;
+  --color-uni-orange-dark: #0369a1;
+  --color-uni-orange-deep: #075985;
+  --color-uni-orange-light: #38bdf8;
+  --color-uni-orange-soft: #f0f9ff;
+
+  --color-uni-navy: #0b1120;
   --color-uni-navy-dark: #050811;
-  --color-uni-navy-light: #161f30;
+  --color-uni-navy-light: #162033;
   --color-uni-navy-soft: #f8fafc;
 
-  --color-hsc-navy: #0b0f19;
+  --color-hsc-navy: #0b1120;
   --color-hsc-navy-dark: #050811;
-  --color-hsc-navy-midnight: #070b16;
-  --color-hsc-navy-light: #161f30;
+  --color-hsc-navy-midnight: #060a14;
+  --color-hsc-navy-light: #162033;
   --color-hsc-navy-soft: #f8fafc;
 
-  --color-hsc-gold: #dc2626;
-  --color-hsc-gold-bright: #ef4444;
-  --color-hsc-gold-dark: #b91c1c;
-  --color-hsc-gold-soft: #fef2f2;
+  --color-hsc-gold: #f59e0b;
+  --color-hsc-gold-bright: #fbbf24;
+  --color-hsc-gold-dark: #d97706;
+  --color-hsc-gold-soft: #fffbeb;
 
-  --color-hsc-blue: #0ea5e9;
+  --color-hsc-blue: #0098da;
   --color-hsc-blue-light: #38bdf8;
   --color-hsc-blue-soft: #f0f9ff;
 
-  --color-hsc-emerald: #059669;
-  --color-hsc-emerald-soft: #ecfdf5;
+  --color-hsc-emerald: #16a34a;
+  --color-hsc-emerald-soft: #f0fdf4;
 
   /* Harmonized Aliases for seamless UI rendering across all components */
   --color-kic-navy: #161b38;

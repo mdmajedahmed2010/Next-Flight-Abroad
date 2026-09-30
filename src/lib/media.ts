@@ -1,25 +1,26 @@
 /**
- * ONETECH EDUCATION (ওয়ানটেক এডুকেশন) — Official Verified Media & Brand Assets.
+ * MILESTONE BEANIBAZAR / MICU — Official Verified Media & Brand Assets.
  *
  * Verified from:
- *  - Official Logo: /logo.jpg (Red circular 'E' emblem & "OneTech EDUCATION", "Connecting Possibilities")
- *  - Official Banner: /banner.png ("Study in JAPAN - Start Your Future Today" · "Enroll in Japanese N5/N4 Language Course")
- *      Featuring Mount Fuji, Torii Gate, Japanese textbooks, students & aircraft
- *  - Official Facebook Page: https://www.facebook.com/OneTechEducation/
- *  - Dhaka Principal Office: Gemcon EL Mercado, Lift-09 (Shop 114), Senpara Parbata, Mirpur-10, Dhaka-1216
- *  - Hotlines: 01345-918515 · 01345-918516
- *  - Official Email: info@onetecheducation.com
+ *  - Official Logo: /loogo.jpg (Round badge emblem with gold trim, "IELTS", "IELTS LIFE SKILLS", "SPOKEN ENGLISH", stylized green/cyan 'm', "milestone", "GET READY FOR THE WORLD", "MICU", "OFFICIAL PAGE")
+ *  - Official Milestone Celebration Gathering Photo: /milestone-celebration.jpg (Giant 3D golden "MILESTONE" sculpture in Beanibazar with 100+ graduates holding certificates)
+ *  - Official Facebook Page: https://www.facebook.com/milestonebeanibazar/
+ *  - Main Campus: Azir Market (2nd Floor), 1 No. Goli, Inner College Road, Beanibazar, Sylhet
+ *  - Annex Campus: Somobay Market (2nd Floor), College Road, Beanibazar, Sylhet
+ *  - Hotlines: 01781-545490 · 01706-452949
+ *  - Email: siddikurr806@gmail.com
  */
 
 export const mediaUrls: Record<string, string> = {
-  // Official OneTech Education Brand Assets
-  logo: "/logo.jpg",
+  // Official Milestone Beanibazar Brand Assets
+  logo: "/loogo.jpg",
   "logo-fallback": "/logo.jpg",
-  banner: "/banner.png",
-  "hero-banner": "/banner.png",
-  "hero-banner-brand": "/banner.png",
+  banner: "/milestone-celebration.jpg",
+  celebration: "/milestone-celebration.jpg",
+  "hero-banner": "/milestone-celebration.jpg",
+  "hero-banner-brand": "/milestone-celebration.jpg",
 };
 
 export function getMediaUrl(key: string, fallback?: string): string {
-  return mediaUrls[key] || fallback || "/logo.jpg";
+  return mediaUrls[key] || fallback || "/loogo.jpg";
 }

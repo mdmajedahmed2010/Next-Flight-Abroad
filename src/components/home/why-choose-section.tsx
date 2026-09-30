@@ -4,56 +4,56 @@ import { company } from "@/lib/site-data";
 export function WhyChooseSection() {
   const features = [
     {
-      icon: "🛡️",
-      iconBg: "bg-red-50 text-red-700",
-      value: 99,
-      suffix: "%+",
+      icon: "🎓",
+      iconBg: "bg-sky-50 text-sky-700",
+      value: 98,
+      suffix: "%",
       label: "",
-      metricColor: "text-red-600",
+      metricColor: "text-sky-600",
       tag: "VERIFIED TRACK RECORD",
-      title: "High COE & Visa Success Rate",
-      bengaliTitle: "উচ্চ সিওই (COE) ও ভিসা সাফল্যের হার",
-      desc: "Bulletproof file preparation complying with Japanese Immigration Bureau (Nyukan) standards with 100% genuine documentation.",
-      bengaliDesc: "জাপান ইমিগ্রেশনের কঠোর নিয়ম মেনে নির্ভুল ফাইল প্রস্তুত করে নিশ্চিত সিওই ও ভিসা সুবিধা।",
+      title: "Global Visa Success Rate",
+      bengaliTitle: "উচ্চ ভিসা সাফল্যের হার",
+      desc: "Impeccable file preparation complying with UKVI, IRCC Canada, US Dept of State, and Australia Home Affairs standards.",
+      bengaliDesc: "যুক্তরাজ্য, কানাডা, আমেরিকা, অস্ট্রেলিয়া ও ইউরোপের শীর্ষ বিশ্ববিদ্যালয়ে শতভাগ নিখুঁত ফাইল প্রসেসিং।",
     },
     {
-      icon: "⛩️",
+      icon: "🏆",
       iconBg: "bg-amber-50 text-amber-700",
-      value: 4,
-      suffix: " Intakes",
+      value: 350,
+      suffix: "+",
       label: "",
       metricColor: "text-amber-600",
-      tag: "MAJOR JAPAN INTAKES",
-      title: "April, July, Oct & Jan Admissions",
-      bengaliTitle: "বছরের ৪টি মেজর ইনটেকে ভর্তির সুযোগ",
-      desc: "Enroll in premier Japanese language schools and universities across Tokyo, Osaka, Kyoto, Nagoya, and Fukuoka with prompt offer letters.",
-      bengaliDesc: "টোকিও, ওসাকা, কিয়োটো ও ফুকুওকার শীর্ষ ল্যাঙ্গুয়েজ স্কুল ও বিশ্ববিদ্যালয়ে সরাসরি ভর্তি।",
+      tag: "BAND 7.0+ ACHIEVERS",
+      title: "IELTS Band 7.0+ Excellence",
+      bengaliTitle: "৩৫০+ শিক্ষার্থী ব্যান্ড ৭+ প্রাপ্ত",
+      desc: "Proven track record of high scores with instant cash prize incentives and grand stage honors for high achieving candidates.",
+      bengaliDesc: "আইইএলটিএস-এ ব্যান্ড ৭.০, ৭.৫ ও ৮.০ অর্জনে বিশেষ ক্যাশ রিওয়ার্ড ও মঞ্চে সংবর্ধনা প্রদান।",
     },
     {
-      icon: "💴",
+      icon: "💻",
       iconBg: "bg-emerald-50 text-emerald-700",
-      value: 28,
-      suffix: " hrs/wk",
+      value: 30,
+      suffix: "+ Seats",
       label: "",
       metricColor: "text-emerald-600",
-      tag: "LEGAL WORK RIGHTS",
-      title: "28 Hours/Week Legal Work (Arubaito)",
-      bengaliTitle: "সপ্তাহে ২৮ ঘণ্টা বৈধ পার্ট-টাইম কাজ",
-      desc: "Earn ¥1,100 to ¥1,400 per hour while studying to comfortably cover living expenses and tuition fees in Japan.",
-      bengaliDesc: "পড়াশোনার পাশাপাশি ঘণ্টায় ১১০০-১৪০০ ইয়েন উপার্জন করে স্বাচ্ছন্দ্যে থাকার ও টিউশন ফি পরিশোধের সুযোগ।",
+      tag: "BEANBAZAR'S FIRST CD LAB",
+      title: "Computer-Delivered IELTS Lab",
+      bengaliTitle: "বিয়ানীবাজারের প্রথম সিডি আইইএলটিএস ল্যাব",
+      desc: "Simulate the authentic IDP/British Council Computer-Delivered exam environment with individual workstations and noise-cancelling headphones.",
+      bengaliDesc: "প্রকৃত ব্রিটিশ কাউন্সিল ও আইডিপি পরীক্ষার মতো সফটওয়্যার এবং হেডফোনসহ ফুল মক টেস্ট সুবিধা।",
     },
     {
-      icon: "🎓",
+      icon: "🤝",
       iconBg: "bg-blue-50 text-blue-700",
-      value: 3,
-      suffix: " Levels",
+      value: 1500,
+      suffix: "+",
       label: "",
       metricColor: "text-blue-600",
-      tag: "IN-HOUSE ACADEMY",
-      title: "OneTech Japanese Academy (N5/N4/N3)",
-      bengaliTitle: "জাপানিজ ল্যাঙ্গুয়েজ কোর্স ও এম্বাসি ইন্টারভিউ",
-      desc: "Dedicated multimedia studio at Mirpur-10 HQ. Native audio-visual drills, JLPT/NAT-TEST coaching, and 1-on-1 interview mock drills.",
-      bengaliDesc: "জেমকন এল মেরকাডো (৯ম তলা) স্টুডিওতে অভিজ্ঞ সেনসেইদের নির্দেশনায় পূর্ণাঙ্গ ভাষা ও ভাইভা প্রস্তুতি।",
+      tag: "IDP AUTHORIZED PARTNER",
+      title: "Successful Alumni Network",
+      bengaliTitle: "১৫০০+ সফল প্রাক্তন শিক্ষার্থী",
+      desc: "Official IDP Education registration partner guiding students from Beanibazar directly to global university campuses with zero file opening fee.",
+      bengaliDesc: "আইডিপি অনুমোদিত রেজিস্ট্রেশন ও মক পার্টনার হিসেবে কোনো ফাইল ওপেনিং চার্জ ছাড়াই পূর্ণাঙ্গ কাউন্সেলিং।",
     },
   ];
 
@@ -62,12 +62,12 @@ export function WhyChooseSection() {
       <div className="section-shell">
         {/* Title with Framer Motion */}
         <MotionHeading
-          tag="— WHY ONETECH EDUCATION (ওয়ানটেক এডুকেশন) —"
+          tag="— WHY MILESTONE BEANIBAZAR / MICU —"
           title="Why Choose"
-          highlight="OneTech Education?"
-          description="Connecting Possibilities. Direct discussions with expert Japan counselors, 99%+ COE approval record, and in-house Japanese language studio at Mirpur-10, Dhaka."
-          tagColor="text-red-600"
-          highlightColor="text-red-600"
+          highlight="Milestone Beanibazar?"
+          description="Get Ready for the World. Certified Cambridge & IDP-standard mentors, Beanibazar's only Computer-Delivered IELTS Lab, and comprehensive Study Abroad consultancy under one roof."
+          tagColor="text-sky-600"
+          highlightColor="text-sky-600"
         />
 
         {/* 4 Feature Cards Grid with Staggered Entrance & CountUp */}
@@ -77,7 +77,7 @@ export function WhyChooseSection() {
         >
           {features.map((f) => (
             <StaggerItem key={f.title}>
-              <div className="rounded-3xl border border-slate-200/80 bg-slate-50/50 p-6 sm:p-7 text-center flex flex-col items-center hover:bg-white hover:border-red-600 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 h-full">
+              <div className="rounded-3xl border border-slate-200/80 bg-slate-50/50 p-6 sm:p-7 text-center flex flex-col items-center hover:bg-white hover:border-sky-500 hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2 h-full">
                 {/* Icon Container */}
                 <div
                   className={`flex h-14 w-14 items-center justify-center rounded-2xl text-2xl mb-4 transition-transform duration-300 group-hover:scale-110 shadow-xs ${f.iconBg}`}
@@ -96,7 +96,7 @@ export function WhyChooseSection() {
                   {f.tag}
                 </span>
 
-                <h3 className="font-display text-sm sm:text-base font-extrabold text-[#0f172a] mb-1 leading-snug group-hover:text-red-600 transition-colors">
+                <h3 className="font-display text-sm sm:text-base font-extrabold text-[#0f172a] mb-1 leading-snug group-hover:text-sky-600 transition-colors">
                   {f.title}
                 </h3>
 

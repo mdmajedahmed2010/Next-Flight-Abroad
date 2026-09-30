@@ -50,7 +50,7 @@ export function InteractiveMatcher() {
           </h2>
           <p className="mt-1 max-w-2xl text-xs sm:text-sm text-slate-600 leading-relaxed">
             Select your academic degree level, GPA, English status, and
-            budget to discover matched pathways across Cyprus, UK, Malaysia, Malta, Australia, Canada, USA, and Europe.
+            budget to discover matched pathways across the UK, Canada, USA, Australia, and Europe with Milestone Beanibazar.
           </p>
         </div>
         <div className="rounded-2xl border border-slate-800 bg-slate-950 px-4 py-2 text-xs font-bold text-white">
@@ -67,10 +67,10 @@ export function InteractiveMatcher() {
           </label>
           <div className="space-y-1.5">
             {[
-              "Language School (Japan N5 / Germany A1)",
-              "Bachelor's Degree",
-              "Master's / MBA",
-              "SSW & Skilled Work Permit",
+              "IELTS Prep & CD Mock Lab",
+              "Bachelor's Degree (Undergrad)",
+              "Master's / MBA / Post-Grad",
+              "Spoken English & Fluency",
             ].map((opt) => (
               <button
                 key={opt}
@@ -97,8 +97,8 @@ export function InteractiveMatcher() {
             {[
               "GPA 5.0 / First Class",
               "GPA 4.0 – 4.9 / Second Class Upper",
-              "GPA 3.0 – 3.9",
-              "Study Gap 2–5+ Yrs (Japan Friendly)",
+              "GPA 3.0 – 3.9 / Study Gap Acceptable",
+              "HSC / A-Level Appeared",
             ].map((opt) => (
               <button
                 key={opt}
@@ -123,10 +123,10 @@ export function InteractiveMatcher() {
           </label>
           <div className="space-y-1.5">
             {[
-              "Without IELTS (Japan N5 / MOI Accepted)",
-              "IELTS 6.5 – 7.5+",
-              "German A1 Completed / In Progress",
-              "Planning to Start Language Course",
+              "IELTS 7.0 – 8.5+ (Cash Prize Eligible)",
+              "IELTS 6.0 – 6.5 (Standard Direct Entry)",
+              "Without IELTS (MOI / English Waiver)",
+              "Enrolling in Milestone IELTS Batch",
             ].map((opt) => (
               <button
                 key={opt}
@@ -151,10 +151,10 @@ export function InteractiveMatcher() {
           </label>
           <div className="space-y-1.5">
             {[
-              "Low Cost / Tuition-Free Germany",
-              "Affordable (৳8L – ৳15L)",
-              "Moderate (৳15L – ৳22L)",
-              "Premium (৳18L+)",
+              "Affordable Europe (৳4L – ৳8L)",
+              "UK & Ireland (৳10L – ৳16L)",
+              "Canada & Australia (৳14L – ৳22L)",
+              "USA & High Scholarships (৳15L+)",
             ].map((opt) => (
               <button
                 key={opt}

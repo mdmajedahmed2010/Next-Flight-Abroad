@@ -1,9 +1,8 @@
 @echo off
-title GitHub Push - mdmajedahmed2010/OneTech-Education
+title GitHub Push - Milestone-Beanibazar
 color 0a
 echo ==========================================================
-echo   Pushing to GitHub Repository:
-echo   https://github.com/mdmajedahmed2010/OneTech-Education.git
+echo   Pushing Milestone Beanibazar Web Platform to GitHub:
 echo ==========================================================
 echo.
 cd /d "C:\Users\Majed\Downloads\Alex-Global-Consultancy-main\Alex-Global-Consultancy-main"

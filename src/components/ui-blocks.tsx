@@ -154,29 +154,45 @@ export function IconWhatsApp({ className = "w-4 h-4" }: { className?: string }) 
 
 export const globalPartners = [
   {
-    name: "Japan Language Schools & Univs",
-    type: "SSW & Student Visa Pathways",
-    tag: "Tokyo Branch Care",
-  },
-  {
-    name: "Germany Public Universities",
-    type: "Tuition-Free & Ausbildung",
-    tag: "Goethe A1 Prep",
-  },
-  {
-    name: "Malaysia Partner Colleges",
-    type: "Fast EMGS & Credit Transfer",
-    tag: "Affordable Tuition",
+    name: "IDP Education Official Partner",
+    type: "Direct Exam Booking & Testing Support",
+    tag: "Authorized Partner",
   },
   {
     name: "United Kingdom Universities",
-    type: "1-Yr Master's & 2-Yr PSW",
-    tag: "Fast Track CAS",
+    type: "1-Yr Master's & 2-Yr PSW Work Visa",
+    tag: "Sylhet Flagship",
   },
-  { name: "Canada Public DLIs", type: "Co-op & 3-Year PGWP", tag: "Fast Permits" },
-  { name: "Australia Top Universities", type: "High Student Wages", tag: "Subclass 500" },
-  { name: "USA Accredited Universities", type: "F-1 Stem OPT 3-Yr", tag: "Interview Prep" },
-  { name: "Schengen 29 Countries", type: "Finland, Spain & Greece", tag: "High Visa Ratio" },
+  {
+    name: "Canada Public DLIs & Colleges",
+    type: "Co-op & Up to 3-Year PGWP",
+    tag: "Fast Study Permits",
+  },
+  {
+    name: "Australia Top Universities",
+    type: "CRICOS Approved & Subclass 500",
+    tag: "Extended PSW",
+  },
+  {
+    name: "USA Accredited Universities",
+    type: "STEM OPT 3-Yr & F-1 Coaching",
+    tag: "Scholarship Support",
+  },
+  {
+    name: "Europe (Cyprus, Malta & Schengen)",
+    type: "Affordable Tuition & High Visa Ratio",
+    tag: "Flexible Pathways",
+  },
+  {
+    name: "Cambridge Assessment English",
+    type: "Authentic IELTS Books 11–19",
+    tag: "Official Prep",
+  },
+  {
+    name: "Milestone CD IELTS Mock Lab",
+    type: "30+ High-Spec Workstations",
+    tag: "Beanibazar's 1st Lab",
+  },
 ];
 
 export function RegisterButton({
@@ -448,8 +464,7 @@ export function UniversityMarquee() {
           Top Study & Career <span className="text-sky-600">Destinations & Partners</span>
         </h2>
         <p className="text-xs sm:text-sm text-slate-600 font-medium mt-2 leading-relaxed">
-          Comprehensive admission and language coaching for Japan (with Tokyo liaison office),
-          tuition-free German universities & Ausbildung, Malaysia, UK, Canada, Australia, and the USA.
+          Comprehensive university admissions and certified IELTS coaching for the United Kingdom, Canada, Australia, the USA, and Europe — powered by Beanibazar&apos;s first Computer-Delivered IELTS Lab and official IDP registration partnership.
         </p>
       </div>
 
@@ -502,7 +517,7 @@ export function CtaBand() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-[#0B1528] via-[#0F1E36] to-[#0B1528] text-white py-16 sm:py-24 border-t border-sky-950">
       <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-sky-500/15 blur-[120px]" />
-      <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-orange-500/15 blur-[120px]" />
+      <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-emerald-500/15 blur-[120px]" />
 
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -510,17 +525,17 @@ export function CtaBand() {
         viewport={{ once: true }}
         className="section-shell relative z-10 text-center max-w-3xl mx-auto space-y-6"
       >
-        <div className="inline-flex items-center gap-2 rounded-full border border-red-500/40 bg-red-500/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-red-300">
-          <IconGlobe className="w-3.5 h-3.5 text-red-400" />
+        <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/40 bg-sky-500/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-sky-300">
+          <IconGlobe className="w-3.5 h-3.5 text-sky-400" />
           <span>{company.name} ({company.taglineBangla}) · {company.tagline}</span>
         </div>
 
         <h2 className="font-display text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
-          Study in Japan · Language Academy · <span className="text-red-500">Connecting Possibilities</span>
+          Study Abroad · IELTS Academy · <span className="text-sky-400">Get Ready For The World</span>
         </h2>
 
         <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed font-medium">
-          Book your free advisory session with {company.name}. 100% genuine guidance for Study in Japan (Tokyo, Osaka, Kyoto, Nagoya, Fukuoka), Japanese Language Academy (N5/N4/N3), and SSW career matching. Free profile evaluation at Mirpur-10 HQ.
+          Book your free advisory session with {company.name}. 100% genuine guidance for Study Abroad (UK, Canada, USA, Australia, Europe), IELTS Academic &amp; General, and Beanibazar&apos;s first Computer-Delivered Mock Lab. Free profile evaluation at Azir Market &amp; Somobay Market, Beanibazar.
         </p>
 
         <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 pt-2">
@@ -529,16 +544,16 @@ export function CtaBand() {
             whileTap={{ scale: 0.97 }}
             type="button"
             onClick={open}
-            className="btn-primary w-full xs:w-auto text-xs sm:text-sm py-3.5 px-8 shadow-xl cursor-pointer font-bold flex items-center justify-center gap-2"
+            className="btn-primary w-full xs:w-auto text-xs sm:text-sm py-3.5 px-8 shadow-xl cursor-pointer font-bold flex items-center justify-center gap-2 bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white border-none"
           >
-            <span>Book Free Japan Assessment</span>
+            <span>Book Free Profile Assessment</span>
             <IconArrowRight className="w-4 h-4" />
           </motion.button>
           <motion.a
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.97 }}
             href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-              `Hello ${company.name}! I would like to book a free consultation for Study in Japan and Japanese language courses.`,
+              `Hello ${company.name}! I would like to book a free consultation for Study Abroad and IELTS courses in Beanibazar.`,
             )}`}
             target="_blank"
             rel="noreferrer"

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { company, destinations } from "@/lib/site-data";
 import { useRegisterModal } from "@/components/register-modal";
@@ -8,23 +7,23 @@ import { motion } from "framer-motion";
 export function DestinationBento() {
   const { open } = useRegisterModal();
 
-  const japan = destinations.find((d) => d.slug === "japan") || destinations[0]!;
-  const uk = destinations.find((d) => d.slug === "uk") || destinations[1]!;
+  const uk = destinations.find((d: any) => d.slug === "uk") || destinations[0]!;
+  const canada = destinations.find((d: any) => d.slug === "canada") || destinations[1]!;
 
   return (
     <section className="relative bg-[#FAFAF8] py-16 sm:py-24 lg:py-32 text-slate-900 overflow-hidden">
       <div className="section-shell relative z-10 px-4 sm:px-6">
-        {/* Section Heading — Editorial Luxury Typography */}
+        {/* Section Heading */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
           <div className="max-w-2xl space-y-3">
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 rounded-full bg-red-100/80 border border-red-200 px-3.5 py-1 text-xs font-bold text-red-900"
+              className="inline-flex items-center gap-2 rounded-full bg-cyan-100/80 border border-cyan-200 px-3.5 py-1 text-xs font-bold text-cyan-900"
             >
-              <IconSparkles className="w-3.5 h-3.5 text-red-600" />
-              <span>Japan Specialist & Global Education</span>
+              <IconSparkles className="w-3.5 h-3.5 text-cyan-600" />
+              <span>Global Higher Education Advisory</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 14 }}
@@ -33,7 +32,7 @@ export function DestinationBento() {
               transition={{ delay: 0.1 }}
               className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight"
             >
-              Featured Study in Japan & <span className="text-red-600">Career Portfolios</span>
+              Featured Global Study <span className="text-[#0098da]">Destinations</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 14 }}
@@ -42,7 +41,7 @@ export function DestinationBento() {
               transition={{ delay: 0.2 }}
               className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed"
             >
-              Explore Japanese Language Schools, Senmon Gakko, SSW Technical Work Visas, and global partner university admissions with OneTech Education.
+              From Beanibazar to the world's leading lecture halls. Milestone guides your admissions into the UK, Canada, USA, Australia, and Europe with zero false promises.
             </motion.p>
           </div>
 
@@ -54,7 +53,7 @@ export function DestinationBento() {
           >
             <Link
               to="/destinations"
-              className="group inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-2.5 text-xs font-bold text-slate-800 shadow-sm hover:border-red-500 hover:text-red-600 transition-all active:scale-95"
+              className="group inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-2.5 text-xs font-bold text-slate-800 shadow-sm hover:border-[#0098da] hover:text-[#0098da] transition-all active:scale-95"
             >
               <span>Explore All Destinations</span>
               <IconArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -64,286 +63,270 @@ export function DestinationBento() {
 
         {/* Asymmetrical Bento Grid */}
         <div className="grid gap-5 sm:gap-6 lg:grid-cols-12">
-          {/* Bento Card 1: JAPAN (7 Columns — The Flagship) */}
+          {/* Bento Card 1: UNITED KINGDOM (7 Columns) */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="lg:col-span-7 group relative rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-slate-900 via-[#0F172A] to-slate-950 p-1.5 sm:p-2 border border-slate-800 shadow-xl text-white flex flex-col justify-between hover:border-red-500/50 hover:shadow-2xl transition-all"
+            className="lg:col-span-7 group relative rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-slate-900 via-[#0F172A] to-slate-950 p-1.5 sm:p-2 border border-slate-800 shadow-xl text-white flex flex-col justify-between hover:border-cyan-500/50 hover:shadow-2xl transition-all"
           >
             <div className="rounded-[1.75rem] sm:rounded-[2rem] bg-gradient-to-br from-[#161F33] to-[#0D1322] p-5 sm:p-8 lg:p-9 space-y-5">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
-                  <span className="text-3xl sm:text-4xl">🇯🇵</span>
+                  <span className="text-3xl sm:text-4xl">🇬🇧</span>
                   <div>
                     <div className="flex items-center gap-2">
                       <h3 className="font-display text-xl sm:text-3xl font-black text-white">
-                        Japan
+                        United Kingdom
                       </h3>
-                      <span className="rounded-full bg-red-600 text-white px-2.5 py-0.5 text-[9px] sm:text-[10px] font-black uppercase tracking-wider shadow-sm">
-                        Official Flagship
+                      <span className="rounded-full bg-cyan-600 text-white px-2.5 py-0.5 text-[9px] sm:text-[10px] font-black uppercase tracking-wider shadow-sm">
+                        Top Choice in Sylhet
                       </span>
                     </div>
-                    <span className="text-xs text-rose-300 font-semibold block mt-0.5">
-                      Study in JAPAN · Start Your Future Today · 28h Legal Work
+                    <span className="text-xs text-cyan-300 font-semibold block mt-0.5">
+                      1-Year Master's · 2-Year Graduate Route PSW · Fast CAS
                     </span>
                   </div>
                 </div>
 
                 <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-slate-300 border border-white/10">
-                  COE Approval: 99%+
+                  Visa Rate: 98%+
                 </span>
               </div>
 
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
-                Japan is OneTech Education&apos;s primary specialization. Study in premier Japanese Language Schools across <strong>Tokyo, Osaka, Kyoto, Nagoya, and Fukuoka</strong>. Enjoy <strong>28 hours/week legal part-time work rights (¥1,100–¥1,400/hr)</strong>, high living standards, and direct career progression into Japanese enterprises.
+                The United Kingdom is the premier destination for Beanibazar and Sylhet students. Benefit from fast-track offer letters, generous merit scholarships (£1,500–£5,000), 20 hours/week part-time work rights, and the prestigious 2-year Graduate Route Post-Study Work (PSW) visa.
               </p>
 
-              {/* Japan Interactive Matrix */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs pt-1">
-                <div className="rounded-2xl bg-white/[0.04] p-3 border border-white/10">
-                  <span className="text-[10px] text-slate-400 block font-medium">Part-Time Work:</span>
-                  <span className="font-display font-bold text-red-400 text-sm mt-0.5 block">28 hrs / week</span>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+                <div className="rounded-xl bg-white/5 p-3 border border-white/10">
+                  <span className="text-[10px] text-slate-400 block">Avg. Tuition:</span>
+                  <strong className="text-cyan-300 font-bold text-xs">£11,000–£17,000</strong>
                 </div>
-                <div className="rounded-2xl bg-white/[0.04] p-3 border border-white/10">
-                  <span className="text-[10px] text-slate-400 block font-medium">Language Course:</span>
-                  <span className="font-display font-bold text-emerald-400 text-sm mt-0.5 block">N5 / N4 Batches ✓</span>
+                <div className="rounded-xl bg-white/5 p-3 border border-white/10">
+                  <span className="text-[10px] text-slate-400 block">IELTS Req:</span>
+                  <strong className="text-amber-300 font-bold text-xs">Band 6.0 – 6.5</strong>
                 </div>
-                <div className="rounded-2xl bg-white/[0.04] p-3 border border-white/10">
-                  <span className="text-[10px] text-slate-400 block font-medium">Study Gap:</span>
-                  <span className="font-display font-bold text-slate-200 text-sm mt-0.5 block">Accepted (Justified)</span>
+                <div className="rounded-xl bg-white/5 p-3 border border-white/10">
+                  <span className="text-[10px] text-slate-400 block">Post-Study:</span>
+                  <strong className="text-slate-100 font-bold text-xs">2 Years PSW</strong>
                 </div>
-                <div className="rounded-2xl bg-white/[0.04] p-3 border border-white/10">
-                  <span className="text-[10px] text-slate-400 block font-medium">Intakes:</span>
-                  <span className="font-display font-bold text-amber-300 text-sm mt-0.5 block">Apr, Jul, Oct, Jan</span>
-                </div>
-              </div>
-
-              {/* Key Partner Schools in Japan */}
-              <div className="space-y-2 pt-1 border-t border-white/10">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">
-                  Top Affiliated Language Schools & Universities in Japan:
-                </span>
-                <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                  {japan.topUnis.slice(0, 4).map((u) => (
-                    <span
-                      key={u}
-                      className="rounded-xl bg-white/[0.06] border border-white/10 px-2.5 py-1 text-[11px] font-semibold text-slate-200"
-                    >
-                      ⛩️ {u}
-                    </span>
-                  ))}
+                <div className="rounded-xl bg-white/5 p-3 border border-white/10">
+                  <span className="text-[10px] text-slate-400 block">Major Intakes:</span>
+                  <strong className="text-emerald-300 font-bold text-xs">Sept / Jan</strong>
                 </div>
               </div>
 
-              <div className="pt-2 flex flex-col xs:flex-row gap-2.5">
-                <Link
-                  to="/study-in-{$country}"
-                  params={{ country: "japan" }}
-                  className="btn-primary text-xs py-3 px-5 font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white border-none"
+              <div className="pt-2 flex flex-col xs:flex-row gap-3">
+                <button
+                  type="button"
+                  onClick={open}
+                  className="btn-primary text-xs py-3 px-6 font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white border-none cursor-pointer"
                 >
-                  <span>Explore Japan Admission Details</span>
+                  <span>Apply for UK University Offer</span>
                   <IconArrowRight className="w-3.5 h-3.5" />
-                </Link>
+                </button>
                 <a
-                  href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello OneTech Education! I want to apply for Japanese Language School admissions & N5/N4 course.")}`}
+                  href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello Milestone Beanibazar! I want to apply for UK university admissions and IELTS prep.")}`}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 border border-white/20 px-5 py-3 text-xs font-bold text-white hover:bg-white/20 transition-colors"
                 >
                   <IconWhatsApp className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>WhatsApp Japan Desk</span>
+                  <span>WhatsApp UK Desk</span>
                 </a>
               </div>
             </div>
           </motion.div>
 
-          {/* Bento Card 2: SSW & Work Visas (5 Columns) */}
+          {/* Bento Card 2: CANADA (5 Columns) */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.15 }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="lg:col-span-5 group relative rounded-[2rem] sm:rounded-[2.5rem] bg-white p-1.5 sm:p-2 border border-slate-200 shadow-md flex flex-col justify-between hover:border-red-400 hover:shadow-xl transition-all"
+            className="lg:col-span-5 group relative rounded-[2rem] sm:rounded-[2.5rem] bg-white p-1.5 sm:p-2 border border-slate-200 shadow-md flex flex-col justify-between hover:border-cyan-400 hover:shadow-xl transition-all"
           >
             <div className="rounded-[1.75rem] sm:rounded-[2rem] bg-gradient-to-br from-slate-50 to-white p-5 sm:p-8 space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <span className="text-3xl sm:text-4xl">💼</span>
+                  <span className="text-3xl sm:text-4xl">🇨🇦</span>
                   <div>
                     <h3 className="font-display text-xl sm:text-2xl font-black text-slate-900">
-                      Japan SSW Work Visa
+                      Canada
                     </h3>
-                    <span className="text-xs text-red-600 font-bold block">
-                      Specified Skilled Worker (Tokutei Ginou)
+                    <span className="text-xs text-[#0098da] font-bold block">
+                      DLI Institutions · Up to 3-Year PGWP · PR Pathways
                     </span>
                   </div>
                 </div>
                 <span className="rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 px-3 py-1 text-xs font-bold">
-                  Direct Employment
+                  PR Friendly
                 </span>
               </div>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                Qualify for direct employment in Japan across <strong>Caregiving (Kaigo), Food Service, Hospitality, Agriculture, and Construction</strong>. OneTech provides Japanese N4 language prep, skill assessment test registration, and employer interview matching.
+                Pursue world-class applied diplomas, bachelor's degrees, and post-graduate certificates across Ontario, British Columbia, and Alberta. Full support for SDS visa filing, GIC creation, and Provincial Attestation Letters (PAL).
               </p>
 
               <div className="space-y-2 rounded-2xl bg-slate-100/80 p-3.5 text-xs text-slate-700">
                 <div className="flex justify-between">
-                  <span className="text-slate-500 font-medium">Requirements:</span>
-                  <strong>JLPT N4 / JFT-Basic + Skill Test</strong>
+                  <span className="text-slate-500 font-medium">Tuition Range:</span>
+                  <strong>CAD $14,000 – $22,000 / year</strong>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-500 font-medium">Salary & Benefits:</span>
-                  <strong className="text-emerald-700">Standard Japanese Pay Scale</strong>
+                  <span className="text-slate-500 font-medium">IELTS Standard:</span>
+                  <strong className="text-emerald-700">Band 6.0 Overall (SDS Stream)</strong>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-500 font-medium">Training Center:</span>
-                  <strong className="text-slate-900 truncate ml-2">Mirpur-10, Gemcon EL Mercado</strong>
+                  <span className="text-slate-500 font-medium">Work Rights:</span>
+                  <strong className="text-slate-900">20–24 hrs/wk + Up to 3-Yr PGWP</strong>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-500 font-medium">Employer Placement:</span>
-                  <strong className="text-red-600">Direct Interview Drills</strong>
+                  <span className="text-slate-500 font-medium">Immigration:</span>
+                  <strong className="text-cyan-700">Express Entry & PNP Bonus Points</strong>
                 </div>
               </div>
 
               <div className="pt-2 flex flex-col xs:flex-row gap-2.5">
                 <Link
-                  to="/services"
-                  className="btn-primary w-full text-center text-xs py-3 font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm bg-gradient-to-r from-red-600 to-rose-600 hover:from-red-500 hover:to-rose-500 text-white border-none"
+                  to="/study-in-{$country}"
+                  params={{ country: "canada" }}
+                  className="btn-primary w-full text-center text-xs py-3 font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white border-none"
                 >
-                  <span>SSW Career Roadmap</span>
+                  <span>Explore Canada Universities</span>
                   <IconArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <a
-                  href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello OneTech Education! I want to inquire about Japan SSW (Specified Skilled Worker) work visas.")}`}
+                  href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello Milestone Beanibazar! I want to inquire about studying in Canada.")}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full rounded-xl border border-slate-300 bg-white py-3 px-4 text-center text-xs font-bold text-slate-800 hover:border-red-500 transition-colors flex items-center justify-center gap-1.5"
+                  className="w-full rounded-xl border border-slate-300 bg-white py-3 px-4 text-center text-xs font-bold text-slate-800 hover:border-cyan-500 transition-colors flex items-center justify-center gap-1.5"
                 >
                   <IconWhatsApp className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>WhatsApp SSW Desk</span>
+                  <span>WhatsApp Canada</span>
                 </a>
               </div>
             </div>
           </motion.div>
 
-          {/* Bento Card 3: United Kingdom (4 Columns) */}
+          {/* Bento Card 3: USA (4 Columns) */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="lg:col-span-4 rounded-[2rem] bg-white p-5 sm:p-7 border border-slate-200 shadow-sm hover:border-red-400 hover:shadow-xl transition-all flex flex-col justify-between"
+            className="lg:col-span-4 rounded-[2rem] bg-white p-5 sm:p-7 border border-slate-200 shadow-sm hover:border-cyan-400 hover:shadow-xl transition-all flex flex-col justify-between"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-3xl">🇬🇧</span>
+                <span className="text-3xl">🇺🇸</span>
                 <span className="rounded-full bg-blue-50 text-blue-700 border border-blue-200 px-2.5 py-0.5 text-[10px] font-bold">
-                  2-Yr Graduate PSW
+                  3-Yr STEM OPT
                 </span>
               </div>
               <h3 className="font-display text-lg sm:text-xl font-bold text-slate-900">
-                United Kingdom
+                United States (USA)
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                Fast-track 1-Year Masters programs and 3-Year Bachelors. Full guidance on university CAS letters, 2-year Graduate Route PSW, and scholarships of £1,500–£5,000.
+                High scholarship potential, top global research faculty, and 36-month STEM OPT work authorization. Milestone conducts comprehensive F-1 visa interview simulations.
               </p>
               <div className="rounded-xl bg-slate-50 p-3 text-xs space-y-1 text-slate-700 border border-slate-100">
-                <p>• <strong>Duration:</strong> 1-Year Masters savings</p>
-                <p>• <strong>Post-Study:</strong> 2-Year Graduate Route Visa</p>
-                <p>• <strong>Work Rights:</strong> 20 hours / week permitted</p>
+                <p>• <strong>Scholarships:</strong> Up to $10,000 – $20,000/yr</p>
+                <p>• <strong>Work Rights:</strong> 12–36 Months OPT</p>
+                <p>• <strong>Intakes:</strong> Spring & Fall</p>
               </div>
             </div>
             <div className="pt-4 border-t border-slate-100 mt-4">
               <Link
                 to="/study-in-{$country}"
-                params={{ country: "uk" }}
-                className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center justify-between"
+                params={{ country: "usa" }}
+                className="text-xs font-bold text-[#0098da] hover:text-[#0284c7] flex items-center justify-between"
               >
-                <span>View UK Universities</span>
+                <span>View USA Pathways</span>
                 <span>→</span>
               </Link>
             </div>
           </motion.div>
 
-          {/* Bento Card 4: Malaysia (4 Columns) */}
+          {/* Bento Card 4: Australia (4 Columns) */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="lg:col-span-4 rounded-[2rem] bg-white p-5 sm:p-7 border border-slate-200 shadow-sm hover:border-red-400 hover:shadow-xl transition-all flex flex-col justify-between"
+            className="lg:col-span-4 rounded-[2rem] bg-white p-5 sm:p-7 border border-slate-200 shadow-sm hover:border-cyan-400 hover:shadow-xl transition-all flex flex-col justify-between"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-3xl">🇲🇾</span>
+                <span className="text-3xl">🇦🇺</span>
                 <span className="rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-0.5 text-[10px] font-bold">
-                  Fast EMGS Visa
+                  High Minimum Wage
                 </span>
               </div>
               <h3 className="font-display text-lg sm:text-xl font-bold text-slate-900">
-                Malaysia Dual Degrees
+                Australia
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                Earn British and Australian degrees at 60% lower cost. High visa approval rates through EMGS without embassy interviews, with low monthly living costs.
+                World Top 100 institutions, 48 hours/fortnight student work rights, and up to 4 years post-study work in regional study centers like Adelaide and Perth.
               </p>
               <div className="rounded-xl bg-slate-50 p-3 text-xs space-y-1 text-slate-700 border border-slate-100">
-                <p>• <strong>Tuition:</strong> $3,500 – $6,500 / year</p>
-                <p>• <strong>Language:</strong> MOI accepted widely</p>
-                <p>• <strong>Processing:</strong> Fast online visa approval</p>
+                <p>• <strong>Min Wage:</strong> AUD $24.10 / hr (World High)</p>
+                <p>• <strong>Work:</strong> 48 hrs/fortnight legal</p>
+                <p>• <strong>PSW:</strong> 2 to 4 Years extended</p>
               </div>
             </div>
             <div className="pt-4 border-t border-slate-100 mt-4">
               <Link
                 to="/study-in-{$country}"
-                params={{ country: "malaysia" }}
-                className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center justify-between"
+                params={{ country: "australia" }}
+                className="text-xs font-bold text-[#0098da] hover:text-[#0284c7] flex items-center justify-between"
               >
-                <span>View Malaysia Pathways</span>
+                <span>View Australia Universities</span>
                 <span>→</span>
               </Link>
             </div>
           </motion.div>
 
-          {/* Bento Card 5: Australia, Canada & Finland (4 Columns) */}
+          {/* Bento Card 5: Europe / Cyprus / Malta (4 Columns) */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="lg:col-span-4 rounded-[2rem] bg-white p-5 sm:p-7 border border-slate-200 shadow-sm hover:border-red-400 hover:shadow-xl transition-all flex flex-col justify-between"
+            className="lg:col-span-4 rounded-[2rem] bg-white p-5 sm:p-7 border border-slate-200 shadow-sm hover:border-cyan-400 hover:shadow-xl transition-all flex flex-col justify-between"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-2xl sm:text-3xl">🇦🇺 🇨🇦 🇫🇮</span>
+                <span className="text-2xl sm:text-3xl">🇪🇺 🇨🇾 🇲🇹</span>
                 <span className="rounded-full bg-purple-50 text-purple-700 border border-purple-200 px-2.5 py-0.5 text-[10px] font-bold">
-                  Global Network
+                  Affordable Tuition
                 </span>
               </div>
               <h3 className="font-display text-lg sm:text-xl font-bold text-slate-900">
-                Australia, Canada & Finland
+                Europe (Cyprus & Malta)
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                Comprehensive advisory for Australia (Subclass 500), Canada DLI study permits, and Finland&apos;s #1 education system with 30 hrs/week student work rights.
+                Budget-friendly European higher education with low tuition costs (€3,500–€7,000/year), high visa issuance, and pathways to the broader European Schengen zone.
               </p>
               <div className="rounded-xl bg-slate-50 p-3 text-xs space-y-1 text-slate-700 border border-slate-100">
-                <p>• <strong>Australia:</strong> Group of Eight & up to 4-Yr PSW</p>
-                <p>• <strong>Canada:</strong> Applied Co-op & 3-Yr PGWP</p>
-                <p>• <strong>Finland:</strong> 30 hrs/wk work + 2-Yr Post-Study Visa</p>
+                <p>• <strong>Tuition:</strong> €3,500 – €7,000 / year</p>
+                <p>• <strong>Visa Rate:</strong> Very high for genuine students</p>
+                <p>• <strong>Intakes:</strong> Feb, June & October</p>
               </div>
             </div>
             <div className="pt-4 border-t border-slate-100 mt-4">
               <Link
-                to="/destinations"
-                className="text-xs font-bold text-red-600 hover:text-red-700 flex items-center justify-between"
+                to="/study-in-{$country}"
+                params={{ country: "europe" }}
+                className="text-xs font-bold text-[#0098da] hover:text-[#0284c7] flex items-center justify-between"
               >
-                <span>View All Destinations</span>
+                <span>View Europe Details</span>
                 <span>→</span>
               </Link>
             </div>

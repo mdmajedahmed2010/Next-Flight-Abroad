@@ -15,21 +15,21 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       {
-        title: `About Us | ${company.name} — Connecting Possibilities · Japan Education & Careers`,
+        title: `About Us | ${company.name} — Get Ready For The World · Beanibazar, Sylhet`,
       },
       {
         name: "description",
         content:
-          `About ${company.name} (${company.nativeName}) — Connecting Possibilities. Premier Japan higher education consultancy and Japanese language academy. Japanese Language Schools, Senmon Gakko, SSW work visas & JLPT N5/N4 coaching. Dhaka Principal Office: ${company.address.full}. Hotlines: ${company.phones[0]} / ${company.phones[1]}.`,
+          `About ${company.name} (${company.nativeName}) — Get Ready For The World. Beanibazar's premier Study Abroad consultancy and language academy. IELTS Academic, Beanibazar's first Computer-Delivered (CD) Mock Lab, Spoken English, and UK, Canada, USA, Australia admissions. Led by Saleh Ahmed Shaheen and Ahbabur Rahman Tahmid. Campuses: Azir Market & Somobay Market, College Road, Beanibazar, Sylhet. Hotlines: ${company.phones[0]} / ${company.phones[1]}.`,
       },
       {
         property: "og:title",
-        content: `About ${company.name} — Japan Higher Education & Language Academy`,
+        content: `About ${company.name} — Study Abroad Consultancy & IELTS Language Academy`,
       },
       {
         property: "og:description",
         content:
-          `Official profile of ${company.name}. Connecting Possibilities. Your trusted companion for higher education, language school admissions, and SSW careers in Japan.`,
+          `Official profile of ${company.name}. Get Ready For The World. Your trusted partner for foreign university admissions, IELTS Band 7+ prep, and language fluency in Beanibazar, Sylhet.`,
       },
     ],
   }),
@@ -38,32 +38,32 @@ export const Route = createFileRoute("/about")({
 
 const advisoryWings = [
   {
-    title: "Japan Language School Admissions Wing",
-    hub: "Mirpur-10 HQ & Japan Partner Network",
-    badge: "Tokyo, Osaka & Fukuoka",
-    icon: "🇯🇵",
-    desc: "Direct admissions into accredited Japanese Language Schools (Nihongo Gakko), Senmon Gakko, and Universities across Tokyo, Osaka, Kyoto, Nagoya, and Fukuoka.",
+    title: "Global Study Abroad Admissions Wing",
+    hub: "Azir Market Main Campus & Global Partner Network",
+    badge: "UK, Canada, USA, Australia & Europe",
+    icon: "✈️",
+    desc: "Direct admissions into top-ranked universities in the UK (with or without IELTS depending on academic background), Canada, USA, Australia, and Schengen European nations with zero file opening fee.",
   },
   {
-    title: "OneTech Japanese Language Academy Studio",
-    hub: "Gemcon EL Mercado Lift-09, Mirpur-10",
-    badge: "JLPT & NAT N5/N4/N3",
-    icon: "⛩️",
-    desc: "Targeted Japanese language batches (N5 Beginner, N4 Elementary, N3 Intermediate) with native audio-visual equipment, Minna no Nihongo curriculum, and mock examinations.",
+    title: "Milestone IELTS Academy & CD Mock Lab",
+    hub: "Beanibazar's 1st Computer-Delivered Lab (Azir Market 2nd Fl.)",
+    badge: "IDP Authorized Partner",
+    icon: "💻",
+    desc: "State-of-the-art 30+ seat computer lab with authentic IDP software simulation, individual headphones, Cambridge 11-19 syllabus, and cash rewards for Band 7.0+ achievers.",
   },
   {
-    title: "COE Approval & Nyukan Compliance Wing",
-    hub: "Certified Japan Advisory Wing",
-    badge: "99%+ Approval Record",
-    icon: "🛡️",
-    desc: "Rigorous sponsor document scrutiny, financial solvency statements, and SOP drafting meeting strict Japanese Immigration Bureau (Nyukan) criteria.",
+    title: "Spoken English & 'Speakers' Mania' Studio",
+    hub: "Fluency & Stage Presentation Stage",
+    badge: "Weekly Contests & Trophies",
+    icon: "🎤",
+    desc: "Overcome hesitation with weekly stage speech contests, situational role-plays, native pronunciation drills, and corporate presentation confidence.",
   },
   {
-    title: "SSW (Specified Skilled Worker) & Career Desk",
-    hub: "Japan Technical Work Track",
-    badge: "Tokutei Ginou Visas",
-    icon: "💼",
-    desc: "Employment placement and interview training for Caregiving, Food Service, Hospitality, and Construction tracks with accredited Japanese companies.",
+    title: "Milestone Junior Kids English Academy",
+    hub: "Azir Market & Somobay Market Campuses",
+    badge: "Ages 5–12 Phonics & Fluency",
+    icon: "🧒",
+    desc: "Fun, engaging, phonics-based English foundation courses for school students to build accent-free bilingual fluency from early childhood.",
   },
 ];
 
@@ -72,10 +72,10 @@ function About() {
     <>
       <PageHero
         eyebrow="Our Story & Philosophy"
-        title="ONETECH EDUCATION (ওয়ানটেক এডুকেশন)"
-        subtitle="CONNECTING POSSIBILITIES. Premier consultancy for Study in Japan, Japanese Language Academy, and SSW work visas. Empowering ambitious students across Bangladesh with direct admissions, honest visa guidance, and Sensei mentorship."
-        image="/banner.png"
-        imageAlt="OneTech Education official banner"
+        title="MILESTONE BEANIBAZAR / MICU"
+        subtitle="GET READY FOR THE WORLD. Beanibazar's most trusted Study Abroad consultancy and language academy. Empowering students across Beanibazar and Greater Sylhet with certified Cambridge mentors, Beanibazar's first Computer-Delivered IELTS Lab, and zero-fee profile assessment."
+        image="/milestone-celebration.jpg"
+        imageAlt="Milestone Beanibazar grand celebration gathering with 3D MILESTONE sculpture"
       >
         <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "About Us" }]} />
       </PageHero>
@@ -89,8 +89,8 @@ function About() {
               <BrandLogo size={56} />
               <div>
                 <h3 className="font-display text-xl font-bold text-slate-900">{company.name}</h3>
-                <span className="inline-block rounded-full bg-red-50 border border-red-200 px-3 py-0.5 text-xs font-bold text-red-800 mt-1">
-                  Connecting Possibilities
+                <span className="inline-block rounded-full bg-sky-50 border border-sky-200 px-3 py-0.5 text-xs font-bold text-sky-800 mt-1">
+                  Get Ready For The World
                 </span>
               </div>
             </div>
@@ -101,84 +101,84 @@ function About() {
                 <dd className="font-bold text-slate-900 text-right">{company.name} ({company.legalName})</dd>
               </div>
               <div className="flex justify-between border-b border-slate-100 pb-3">
-                <dt className="text-slate-500 font-medium">Principal Office (Dhaka)</dt>
+                <dt className="text-slate-500 font-medium">Main Campus (Beanibazar)</dt>
                 <dd className="font-bold text-slate-900 text-right max-w-[260px]">
                   {company.branches[0].address}
                 </dd>
               </div>
               <div className="flex justify-between border-b border-slate-100 pb-3">
-                <dt className="text-slate-500 font-medium">Core Philosophy</dt>
-                <dd className="font-bold text-red-600 text-right">
-                  Connecting Possibilities (পসিবিলিটিজ কানেক্ট করে ভবিষ্যৎ গড়া)
+                <dt className="text-slate-500 font-medium">Annex Campus (Beanibazar)</dt>
+                <dd className="font-bold text-slate-900 text-right max-w-[260px]">
+                  {company.branches[1].address}
                 </dd>
               </div>
               <div className="flex justify-between border-b border-slate-100 pb-3">
-                <dt className="text-slate-500 font-medium">Flagship Destination</dt>
+                <dt className="text-slate-500 font-medium">Leadership</dt>
+                <dd className="font-bold text-sky-700 text-right">
+                  Saleh Ahmed Shaheen &amp; Ahbabur Rahman Tahmid
+                </dd>
+              </div>
+              <div className="flex justify-between border-b border-slate-100 pb-3">
+                <dt className="text-slate-500 font-medium">Core Speciality</dt>
                 <dd className="font-bold text-slate-800 text-right">
-                  Japan 🇯🇵 (28h Legal Work, High COE Approval, N5/N4 Academy)
-                </dd>
-              </div>
-              <div className="flex justify-between border-b border-slate-100 pb-3">
-                <dt className="text-slate-500 font-medium">Language Academy</dt>
-                <dd className="font-bold text-red-700 text-right">
-                  Japanese N5, N4, N3 • Interview Prep • IELTS Academic
+                  IELTS Academic/General · Beanibazar&apos;s 1st CD Lab · Study in UK, Canada, USA
                 </dd>
               </div>
               <div className="flex justify-between pt-1">
-                <dt className="text-slate-500 font-medium">Hotlines & WhatsApp</dt>
+                <dt className="text-slate-500 font-medium">Hotlines &amp; WhatsApp</dt>
                 <dd className="font-bold text-slate-900 text-right">
                   {company.phones[0]} / {company.phones[1]}
                 </dd>
               </div>
             </dl>
 
-            <div className="mt-8 rounded-2xl bg-red-50/80 p-4 border border-red-200">
-              <p className="text-xs font-bold text-slate-900 mb-1">Official Motto:</p>
-              <p className="text-xs italic text-red-950 font-bold">&quot;{company.motto}&quot;</p>
+            <div className="mt-8 rounded-2xl bg-sky-50/80 p-4 border border-sky-200">
+              <p className="text-xs font-bold text-slate-900 mb-1">Official Brand Slogan:</p>
+              <p className="text-xs italic text-sky-950 font-bold">&quot;{company.motto}&quot;</p>
             </div>
           </div>
 
           {/* Right Column: Mission, Vision & Guiding Principles */}
           <div className="space-y-6">
-            <span className="badge-clean badge-orange text-red-700 bg-red-50 border border-red-200">Our Vision & Mission</span>
+            <span className="badge-clean text-sky-700 bg-sky-50 border border-sky-200">Our Vision &amp; Mission</span>
             <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-slate-900">
-              Connecting Bangladeshi Students with Japanese Higher Education & Career Possibilities
+              Transforming Students of Beanibazar &amp; Sylhet into Confident Global Scholars
             </h2>
             <p className="text-sm leading-relaxed text-slate-600 font-bangla">
-              {company.name} ({company.nativeName}) জাপানে উচ্চশিক্ষা ও ক্যারিয়ার গড়ার বিশ্বস্ত প্রতিষ্ঠান। জেমকন এল মেরকাডো (৯ম তলা, শপ ১১৪), মিরপুর-১০ এ অবস্থিত আমাদের প্রধান কার্যালয় ও আধুনিক জাপানিজ ল্যাঙ্গুয়েজ স্টুডিও শিক্ষার্থীদের স্বপ্ন পূরণে প্রতিশ্রুতিবদ্ধ।
+              {company.name} ({company.nativeName}) সিলেট অঞ্চলের শিক্ষার্থীদের বিশ্বমানের উচ্চশিক্ষা ও আন্তর্জাতিক ভাষা দক্ষতা নিশ্চিত করার অগ্রদূত। বিয়ানীবাজারের প্রাণকেন্দ্র ইনার কলেজ রোডের আজির মার্কেট (২য় তলা) ও সমবায় মার্কেট (২য় তলা) ক্যাম্পাসে অবস্থিত আমাদের ল্যাব ও একাডেমি শত শত শিক্ষার্থীর স্বপ্নের ভিত্তি তৈরি করেছে।
             </p>
             <p className="text-sm leading-relaxed text-slate-600 font-bangla">
-              আমাদের জাপানিজ ল্যাঙ্গুয়েজ একাডেমিতে শিক্ষার্থীরা পাচ্ছেন মিন্না নো নিহোঙ্গো কারিকুলামে N5, N4 ও N3 লেভেলের পূর্ণাঙ্গ প্রস্তুতি, অভিজ্ঞ সেনসেইদের তত্ত্বাবধানে এম্বাসি ও স্কুল ইন্টারভিউ ড্রিল এবং শতভাগ নিখুঁত সিওই (COE) ডকুমেন্টেশন গাইডলাইন।
+              আমাদের আধুনিক কম্পিউটার-ডেলিভার্ড (CD) আইইএলটিএস ল্যাব, সাপ্তাহিক স্পিকার্স ম্যানিয়া স্টেজ বিতর্ক ও প্রেজেন্টেশন এবং কেমব্রিজ-প্রশিক্ষিত শিক্ষকদের আন্তরিক দিকনির্দেশনায় শিক্ষার্থীরা আইইএলটিএস-এ কাঙ্ক্ষিত ব্যান্ড স্কোর অর্জন করছেন।
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2 pt-2">
               <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
                 <h4 className="font-display text-base font-bold text-slate-900">🎯 Our Mission</h4>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed font-bangla">
-                  সততা, স্বচ্ছতা এবং নির্ভরযোগ্য গাইডলাইনের মাধ্যমে জাপানের শীর্ষ ল্যাঙ্গুয়েজ স্কুল ও বিশ্ববিদ্যালয়ে ভর্তি নিশ্চিত করা এবং জাপানি ভাষায় দক্ষ জনশক্তি গড়ে তোলা।
+                  শতভাগ সততা ও স্বচ্ছতার সাথে শিক্ষার্থীদের সঠিক বিশ্ববিদ্যালয় নির্বাচন, ভিসা প্রসেসিং ও ব্রিটিশ কাউন্সিলের আন্তর্জাতিক মানে আইইএলটিএস প্রশিক্ষণ দেওয়া।
                 </p>
               </div>
 
               <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
                 <h4 className="font-display text-base font-bold text-slate-900">🔭 Our Vision</h4>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed font-bangla">
-                  বাংলাদেশের সর্বাধিক নির্ভরযোগ্য জাপান এডুকেশন কনসালট্যান্সি ও ল্যাঙ্গুয়েজ একাডেমি হিসেবে প্রতিটি শিক্ষার্থীর উজ্জ্বল ও নিরাপদ ভবিষ্যৎ নিশ্চিত করা।
+                  বিয়ানীবাজার ও সিলেটের সর্বাধিক নির্ভরযোগ্য স্টাডি অ্যাব্রড প্রতিষ্ঠান হিসেবে প্রতিটি শিক্ষার্থীকে বিশ্ব নাগরিক হিসেবে গড়ে তোলা।
                 </p>
               </div>
             </div>
 
-            <div className="rounded-2xl bg-gradient-to-r from-red-50/70 via-slate-50 to-amber-50/70 border border-slate-200 p-5">
-              <h4 className="font-display text-sm font-bold text-red-800 mb-2">
+            <div className="rounded-2xl bg-gradient-to-r from-sky-50/70 via-slate-50 to-emerald-50/70 border border-slate-200 p-5">
+              <h4 className="font-display text-sm font-bold text-sky-800 mb-2">
                 🌟 The Core {company.name} Pillars:
               </h4>
               <BulletList
                 items={[
-                  "CONNECTING POSSIBILITIES: প্রতিটি পরামর্শে সততা, আন্তরিকতা ও শিক্ষার্থীদের স্বার্থকে সর্বোচ্চ অগ্রাধিকার।",
-                  "Study in Japan Flagship: টোকিও, ওসাকা, কিয়োটো, নাগোয়া ও ফুকুওকার শীর্ষ ল্যাঙ্গুয়েজ স্কুল ও বিশ্ববিদ্যালয়ে ভর্তি।",
-                  "OneTech Japanese Academy: JLPT ও NAT-TEST N5, N4, N3 প্রস্তুতি এবং এম্বাসি ও স্কুল ইন্টারভিউ ড্রিল।",
-                  "Legal 28 hrs/week Work Rights: সপ্তাহে ২৮ ঘণ্টা বৈধ পার্ট-টাইম কাজ করে টিউশন ও থাকার খরচ নির্বাহের সুযোগ।",
-                  "SSW Technical Work Visas: কেয়ারগিভিং, ফুড সার্ভিস ও হসপিটালিটিতে টেকনিক্যাল ক্যারিয়ার গড়ার বিশ্বস্ত মাধ্যম।",
-                  "Mirpur-10 Principal Office: জেমকন এল মেরকাডো (৯ম তলা, শপ ১১৪), মিরপুর-১০ মেট্রোরেল স্টেশনের নিকটবর্তী সুপরিসর ক্যাম্পাস।",
+                  "GET READY FOR THE WORLD: কোনো ফাইল ওপেনিং চার্জ ছাড়া সম্পূর্ণ ফ্রি বিশ্ববিদ্যালয় মূল্যায়ন।",
+                  "Beanibazar's First CD Lab: ৩০+ কম্পিউটারের আধুনিক ল্যাব ও ফুল লেন্থ রিয়েল টেস্ট সফটওয়্যার।",
+                  "IDP Authorized Partner: আইডিএলটিএস অফিসিয়াল এক্সাম রেজিস্ট্রেশন ও ভেন্যু সাপোর্ট।",
+                  "Band 7.0+ Cash Rewards: কৃতি শিক্ষার্থীদের নগদ অর্থ পুরস্কার ও গ্র্যান্ড সংবর্ধনা প্রদান।",
+                  "Speakers' Mania Fluency: স্পোকেন ইংলিশের জন্য সাপ্তাহিক স্টেজ ও মাইক প্রেজেন্টেশন সেশন।",
+                  "Beanibazar Campuses: আজির মার্কেট ও সমবায় মার্কেট, কলেজ রোডে সুপরিসর ক্যাম্পাস।",
                 ]}
               />
             </div>
@@ -186,50 +186,52 @@ function About() {
         </div>
       </section>
 
-      {/* Corporate Presence Spotlight */}
-      <section className="section-shell py-12 border-t border-slate-200">
-        <div className="rounded-3xl bg-slate-950 border border-slate-800 p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
-          <div className="grid gap-8 lg:grid-cols-2 items-center">
-            <div>
-              <span className="rounded-full bg-red-500/20 text-red-300 border border-red-400/30 px-3 py-1 text-xs font-bold">
-                Principal Headquarters & Academy
-              </span>
-              <h3 className="mt-3 font-display text-2xl sm:text-3xl font-extrabold text-white">
-                Dhaka Principal Office (Mirpur-10)
-              </h3>
-              <p className="mt-3 text-xs sm:text-sm text-slate-300 leading-relaxed font-bangla">
-                জেমকন এল মেরকাডো, ৯ম তলা (শপ ১১৪), সেনপাড়া পর্বতা, মিরপুর-১০, ঢাকা-১২১৬ তে সরাসরি এসে অভিজ্ঞ সিনিয়র জাপান কনসালট্যান্টদের সাথে ফ্রি প্রোফাইল মূল্যায়ন করান।
-              </p>
+      {/* Leadership & Faculty Spotlight */}
+      <section className="section-shell py-14 sm:py-20 border-t border-slate-200 bg-slate-50/50">
+        <SectionHeading
+          eyebrow="Leadership & Mentors"
+          title="Meet Our Senior Instructors"
+          subtitle="Experienced educators and study abroad consultants dedicated to your success in Beanibazar."
+        />
 
-              <div className="mt-6 space-y-3">
-                <div className="rounded-2xl border border-slate-700 bg-slate-900/80 p-4">
-                  <p className="text-xs font-bold text-red-400">📍 Principal Head Office</p>
-                  <p className="text-[0.75rem] text-slate-300 mt-1">
-                    {company.branches[0].address}
-                  </p>
-                  <p className="text-[0.75rem] text-slate-400 mt-1">
-                    📞 {company.phones[0]} (WhatsApp) · {company.phones[1]}
-                  </p>
-                  <p className="text-[0.75rem] text-slate-400 mt-0.5">
-                    ✉️ {company.email}
-                  </p>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 max-w-4xl mx-auto">
+          <div className="card-clean rounded-3xl p-7 border border-slate-200 bg-white shadow-sm hover:shadow-md hover:border-sky-500 transition-all flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="h-14 w-14 rounded-2xl bg-sky-100 border border-sky-300 flex items-center justify-center text-2xl font-black text-sky-700">
+                  SS
+                </div>
+                <div>
+                  <h3 className="font-display text-lg font-bold text-slate-900">Saleh Ahmed Shaheen</h3>
+                  <span className="text-xs font-semibold text-sky-600">CEO &amp; Senior Consultant</span>
                 </div>
               </div>
+              <p className="text-xs text-slate-600 leading-relaxed font-bangla">
+                সিলেট অঞ্চলের স্টাডি অ্যাব্রড সেক্টরে দীর্ঘদিনের অভিজ্ঞতা সম্পন্ন। যুক্তরাজ্য, কানাডা, আমেরিকা ও অস্ট্রেলিয়ার বিশ্ববিদ্যালয় ভর্তি এবং ভিসা প্রক্রিয়া পরিচালনায় অগ্রগণ্য।
+              </p>
             </div>
+            <div className="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-sky-700">
+              📍 Azir Market Main Campus, Beanibazar
+            </div>
+          </div>
 
-            <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 aspect-video flex items-center justify-center p-6">
-              <div className="text-center space-y-3">
-                <BrandLogo size={72} />
-                <h4 className="font-display font-black text-xl text-white">
-                  {company.name}
-                </h4>
-                <p className="text-xs text-red-400 font-bold">
-                  {company.tagline}
-                </p>
-                <p className="text-xs text-slate-400">
-                  {company.branches[0].address}
-                </p>
+          <div className="card-clean rounded-3xl p-7 border border-slate-200 bg-white shadow-sm hover:shadow-md hover:border-sky-500 transition-all flex flex-col justify-between">
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="h-14 w-14 rounded-2xl bg-emerald-100 border border-emerald-300 flex items-center justify-center text-2xl font-black text-emerald-700">
+                  AT
+                </div>
+                <div>
+                  <h3 className="font-display text-lg font-bold text-slate-900">Ahbabur Rahman Tahmid</h3>
+                  <span className="text-xs font-semibold text-emerald-600">Chief Instructor &amp; Writing Specialist</span>
+                </div>
               </div>
+              <p className="text-xs text-slate-600 leading-relaxed font-bangla">
+                আইইএলটিএস রাইটিং ও রিডিংয়ের বিশেষজ্ঞ মেন্টর। শত শত শিক্ষার্থীকে ব্যান্ড ৭.০+ অর্জনে প্রশিক্ষণ দিয়েছেন এবং শিক্ষার্থীদের মাঝে দারুণ জনপ্রিয়।
+              </p>
+            </div>
+            <div className="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-emerald-700">
+              📍 CD IELTS Lab &amp; Academy Studio, Beanibazar
             </div>
           </div>
         </div>
@@ -245,24 +247,24 @@ function About() {
         <SectionHeading
           eyebrow="Specialized Divisions"
           title="Our Operational Divisions"
-          subtitle="Dedicated wings for Japan language school admissions, language coaching studio, COE documentation audit, and SSW career matching."
+          subtitle="Comprehensive academic and consultancy wings serving undergraduate, postgraduate, and language learners."
         />
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {advisoryWings.map((wing) => (
             <div
               key={wing.title}
-              className="card-clean rounded-3xl p-6 flex flex-col justify-between border border-slate-200 hover:border-red-500 shadow-sm hover:shadow-md transition-all bg-white"
+              className="card-clean rounded-3xl p-6 flex flex-col justify-between border border-slate-200 hover:border-sky-500 shadow-sm hover:shadow-md transition-all bg-white"
             >
               <div>
                 <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                   <span className="text-2xl">{wing.icon}</span>
-                  <span className="rounded-full bg-red-50 border border-red-200 text-red-800 text-[0.68rem] px-2.5 py-0.5 font-bold">{wing.badge}</span>
+                  <span className="rounded-full bg-sky-50 border border-sky-200 text-sky-800 text-[0.68rem] px-2.5 py-0.5 font-bold">{wing.badge}</span>
                 </div>
                 <h3 className="mt-4 font-display text-base font-bold text-slate-900 leading-snug">
                   {wing.title}
                 </h3>
-                <p className="text-[0.68rem] font-bold text-red-700 mt-0.5">📍 {wing.hub}</p>
+                <p className="text-[0.68rem] font-bold text-sky-700 mt-0.5">📍 {wing.hub}</p>
                 <p className="mt-3 text-xs text-slate-600 leading-relaxed">{wing.desc}</p>
               </div>
 
@@ -271,7 +273,7 @@ function About() {
                   href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Hello ${company.name}, I want to consult your "${wing.title}" division.`)}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-xs font-bold text-red-600 hover:underline flex items-center justify-center gap-1.5"
+                  className="text-xs font-bold text-sky-600 hover:underline flex items-center justify-center gap-1.5"
                 >
                   <span>Connect with Division →</span>
                 </a>
@@ -281,12 +283,12 @@ function About() {
         </div>
       </section>
 
-      {/* Verified Media & Office Gallery */}
+      {/* Verified Campuses & Office Gallery */}
       <section className="section-shell py-14 sm:py-20 border-t border-slate-200 bg-slate-50/50">
         <SectionHeading
-          eyebrow="Our Offices"
-          title="OneTech Education Campuses"
-          subtitle="Explore our Principal Headquarters and Japanese Academy studio in Mirpur-10, Dhaka, and our Tokyo Liaison Desk."
+          eyebrow="Our Campuses"
+          title="Milestone Beanibazar Campuses"
+          subtitle="Explore our Main Campus & CD IELTS Lab at Azir Market and Admissions Annex at Somobay Market, College Road, Beanibazar, Sylhet."
         />
         <div className="mt-10">
           <OfficeGallery />

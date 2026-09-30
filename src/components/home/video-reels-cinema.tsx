@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { company } from "@/lib/site-data";
+import { company, embeddedVideos } from "@/lib/site-data";
 import { IconSparkles, IconWhatsApp } from "@/components/ui-blocks";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function VideoReelsCinema() {
   const [activeVideoIdx, setActiveVideoIdx] = useState(0);
 
-  const videos = company.featuredReels;
+  const videos = embeddedVideos;
   const currentVideo = videos[activeVideoIdx] || videos[0]!;
 
   return (
@@ -15,19 +15,19 @@ export function VideoReelsCinema() {
       <motion.div
         animate={{
           scale: [1, 1.15, 1],
-          opacity: [0.12, 0.22, 0.12],
+          opacity: [0.15, 0.25, 0.15],
         }}
         transition={{
           duration: 10,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-red-600/15 blur-[160px]"
+        className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-cyan-600/15 blur-[160px]"
       />
       <motion.div
         animate={{
           scale: [1, 1.2, 1],
-          opacity: [0.08, 0.16, 0.08],
+          opacity: [0.1, 0.2, 0.1],
         }}
         transition={{
           duration: 12,
@@ -35,7 +35,7 @@ export function VideoReelsCinema() {
           ease: "easeInOut",
           delay: 2,
         }}
-        className="pointer-events-none absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-blue-600/10 blur-[140px]"
+        className="pointer-events-none absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-emerald-600/15 blur-[140px]"
       />
 
       <div className="section-shell relative z-10 px-4 sm:px-6">
@@ -45,10 +45,10 @@ export function VideoReelsCinema() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] border border-white/15 px-3.5 py-1 text-xs font-bold text-red-400 mb-3 backdrop-blur-md"
+            className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] border border-cyan-500/25 px-3.5 py-1 text-xs font-bold text-cyan-400 mb-3 backdrop-blur-md"
           >
-            <IconSparkles className="w-3.5 h-3.5 text-red-400" />
-            <span>Official Video Proof & Reels</span>
+            <IconSparkles className="w-3.5 h-3.5 text-amber-400" />
+            <span>Official Video Proof & Facebook Broadcasts</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 14 }}
@@ -66,7 +66,7 @@ export function VideoReelsCinema() {
             transition={{ delay: 0.2 }}
             className="mt-2.5 text-xs sm:text-sm text-slate-300 font-medium max-w-xl mx-auto leading-relaxed"
           >
-            Verified Facebook video broadcasts from our Mirpur-10 headquarters. Real students celebrating their Japan student visas, Certificate of Eligibility (COE), and admission letters.
+            Verified Facebook video broadcasts from Milestone Beanibazar campus. Real students taking Computer-Delivered IELTS mock tests, practicing spoken fluency, and receiving cash prize rewards for Band 7+ scores.
           </motion.p>
         </div>
 
@@ -74,7 +74,7 @@ export function VideoReelsCinema() {
         <div className="rounded-[1.75rem] sm:rounded-[2.5rem] bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-1.5 sm:p-3 border border-white/10 shadow-2xl backdrop-blur-2xl ring-1 ring-white/5">
           <div className="rounded-[1.5rem] sm:rounded-[2rem] bg-[#0A1020]/95 border border-white/10 p-4 sm:p-7 lg:p-10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)]">
             <div className="grid gap-6 lg:gap-8 lg:grid-cols-[1.2fr_0.8fr] items-center">
-              {/* Left: Active Featured Video Player with Framer Motion */}
+              {/* Left: Active Featured Video Player */}
               <div className="space-y-4">
                 <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-black shadow-2xl">
                   <AnimatePresence mode="wait">
@@ -84,21 +84,25 @@ export function VideoReelsCinema() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="w-full overflow-hidden flex items-center justify-center bg-black min-h-[440px] sm:min-h-[500px]"
+                      className="w-full overflow-hidden flex items-center justify-center bg-black min-h-[440px] sm:min-h-[500px] p-2"
                     >
-                      <div className="w-full max-w-[340px] aspect-[9/16] rounded-xl overflow-hidden shadow-2xl bg-black border border-white/10">
+                      <div
+                        className={`w-full ${
+                          currentVideo.aspect === "16:9" ? "max-w-[560px] aspect-[16/9]" : "max-w-[320px] aspect-[9/16]"
+                        } rounded-xl overflow-hidden shadow-2xl bg-black border border-white/10 flex items-center justify-center`}
+                      >
                         <iframe
                           key={currentVideo.id}
-                          src={currentVideo.embedSrc}
+                          src={currentVideo.iframeSrc}
                           title={currentVideo.title}
-                          width="100%"
-                          height="100%"
-                          style={{ border: "none", overflow: "hidden" }}
+                          width={currentVideo.aspect === "16:9" ? "560" : "267"}
+                          height={currentVideo.aspect === "16:9" ? "314" : "476"}
+                          style={{ border: "none", overflow: "hidden", maxWidth: "100%", maxHeight: "100%" }}
                           scrolling="no"
                           frameBorder="0"
                           allowFullScreen
                           allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                          className="w-full h-full"
+                          className="w-full h-full object-contain"
                         />
                       </div>
                     </motion.div>
@@ -108,20 +112,20 @@ export function VideoReelsCinema() {
                 {/* Video Meta Info */}
                 <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-3 pt-1">
                   <div>
-                    <span className="text-red-400 text-xs font-bold block">{currentVideo.badge}</span>
+                    <span className="text-amber-400 text-xs font-bold block">{currentVideo.badge}</span>
                     <h3 className="font-display text-base sm:text-lg font-bold text-white mt-0.5">{currentVideo.title}</h3>
-                    <p className="text-xs text-slate-400 mt-1 max-w-md">{currentVideo.desc}</p>
+                    <p className="text-xs text-slate-400 mt-1 max-w-md">{currentVideo.description}</p>
                   </div>
 
                   <motion.a
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.97 }}
                     href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                      `Hello ${company.name}! I watched your video "${currentVideo.title}" and want to consult on my admission.`,
+                      `Hello Milestone Beanibazar! I watched your video "${currentVideo.title}" and would like to enroll in courses.`,
                     )}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn-primary text-xs py-2.5 px-4 font-bold rounded-xl inline-flex items-center justify-center gap-2 shadow-sm shrink-0"
+                    className="btn-primary text-xs py-2.5 px-4 font-bold rounded-xl inline-flex items-center justify-center gap-2 shadow-sm shrink-0 bg-[#0098da] hover:bg-[#0284c7] text-white"
                   >
                     <IconWhatsApp className="w-3.5 h-3.5" />
                     <span>WhatsApp Counselor</span>
@@ -133,13 +137,13 @@ export function VideoReelsCinema() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between border-b border-white/10 pb-3">
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                    Featured Broadcasts ({videos.length})
+                    Official Video Playlist ({videos.length})
                   </span>
                   <a
-                    href={company.social.facebookVideos}
+                    href={company.social.facebook}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-xs text-red-400 font-bold hover:underline"
+                    className="text-xs text-cyan-400 font-bold hover:underline"
                   >
                     All Facebook Videos ↗
                   </a>
@@ -157,18 +161,18 @@ export function VideoReelsCinema() {
                         onClick={() => setActiveVideoIdx(idx)}
                         className={`w-full text-left p-3.5 sm:p-4 rounded-2xl border transition-all duration-300 cursor-pointer flex items-start gap-3 sm:gap-4 ${
                           active
-                            ? "bg-gradient-to-r from-red-600/25 to-rose-600/15 border-red-600/80 text-white ring-1 ring-red-600/40 shadow-md"
+                            ? "bg-gradient-to-r from-cyan-600/25 to-blue-600/15 border-cyan-500/80 text-white ring-1 ring-cyan-500/40 shadow-md"
                             : "bg-white/[0.03] border-white/10 text-slate-300 hover:bg-white/[0.06] hover:text-white"
                         }`}
                       >
-                        <span className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-sm sm:text-base font-bold text-red-400 border border-white/10">
+                        <span className="flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-sm sm:text-base font-bold text-amber-400 border border-white/10">
                           {active ? "▶" : `0${idx + 1}`}
                         </span>
 
                         <div className="space-y-0.5 sm:space-y-1 min-w-0">
                           <div className="flex items-center gap-2">
-                            <span className="text-[9px] uppercase font-bold tracking-wider rounded-md bg-white/10 px-2 py-0.5 text-red-300">
-                              {vid.tag}
+                            <span className="text-[9px] uppercase font-bold tracking-wider rounded-md bg-white/10 px-2 py-0.5 text-cyan-300">
+                              {vid.badge}
                             </span>
                             {active && (
                               <span className="text-[9px] sm:text-[10px] text-emerald-400 font-bold flex items-center gap-1">
@@ -181,7 +185,7 @@ export function VideoReelsCinema() {
                             {vid.title}
                           </h4>
                           <p className="text-[11px] text-slate-400 line-clamp-1 sm:line-clamp-2">
-                            {vid.desc}
+                            {vid.description}
                           </p>
                         </div>
                       </motion.button>
@@ -191,11 +195,11 @@ export function VideoReelsCinema() {
 
                 {/* Assurance Box */}
                 <div className="rounded-2xl bg-white/[0.04] p-3.5 sm:p-4 border border-white/10 space-y-1.5 text-xs">
-                  <span className="text-amber-300 font-bold block">
-                    ★ Real Student Visas & COE Handover in Mirpur-10 HQ
+                  <span className="text-amber-400 font-bold block">
+                    ★ Authentic Beanibazar Classroom & Award Broadcasts
                   </span>
                   <p className="text-slate-300 text-[11px] leading-relaxed">
-                    Watch our students receive their Japanese Certificate of Eligibility (COE) and visas at our Gemcon EL Mercado (Lift-09) Mirpur-10 headquarters.
+                    Watch our real students testing in the Computer-Delivered lab, participating in Speakers' Mania fluency sessions, and receiving cash prizes from CEO Saleh Ahmed Shaheen & Chief Instructor Ahbabur Rahman Tahmid.
                   </p>
                 </div>
               </div>

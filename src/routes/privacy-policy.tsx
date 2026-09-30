@@ -5,10 +5,10 @@ import { company } from "@/lib/site-data";
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
     meta: [
-      { title: `Privacy Policy | ${company.name}` },
+      { title: `Privacy Policy | ${company.name} — Beanibazar, Sylhet` },
       {
         name: "description",
-        content: `How ${company.name} (${company.taglineBangla}) collects, protects, and handles student and applicant personal data for global university admissions, language training, and visa counseling.`,
+        content: `How ${company.name} (${company.taglineBangla}) collects, protects, and handles student and applicant personal data for global university admissions, IELTS training, and visa counseling.`,
       },
       { property: "og:title", content: `Privacy Policy | ${company.name}` },
       {
@@ -23,19 +23,19 @@ export const Route = createFileRoute("/privacy-policy")({
 const sections = [
   {
     title: "1. Information We Collect",
-    body: `When you register with ${company.name} for language courses or study abroad pathways (Cyprus, UK, Malaysia, Malta, Australia, Canada, USA, Europe, etc.), we collect relevant personal details including your name, phone/WhatsApp number, email address, academic credentials, and destination preferences. We also collect minimal anonymous web analytics to ensure website security and optimal performance.`,
+    body: `When you register with ${company.name} for IELTS training, Computer-Delivered Mock Tests, or study abroad university admissions (UK, Canada, USA, Australia, Europe), we collect relevant personal details including your name, phone/WhatsApp number, email address, academic mark sheets, and destination preferences. We also collect minimal anonymous web analytics to ensure website security and optimal performance.`,
   },
   {
     title: "2. How We Use Your Information",
-    body: `Your information is used strictly to provide profile evaluations, course enrollments, IELTS & language preparation materials, university admissions, and visa documentation. All counseling is conducted transparently from our Principal Head Office at ${company.address.full} and our regional branches.`,
+    body: `Your information is used strictly to provide profile evaluations, course enrollments, IELTS preparation materials, university admissions, and visa documentation. All counseling is conducted transparently from our campuses at ${company.address.full} and Somobay Market, Beanibazar, Sylhet.`,
   },
   {
     title: "3. Information Sharing & Third Parties",
-    body: "We share your documents solely with designated partner institutions, universities, and official sovereign immigration authorities for visa processing upon your instruction. We NEVER sell, rent, or trade your personal information with third-party marketers or commercial brokers.",
+    body: "We share your documents solely with designated partner universities, IDP Education testing bodies, and official sovereign immigration authorities for visa processing upon your explicit consent. We NEVER sell, rent, or trade your personal information with third-party marketers or commercial brokers.",
   },
   {
     title: "4. Data Storage & Confidentiality",
-    body: `Student and applicant records are stored securely in protected digital repositories accessible only to authorized ${company.name} senior counselors. Physical documents and electronic records are maintained with strict confidentiality and integrity.`,
+    body: `Student and applicant records are stored securely in protected digital repositories accessible only to authorized ${company.name} senior instructors and counselors. Physical documents and electronic records are maintained with strict confidentiality and integrity.`,
   },
   {
     title: "5. Your Privacy Rights",

@@ -25,7 +25,7 @@ function NotFoundComponent() {
         <h1 className="text-7xl font-bold text-foreground">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          The page you&apos;re looking for doesn&apos;t exist or has been moved.
         </p>
         <div className="mt-6">
           <Link to="/" className="btn-primary text-xs py-2 px-5">
@@ -59,7 +59,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="btn-primary text-xs py-2 px-5"
+            className="btn-primary text-xs py-2 px-5 cursor-pointer"
           >
             Try again
           </button>
@@ -84,8 +84,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/logo.jpg", type: "image/jpeg" },
-      { rel: "apple-touch-icon", href: "/logo.jpg" },
+      { rel: "icon", href: "/loogo.jpg", type: "image/jpeg" },
+      { rel: "apple-touch-icon", href: "/loogo.jpg" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -100,15 +100,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "EducationalOrganization",
           name: company.legalName,
-          alternateName: "OneTech Education (@OneTechEducation)",
+          alternateName: "Milestone Beanibazar (@milestonebeanibazar)",
           slogan: company.slogan,
           description:
-            "OneTech Education is a premier Japan higher education consultancy and Japanese language academy located at Gemcon EL Mercado, Lift-09 (Shop 114), Senpara Parbata, Mirpur-10, Dhaka-1216. Specializing in Study in Japan admissions (Tokyo, Osaka, Kyoto, Nagoya, Fukuoka), Japanese Language Academy (JLPT & NAT-TEST N5/N4/N3), SSW work visas, and global university admissions.",
+            "Milestone Beanibazar (MICU) is a premier Study Abroad consultancy and language academy located at Azir Market (2nd Floor), Inner College Road, Beanibazar, Sylhet. IDP Authorized Registration Partner, featuring Beanibazar's first Computer-Delivered (CD) IELTS Mock Lab, Spoken English, and direct university admissions to UK, Canada, USA, Australia, and Europe.",
           foundingDate: "Verified Consultancy",
-          areaServed: ["Bangladesh", "Dhaka", "Mirpur", "Japan", "Tokyo", "Worldwide"],
+          areaServed: ["Beanibazar", "Sylhet", "Golapganj", "Zakiganj", "Barlekha", "Bangladesh", "Worldwide"],
           email: company.email,
           telephone: company.phones,
-          openingHours: "Sa-Th 10:00-19:00",
+          openingHours: "Sa-Th 09:00-19:30",
           sameAs: [company.social.facebook],
           hasMap: company.mapsUrl,
           geo: {
@@ -140,7 +140,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="min-h-screen w-full overflow-x-hidden bg-background font-sans antialiased text-foreground selection:bg-red-600 selection:text-white">
+      <body className="min-h-screen w-full overflow-x-hidden bg-background font-sans antialiased text-foreground selection:bg-sky-500 selection:text-white">
         {children}
         <Scripts />
       </body>

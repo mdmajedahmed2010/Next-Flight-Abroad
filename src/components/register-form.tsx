@@ -2,24 +2,23 @@ import { useState } from "react";
 import { company, destinations } from "@/lib/site-data";
 
 const field =
-  "w-full rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm text-slate-900 outline-none transition-all hover:bg-white focus:border-red-600 focus:bg-white focus:ring-2 focus:ring-red-500/10";
+  "w-full rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm text-slate-900 outline-none transition-all hover:bg-white focus:border-sky-600 focus:bg-white focus:ring-2 focus:ring-sky-500/10";
 const label = "mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700";
 
 const serviceOptions = [
-  "Study in Japan — Language School Admission (Tokyo, Osaka, Kyoto, Nagoya, Fukuoka)",
-  "Japanese Language Course N5 (Beginner to JLPT/NAT 5Q)",
-  "Japanese Language Course N4 (Elementary / SSW Eligible)",
-  "Japanese Language Course N3 (Intermediate & Vocational Track)",
-  "SSW (Specified Skilled Worker) Career & Technical Visa Support",
-  "Japanese Embassy & School Interview Mock Preparation",
-  "Global Admissions (UK 1-Yr Masters, Malaysia Dual Degree, Australia, Canada, Europe)",
-  "IELTS Academic & Spoken English Fluency Batch",
+  "IELTS Academic Preparation (Target Band 7.0 - 8.5)",
+  "IELTS General Training (Work & Migration Track)",
+  "Computer-Delivered (CD) IELTS Mock Test Lab",
+  "Spoken English & Fluency Studio (Speakers' Mania)",
+  "Milestone Junior (Kids English & Phonics)",
+  "IELTS Life Skills A1 / B1 (UK Spouse & Settlement)",
+  "Study Abroad Admissions — UK (Undergraduate / Masters)",
+  "Study Abroad Admissions — Canada, USA, Australia & Europe",
 ];
 
 const officeOptions = [
-  "Principal Head Office (Gemcon EL Mercado, Lift-09, Shop 114, Mirpur-10, Dhaka)",
-  "OneTech Japanese Academy Studio (Gemcon EL Mercado, Lift-09, Mirpur-10)",
-  "Tokyo Liaison & Student Welfare Desk (Shinjuku, Tokyo, Japan)",
+  "Azir Market Main Campus (2nd Floor, Inner College Road, Beanibazar, Sylhet)",
+  "Somobay Market Annex (2nd Floor, College Road, Beanibazar, Sylhet)",
   "Online Consultation (WhatsApp / Zoom / Phone Call)",
 ];
 
@@ -30,8 +29,8 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
     email: "",
     phone: "",
     service: serviceOptions[0],
-    destination: "Japan",
-    currentStatus: "HSC / A-Level Completed (Language School & Bachelor's Aspirant)",
+    destination: "United Kingdom (UK)",
+    currentStatus: "HSC / A-Level Completed (Bachelor's Abroad Aspirant)",
     office: officeOptions[0],
     message: "",
   });
@@ -48,7 +47,7 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
       `🎯 Interested Service: ${form.service}`,
       `🌍 Target Destination: ${form.destination}`,
       `🎓 Status/Background: ${form.currentStatus}`,
-      `🏢 Preferred Office/Mode: ${form.office}`,
+      `🏢 Preferred Campus/Mode: ${form.office}`,
       form.message ? `📝 Notes: ${form.message}` : "",
       `\nI would like to schedule a free counseling session with ${company.name}.`,
     ].filter(Boolean);
@@ -64,34 +63,34 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
   if (sent) {
     return (
       <div className="py-10 text-center space-y-4">
-        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-red-100 text-4xl shadow-inner">
+        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-sky-100 text-4xl shadow-inner">
           ✅
         </div>
         <h3 className="font-display text-2xl font-black text-slate-900">Appointment Requested! 🎉</h3>
         <p className="mx-auto max-w-md text-sm text-slate-600 leading-relaxed">
           Thank you, <strong className="text-slate-900">{form.name}</strong>! Your consultation request has been registered. An expert counselor from <strong>{company.name}</strong> will contact you on{" "}
-          <strong className="text-red-600">{form.phone}</strong> shortly.
+          <strong className="text-sky-600">{form.phone}</strong> shortly.
         </p>
-        <div className="mt-2 rounded-2xl border border-red-200 bg-red-50/50 p-4 text-xs text-slate-800 text-left space-y-1">
+        <div className="mt-2 rounded-2xl border border-sky-200 bg-sky-50/50 p-4 text-xs text-slate-800 text-left space-y-1">
           <p>✔ {company.address.full}</p>
-          <p>✔ Connecting Possibilities (পসিবিলিটিজ কানেক্ট করে জাপানে ভবিষ্যৎ গড়া)</p>
-          <p>✔ Study in Japan: Language Schools, Senmon Gakko & Universities</p>
-          <p>✔ Japanese Language Academy (N5/N4/N3) & SSW Work Visas</p>
+          <p>✔ Get Ready For The World ({company.taglineBangla})</p>
+          <p>✔ Study Abroad: UK, Canada, USA, Australia &amp; Europe</p>
+          <p>✔ IELTS Academy, Beanibazar&apos;s 1st CD Lab &amp; Spoken English</p>
         </div>
         <div className="pt-2 flex flex-col gap-2">
           <a
             href={whatsappHref()}
             target="_blank"
             rel="noreferrer"
-            className="btn-primary text-xs py-3 justify-center shadow-md font-bold"
+            className="btn-primary text-xs py-3 justify-center shadow-md font-bold bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white border-none flex items-center gap-2"
           >
-            💬 Open WhatsApp Chat with {company.name} Counselor
+            💬 Open WhatsApp Chat with {company.name} Desk
           </a>
           {onDone && (
             <button
               type="button"
               onClick={onDone}
-              className="btn-secondary text-xs py-2.5 justify-center"
+              className="btn-secondary text-xs py-2.5 justify-center cursor-pointer"
             >
               Close
             </button>
@@ -104,14 +103,14 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
   return (
     <form onSubmit={handleSubmit} className="space-y-4 text-left">
       <div className="border-b border-slate-100 pb-3 mb-2">
-        <span className="text-[0.68rem] font-extrabold uppercase tracking-wider text-red-600">
+        <span className="text-[0.68rem] font-extrabold uppercase tracking-wider text-sky-600">
           {company.name} ({company.taglineBangla})
         </span>
         <h3 className="font-display text-xl font-black text-slate-900">
-          Book Your Free Japan Assessment & Language Evaluation
+          Book Your Free Study Abroad &amp; IELTS Evaluation
         </h3>
         <p className="text-xs text-slate-500 mt-0.5">
-          Principal HQ: {company.address.short} · Hotlines: {company.phones[0]} / {company.phones[1]}
+          Beanibazar Campus: {company.address.short} · Hotlines: {company.phones[0]} / {company.phones[1]}
         </p>
       </div>
 
@@ -141,7 +140,7 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
             required
             value={form.phone}
             onChange={set("phone")}
-            placeholder="e.g. 01335-XXXXXX"
+            placeholder="e.g. 01781-XXXXXX"
             className={field}
           />
         </div>
@@ -177,7 +176,7 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
               </option>
             ))}
             <option value="Language Course (IELTS / Spoken / Kids)">
-              🎯 Language Training Only
+              🎯 Language Training Only (Beanibazar Campus)
             </option>
             <option value="Other / Need Advice">🌍 Other / Need Advice</option>
           </select>
@@ -195,20 +194,20 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
             onChange={set("currentStatus")}
             className={field}
           >
-            <option value="HSC / A-Level Completed (Language School & Bachelor's Aspirant)">
-              HSC / A-Level Completed (Language School & Bachelor's)
+            <option value="HSC / A-Level Completed (Bachelor's Abroad Aspirant)">
+              HSC / A-Level Completed (Bachelor&apos;s Abroad Aspirant)
             </option>
-            <option value="Bachelor's Graduate (Language School / Master's / Senmon Gakko)">
-              Bachelor's Graduate (Master's / Senmon Gakko)
+            <option value="Bachelor's / Masters Graduate (UK / Canada / Australia Masters)">
+              Bachelor&apos;s / Masters Graduate (UK / Canada / Australia Masters)
             </option>
-            <option value="Diploma / Polytechnic Graduate (Japan Technical & SSW Track)">
-              Diploma / Polytechnic Graduate (Japan Technical / SSW)
+            <option value="IELTS Candidate (Mock Test / Exam Preparation Only)">
+              IELTS Candidate (Mock Test / CD Lab Only)
             </option>
-            <option value="Working Professional (Japan Career / SSW / Study Gap)">
-              Working Professional (Japan Career / SSW / Study Gap)
+            <option value="Spoken English & Professional Fluency Candidate">
+              Spoken English &amp; Fluency Candidate
             </option>
-            <option value="Student for Japanese Language Course Only (N5/N4)">
-              Japanese Language Course Aspirant (N5/N4)
+            <option value="Parent for Milestone Junior Kids Academy">
+              Parent for Milestone Junior (Kids English)
             </option>
             <option value="Other / Need Guidance">Other / Need Guidance</option>
           </select>
@@ -216,7 +215,7 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
 
         <div>
           <label htmlFor="reg-office" className={label}>
-            Preferred Office / Meeting Mode
+            Preferred Campus / Meeting Mode
           </label>
           <select id="reg-office" value={form.office} onChange={set("office")} className={field}>
             {officeOptions.map((o) => (
@@ -252,7 +251,7 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
             rows={1}
             value={form.message}
             onChange={set("message")}
-            placeholder="Target intake, background, study gap details, etc."
+            placeholder="Target intake, study gap, current English level, etc."
             className={field}
           />
         </div>
@@ -260,14 +259,14 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
 
       <button
         type="submit"
-        className="btn-primary w-full text-xs py-3.5 mt-2 justify-center shadow-lg cursor-pointer font-bold"
+        className="btn-primary w-full text-xs py-3.5 mt-2 justify-center shadow-lg cursor-pointer font-bold bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white border-none flex items-center gap-2"
       >
         <span>Book Free Appointment</span>
         <span>→</span>
       </button>
 
       <p className="text-center text-[0.7rem] text-slate-600">
-        🔒 100% Privacy Guaranteed · {company.name} · Principal HQ: {company.address.full}
+        🔒 100% Privacy Guaranteed · {company.name} · Campus: {company.address.full}
       </p>
     </form>
   );
