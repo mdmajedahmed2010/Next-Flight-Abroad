@@ -1,76 +1,66 @@
-# 🎓 Milestone Beanibazar (MICU) — Study Abroad & Language Academy
+# 🌍 Abroad Blueprint — Study Abroad & Language Academy
 
-> **"Your Gateway to Global Education & Language Excellence"**  
-> Official Web Application & Knowledge Portal for **Milestone Beanibazar / MICU** (Azir Market Main Campus & Somobay Market Annex, Beanibazar, Sylhet).
+> Official Web Application & Knowledge Portal for **Abroad Blueprint** (Head Office: 4091, CJKS Shopping Complex, 3rd Floor, Kazir Dewri, Chittagong, Bangladesh & UK Branch: 17 Woodgate, Birmingham, United Kingdom).
 
-[![Vite](https://img.shields.io/badge/Vite-8.x-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
-[![React](https://img.shields.io/badge/React-19.x-61DAFB?logo=react&logoColor=black)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.x-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![TanStack Start](https://img.shields.io/badge/TanStack-Start-FF4154?logo=react&logoColor=white)](https://tanstack.com/start)
+[![British Council Certified](https://img.shields.io/badge/British%20Council-Certified%20Agent-0052cc.svg)](https://www.facebook.com/AbroadBlueprint/)
+[![Zero Service Charge](https://img.shields.io/badge/Service%20Charge-0%20BDT%20(Free)-16a34a.svg)](https://www.facebook.com/AbroadBlueprint/)
+[![Framework](https://img.shields.io/badge/TanStack-Router%20%2B%20Start-blue.svg)](https://tanstack.com/router)
+[![Tailwind CSS v4](https://img.shields.io/badge/Tailwind-CSS%20v4-38bdf8.svg)](https://tailwindcss.com/)
 
 ---
 
-## 🌟 Key Features & Agency Architecture
+## 🌟 Brand Overview
 
-- **🖥️ Beanibazar's First Computer-Delivered (CD) IELTS Mock Test Lab**:
-  - 30+ dedicated high-speed computer terminals configured to mirror the exact IDP & British Council test engine interface with noise-canceling headsets, timer emulation, and immediate diagnostic score breakdown.
-- **🏆 Cash Prize Rewards for High Band Achievers**:
-  - Milestone honors outstanding students with prestigious cash awards and stage recognition ceremonies for achieving IELTS Band 7.0, 7.5, and 8.0+.
-- **🤝 Official IDP Education Exam Registration Center**:
-  - Authorized IDP booking and registration desk right in Beanibazar, saving students travel to Sylhet city for date reservation and test formalities.
-- **🗣️ Speakers' Mania & Spoken English Fluency**:
-  - Weekly stage debate, extempore speech sessions, and viva interview simulations designed to eradicate stage fright and build spontaneous English communication.
-- **👶 Milestone Junior Academy**:
-  - Specialized phonics, foundational grammar, creative writing, and cognitive speaking programs for young learners (ages 5–14).
-- **🌍 Higher Education Counseling**:
-  - Comprehensive visa guidance, university admission matching, SOP auditing, and post-arrival settlement support for the **UK (Flagship for Sylhet)**, **Canada**, **USA**, **Australia**, and **Europe (Schengen)**.
-- **🎬 Verified Facebook Video Showcase**:
-  - Real classroom tours, student celebration reels, and CD lab demonstrations embedded directly from the official `@milestonebeanibazar` page.
+- **Brand Name**: Abroad Blueprint
+- **Slogan / Tagline**: "Start Here, Go Anywhere! 🌍" (Bengali: "শুরু করুন এখান থেকেই, পৌঁছে যান বিশ্বমঞ্চে!")
+- **Accreditation**: British Council Certified Agent (`#British_Council_Certified_Agent`)
+- **Core Value Proposition**: 
+  - 100% Free Processing & Zero Service Charge (ভিসার আগে বা পরে কোনো সার্ভিস চার্জ নেই ❌)
+  - No File Opening Charges ❌
+  - Complete Application & Visa Guidance Free of Cost
+- **Signature Specialty**: **Fly with Dependent 👨‍👩‍👧‍👦**
+  - Master by Research (MRes), DBA, and PhD programs with full spouse work permits and children schooling in the UK.
+  - Partner university scholarships: £3,000 to £5,000 (Derby, Greenwich, UEL, Teesside, Anglia Ruskin Cambridge).
+
+---
+
+## 🏢 Official Offices & Contacts
+
+### 🇧🇩 Chittagong Head Office (Bangladesh)
+- **Address**: 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong-4000, Bangladesh
+- **Hotlines**: `+880 1961-532479`, `+880 1643-829960`, `+880 1302-092490`, `+880 1616-338613`
+- **WhatsApp**: `+880 1961-532479`
+- **Hours**: Saturday – Thursday (10:00 AM – 7:30 PM)
+
+### 🇬🇧 UK Branch Office (United Kingdom)
+- **Address**: 17, Woodgate, Birmingham, United Kingdom
+- **Phone**: `+44 7587 358080`
+- **Hours**: Monday – Friday (9:30 AM – 5:30 PM GMT)
+
+- **Official Email**: `abroadblueprint@gmail.com`
+- **Official Facebook**: [facebook.com/AbroadBlueprint](https://www.facebook.com/AbroadBlueprint/) (18,700+ Followers)
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- Node.js (v18+ recommended)
-- npm or pnpm
-
-### Installation
-
 ```bash
 # Clone the repository
-git clone https://github.com/mdmajedahmed2010/Milestone-Beanibazar.git
-cd Milestone-Beanibazar
+git clone https://github.com/mdmajedahmed2010/Abroad-Blueprint.git
+cd Abroad-Blueprint
 
 # Install dependencies
 npm install
 
-# Start local development server
+# Run the development server
 npm run dev
-```
 
-### Production Build
-
-```bash
-# Compile client and Nitro SSR server bundle
+# Build for production
 npm run build
-
-# Preview build locally
-npm run preview
 ```
 
 ---
 
-## 📍 Campus Locations & Contact Information
+## 🛡️ License
 
-| Location | Address | Contact |
-| :--- | :--- | :--- |
-| **Main Campus & CD IELTS Lab** | Azir Market (2nd Floor), 1 No. Goli, Inner College Road, Beanibazar, Sylhet | 📞 `+880 1781-545490` |
-| **Annex Campus** | Somobay Market (2nd Floor), College Road, Beanibazar, Sylhet | 📞 `+880 1706-452949` |
-
-- **Official Hotlines**: `+880 1781-545490` · `+880 1706-452949`
-- **WhatsApp**: `+880 1781-545490`
-- **Official Email**: `siddikurr806@gmail.com` / `info@milestonebeanibazar.com`
-- **Official Facebook**: [facebook.com/milestonebeanibazar](https://www.facebook.com/milestonebeanibazar/)
-- **Website**: [milestonebeanibazar.com](https://milestonebeanibazar.com/)
+Private and proprietary to **Abroad Blueprint**. All rights reserved.

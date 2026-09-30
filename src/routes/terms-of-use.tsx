@@ -5,14 +5,14 @@ import { company } from "@/lib/site-data";
 export const Route = createFileRoute("/terms-of-use")({
   head: () => ({
     meta: [
-      { title: `Terms of Use | ${company.name} — Beanibazar, Sylhet` },
+      { title: `Terms of Use | ${company.name}` },
       {
         name: "description",
         content: `Terms and conditions governing study abroad admissions, language academy training, and educational advisory services at ${company.name} (${company.taglineBangla}).`,
       },
       { property: "og:title", content: `Terms of Use | ${company.name}` },
       {
-        property: "og:description",
+        name: "og:description",
         content: "Terms governing foreign university admissions, IELTS courses, and study abroad guidance.",
       },
     ],
@@ -23,23 +23,23 @@ export const Route = createFileRoute("/terms-of-use")({
 const sections = [
   {
     title: "1. Scope of Educational Advisory Services",
-    body: `${company.name} (${company.taglineBangla}) provides specialized foreign university selection, direct application processing, scholarship facilitation, IELTS preparation, and visa guidance for the United Kingdom, Canada, USA, Australia, and Europe. Statutory third-party fees (such as official university tuition, embassy visa fees, medical exams, and IDP/British Council test registration fees) are payable directly to the respective authorities.`,
+    body: `${company.name} (${company.taglineBangla}) provides specialized foreign university selection, direct application processing, scholarship facilitation, IELTS preparation, and visa guidance for the United Kingdom, Canada, USA, Australia, and Europe. Statutory third-party fees (such as official university tuition, embassy visa fees, medical exams, and test registration fees) are payable directly to the respective authorities.`,
   },
   {
-    title: "2. Transparent Counseling Commitment",
-    body: `Under our core philosophy "${company.tagline}" (${company.taglineBangla}), all counseling, institution shortlisting, and fee structures are delivered transparently with zero file opening charges before profile assessment.`,
+    title: "2. Zero Service Charge & Free Processing Commitment",
+    body: `Under our core philosophy "${company.tagline}" (${company.taglineBangla}), all student profile assessments, university application submissions, offer letter follow-ups, and visa file preparations are provided 100% free of charge with zero service charge before or after visa issuance (ভিসার আগে বা পরে কোনো সার্ভিস চার্জ নেই ❌).`,
   },
   {
     title: "3. Document Authenticity & Applicant Responsibility",
-    body: `Applicants and students are solely responsible for the accuracy and authenticity of all academic certificates, marks transcripts, language scorecards, and financial documentation provided. ${company.name} adheres strictly to ethical counseling practices with zero tolerance for fraudulent submissions.`,
+    body: `Applicants and students are solely responsible for the accuracy and authenticity of all academic certificates, marks transcripts, language scorecards, and financial documentation provided. ${company.name} adheres strictly to British Council Certified ethical counseling standards with zero tolerance for fraudulent submissions.`,
   },
   {
     title: "4. Sovereign Visa Decisions Disclaimer",
-    body: `${company.name} provides expert document verification, university correspondence, and embassy interview coaching, but sovereign visa approvals remain within the exclusive legal jurisdiction of destination embassies and high commissions.`,
+    body: `${company.name} provides expert document verification, university correspondence, and embassy interview coaching, but sovereign visa approvals remain within the exclusive legal jurisdiction of destination embassies and high commissions (e.g., UKVI).`,
   },
   {
     title: "5. Contact & Inquiries",
-    body: `For questions regarding these terms, please email ${company.email}, call ${company.phones[0]} / ${company.phones[1]}, or visit our Main Campus at ${company.address.full}.`,
+    body: `For questions regarding these terms, please email ${company.email}, call ${company.phones.join(" / ")}, or visit our Head Office at ${company.address.full}.`,
   },
 ];
 

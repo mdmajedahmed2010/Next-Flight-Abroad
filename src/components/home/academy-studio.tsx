@@ -13,7 +13,7 @@ export function AcademyStudio() {
 
   return (
     <section className="relative bg-[#070B16] py-16 sm:py-24 lg:py-32 text-white overflow-hidden border-t border-white/10">
-      {/* Animated Soft Glow Ambient Orbs (Cyan & Emerald) */}
+      {/* Animated Soft Glow Ambient Orbs (Royal Blue & Gold) */}
       <motion.div
         animate={{
           scale: [1, 1.2, 1],
@@ -24,7 +24,7 @@ export function AcademyStudio() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="pointer-events-none absolute top-10 left-10 h-[450px] w-[450px] rounded-full bg-sky-500/15 blur-[140px]"
+        className="pointer-events-none absolute top-10 left-10 h-[450px] w-[450px] rounded-full bg-blue-600/20 blur-[140px]"
       />
       <motion.div
         animate={{
@@ -37,7 +37,7 @@ export function AcademyStudio() {
           ease: "easeInOut",
           delay: 1.5,
         }}
-        className="pointer-events-none absolute bottom-10 right-10 h-[450px] w-[450px] rounded-full bg-emerald-500/15 blur-[140px]"
+        className="pointer-events-none absolute bottom-10 right-10 h-[450px] w-[450px] rounded-full bg-amber-500/15 blur-[140px]"
       />
 
       <div className="section-shell relative z-10 px-4 sm:px-6">
@@ -48,10 +48,10 @@ export function AcademyStudio() {
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 rounded-full bg-sky-500/10 border border-sky-400/30 px-3.5 py-1 text-xs font-bold text-sky-400 backdrop-blur-md"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 border border-blue-400/30 px-3.5 py-1 text-xs font-bold text-blue-400 backdrop-blur-md"
             >
-              <IconSparkles className="w-3.5 h-3.5 text-sky-400" />
-              <span>Language & Fluency Excellence in Beanibazar</span>
+              <IconSparkles className="w-3.5 h-3.5 text-blue-400" />
+              <span>Language &amp; Fluency Excellence · British Council Standard</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 14 }}
@@ -60,7 +60,7 @@ export function AcademyStudio() {
               transition={{ delay: 0.1 }}
               className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight"
             >
-              Milestone Language & <span className="text-sky-400">IELTS Academy</span>
+              Abroad Blueprint <span className="text-blue-400">Language Academy</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 14 }}
@@ -69,7 +69,7 @@ export function AcademyStudio() {
               transition={{ delay: 0.2 }}
               className="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed"
             >
-              From IELTS Academic & General and Beanibazar&apos;s first Computer-Delivered (CD) Mock Lab, to weekly &ldquo;Speakers&apos; Mania&rdquo; stage fluency contests and Kids English — prepare to conquer the world right here in Beanibazar.
+              Comprehensive IELTS (Academic &amp; General), Spoken English Fluency, Kids English &amp; Phonics, and Pearson PTE coaching taught by certified English trainers. Offline classes at Kazir Dewri, Chittagong and interactive online sessions.
             </motion.p>
           </div>
 
@@ -81,7 +81,7 @@ export function AcademyStudio() {
           >
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 text-xs font-bold text-white hover:bg-white/10 hover:border-sky-400 transition-all active:scale-95"
+              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 text-xs font-bold text-white hover:bg-white/10 hover:border-blue-400 transition-all active:scale-95"
             >
               <span>Explore All Courses</span>
               <IconArrowRight className="w-3.5 h-3.5" />
@@ -103,21 +103,21 @@ export function AcademyStudio() {
                     onClick={() => setActiveCourseIdx(idx)}
                     className={`relative p-3 sm:p-4 rounded-2xl border text-left transition-all duration-300 cursor-pointer ${
                       active
-                        ? "border-sky-400/80 text-white shadow-md ring-1 ring-sky-400/40"
+                        ? "border-blue-400/80 text-white shadow-md ring-1 ring-blue-400/40"
                         : "bg-white/[0.03] border-white/10 text-slate-400 hover:bg-white/[0.06] hover:text-white"
                     }`}
                   >
                     {active && (
                       <motion.div
                         layoutId="activeAcademyTab"
-                        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-sky-600/30 to-teal-600/20"
+                        className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-600/30 to-indigo-600/20"
                         transition={{ type: "spring", stiffness: 350, damping: 30 }}
                       />
                     )}
                     <div className="relative z-10">
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-xl sm:text-2xl">{c.icon || "🎓"}</span>
-                        <span className="rounded-full bg-white/10 px-2 py-0.5 text-[9px] sm:text-[10px] font-bold text-sky-300">
+                        <span className="rounded-full bg-white/10 px-2 py-0.5 text-[9px] sm:text-[10px] font-bold text-amber-300">
                           {c.badge}
                         </span>
                       </div>
@@ -152,7 +152,7 @@ export function AcademyStudio() {
                         {currentCourse.title}
                       </h3>
                     </div>
-                    <p className="text-xs sm:text-sm font-semibold text-sky-300 mt-1">
+                    <p className="text-xs sm:text-sm font-semibold text-blue-300 mt-1">
                       {currentCourse.subtitle || currentCourse.tagline}
                     </p>
                     <p className="text-xs sm:text-sm text-slate-300 mt-2.5 sm:mt-3 leading-relaxed font-medium">
@@ -168,7 +168,7 @@ export function AcademyStudio() {
                     </div>
                     <div className="rounded-xl bg-white/[0.04] p-2.5 sm:p-3 border border-white/10">
                       <span className="text-[10px] text-slate-400 block">Classes:</span>
-                      <strong className="text-sky-400 block mt-0.5 text-xs sm:text-sm">{currentCourse.classesCount || "36+ Classes"}</strong>
+                      <strong className="text-blue-400 block mt-0.5 text-xs sm:text-sm">{currentCourse.classesCount || "36+ Classes"}</strong>
                     </div>
                     <div className="rounded-xl bg-white/[0.04] p-2.5 sm:p-3 border border-white/10">
                       <span className="text-[10px] text-slate-400 block">Mock Tests:</span>
@@ -183,7 +183,7 @@ export function AcademyStudio() {
                   {/* Key Course Highlights */}
                   <div className="space-y-2">
                     <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">
-                      Key Features & Learning Inclusions:
+                      Key Features &amp; Learning Inclusions:
                     </span>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
                       {(currentCourse.highlights ?? currentCourse.features ?? currentCourse.keyFeatures ?? []).slice(0, 4).map((h) => (
@@ -202,16 +202,16 @@ export function AcademyStudio() {
                       whileTap={{ scale: 0.97 }}
                       type="button"
                       onClick={open}
-                      className="btn-primary text-xs py-3 px-5 font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg cursor-pointer bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white border-none"
+                      className="btn-primary text-xs py-3 px-5 font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg cursor-pointer bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white border-none"
                     >
-                      <span>Book Free Assessment & Demo</span>
+                      <span>Book Free Assessment &amp; Demo</span>
                       <IconArrowRight className="w-3.5 h-3.5" />
                     </motion.button>
                     <motion.a
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.97 }}
                       href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                        `Hello Milestone Beanibazar! I want to enroll in the ${currentCourse.title} batch at Beanibazar Campus.`,
+                        `Hello Abroad Blueprint! I want to enroll in the ${currentCourse.title} course.`,
                       )}`}
                       target="_blank"
                       rel="noreferrer"
@@ -227,10 +227,10 @@ export function AcademyStudio() {
                 <div className="rounded-2xl bg-white/[0.03] border border-white/10 p-4 sm:p-6 space-y-4">
                   <div className="flex items-center justify-between border-b border-white/10 pb-3">
                     <h4 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-white">
-                      Curriculum & Focus Areas
+                      Curriculum &amp; Focus Areas
                     </h4>
-                    <span className="text-xs text-sky-400 font-semibold">
-                      Cambridge & IDP Standard
+                    <span className="text-xs text-blue-400 font-semibold">
+                      British Council &amp; Cambridge Standard
                     </span>
                   </div>
 
@@ -247,7 +247,7 @@ export function AcademyStudio() {
                           <span className="font-bold text-xs text-white">
                             {mod.name.startsWith("Phase") ? mod.name : `Module ${i + 1}: ${mod.name}`}
                           </span>
-                          <span className="text-[10px] text-sky-400 font-semibold">Core Focus</span>
+                          <span className="text-[10px] text-blue-400 font-semibold">Core Focus</span>
                         </div>
                         <p className="text-[11px] text-slate-400 leading-relaxed font-bangla">
                           {mod.desc}
@@ -256,12 +256,12 @@ export function AcademyStudio() {
                     ))}
                   </div>
 
-                  <div className="rounded-xl bg-sky-500/10 border border-sky-500/20 p-3 text-xs text-slate-300 space-y-1">
-                    <span className="text-sky-300 font-bold block text-xs">
-                      Class Format & Academy Location:
+                  <div className="rounded-xl bg-blue-500/10 border border-blue-500/20 p-3 text-xs text-slate-300 space-y-1">
+                    <span className="text-blue-300 font-bold block text-xs">
+                      Class Format &amp; Academy Campus:
                     </span>
                     <p className="text-[11px] leading-relaxed">
-                      {currentCourse.classSchedule || currentCourse.schedule} · Classroom training at Azir Market (2nd Floor), 1 No. Goli, Inner College Road, Beanibazar, Sylhet & Interactive Online Zoom.
+                      {currentCourse.classSchedule || currentCourse.schedule} · Classroom training at 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong &amp; Live Interactive Online Zoom.
                     </p>
                   </div>
                 </div>
@@ -273,3 +273,4 @@ export function AcademyStudio() {
     </section>
   );
 }
+

@@ -41,16 +41,16 @@ export function InteractiveMatcher() {
     <div className="card-clean p-6 sm:p-10 border border-slate-200/90 shadow-md bg-white rounded-3xl">
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-6">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3.5 py-1 text-xs font-bold text-uni-orange">
-            <IconSparkles className="w-3.5 h-3.5 text-uni-orange" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-bold text-blue-700">
+            <IconSparkles className="w-3.5 h-3.5 text-blue-600" />
             <span>Interactive Tool · 100% Free Profile Assessment</span>
           </div>
           <h2 className="mt-3 font-display text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Study Abroad & Language <span className="text-uni-orange">Eligibility Calculator</span>
+            Study Abroad &amp; Language <span className="text-blue-600">Eligibility Calculator</span>
           </h2>
           <p className="mt-1 max-w-2xl text-xs sm:text-sm text-slate-600 leading-relaxed">
             Select your academic degree level, GPA, English status, and
-            budget to discover matched pathways across the UK, Canada, USA, Australia, and Europe with Milestone Beanibazar.
+            budget to discover matched pathways across the UK, Canada, USA, Australia, and Europe with Abroad Blueprint.
           </p>
         </div>
         <div className="rounded-2xl border border-slate-800 bg-slate-950 px-4 py-2 text-xs font-bold text-white">
@@ -67,10 +67,10 @@ export function InteractiveMatcher() {
           </label>
           <div className="space-y-1.5">
             {[
-              "IELTS Prep & CD Mock Lab",
+              "IELTS Prep (Academic / General)",
               "Bachelor's Degree (Undergrad)",
               "Master's / MBA / Post-Grad",
-              "Spoken English & Fluency",
+              "MRes / PhD (Fly with Dependent)",
             ].map((opt) => (
               <button
                 key={opt}
@@ -78,7 +78,7 @@ export function InteractiveMatcher() {
                 onClick={() => setLevel(opt)}
                 className={`w-full rounded-xl px-3.5 py-2.5 text-left text-xs font-bold transition-all cursor-pointer ${
                   level === opt
-                    ? "bg-slate-900 text-white shadow-sm border border-sky-500"
+                    ? "bg-slate-900 text-white shadow-sm border border-blue-500"
                     : "border border-slate-200 bg-slate-50/80 text-slate-700 hover:bg-slate-100"
                 }`}
               >
@@ -106,7 +106,7 @@ export function InteractiveMatcher() {
                 onClick={() => setScore(opt)}
                 className={`w-full rounded-xl px-3.5 py-2.5 text-left text-xs font-bold transition-all cursor-pointer ${
                   score === opt
-                    ? "bg-slate-900 text-white shadow-sm border border-sky-500"
+                    ? "bg-slate-900 text-white shadow-sm border border-blue-500"
                     : "border border-slate-200 bg-slate-50/80 text-slate-700 hover:bg-slate-100"
                 }`}
               >
@@ -123,10 +123,10 @@ export function InteractiveMatcher() {
           </label>
           <div className="space-y-1.5">
             {[
-              "IELTS 7.0 – 8.5+ (Cash Prize Eligible)",
-              "IELTS 6.0 – 6.5 (Standard Direct Entry)",
+              "IELTS 7.0 – 8.5+ (High Direct Entry)",
+              "IELTS 6.0 – 6.5 (Standard Entry)",
               "Without IELTS (MOI / English Waiver)",
-              "Enrolling in Milestone IELTS Batch",
+              "Enrolling in Abroad Blueprint Batch",
             ].map((opt) => (
               <button
                 key={opt}
@@ -134,7 +134,7 @@ export function InteractiveMatcher() {
                 onClick={() => setIelts(opt)}
                 className={`w-full rounded-xl px-3.5 py-2.5 text-left text-xs font-bold transition-all cursor-pointer ${
                   ielts === opt
-                    ? "bg-slate-900 text-white shadow-sm border border-sky-500"
+                    ? "bg-slate-900 text-white shadow-sm border border-blue-500"
                     : "border border-slate-200 bg-slate-50/80 text-slate-700 hover:bg-slate-100"
                 }`}
               >
@@ -152,7 +152,7 @@ export function InteractiveMatcher() {
           <div className="space-y-1.5">
             {[
               "Affordable Europe (৳4L – ৳8L)",
-              "UK & Ireland (৳10L – ৳16L)",
+              "UK & Scholarships (৳10L – ৳15L)",
               "Canada & Australia (৳14L – ৳22L)",
               "USA & High Scholarships (৳15L+)",
             ].map((opt) => (
@@ -162,7 +162,7 @@ export function InteractiveMatcher() {
                 onClick={() => setBudget(opt)}
                 className={`w-full rounded-xl px-3.5 py-2.5 text-left text-xs font-bold transition-all cursor-pointer ${
                   budget === opt
-                    ? "bg-slate-900 text-white shadow-sm border border-sky-500"
+                    ? "bg-slate-900 text-white shadow-sm border border-blue-500"
                     : "border border-slate-200 bg-slate-50/80 text-slate-700 hover:bg-slate-100"
                 }`}
               >
@@ -180,7 +180,7 @@ export function InteractiveMatcher() {
             Top Matched Destinations for Your Profile ({matchedDestinations.length}):
           </span>
           <span className="text-xs font-semibold text-emerald-700">
-            100% Free Profile Assessment Available
+            100% Free Profile Assessment (0 BDT Service Fee)
           </span>
         </div>
 
@@ -188,13 +188,13 @@ export function InteractiveMatcher() {
           {matchedDestinations.map((d) => (
             <div
               key={d.slug}
-              className="rounded-2xl border border-slate-200 bg-slate-50/60 p-4 transition-all hover:bg-white hover:border-sky-300 hover:shadow-md"
+              className="rounded-2xl border border-slate-200 bg-slate-50/60 p-4 transition-all hover:bg-white hover:border-blue-300 hover:shadow-md"
             >
               <div className="flex items-center justify-between">
                 <span className="flex items-center gap-2 text-sm sm:text-base font-bold text-slate-900">
                   <span className="text-xl">{d.flag}</span> {d.name}
                 </span>
-                <span className="rounded-full bg-sky-50 border border-sky-200 px-2 py-0.5 text-[0.62rem] font-bold text-sky-700">
+                <span className="rounded-full bg-blue-50 border border-blue-200 px-2 py-0.5 text-[0.62rem] font-bold text-blue-700">
                   {d.pswv}
                 </span>
               </div>
@@ -208,7 +208,7 @@ export function InteractiveMatcher() {
                 <Link
                   to="/study-in-{$country}"
                   params={{ country: d.slug }}
-                  className="font-bold text-sky-600 hover:underline flex items-center gap-1"
+                  className="font-bold text-blue-600 hover:underline flex items-center gap-1"
                 >
                   <span>Explore</span>
                   <IconArrowRight className="w-3 h-3" />

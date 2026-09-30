@@ -9,13 +9,36 @@
   --font-serif: "Playfair Display", Georgia, serif;
   --font-bangla: "Hind Siliguri", "Plus Jakarta Sans", sans-serif;
 
-  /* MILESTONE BEANIBAZAR Official Brand Palette */
-  /* Cyan / Sky Blue (#0098DA / #0284C7), Emerald Green (#16A34A / #65A30D), Golden Amber (#F59E0B) & Deep Slate Navy (#0B1120) */
-  --color-milestone-cyan: #0098da;
-  --color-milestone-cyan-dark: #0369a1;
-  --color-milestone-cyan-deep: #075985;
-  --color-milestone-cyan-light: #38bdf8;
-  --color-milestone-cyan-soft: #f0f9ff;
+  /* ABROAD BLUEPRINT Official Brand Palette */
+  /* Royal / Cobalt Blue (#0052CC / #0866FF), Amber Gold (#F59E0B / #FBBF24), Deep Navy (#0A192F / #0F172A) */
+  --color-ab-blue: #0052cc;
+  --color-ab-blue-dark: #0043a8;
+  --color-ab-blue-deep: #003380;
+  --color-ab-blue-light: #2563eb;
+  --color-ab-blue-bright: #3b82f6;
+  --color-ab-blue-soft: #eff6ff;
+
+  --color-ab-gold: #f59e0b;
+  --color-ab-gold-dark: #d97706;
+  --color-ab-gold-bright: #fbbf24;
+  --color-ab-gold-deep: #b45309;
+  --color-ab-gold-soft: #fffbeb;
+
+  --color-ab-navy: #0a192f;
+  --color-ab-navy-dark: #060e1a;
+  --color-ab-navy-midnight: #040912;
+  --color-ab-navy-light: #132238;
+  --color-ab-navy-soft: #f8fafc;
+
+  --color-ab-emerald: #16a34a;
+  --color-ab-emerald-soft: #f0fdf4;
+
+  /* Backward Compatibility Aliases for components */
+  --color-milestone-cyan: #0052cc;
+  --color-milestone-cyan-dark: #0043a8;
+  --color-milestone-cyan-deep: #003380;
+  --color-milestone-cyan-light: #2563eb;
+  --color-milestone-cyan-soft: #eff6ff;
 
   --color-milestone-green: #16a34a;
   --color-milestone-green-dark: #15803d;
@@ -28,29 +51,29 @@
   --color-milestone-gold-bright: #fbbf24;
   --color-milestone-gold-soft: #fffbeb;
 
-  --color-milestone-purple: #7e22ce;
-  --color-milestone-purple-dark: #6b21a8;
-  --color-milestone-purple-soft: #faf5ff;
+  --color-milestone-purple: #0052cc;
+  --color-milestone-purple-dark: #0043a8;
+  --color-milestone-purple-soft: #eff6ff;
 
-  --color-milestone-orange: #ea580c;
-  --color-milestone-orange-dark: #c2410c;
-  --color-milestone-orange-soft: #fff7ed;
+  --color-milestone-orange: #f59e0b;
+  --color-milestone-orange-dark: #d97706;
+  --color-milestone-orange-soft: #fffbeb;
 
-  --color-uni-orange: #0098da;
-  --color-uni-orange-dark: #0369a1;
-  --color-uni-orange-deep: #075985;
-  --color-uni-orange-light: #38bdf8;
-  --color-uni-orange-soft: #f0f9ff;
+  --color-uni-orange: #0052cc;
+  --color-uni-orange-dark: #0043a8;
+  --color-uni-orange-deep: #003380;
+  --color-uni-orange-light: #2563eb;
+  --color-uni-orange-soft: #eff6ff;
 
-  --color-uni-navy: #0b1120;
-  --color-uni-navy-dark: #050811;
-  --color-uni-navy-light: #162033;
+  --color-uni-navy: #0a192f;
+  --color-uni-navy-dark: #060e1a;
+  --color-uni-navy-light: #132238;
   --color-uni-navy-soft: #f8fafc;
 
-  --color-hsc-navy: #0b1120;
-  --color-hsc-navy-dark: #050811;
-  --color-hsc-navy-midnight: #060a14;
-  --color-hsc-navy-light: #162033;
+  --color-hsc-navy: #0a192f;
+  --color-hsc-navy-dark: #060e1a;
+  --color-hsc-navy-midnight: #040912;
+  --color-hsc-navy-light: #132238;
   --color-hsc-navy-soft: #f8fafc;
 
   --color-hsc-gold: #f59e0b;
@@ -58,90 +81,89 @@
   --color-hsc-gold-dark: #d97706;
   --color-hsc-gold-soft: #fffbeb;
 
-  --color-hsc-blue: #0098da;
-  --color-hsc-blue-light: #38bdf8;
-  --color-hsc-blue-soft: #f0f9ff;
+  --color-hsc-blue: #0052cc;
+  --color-hsc-blue-light: #2563eb;
+  --color-hsc-blue-soft: #eff6ff;
 
   --color-hsc-emerald: #16a34a;
   --color-hsc-emerald-soft: #f0fdf4;
 
-  /* Harmonized Aliases for seamless UI rendering across all components */
-  --color-kic-navy: #161b38;
-  --color-kic-navy-dark: #0f142e;
-  --color-kic-navy-light: #242c56;
-  --color-kic-navy-soft: #f0f3fa;
+  --color-kic-navy: #0a192f;
+  --color-kic-navy-dark: #060e1a;
+  --color-kic-navy-light: #132238;
+  --color-kic-navy-soft: #f8fafc;
 
-  --color-kic-orange: #f5a623;
+  --color-kic-orange: #f59e0b;
   --color-kic-orange-bright: #fbbf24;
-  --color-kic-orange-dark: #d98205;
-  --color-kic-orange-soft: #fef8ec;
+  --color-kic-orange-dark: #d97706;
+  --color-kic-orange-soft: #fffbeb;
 
-  --color-kic-blue: #0ea5e9;
-  --color-kic-blue-light: #38bdf8;
-  --color-kic-blue-soft: #f0f9ff;
+  --color-kic-blue: #0052cc;
+  --color-kic-blue-light: #2563eb;
+  --color-kic-blue-soft: #eff6ff;
 
-  --color-academia-navy: #161b38;
-  --color-academia-navy-dark: #0f142e;
-  --color-academia-navy-light: #242c56;
-  --color-academia-navy-soft: #f0f3fa;
+  --color-academia-navy: #0a192f;
+  --color-academia-navy-dark: #060e1a;
+  --color-academia-navy-light: #132238;
+  --color-academia-navy-soft: #f8fafc;
 
-  --color-academia-gold: #f5a623;
+  --color-academia-gold: #f59e0b;
   --color-academia-gold-bright: #fbbf24;
-  --color-academia-gold-dark: #d98205;
-  --color-academia-gold-soft: #fef8ec;
+  --color-academia-gold-dark: #d97706;
+  --color-academia-gold-soft: #fffbeb;
 
-  --color-academia-red: #f5a623;
-  --color-academia-red-dark: #d98205;
-  --color-academia-red-light: #fbbf24;
-  --color-academia-red-soft: #fef8ec;
+  --color-academia-red: #0052cc;
+  --color-academia-red-dark: #0043a8;
+  --color-academia-red-light: #2563eb;
+  --color-academia-red-soft: #eff6ff;
 
-  --color-academia-blue: #0ea5e9;
-  --color-academia-blue-light: #38bdf8;
-  --color-academia-blue-soft: #f0f9ff;
+  --color-academia-blue: #0052cc;
+  --color-academia-blue-light: #2563eb;
+  --color-academia-blue-soft: #eff6ff;
 
-  --color-nexus-blue: #0ea5e9;
-  --color-nexus-blue-dark: #161b38;
-  --color-nexus-blue-light: #38bdf8;
-  --color-nexus-blue-soft: #f0f9ff;
+  --color-nexus-blue: #0052cc;
+  --color-nexus-blue-dark: #0a192f;
+  --color-nexus-blue-light: #2563eb;
+  --color-nexus-blue-soft: #eff6ff;
 
-  --color-nexus-orange: #f5a623;
-  --color-nexus-orange-dark: #d98205;
+  --color-nexus-orange: #f59e0b;
+  --color-nexus-orange-dark: #d97706;
   --color-nexus-orange-light: #fbbf24;
-  --color-nexus-orange-soft: #fef8ec;
+  --color-nexus-orange-soft: #fffbeb;
 
-  --color-nexus-navy: #161b38;
-  --color-nexus-sapphire: #242c56;
-  --color-nexus-charcoal: #1e293b;
-  --color-nexus-slate: #334155;
+  --color-nexus-navy: #0a192f;
+  --color-nexus-sapphire: #132238;
+  --color-nexus-charcoal: #0f172a;
+  --color-nexus-slate: #1e293b;
 
-  --color-gold-metallic: #f5a623;
+  --color-gold-metallic: #f59e0b;
   --color-gold-bright: #fbbf24;
-  --color-gold-deep: #d98205;
-  --color-gold-soft: #fef8ec;
+  --color-gold-deep: #d97706;
+  --color-gold-soft: #fffbeb;
 
-  --color-emerald-deep: #059669;
-  --color-emerald-soft: #ecfdf5;
+  --color-emerald-deep: #16a34a;
+  --color-emerald-soft: #f0fdf4;
 
-  --color-ab-red: #f5a623;
-  --color-ab-red-dark: #d98205;
+  --color-ab-red: #f59e0b;
+  --color-ab-red-dark: #d97706;
   --color-ab-red-light: #fbbf24;
-  --color-ab-red-soft: #fef8ec;
+  --color-ab-red-soft: #fffbeb;
 
-  --color-ab-black: #0f142e;
-  --color-ab-charcoal: #161b38;
-  --color-ab-dark: #090c1f;
-  --color-ab-slate: #334155;
+  --color-ab-black: #060e1a;
+  --color-ab-charcoal: #0a192f;
+  --color-ab-dark: #040912;
+  --color-ab-slate: #1e293b;
 
-  --color-agc-navy: #161b38;
-  --color-agc-navy-dark: #0f142e;
-  --color-agc-navy-midnight: #090c1f;
-  --color-agc-navy-light: #242c56;
-  --color-agc-navy-soft: #f0f3fa;
+  --color-agc-navy: #0a192f;
+  --color-agc-navy-dark: #060e1a;
+  --color-agc-navy-midnight: #040912;
+  --color-agc-navy-light: #132238;
+  --color-agc-navy-soft: #f8fafc;
 
-  --color-agc-red: #f5a623;
-  --color-agc-red-dark: #d98205;
+  --color-agc-red: #f59e0b;
+  --color-agc-red-dark: #d97706;
   --color-agc-red-light: #fbbf24;
-  --color-agc-red-soft: #fef8ec;
+  --color-agc-red-soft: #fffbeb;
 
   --color-sand: #fafafc;
   --color-surface: #ffffff;

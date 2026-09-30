@@ -7,7 +7,7 @@ export function ChatWidget() {
   const [showCallMenu, setShowCallMenu] = useState(false);
 
   const whatsappUrl = `https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-    `Hello ${company.name}! I would like to consult about IELTS course preparation and Study Abroad admissions.`,
+    `Hello Abroad Blueprint! I would like to consult about study abroad admissions and IELTS courses.`,
   )}`;
 
   const messengerUrl = company.social.messenger;
@@ -27,7 +27,7 @@ export function ChatWidget() {
             {/* Action 1: Facebook Messenger */}
             <div className="group relative flex items-center">
               <span className="pointer-events-none absolute right-full mr-3 hidden rounded-xl bg-slate-900/90 px-3 py-1.5 text-xs font-bold text-white shadow-md backdrop-blur whitespace-nowrap opacity-0 transition-all group-hover:opacity-100 sm:block">
-                Facebook (@milestonebeanibazar)
+                Facebook (@AbroadBlueprint)
               </span>
               <motion.a
                 whileHover={{ scale: 1.08 }}
@@ -47,7 +47,7 @@ export function ChatWidget() {
             {/* Action 2: Direct Phone Call Hotlines */}
             <div className="group relative flex items-center">
               <span className="pointer-events-none absolute right-full mr-3 hidden rounded-xl bg-slate-900/90 px-3 py-1.5 text-xs font-bold text-white shadow-md backdrop-blur whitespace-nowrap opacity-0 transition-all group-hover:opacity-100 sm:block">
-                Campus Hotlines (Beanibazar)
+                Hotlines (Chittagong &amp; UK)
               </span>
               <motion.button
                 whileHover={{ scale: 1.08 }}
@@ -55,7 +55,7 @@ export function ChatWidget() {
                 type="button"
                 onClick={() => setShowCallMenu(!showCallMenu)}
                 aria-label="Direct Phone Hotlines"
-                className="flex h-11 w-11 sm:h-13 sm:w-13 items-center justify-center rounded-full bg-[#0b0f19] text-sky-400 shadow-lg border-2 border-white transition-colors hover:bg-slate-800 cursor-pointer font-bold"
+                className="flex h-11 w-11 sm:h-13 sm:w-13 items-center justify-center rounded-full bg-[#0B1528] text-amber-400 shadow-lg border-2 border-white transition-colors hover:bg-slate-800 cursor-pointer font-bold"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
@@ -72,20 +72,26 @@ export function ChatWidget() {
                     className="absolute right-full mr-3 bottom-0 w-64 sm:w-72 rounded-2xl border border-slate-200 bg-white p-3 shadow-2xl"
                   >
                     <p className="text-[0.68rem] font-bold uppercase tracking-wider text-slate-500 mb-2">
-                      {company.name} হটলাইন:
+                      {company.name} অফিস হটলাইন:
                     </p>
                     <div className="space-y-1.5">
                       <a
                         href={`tel:${company.phones[0].replace(/[^0-9]/g, "")}`}
-                        className="block rounded-xl border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-center text-xs font-bold text-slate-800 hover:border-sky-500 hover:text-sky-600 transition-colors"
+                        className="block rounded-xl border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-center text-xs font-bold text-slate-800 hover:border-blue-500 hover:text-blue-600 transition-colors"
                       >
-                        📞 {company.phones[0]} (Azir Market Main Campus)
+                        📞 {company.phones[0]} (চট্টগ্রাম হেড অফিস)
                       </a>
                       <a
                         href={`tel:${company.phones[1].replace(/[^0-9]/g, "")}`}
-                        className="block rounded-xl border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-center text-xs font-bold text-slate-800 hover:border-sky-500 hover:text-sky-600 transition-colors"
+                        className="block rounded-xl border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-center text-xs font-bold text-slate-800 hover:border-blue-500 hover:text-blue-600 transition-colors"
                       >
-                        📞 {company.phones[1]} (Somobay Market Annex Desk)
+                        📞 {company.phones[1]} (চট্টগ্রাম হেল্পডেস্ক)
+                      </a>
+                      <a
+                        href={`tel:${company.phones[4].replace(/[^0-9]/g, "")}`}
+                        className="block rounded-xl border border-blue-200 bg-blue-50/50 px-2.5 py-1.5 text-center text-xs font-bold text-blue-900 hover:border-blue-500 transition-colors"
+                      >
+                        🇬🇧 {company.phones[4]} (UK On-shore Office)
                       </a>
                     </div>
                   </motion.div>
@@ -126,7 +132,7 @@ export function ChatWidget() {
           setShowCallMenu(false);
         }}
         aria-label="Quick Communication Center"
-        className="group relative flex h-13 w-13 sm:h-15 sm:w-15 items-center justify-center rounded-full bg-gradient-to-tr from-sky-600 to-cyan-500 text-white shadow-2xl transition-all duration-300 hover:shadow-sky-500/40 cursor-pointer border-2 border-white ring-2 ring-sky-500/20"
+        className="group relative flex h-13 w-13 sm:h-15 sm:w-15 items-center justify-center rounded-full bg-gradient-to-tr from-blue-700 to-indigo-600 text-white shadow-2xl transition-all duration-300 hover:shadow-blue-500/40 cursor-pointer border-2 border-white ring-2 ring-blue-500/20"
       >
         <span className="relative flex h-full w-full items-center justify-center">
           {isOpen ? (
@@ -139,3 +145,4 @@ export function ChatWidget() {
     </div>
   );
 }
+

@@ -19,7 +19,7 @@ export function HonestyManifesto() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="pointer-events-none absolute -top-32 right-1/4 h-[500px] w-[500px] rounded-full bg-sky-500/10 blur-[150px]"
+        className="pointer-events-none absolute -top-32 right-1/4 h-[500px] w-[500px] rounded-full bg-blue-600/15 blur-[150px]"
       />
       <motion.div
         animate={{
@@ -32,7 +32,7 @@ export function HonestyManifesto() {
           ease: "easeInOut",
           delay: 2,
         }}
-        className="pointer-events-none absolute bottom-0 left-1/4 h-[400px] w-[400px] rounded-full bg-emerald-500/10 blur-[130px]"
+        className="pointer-events-none absolute bottom-0 left-1/4 h-[400px] w-[400px] rounded-full bg-amber-500/10 blur-[130px]"
       />
 
       <div className="section-shell relative z-10 px-4 sm:px-6">
@@ -42,10 +42,10 @@ export function HonestyManifesto() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 rounded-full bg-sky-500/15 border border-sky-400/30 px-4 py-1 text-xs font-bold text-sky-300 mb-3 backdrop-blur-md"
+            className="inline-flex items-center gap-2 rounded-full bg-blue-500/15 border border-blue-400/30 px-4 py-1 text-xs font-bold text-blue-300 mb-3 backdrop-blur-md"
           >
-            <IconSparkles className="w-3.5 h-3.5 text-sky-400" />
-            <span>The Milestone Standard of Excellence</span>
+            <IconSparkles className="w-3.5 h-3.5 text-blue-400" />
+            <span>The Abroad Blueprint Standard of Integrity</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 14 }}
@@ -54,7 +54,7 @@ export function HonestyManifesto() {
             transition={{ delay: 0.1 }}
             className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-white tracking-tight"
           >
-            Why Ambitious Students Trust <span className="text-sky-400">Milestone Beanibazar</span>
+            Why Ambitious Students Trust <span className="text-blue-400">Abroad Blueprint</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
@@ -63,7 +63,7 @@ export function HonestyManifesto() {
             transition={{ delay: 0.2 }}
             className="mt-3 text-xs sm:text-sm text-slate-300 font-medium max-w-xl mx-auto leading-relaxed"
           >
-            Built on transparency, certified Cambridge &amp; IDP-standard mentoring, and authentic representations of premier universities worldwide.
+            Built on British Council Certified ethics, 100% free processing with zero service charge, and dual offices in Chittagong and Birmingham, UK.
           </motion.p>
         </div>
 
@@ -77,7 +77,7 @@ export function HonestyManifesto() {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.08, duration: 0.5 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="group relative rounded-3xl bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-1.5 border border-white/10 shadow-lg hover:border-sky-400/50 hover:shadow-2xl transition-all"
+              className="group relative rounded-3xl bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-1.5 border border-white/10 shadow-lg hover:border-blue-400/50 hover:shadow-2xl transition-all"
             >
               <div className="rounded-[1.35rem] bg-[#0A1020] p-5 sm:p-7 h-full flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
@@ -85,15 +85,15 @@ export function HonestyManifesto() {
                     <span className="text-2xl sm:text-3xl p-2 rounded-2xl bg-white/[0.05] border border-white/10">
                       {p.icon || "✓"}
                     </span>
-                    <span className="font-display font-black text-xl sm:text-2xl text-sky-500/40 group-hover:text-sky-400 transition-colors">
+                    <span className="font-display font-black text-xl sm:text-2xl text-blue-500/40 group-hover:text-blue-400 transition-colors">
                       {p.id || `0${idx + 1}`}
                     </span>
                   </div>
 
-                  <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-sky-400 transition-colors">
+                  <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
                     {p.title}
                   </h3>
-                  <p className="font-bangla text-xs font-semibold text-emerald-400">
+                  <p className="font-bangla text-xs font-semibold text-amber-300">
                     {p.bengali}
                   </p>
                   <p className="text-xs text-slate-300 leading-relaxed font-medium">
@@ -101,9 +101,9 @@ export function HonestyManifesto() {
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-white/5 flex items-center gap-1.5 text-[11px] font-bold text-slate-400 group-hover:text-sky-400 transition-colors">
+                <div className="pt-3 border-t border-white/5 flex items-center gap-1.5 text-[11px] font-bold text-slate-400 group-hover:text-blue-400 transition-colors">
                   <IconCheck className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Verified Milestone Commitment</span>
+                  <span>Verified Blueprint Commitment</span>
                 </div>
               </div>
             </motion.div>
@@ -115,14 +115,14 @@ export function HonestyManifesto() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 sm:mt-16 rounded-3xl bg-gradient-to-r from-sky-600/15 via-teal-600/10 to-transparent p-6 sm:p-8 border border-sky-500/20 backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-6"
+          className="mt-12 sm:mt-16 rounded-3xl bg-gradient-to-r from-blue-600/15 via-indigo-600/10 to-transparent p-6 sm:p-8 border border-blue-500/20 backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-6"
         >
           <div className="space-y-1.5 text-center md:text-left">
             <h4 className="font-display text-lg sm:text-xl font-bold text-white">
-              Ready to Conquer the World with Milestone?
+              Ready to Start Here and Go Anywhere?
             </h4>
             <p className="text-xs sm:text-sm text-slate-300 font-medium">
-              Schedule a free profile assessment with our senior counselors at Azir Market, College Road, Beanibazar, Sylhet.
+              Schedule a free profile assessment with our British Council certified counselors at CJKS Shopping Complex, Kazir Dewri, Chittagong.
             </p>
           </div>
 
@@ -132,7 +132,7 @@ export function HonestyManifesto() {
               whileTap={{ scale: 0.97 }}
               type="button"
               onClick={open}
-              className="btn-primary text-xs py-3 px-6 font-bold rounded-full flex items-center justify-center gap-2 shadow-lg cursor-pointer bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white border-none"
+              className="btn-primary text-xs py-3 px-6 font-bold rounded-full flex items-center justify-center gap-2 shadow-lg cursor-pointer bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white border-none"
             >
               <span>Book Free Consultation</span>
               <IconArrowRight className="w-3.5 h-3.5" />
@@ -140,13 +140,13 @@ export function HonestyManifesto() {
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello Milestone Beanibazar! I want to book a free study abroad and IELTS counseling session.")}`}
+              href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello Abroad Blueprint! I want to book a free study abroad and IELTS counseling session.")}`}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-xs font-bold text-white hover:bg-white/10 hover:border-sky-400 transition-colors"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-xs font-bold text-white hover:bg-white/10 hover:border-blue-400 transition-colors"
             >
               <IconWhatsApp className="w-3.5 h-3.5 text-emerald-400" />
-              <span>WhatsApp Beanibazar Desk</span>
+              <span>WhatsApp Direct Desk</span>
             </motion.a>
           </div>
         </motion.div>
@@ -154,3 +154,4 @@ export function HonestyManifesto() {
     </section>
   );
 }
+

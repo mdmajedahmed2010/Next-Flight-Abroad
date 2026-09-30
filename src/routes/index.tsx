@@ -17,18 +17,18 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: `${company.name} | Study Abroad Consultancy & IELTS Language Academy | Beanibazar, Sylhet`,
+        title: `${company.name} | Study Abroad Consultancy & IELTS Language Academy`,
       },
       {
         name: "description",
         content:
-          `${company.name} — ${company.tagline}. Beanibazar's premier Study Abroad consultancy and IELTS Academy. IDP Partner, First Computer-Delivered (CD) Mock Lab, Spoken English, and UK, Canada, USA, Australia admissions. Campuses: Azir Market & Somobay Market, College Road, Beanibazar, Sylhet. Hotlines: 01781-545490, 01706-452949.`,
+          `${company.name} — ${company.tagline}. British Council Certified Agent. 100% Free Processing, Zero Service Charge (ভিসার আগে বা পরে কোনো সার্ভিস চার্জ নেই ❌). UK Fly with Dependent (MRes/PhD), Canada, USA, Australia admissions. Head Office: ${company.address.full}. UK Office: ${company.branches[1].address}. Hotlines: ${company.phones.join(", ")}.`,
       },
       { property: "og:title", content: `${company.name} — Study Abroad & IELTS Language Academy` },
       {
-        property: "og:description",
+        name: "og:description",
         content:
-          "Get Ready For The World. Premier IELTS Academic & General coaching, Beanibazar's only Computer-Delivered (CD) Mock Lab, and direct UK, Canada, USA & Australia admissions. Hotlines: 01781-545490, 01706-452949.",
+          "Start Here, Go Anywhere! British Council Certified Study Abroad Consultancy and Language Academy. Zero Service Charge. Head Office in Chittagong & Branch in Birmingham, UK.",
       },
     ],
   }),
@@ -42,9 +42,9 @@ function Home() {
   const faqCategories = [
     "All",
     "Study Abroad (UK, Canada, USA)",
-    "IELTS & CD Mock Lab",
-    "Spoken English & Fluency",
-    "Campuses & Admissions",
+    "Fly with Dependent (MRes/PhD)",
+    "IELTS & English Academy",
+    "Offices & Zero Fee Policy",
   ];
 
   const filteredFaqs =
@@ -62,83 +62,87 @@ function Home() {
               lowerQ.includes("canada") ||
               lowerA.includes("canada") ||
               lowerQ.includes("country") ||
-              lowerA.includes("university")
+              lowerA.includes("university") ||
+              lowerA.includes("scholarship")
             );
-          if (activeFaqCategory === "IELTS & CD Mock Lab")
+          if (activeFaqCategory === "Fly with Dependent (MRes/PhD)")
+            return (
+              lowerQ.includes("dependent") ||
+              lowerA.includes("dependent") ||
+              lowerQ.includes("spouse") ||
+              lowerA.includes("spouse") ||
+              lowerQ.includes("mres") ||
+              lowerA.includes("mres") ||
+              lowerQ.includes("phd") ||
+              lowerA.includes("phd") ||
+              lowerA.includes("child")
+            );
+          if (activeFaqCategory === "IELTS & English Academy")
             return (
               lowerQ.includes("ielts") ||
               lowerA.includes("ielts") ||
-              lowerQ.includes("mock") ||
-              lowerA.includes("mock") ||
-              lowerQ.includes("cd") ||
-              lowerA.includes("computer") ||
-              lowerQ.includes("band") ||
-              lowerA.includes("band")
-            );
-          if (activeFaqCategory === "Spoken English & Fluency")
-            return (
-              lowerQ.includes("spoken") ||
-              lowerA.includes("spoken") ||
               lowerQ.includes("english") ||
               lowerA.includes("english") ||
-              lowerQ.includes("junior") ||
-              lowerA.includes("junior") ||
+              lowerQ.includes("spoken") ||
+              lowerA.includes("spoken") ||
               lowerQ.includes("kids") ||
-              lowerA.includes("fluency")
+              lowerA.includes("kids")
             );
-          if (activeFaqCategory === "Campuses & Admissions")
+          if (activeFaqCategory === "Offices & Zero Fee Policy")
             return (
-              lowerQ.includes("campus") ||
-              lowerA.includes("campus") ||
+              lowerQ.includes("charge") ||
+              lowerA.includes("charge") ||
+              lowerQ.includes("fee") ||
+              lowerA.includes("fee") ||
               lowerQ.includes("office") ||
               lowerA.includes("office") ||
-              lowerQ.includes("beanibazar") ||
-              lowerA.includes("azir") ||
-              lowerQ.includes("contact") ||
-              lowerA.includes("road")
+              lowerQ.includes("chittagong") ||
+              lowerA.includes("chittagong") ||
+              lowerQ.includes("birmingham") ||
+              lowerA.includes("uk")
             );
           return true;
         });
 
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden bg-[#070B16] text-slate-100 selection:bg-sky-500 selection:text-white">
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-[#070B16] text-slate-100 selection:bg-blue-500 selection:text-white">
       {/* 1. Grand Opening: Hero Showcase with Double-Bezel Concierge & Celebration Banner */}
       <HeroShowcase />
 
-      {/* 2. The Proof Stage: Real Metrics, CD Lab & IDP Partnership */}
+      {/* 2. The Proof Stage: Real Metrics, British Council Certification & Verified Visas */}
       <ProofAndCredentials />
 
-      {/* 3. Asymmetrical Flagship Destination Bento Grid (UK, Canada, USA, Australia, Europe) */}
+      {/* 3. Asymmetrical Flagship Destination Bento Grid (UK Dependent, Canada, USA, Australia, Europe) */}
       <DestinationBento />
 
-      {/* 4. The Facebook Video Reels Cinema Theater Mode (3 Verified Facebook Embeds) */}
+      {/* 4. The Facebook Video Reels Cinema Theater Mode (Official Video Embeds) */}
       <VideoReelsCinema />
 
-      {/* 5. Milestone Language & IELTS Academy Studio */}
+      {/* 5. Abroad Blueprint Language & IELTS Academy Studio */}
       <AcademyStudio />
 
-      {/* 6. Strategic Presence: Beanibazar Campuses & CD IELTS Lab */}
+      {/* 6. Strategic Presence: Chittagong Head Office & Birmingham UK Branch */}
       <OfficesHub />
 
-      {/* 7. The Milestone Standard & 6 Core Commitments */}
+      {/* 7. The Abroad Blueprint Standard & Core Commitments */}
       <HonestyManifesto />
 
-      {/* 8. Voice of Real Students: Testimonials & Band 7+ Achievers */}
+      {/* 8. Voice of Real Students: Verified Success Stories */}
       <Testimonials />
 
       {/* 9. Minimalist Categorized FAQ Accordion with Animated Pill */}
       <section className="bg-[#0A1020] py-20 sm:py-28 border-t border-white/10 text-white">
         <div className="section-shell">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 rounded-full bg-sky-500/15 border border-sky-400/30 px-3.5 py-1 text-xs font-bold text-sky-400 mb-2.5">
-              <IconSparkles className="w-3.5 h-3.5 text-sky-400" />
+            <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/15 border border-blue-400/30 px-3.5 py-1 text-xs font-bold text-blue-400 mb-2.5">
+              <IconSparkles className="w-3.5 h-3.5 text-blue-400" />
               <span>Transparent Answers</span>
             </div>
             <h2 className="font-display text-3xl sm:text-5xl font-black text-white tracking-tight">
-              Frequently Asked <span className="text-sky-400">Questions</span>
+              Frequently Asked <span className="text-blue-400">Questions</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-300 mt-2 font-medium">
-              Direct, transparent answers regarding IELTS coaching, Computer-Delivered Mock Tests, Study Abroad admissions, and our Beanibazar campuses.
+              Direct, transparent answers regarding IELTS coaching, UK MRes dependent visas, Study Abroad admissions, and our Chittagong &amp; UK offices.
             </p>
           </div>
 
@@ -162,7 +166,7 @@ function Home() {
                   {isActive && (
                     <motion.div
                       layoutId="activeFaqPill"
-                      className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-600 to-cyan-500 shadow-md"
+                      className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 shadow-md"
                       transition={{ type: "spring", stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -174,7 +178,7 @@ function Home() {
 
           {/* Modern Clean Accordion List */}
           <div className="max-w-3xl mx-auto space-y-3">
-            {filteredFaqs.slice(0, 7).map((faq, idx) => {
+            {filteredFaqs.slice(0, 8).map((faq, idx) => {
               const isOpen = openFaqIndex === idx;
               const qText = faq.q || faq.question;
               const aText = faq.a || faq.answer;
@@ -184,7 +188,7 @@ function Home() {
                   className={cn(
                     "rounded-2xl border transition-all duration-300 overflow-hidden",
                     isOpen
-                      ? "bg-white/[0.06] border-sky-400 shadow-lg ring-1 ring-sky-400/30"
+                      ? "bg-white/[0.06] border-blue-400 shadow-lg ring-1 ring-blue-400/30"
                       : "bg-white/[0.02] border-white/10 hover:border-white/20 hover:bg-white/[0.04]",
                   )}
                 >
@@ -200,7 +204,7 @@ function Home() {
                       className={cn(
                         "flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold transition-transform duration-300",
                         isOpen
-                          ? "bg-sky-500 text-white rotate-180"
+                          ? "bg-blue-500 text-white rotate-180"
                           : "bg-white/10 text-slate-400",
                       )}
                     >

@@ -20,10 +20,10 @@ export function DestinationBento() {
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 rounded-full bg-cyan-100/80 border border-cyan-200 px-3.5 py-1 text-xs font-bold text-cyan-900"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-100/80 border border-blue-200 px-3.5 py-1 text-xs font-bold text-blue-900"
             >
-              <IconSparkles className="w-3.5 h-3.5 text-cyan-600" />
-              <span>Global Higher Education Advisory</span>
+              <IconSparkles className="w-3.5 h-3.5 text-blue-600" />
+              <span>Global Higher Education Advisory · 100% Free Processing</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 14 }}
@@ -32,7 +32,7 @@ export function DestinationBento() {
               transition={{ delay: 0.1 }}
               className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight"
             >
-              Featured Global Study <span className="text-[#0098da]">Destinations</span>
+              Featured Global Study <span className="text-blue-600">Destinations</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 14 }}
@@ -41,7 +41,7 @@ export function DestinationBento() {
               transition={{ delay: 0.2 }}
               className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed"
             >
-              From Beanibazar to the world's leading lecture halls. Milestone guides your admissions into the UK, Canada, USA, Australia, and Europe with zero false promises.
+              Start here, go anywhere! Abroad Blueprint provides British Council Certified guidance for the UK, Canada, Australia, USA, and Europe with zero service charge and full spouse dependent support.
             </motion.p>
           </div>
 
@@ -53,7 +53,7 @@ export function DestinationBento() {
           >
             <Link
               to="/destinations"
-              className="group inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-2.5 text-xs font-bold text-slate-800 shadow-sm hover:border-[#0098da] hover:text-[#0098da] transition-all active:scale-95"
+              className="group inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-2.5 text-xs font-bold text-slate-800 shadow-sm hover:border-blue-600 hover:text-blue-600 transition-all active:scale-95"
             >
               <span>Explore All Destinations</span>
               <IconArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -69,9 +69,9 @@ export function DestinationBento() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="lg:col-span-7 group relative rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-slate-900 via-[#0F172A] to-slate-950 p-1.5 sm:p-2 border border-slate-800 shadow-xl text-white flex flex-col justify-between hover:border-cyan-500/50 hover:shadow-2xl transition-all"
+            className="lg:col-span-7 group relative rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-slate-900 via-[#0B1528] to-slate-950 p-1.5 sm:p-2 border border-slate-800 shadow-xl text-white flex flex-col justify-between hover:border-blue-500/50 hover:shadow-2xl transition-all"
           >
-            <div className="rounded-[1.75rem] sm:rounded-[2rem] bg-gradient-to-br from-[#161F33] to-[#0D1322] p-5 sm:p-8 lg:p-9 space-y-5">
+            <div className="rounded-[1.75rem] sm:rounded-[2rem] bg-gradient-to-br from-[#121E36] to-[#0A101D] p-5 sm:p-8 lg:p-9 space-y-5">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
                   <span className="text-3xl sm:text-4xl">🇬🇧</span>
@@ -80,41 +80,41 @@ export function DestinationBento() {
                       <h3 className="font-display text-xl sm:text-3xl font-black text-white">
                         United Kingdom
                       </h3>
-                      <span className="rounded-full bg-cyan-600 text-white px-2.5 py-0.5 text-[9px] sm:text-[10px] font-black uppercase tracking-wider shadow-sm">
-                        Top Choice in Sylhet
+                      <span className="rounded-full bg-amber-400 text-slate-950 px-2.5 py-0.5 text-[9px] sm:text-[10px] font-black uppercase tracking-wider shadow-sm">
+                        Fly with Dependent 👨‍👩‍👧‍👦
                       </span>
                     </div>
-                    <span className="text-xs text-cyan-300 font-semibold block mt-0.5">
-                      1-Year Master's · 2-Year Graduate Route PSW · Fast CAS
+                    <span className="text-xs text-blue-300 font-semibold block mt-0.5">
+                      MRes · DBA · PhD · Direct Undergrad &amp; Master's · £3,000–£5,000 Scholarships
                     </span>
                   </div>
                 </div>
 
-                <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-slate-300 border border-white/10">
-                  Visa Rate: 98%+
+                <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-bold text-amber-300 border border-white/10">
+                  0 BDT Service Fee ❌
                 </span>
               </div>
 
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-medium">
-                The United Kingdom is the premier destination for Beanibazar and Sylhet students. Benefit from fast-track offer letters, generous merit scholarships (£1,500–£5,000), 20 hours/week part-time work rights, and the prestigious 2-year Graduate Route Post-Study Work (PSW) visa.
+                Our flagship destination. Apply to prestigious UK universities including Anglia Ruskin (Cambridge), Greenwich, Derby, Teesside, and UEL. Master by Research (MRes) and PhD candidates can bring their spouse and children with full work rights.
               </p>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
                 <div className="rounded-xl bg-white/5 p-3 border border-white/10">
                   <span className="text-[10px] text-slate-400 block">Avg. Tuition:</span>
-                  <strong className="text-cyan-300 font-bold text-xs">£11,000–£17,000</strong>
+                  <strong className="text-blue-300 font-bold text-xs">£11,000–£16,000</strong>
                 </div>
                 <div className="rounded-xl bg-white/5 p-3 border border-white/10">
-                  <span className="text-[10px] text-slate-400 block">IELTS Req:</span>
-                  <strong className="text-amber-300 font-bold text-xs">Band 6.0 – 6.5</strong>
+                  <span className="text-[10px] text-slate-400 block">Scholarships:</span>
+                  <strong className="text-amber-300 font-bold text-xs">Up to £5,000 / 50%</strong>
                 </div>
                 <div className="rounded-xl bg-white/5 p-3 border border-white/10">
                   <span className="text-[10px] text-slate-400 block">Post-Study:</span>
-                  <strong className="text-slate-100 font-bold text-xs">2 Years PSW</strong>
+                  <strong className="text-slate-100 font-bold text-xs">2–3 Yrs PSW</strong>
                 </div>
                 <div className="rounded-xl bg-white/5 p-3 border border-white/10">
-                  <span className="text-[10px] text-slate-400 block">Major Intakes:</span>
-                  <strong className="text-emerald-300 font-bold text-xs">Sept / Jan</strong>
+                  <span className="text-[10px] text-slate-400 block">Next Intakes:</span>
+                  <strong className="text-emerald-300 font-bold text-xs">Sept 2026 / Jan 2027</strong>
                 </div>
               </div>
 
@@ -122,13 +122,13 @@ export function DestinationBento() {
                 <button
                   type="button"
                   onClick={open}
-                  className="btn-primary text-xs py-3 px-6 font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white border-none cursor-pointer"
+                  className="btn-primary text-xs py-3 px-6 font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white border-none cursor-pointer"
                 >
                   <span>Apply for UK University Offer</span>
                   <IconArrowRight className="w-3.5 h-3.5" />
                 </button>
                 <a
-                  href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello Milestone Beanibazar! I want to apply for UK university admissions and IELTS prep.")}`}
+                  href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello Abroad Blueprint! I want to apply for UK university admissions with scholarship and dependent visa guidance.")}`}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 border border-white/20 px-5 py-3 text-xs font-bold text-white hover:bg-white/20 transition-colors"
@@ -147,7 +147,7 @@ export function DestinationBento() {
             viewport={{ once: true }}
             transition={{ delay: 0.15 }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="lg:col-span-5 group relative rounded-[2rem] sm:rounded-[2.5rem] bg-white p-1.5 sm:p-2 border border-slate-200 shadow-md flex flex-col justify-between hover:border-cyan-400 hover:shadow-xl transition-all"
+            className="lg:col-span-5 group relative rounded-[2rem] sm:rounded-[2.5rem] bg-white p-1.5 sm:p-2 border border-slate-200 shadow-md flex flex-col justify-between hover:border-blue-400 hover:shadow-xl transition-all"
           >
             <div className="rounded-[1.75rem] sm:rounded-[2rem] bg-gradient-to-br from-slate-50 to-white p-5 sm:p-8 space-y-4">
               <div className="flex items-center justify-between">
@@ -157,8 +157,8 @@ export function DestinationBento() {
                     <h3 className="font-display text-xl sm:text-2xl font-black text-slate-900">
                       Canada
                     </h3>
-                    <span className="text-xs text-[#0098da] font-bold block">
-                      DLI Institutions · Up to 3-Year PGWP · PR Pathways
+                    <span className="text-xs text-blue-600 font-bold block">
+                      Designated Learning Institutions · Up to 3-Year PGWP
                     </span>
                   </div>
                 </div>
@@ -168,25 +168,25 @@ export function DestinationBento() {
               </div>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
-                Pursue world-class applied diplomas, bachelor's degrees, and post-graduate certificates across Ontario, British Columbia, and Alberta. Full support for SDS visa filing, GIC creation, and Provincial Attestation Letters (PAL).
+                Pursue world-class applied diplomas, bachelor's degrees, and master's across Ontario, British Columbia, and Alberta. Complete assistance with PAL, GIC, SOP, and high-approval study permits.
               </p>
 
               <div className="space-y-2 rounded-2xl bg-slate-100/80 p-3.5 text-xs text-slate-700">
                 <div className="flex justify-between">
                   <span className="text-slate-500 font-medium">Tuition Range:</span>
-                  <strong>CAD $14,000 – $22,000 / year</strong>
+                  <strong>CAD $15,000 – $24,000 / year</strong>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-500 font-medium">IELTS Standard:</span>
-                  <strong className="text-emerald-700">Band 6.0 Overall (SDS Stream)</strong>
+                  <span className="text-slate-500 font-medium">Language Standard:</span>
+                  <strong className="text-emerald-700">IELTS 6.0–6.5 / PTE 60+</strong>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-500 font-medium">Work Rights:</span>
                   <strong className="text-slate-900">20–24 hrs/wk + Up to 3-Yr PGWP</strong>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-500 font-medium">Immigration:</span>
-                  <strong className="text-cyan-700">Express Entry & PNP Bonus Points</strong>
+                  <span className="text-slate-500 font-medium">Service Fee:</span>
+                  <strong className="text-emerald-700">100% Free Processing ❌</strong>
                 </div>
               </div>
 
@@ -194,16 +194,16 @@ export function DestinationBento() {
                 <Link
                   to="/study-in-{$country}"
                   params={{ country: "canada" }}
-                  className="btn-primary w-full text-center text-xs py-3 font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white border-none"
+                  className="btn-primary w-full text-center text-xs py-3 font-bold rounded-xl flex items-center justify-center gap-2 shadow-sm bg-gradient-to-r from-blue-700 to-indigo-700 hover:from-blue-600 hover:to-indigo-600 text-white border-none"
                 >
                   <span>Explore Canada Universities</span>
                   <IconArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <a
-                  href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello Milestone Beanibazar! I want to inquire about studying in Canada.")}`}
+                  href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello Abroad Blueprint! I want to inquire about studying in Canada.")}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full rounded-xl border border-slate-300 bg-white py-3 px-4 text-center text-xs font-bold text-slate-800 hover:border-cyan-500 transition-colors flex items-center justify-center gap-1.5"
+                  className="w-full rounded-xl border border-slate-300 bg-white py-3 px-4 text-center text-xs font-bold text-slate-800 hover:border-blue-500 transition-colors flex items-center justify-center gap-1.5"
                 >
                   <IconWhatsApp className="w-3.5 h-3.5 text-emerald-600" />
                   <span>WhatsApp Canada</span>
@@ -212,54 +212,14 @@ export function DestinationBento() {
             </div>
           </motion.div>
 
-          {/* Bento Card 3: USA (4 Columns) */}
+          {/* Bento Card 3: Australia (4 Columns) */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="lg:col-span-4 rounded-[2rem] bg-white p-5 sm:p-7 border border-slate-200 shadow-sm hover:border-cyan-400 hover:shadow-xl transition-all flex flex-col justify-between"
-          >
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="text-3xl">🇺🇸</span>
-                <span className="rounded-full bg-blue-50 text-blue-700 border border-blue-200 px-2.5 py-0.5 text-[10px] font-bold">
-                  3-Yr STEM OPT
-                </span>
-              </div>
-              <h3 className="font-display text-lg sm:text-xl font-bold text-slate-900">
-                United States (USA)
-              </h3>
-              <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                High scholarship potential, top global research faculty, and 36-month STEM OPT work authorization. Milestone conducts comprehensive F-1 visa interview simulations.
-              </p>
-              <div className="rounded-xl bg-slate-50 p-3 text-xs space-y-1 text-slate-700 border border-slate-100">
-                <p>• <strong>Scholarships:</strong> Up to $10,000 – $20,000/yr</p>
-                <p>• <strong>Work Rights:</strong> 12–36 Months OPT</p>
-                <p>• <strong>Intakes:</strong> Spring & Fall</p>
-              </div>
-            </div>
-            <div className="pt-4 border-t border-slate-100 mt-4">
-              <Link
-                to="/study-in-{$country}"
-                params={{ country: "usa" }}
-                className="text-xs font-bold text-[#0098da] hover:text-[#0284c7] flex items-center justify-between"
-              >
-                <span>View USA Pathways</span>
-                <span>→</span>
-              </Link>
-            </div>
-          </motion.div>
-
-          {/* Bento Card 4: Australia (4 Columns) */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="lg:col-span-4 rounded-[2rem] bg-white p-5 sm:p-7 border border-slate-200 shadow-sm hover:border-cyan-400 hover:shadow-xl transition-all flex flex-col justify-between"
+            className="lg:col-span-4 rounded-[2rem] bg-white p-5 sm:p-7 border border-slate-200 shadow-sm hover:border-blue-400 hover:shadow-xl transition-all flex flex-col justify-between"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">
@@ -272,7 +232,7 @@ export function DestinationBento() {
                 Australia
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                World Top 100 institutions, 48 hours/fortnight student work rights, and up to 4 years post-study work in regional study centers like Adelaide and Perth.
+                World Top 100 institutions, 48 hours/fortnight student work rights, and up to 4 years post-study work in regional study centers like Adelaide, Brisbane, and Perth.
               </p>
               <div className="rounded-xl bg-slate-50 p-3 text-xs space-y-1 text-slate-700 border border-slate-100">
                 <p>• <strong>Min Wage:</strong> AUD $24.10 / hr (World High)</p>
@@ -284,7 +244,7 @@ export function DestinationBento() {
               <Link
                 to="/study-in-{$country}"
                 params={{ country: "australia" }}
-                className="text-xs font-bold text-[#0098da] hover:text-[#0284c7] flex items-center justify-between"
+                className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center justify-between"
               >
                 <span>View Australia Universities</span>
                 <span>→</span>
@@ -292,39 +252,79 @@ export function DestinationBento() {
             </div>
           </motion.div>
 
-          {/* Bento Card 5: Europe / Cyprus / Malta (4 Columns) */}
+          {/* Bento Card 4: USA (4 Columns) */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
+            className="lg:col-span-4 rounded-[2rem] bg-white p-5 sm:p-7 border border-slate-200 shadow-sm hover:border-blue-400 hover:shadow-xl transition-all flex flex-col justify-between"
+          >
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-3xl">🇺🇸</span>
+                <span className="rounded-full bg-blue-50 text-blue-700 border border-blue-200 px-2.5 py-0.5 text-[10px] font-bold">
+                  3-Yr STEM OPT
+                </span>
+              </div>
+              <h3 className="font-display text-lg sm:text-xl font-bold text-slate-900">
+                United States (USA)
+              </h3>
+              <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                High scholarship potential, world-class research facilities, and 36-month STEM OPT work authorization. Abroad Blueprint conducts comprehensive F-1 visa interview prep.
+              </p>
+              <div className="rounded-xl bg-slate-50 p-3 text-xs space-y-1 text-slate-700 border border-slate-100">
+                <p>• <strong>Scholarships:</strong> Up to $10,000 – $25,000/yr</p>
+                <p>• <strong>Work Rights:</strong> 12–36 Months OPT</p>
+                <p>• <strong>Intakes:</strong> Spring &amp; Fall</p>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-slate-100 mt-4">
+              <Link
+                to="/study-in-{$country}"
+                params={{ country: "usa" }}
+                className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center justify-between"
+              >
+                <span>View USA Pathways</span>
+                <span>→</span>
+              </Link>
+            </div>
+          </motion.div>
+
+          {/* Bento Card 5: Europe / Germany / Malta / Cyprus (4 Columns) */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="lg:col-span-4 rounded-[2rem] bg-white p-5 sm:p-7 border border-slate-200 shadow-sm hover:border-cyan-400 hover:shadow-xl transition-all flex flex-col justify-between"
+            className="lg:col-span-4 rounded-[2rem] bg-white p-5 sm:p-7 border border-slate-200 shadow-sm hover:border-blue-400 hover:shadow-xl transition-all flex flex-col justify-between"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-2xl sm:text-3xl">🇪🇺 🇨🇾 🇲🇹</span>
+                <span className="text-2xl sm:text-3xl">🇩🇪 🇪🇺 🇲🇹</span>
                 <span className="rounded-full bg-purple-50 text-purple-700 border border-purple-200 px-2.5 py-0.5 text-[10px] font-bold">
-                  Affordable Tuition
+                  Low / No Tuition
                 </span>
               </div>
               <h3 className="font-display text-lg sm:text-xl font-bold text-slate-900">
-                Europe (Cyprus & Malta)
+                Europe (Germany, Malta, Cyprus)
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                Budget-friendly European higher education with low tuition costs (€3,500–€7,000/year), high visa issuance, and pathways to the broader European Schengen zone.
+                Public universities in Germany with €0 tuition, or affordable English-medium programs across Malta, Cyprus, and Hungary with direct pathways across the Schengen zone.
               </p>
               <div className="rounded-xl bg-slate-50 p-3 text-xs space-y-1 text-slate-700 border border-slate-100">
-                <p>• <strong>Tuition:</strong> €3,500 – €7,000 / year</p>
-                <p>• <strong>Visa Rate:</strong> Very high for genuine students</p>
-                <p>• <strong>Intakes:</strong> Feb, June & October</p>
+                <p>• <strong>Tuition:</strong> €0 (Germany Public) or €3,500+</p>
+                <p>• <strong>Schengen:</strong> Travel across 29 nations</p>
+                <p>• <strong>Intakes:</strong> Summer &amp; Winter</p>
               </div>
             </div>
             <div className="pt-4 border-t border-slate-100 mt-4">
               <Link
                 to="/study-in-{$country}"
                 params={{ country: "europe" }}
-                className="text-xs font-bold text-[#0098da] hover:text-[#0284c7] flex items-center justify-between"
+                className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center justify-between"
               >
                 <span>View Europe Details</span>
                 <span>→</span>
@@ -336,3 +336,4 @@ export function DestinationBento() {
     </section>
   );
 }
+

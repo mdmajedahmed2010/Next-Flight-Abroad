@@ -189,9 +189,9 @@ export const globalPartners = [
     tag: "Official Prep",
   },
   {
-    name: "Milestone CD IELTS Mock Lab",
-    type: "30+ High-Spec Workstations",
-    tag: "Beanibazar's 1st Lab",
+    name: "British Council Certified Agency",
+    type: "Accredited Global Education Advisor",
+    tag: "Certified Agent",
   },
 ];
 
@@ -461,10 +461,10 @@ export function UniversityMarquee() {
           <span>GLOBAL INSTITUTIONS</span>
         </div>
         <h2 className="font-display text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
-          Top Study & Career <span className="text-sky-600">Destinations & Partners</span>
+          Top Study &amp; Career <span className="text-blue-600">Destinations &amp; Partners</span>
         </h2>
         <p className="text-xs sm:text-sm text-slate-600 font-medium mt-2 leading-relaxed">
-          Comprehensive university admissions and certified IELTS coaching for the United Kingdom, Canada, Australia, the USA, and Europe — powered by Beanibazar&apos;s first Computer-Delivered IELTS Lab and official IDP registration partnership.
+          Comprehensive university admissions, Fly with Dependent programs, and British Council certified IELTS coaching for the United Kingdom, Canada, Australia, the USA, and Europe with 100% free processing and zero service charge.
         </p>
       </div>
 
@@ -482,9 +482,9 @@ export function UniversityMarquee() {
               key={`${partner.name}-${i}`}
               className="flex items-center gap-3 rounded-2xl border border-slate-200/90 bg-slate-50/80 px-5 py-3 shadow-xs hover:shadow-md hover:bg-white transition-all whitespace-nowrap"
             >
-              <span className="flex h-2 w-2 rounded-full bg-sky-600" />
+              <span className="flex h-2 w-2 rounded-full bg-blue-600" />
               <span className="text-xs sm:text-sm font-bold text-slate-900">{partner.name}</span>
-              <span className="rounded-full bg-sky-50 px-2.5 py-0.5 text-[0.68rem] font-bold text-sky-700 border border-sky-200">
+              <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-[0.68rem] font-bold text-blue-700 border border-blue-200">
                 {partner.tag}
               </span>
             </div>
@@ -501,8 +501,8 @@ export function BulletList({ items }: { items?: readonly string[] }) {
     <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600">
       {items.map((item, i) => (
         <li key={i} className="flex items-start gap-2.5">
-          <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-sky-50 text-sky-600 text-[0.65rem] font-bold border border-sky-200">
-            <IconCheck className="w-3 text-sky-600" />
+          <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 text-[0.65rem] font-bold border border-blue-200">
+            <IconCheck className="w-3 text-blue-600" />
           </span>
           <span className="leading-relaxed font-medium">{item}</span>
         </li>
@@ -515,9 +515,9 @@ export function CtaBand() {
   const { open } = useRegisterModal();
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-[#0B1528] via-[#0F1E36] to-[#0B1528] text-white py-16 sm:py-24 border-t border-sky-950">
-      <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-sky-500/15 blur-[120px]" />
-      <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-emerald-500/15 blur-[120px]" />
+    <section className="relative overflow-hidden bg-gradient-to-r from-[#0B1528] via-[#0F1E36] to-[#0B1528] text-white py-16 sm:py-24 border-t border-slate-800">
+      <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-blue-500/15 blur-[120px]" />
+      <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-amber-500/10 blur-[120px]" />
 
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -525,17 +525,17 @@ export function CtaBand() {
         viewport={{ once: true }}
         className="section-shell relative z-10 text-center max-w-3xl mx-auto space-y-6"
       >
-        <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/40 bg-sky-500/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-sky-300">
-          <IconGlobe className="w-3.5 h-3.5 text-sky-400" />
+        <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/40 bg-blue-500/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-300">
+          <IconGlobe className="w-3.5 h-3.5 text-blue-400" />
           <span>{company.name} ({company.taglineBangla}) · {company.tagline}</span>
         </div>
 
         <h2 className="font-display text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
-          Study Abroad · IELTS Academy · <span className="text-sky-400">Get Ready For The World</span>
+          Study Abroad · IELTS Academy · <span className="text-blue-400">Start Here, Go Anywhere!</span>
         </h2>
 
         <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed font-medium">
-          Book your free advisory session with {company.name}. 100% genuine guidance for Study Abroad (UK, Canada, USA, Australia, Europe), IELTS Academic &amp; General, and Beanibazar&apos;s first Computer-Delivered Mock Lab. Free profile evaluation at Azir Market &amp; Somobay Market, Beanibazar.
+          Book your free advisory session with {company.name}. 100% genuine guidance for Study Abroad (UK, Canada, USA, Australia, Europe), Fly with Dependent (MRes &amp; PhD), and IELTS Academic &amp; General. Free profile evaluation at 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong.
         </p>
 
         <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 pt-2">
@@ -544,7 +544,7 @@ export function CtaBand() {
             whileTap={{ scale: 0.97 }}
             type="button"
             onClick={open}
-            className="btn-primary w-full xs:w-auto text-xs sm:text-sm py-3.5 px-8 shadow-xl cursor-pointer font-bold flex items-center justify-center gap-2 bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white border-none"
+            className="btn-primary w-full xs:w-auto text-xs sm:text-sm py-3.5 px-8 shadow-xl cursor-pointer font-bold flex items-center justify-center gap-2 bg-gradient-to-r from-blue-700 to-indigo-600 hover:from-blue-600 hover:to-indigo-500 text-white border-none"
           >
             <span>Book Free Profile Assessment</span>
             <IconArrowRight className="w-4 h-4" />
@@ -553,7 +553,7 @@ export function CtaBand() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.97 }}
             href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-              `Hello ${company.name}! I would like to book a free consultation for Study Abroad and IELTS courses in Beanibazar.`,
+              `Hello ${company.name}! I would like to book a free consultation for Study Abroad and IELTS courses.`,
             )}`}
             target="_blank"
             rel="noreferrer"

@@ -5,14 +5,14 @@ import { company } from "@/lib/site-data";
 export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
     meta: [
-      { title: `Privacy Policy | ${company.name} — Beanibazar, Sylhet` },
+      { title: `Privacy Policy | ${company.name}` },
       {
         name: "description",
         content: `How ${company.name} (${company.taglineBangla}) collects, protects, and handles student and applicant personal data for global university admissions, IELTS training, and visa counseling.`,
       },
       { property: "og:title", content: `Privacy Policy | ${company.name}` },
       {
-        property: "og:description",
+        name: "og:description",
         content: "Our commitment to protecting your personal information and student records.",
       },
     ],
@@ -23,23 +23,23 @@ export const Route = createFileRoute("/privacy-policy")({
 const sections = [
   {
     title: "1. Information We Collect",
-    body: `When you register with ${company.name} for IELTS training, Computer-Delivered Mock Tests, or study abroad university admissions (UK, Canada, USA, Australia, Europe), we collect relevant personal details including your name, phone/WhatsApp number, email address, academic mark sheets, and destination preferences. We also collect minimal anonymous web analytics to ensure website security and optimal performance.`,
+    body: `When you register with ${company.name} for IELTS training, English language courses, or study abroad university admissions (UK, Canada, USA, Australia, Europe), we collect relevant personal details including your name, phone/WhatsApp number, email address, academic transcripts, certificates, passport details, and destination preferences. We also collect minimal anonymous web analytics to ensure website security and optimal performance.`,
   },
   {
     title: "2. How We Use Your Information",
-    body: `Your information is used strictly to provide profile evaluations, course enrollments, IELTS preparation materials, university admissions, and visa documentation. All counseling is conducted transparently from our campuses at ${company.address.full} and Somobay Market, Beanibazar, Sylhet.`,
+    body: `Your information is used strictly to provide profile evaluations, course enrollments, university admissions, scholarship applications, and visa documentation. All counseling is conducted transparently from our offices at ${company.address.full} and our UK Branch in Birmingham.`,
   },
   {
     title: "3. Information Sharing & Third Parties",
-    body: "We share your documents solely with designated partner universities, IDP Education testing bodies, and official sovereign immigration authorities for visa processing upon your explicit consent. We NEVER sell, rent, or trade your personal information with third-party marketers or commercial brokers.",
+    body: "We share your documents solely with designated partner universities, British Council / IDP testing authorities, and official sovereign immigration authorities (e.g., UK Visas and Immigration) for university admission and visa processing upon your explicit consent. We NEVER sell, rent, or trade your personal information with third-party marketers or commercial brokers.",
   },
   {
     title: "4. Data Storage & Confidentiality",
-    body: `Student and applicant records are stored securely in protected digital repositories accessible only to authorized ${company.name} senior instructors and counselors. Physical documents and electronic records are maintained with strict confidentiality and integrity.`,
+    body: `Student and applicant records are stored securely in protected digital repositories accessible only to authorized ${company.name} certified counselors. Physical documents and electronic records are maintained with strict confidentiality and integrity.`,
   },
   {
     title: "5. Your Privacy Rights",
-    body: `You may request access to, correction of, or deletion of your records at any time by emailing ${company.email} or contacting our hotlines at ${company.phones[0]} / ${company.phones[1]}.`,
+    body: `You may request access to, correction of, or deletion of your records at any time by emailing ${company.email} or contacting our hotlines at ${company.phones.join(" / ")}.`,
   },
 ];
 

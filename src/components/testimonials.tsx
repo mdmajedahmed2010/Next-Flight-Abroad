@@ -24,7 +24,7 @@ export function Testimonials() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="pointer-events-none absolute top-1/2 left-0 -translate-y-1/2 h-[350px] w-[350px] rounded-full bg-orange-600/10 blur-[140px]"
+        className="pointer-events-none absolute top-1/2 left-0 -translate-y-1/2 h-[350px] w-[350px] rounded-full bg-blue-600/10 blur-[140px]"
       />
       <motion.div
         animate={{
@@ -37,7 +37,7 @@ export function Testimonials() {
           ease: "easeInOut",
           delay: 1.5,
         }}
-        className="pointer-events-none absolute top-1/2 right-0 -translate-y-1/2 h-[350px] w-[350px] rounded-full bg-amber-600/10 blur-[140px]"
+        className="pointer-events-none absolute top-1/2 right-0 -translate-y-1/2 h-[350px] w-[350px] rounded-full bg-amber-500/10 blur-[140px]"
       />
 
       <div className="section-shell relative z-10 px-4 sm:px-6">
@@ -48,9 +48,9 @@ export function Testimonials() {
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] border border-white/15 px-3.5 py-1 text-xs font-bold text-orange-400 backdrop-blur-md"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-500/15 border border-blue-400/30 px-3.5 py-1 text-xs font-bold text-blue-300 backdrop-blur-md"
             >
-              <IconSparkles className="w-3.5 h-3.5 text-orange-400" />
+              <IconSparkles className="w-3.5 h-3.5 text-amber-400" />
               <span>Verified Success Stories</span>
             </motion.div>
             <motion.h2
@@ -60,7 +60,7 @@ export function Testimonials() {
               transition={{ delay: 0.1 }}
               className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight"
             >
-              Real Students. <span className="text-orange-400">Honest Results.</span>
+              Real Students. <span className="text-amber-400">Verified Visas.</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 14 }}
@@ -81,7 +81,7 @@ export function Testimonials() {
               aria-label="Previous Testimonials"
               onClick={prev}
               disabled={currentIndex === 0}
-              className="h-10 w-10 sm:h-11 sm:w-11 flex items-center justify-center rounded-2xl bg-white/[0.05] border border-white/10 text-white hover:bg-orange-500 hover:border-orange-500 transition-all disabled:opacity-30 disabled:hover:bg-white/[0.05] disabled:cursor-not-allowed cursor-pointer font-bold text-base sm:text-lg"
+              className="h-10 w-10 sm:h-11 sm:w-11 flex items-center justify-center rounded-2xl bg-white/[0.05] border border-white/10 text-white hover:bg-blue-600 hover:border-blue-600 transition-all disabled:opacity-30 disabled:hover:bg-white/[0.05] disabled:cursor-not-allowed cursor-pointer font-bold text-base sm:text-lg"
             >
               ←
             </motion.button>
@@ -91,7 +91,7 @@ export function Testimonials() {
               aria-label="Next Testimonials"
               onClick={next}
               disabled={currentIndex >= maxIndex}
-              className="h-10 w-10 sm:h-11 sm:w-11 flex items-center justify-center rounded-2xl bg-white/[0.05] border border-white/10 text-white hover:bg-orange-500 hover:border-orange-500 transition-all disabled:opacity-30 disabled:hover:bg-white/[0.05] disabled:cursor-not-allowed cursor-pointer font-bold text-base sm:text-lg"
+              className="h-10 w-10 sm:h-11 sm:w-11 flex items-center justify-center rounded-2xl bg-white/[0.05] border border-white/10 text-white hover:bg-blue-600 hover:border-blue-600 transition-all disabled:opacity-30 disabled:hover:bg-white/[0.05] disabled:cursor-not-allowed cursor-pointer font-bold text-base sm:text-lg"
             >
               →
             </motion.button>
@@ -120,7 +120,7 @@ export function Testimonials() {
                 <motion.div
                   key={r.name + idx}
                   whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                  className="group relative rounded-3xl bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-1.5 border border-white/10 shadow-xl hover:border-orange-500/50 hover:shadow-2xl transition-colors flex flex-col justify-between"
+                  className="group relative rounded-3xl bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-1.5 border border-white/10 shadow-xl hover:border-blue-500/50 hover:shadow-2xl transition-colors flex flex-col justify-between"
                 >
                   <div className="rounded-[1.35rem] bg-[#0A1020] p-5 sm:p-7 h-full flex flex-col justify-between space-y-5 sm:space-y-6">
                     <div className="space-y-3.5">
@@ -131,7 +131,7 @@ export function Testimonials() {
                             <span key={i}>★</span>
                           ))}
                         </div>
-                        <span className="rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-300 px-2.5 py-0.5 text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wide">
+                        <span className="rounded-full bg-blue-500/15 border border-blue-500/30 text-blue-300 px-2.5 py-0.5 text-[9px] sm:text-[10px] font-extrabold uppercase tracking-wide">
                           {r.badge || "Verified Visa"}
                         </span>
                       </div>
@@ -143,7 +143,7 @@ export function Testimonials() {
 
                       {/* Bengali Quote for cultural resonance */}
                       {r.bengaliQuote && (
-                        <p className="text-xs text-amber-300/80 font-bangla italic border-l-2 border-orange-500/40 pl-3 leading-relaxed">
+                        <p className="text-xs text-amber-300/80 font-bangla italic border-l-2 border-amber-500/40 pl-3 leading-relaxed">
                           {r.bengaliQuote}
                         </p>
                       )}
@@ -152,11 +152,11 @@ export function Testimonials() {
                     {/* Student Signature Footer */}
                     <div className="border-t border-white/5 pt-4 flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-amber-600 text-white font-black text-xs shadow-md">
+                        <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white font-black text-xs shadow-md">
                           {initials}
                         </div>
                         <div className="min-w-0">
-                          <h4 className="text-xs font-bold text-white truncate group-hover:text-orange-400 transition-colors">
+                          <h4 className="text-xs font-bold text-white truncate group-hover:text-blue-400 transition-colors">
                             {r.name}
                           </h4>
                           <p className="text-[10px] text-slate-400 truncate">

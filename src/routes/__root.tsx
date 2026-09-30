@@ -79,13 +79,27 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "author", content: company.legalName },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: company.legalName },
+      { property: "og:site_name", content: company.name },
+      { property: "og:title", content: "Abroad Blueprint | Study Abroad & English Academy" },
+      {
+        property: "og:description",
+        content:
+          "British Council Certified Agent. 100% Free Processing, No Service Charge. Study in UK, Australia, Canada, USA & Europe. Fly with Dependent & IELTS Mastery.",
+      },
+      { property: "og:image", content: "/assets/abroad-blueprint-banner.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Abroad Blueprint | Start Here, Go Anywhere!" },
+      {
+        name: "twitter:description",
+        content:
+          "Study Abroad Expert in Chittagong & UK. Admissions for UK, Australia, Canada, USA & Europe with dependent visa options and IELTS coaching.",
+      },
+      { name: "twitter:image", content: "/assets/abroad-blueprint-banner.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/loogo.jpg", type: "image/jpeg" },
-      { rel: "apple-touch-icon", href: "/loogo.jpg" },
+      { rel: "icon", href: "/assets/abroad-blueprint-logo.jpg", type: "image/jpeg" },
+      { rel: "apple-touch-icon", href: "/assets/abroad-blueprint-logo.jpg" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -100,15 +114,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "EducationalOrganization",
           name: company.legalName,
-          alternateName: "Milestone Beanibazar (@milestonebeanibazar)",
+          alternateName: "Abroad Blueprint (@AbroadBlueprint)",
           slogan: company.slogan,
           description:
-            "Milestone Beanibazar (MICU) is a premier Study Abroad consultancy and language academy located at Azir Market (2nd Floor), Inner College Road, Beanibazar, Sylhet. IDP Authorized Registration Partner, featuring Beanibazar's first Computer-Delivered (CD) IELTS Mock Lab, Spoken English, and direct university admissions to UK, Canada, USA, Australia, and Europe.",
+            "Abroad Blueprint is a British Council Certified educational consultancy and English language academy located at 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong, Bangladesh, and 17 Woodgate, Birmingham, UK. Specializing in study abroad admissions, MRes/DBA/PhD dependent visas, scholarships up to 50%-100%, and IELTS/Spoken/Kids English.",
           foundingDate: "Verified Consultancy",
-          areaServed: ["Beanibazar", "Sylhet", "Golapganj", "Zakiganj", "Barlekha", "Bangladesh", "Worldwide"],
+          areaServed: ["Chittagong", "Dhaka", "Sylhet", "Bangladesh", "United Kingdom", "Worldwide"],
           email: company.email,
           telephone: company.phones,
-          openingHours: "Sa-Th 09:00-19:30",
+          openingHours: "Sa-Th 10:00-19:30",
           sameAs: [company.social.facebook],
           hasMap: company.mapsUrl,
           geo: {
@@ -140,7 +154,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="min-h-screen w-full overflow-x-hidden bg-background font-sans antialiased text-foreground selection:bg-sky-500 selection:text-white">
+      <body className="min-h-screen w-full overflow-x-hidden bg-background font-sans antialiased text-foreground selection:bg-blue-600 selection:text-white">
         {children}
         <Scripts />
       </body>

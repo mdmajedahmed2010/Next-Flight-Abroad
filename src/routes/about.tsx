@@ -15,21 +15,21 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       {
-        title: `About Us | ${company.name} — Get Ready For The World · Beanibazar, Sylhet`,
+        title: `About Us | ${company.name} — Start Here, Go Anywhere! · Chittagong & UK`,
       },
       {
         name: "description",
         content:
-          `About ${company.name} (${company.nativeName}) — Get Ready For The World. Beanibazar's premier Study Abroad consultancy and language academy. IELTS Academic, Beanibazar's first Computer-Delivered (CD) Mock Lab, Spoken English, and UK, Canada, USA, Australia admissions. Led by Saleh Ahmed Shaheen and Ahbabur Rahman Tahmid. Campuses: Azir Market & Somobay Market, College Road, Beanibazar, Sylhet. Hotlines: ${company.phones[0]} / ${company.phones[1]}.`,
+          `About ${company.name} (${company.nativeName}) — Start Here, Go Anywhere! British Council Certified Agent offering 100% free study abroad processing (No Service Charge ❌) for the UK, Canada, Australia, USA, and Europe. Specialized in Fly with Dependent (MRes & PhD), IELTS, Spoken English, and Kids English. Head Office: 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong. UK Office: 17, Woodgate, Birmingham. Hotlines: ${company.phones[0]} / ${company.phones[1]}.`,
       },
       {
         property: "og:title",
-        content: `About ${company.name} — Study Abroad Consultancy & IELTS Language Academy`,
+        content: `About ${company.name} — British Council Certified Study Abroad & Language Academy`,
       },
       {
         property: "og:description",
         content:
-          `Official profile of ${company.name}. Get Ready For The World. Your trusted partner for foreign university admissions, IELTS Band 7+ prep, and language fluency in Beanibazar, Sylhet.`,
+          `Official profile of ${company.name}. Start Here, Go Anywhere! 100% Free Processing, British Council Certified counseling, and dual presence in Chittagong, Bangladesh and Birmingham, UK.`,
       },
     ],
   }),
@@ -39,31 +39,31 @@ export const Route = createFileRoute("/about")({
 const advisoryWings = [
   {
     title: "Global Study Abroad Admissions Wing",
-    hub: "Azir Market Main Campus & Global Partner Network",
-    badge: "UK, Canada, USA, Australia & Europe",
+    hub: "Chittagong Head Office & Birmingham Liaison Desk",
+    badge: "UK, Canada, Australia, USA & Europe",
     icon: "✈️",
-    desc: "Direct admissions into top-ranked universities in the UK (with or without IELTS depending on academic background), Canada, USA, Australia, and Schengen European nations with zero file opening fee.",
+    desc: "Direct admissions into accredited global universities across the UK, Canada, Australia, USA, and Europe with zero service charges and no file opening fee.",
   },
   {
-    title: "Milestone IELTS Academy & CD Mock Lab",
-    hub: "Beanibazar's 1st Computer-Delivered Lab (Azir Market 2nd Fl.)",
-    badge: "IDP Authorized Partner",
-    icon: "💻",
-    desc: "State-of-the-art 30+ seat computer lab with authentic IDP software simulation, individual headphones, Cambridge 11-19 syllabus, and cash rewards for Band 7.0+ achievers.",
+    title: "Fly With Dependent & Research Wing",
+    hub: "Specialized UK MRes, DBA & PhD Center",
+    badge: "Spouse Legal Work Rights 👨‍👩‍👧‍👦",
+    icon: "🎓",
+    desc: "Dedicated guidance for Master by Research (MRes) and PhD programs in the UK allowing students to fly with their spouse and children with full-time employment rights.",
   },
   {
-    title: "Spoken English & 'Speakers' Mania' Studio",
-    hub: "Fluency & Stage Presentation Stage",
-    badge: "Weekly Contests & Trophies",
-    icon: "🎤",
-    desc: "Overcome hesitation with weekly stage speech contests, situational role-plays, native pronunciation drills, and corporate presentation confidence.",
+    title: "Language Academy (IELTS & Spoken)",
+    hub: "Chittagong Campus & Online Zoom Studio",
+    badge: "British Council Certified Standard",
+    icon: "🗣️",
+    desc: "Comprehensive preparation for IELTS Academic & General Training, Spoken English professional communication, and PTE Academic by certified trainers.",
   },
   {
-    title: "Milestone Junior Kids English Academy",
-    hub: "Azir Market & Somobay Market Campuses",
+    title: "Kids English & Phonics Academy",
+    hub: "Early Childhood English Studio",
     badge: "Ages 5–12 Phonics & Fluency",
     icon: "🧒",
-    desc: "Fun, engaging, phonics-based English foundation courses for school students to build accent-free bilingual fluency from early childhood.",
+    desc: "Engaging, phonics-based English foundation programs designed to build clear pronunciation, vocabulary, and natural spoken confidence for school students.",
   },
 ];
 
@@ -72,10 +72,10 @@ function About() {
     <>
       <PageHero
         eyebrow="Our Story & Philosophy"
-        title="MILESTONE BEANIBAZAR / MICU"
-        subtitle="GET READY FOR THE WORLD. Beanibazar's most trusted Study Abroad consultancy and language academy. Empowering students across Beanibazar and Greater Sylhet with certified Cambridge mentors, Beanibazar's first Computer-Delivered IELTS Lab, and zero-fee profile assessment."
-        image="/milestone-celebration.jpg"
-        imageAlt="Milestone Beanibazar grand celebration gathering with 3D MILESTONE sculpture"
+        title="ABROAD BLUEPRINT"
+        subtitle="START HERE, GO ANYWHERE! 🌍 British Council Certified educational agency with dual offices in Chittagong, Bangladesh and Birmingham, UK. 100% free profile evaluation, zero service charge, and specialized Fly with Dependent pathways."
+        image="/assets/abroad-blueprint-banner.jpg"
+        imageAlt="Abroad Blueprint official banner with world landmarks and contact information"
       >
         <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "About Us" }]} />
       </PageHero>
@@ -89,8 +89,8 @@ function About() {
               <BrandLogo size={56} />
               <div>
                 <h3 className="font-display text-xl font-bold text-slate-900">{company.name}</h3>
-                <span className="inline-block rounded-full bg-sky-50 border border-sky-200 px-3 py-0.5 text-xs font-bold text-sky-800 mt-1">
-                  Get Ready For The World
+                <span className="inline-block rounded-full bg-blue-50 border border-blue-200 px-3 py-0.5 text-xs font-bold text-blue-800 mt-1">
+                  British Council Certified Agent
                 </span>
               </div>
             </div>
@@ -98,30 +98,30 @@ function About() {
             <dl className="mt-6 space-y-4 text-xs sm:text-sm">
               <div className="flex justify-between border-b border-slate-100 pb-3">
                 <dt className="text-slate-500 font-medium">Official Brand</dt>
-                <dd className="font-bold text-slate-900 text-right">{company.name} ({company.legalName})</dd>
+                <dd className="font-bold text-slate-900 text-right">{company.name}</dd>
               </div>
               <div className="flex justify-between border-b border-slate-100 pb-3">
-                <dt className="text-slate-500 font-medium">Main Campus (Beanibazar)</dt>
+                <dt className="text-slate-500 font-medium">Head Office (Chittagong)</dt>
                 <dd className="font-bold text-slate-900 text-right max-w-[260px]">
                   {company.branches[0].address}
                 </dd>
               </div>
               <div className="flex justify-between border-b border-slate-100 pb-3">
-                <dt className="text-slate-500 font-medium">Annex Campus (Beanibazar)</dt>
+                <dt className="text-slate-500 font-medium">UK Liaison Office</dt>
                 <dd className="font-bold text-slate-900 text-right max-w-[260px]">
                   {company.branches[1].address}
                 </dd>
               </div>
               <div className="flex justify-between border-b border-slate-100 pb-3">
-                <dt className="text-slate-500 font-medium">Leadership</dt>
-                <dd className="font-bold text-sky-700 text-right">
-                  Saleh Ahmed Shaheen &amp; Ahbabur Rahman Tahmid
+                <dt className="text-slate-500 font-medium">Accreditation</dt>
+                <dd className="font-bold text-blue-700 text-right">
+                  British Council Certified Agent
                 </dd>
               </div>
               <div className="flex justify-between border-b border-slate-100 pb-3">
-                <dt className="text-slate-500 font-medium">Core Speciality</dt>
-                <dd className="font-bold text-slate-800 text-right">
-                  IELTS Academic/General · Beanibazar&apos;s 1st CD Lab · Study in UK, Canada, USA
+                <dt className="text-slate-500 font-medium">Processing Fee Policy</dt>
+                <dd className="font-bold text-emerald-700 text-right">
+                  0 BDT Service Fee · No File Opening Charge ❌
                 </dd>
               </div>
               <div className="flex justify-between pt-1">
@@ -132,53 +132,53 @@ function About() {
               </div>
             </dl>
 
-            <div className="mt-8 rounded-2xl bg-sky-50/80 p-4 border border-sky-200">
+            <div className="mt-8 rounded-2xl bg-blue-50/80 p-4 border border-blue-200">
               <p className="text-xs font-bold text-slate-900 mb-1">Official Brand Slogan:</p>
-              <p className="text-xs italic text-sky-950 font-bold">&quot;{company.motto}&quot;</p>
+              <p className="text-xs italic text-blue-950 font-bold">&quot;{company.slogan}&quot; — {company.taglineBangla}</p>
             </div>
           </div>
 
           {/* Right Column: Mission, Vision & Guiding Principles */}
           <div className="space-y-6">
-            <span className="badge-clean text-sky-700 bg-sky-50 border border-sky-200">Our Vision &amp; Mission</span>
+            <span className="badge-clean text-blue-700 bg-blue-50 border border-blue-200">Our Vision &amp; Mission</span>
             <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-slate-900">
-              Transforming Students of Beanibazar &amp; Sylhet into Confident Global Scholars
+              Guiding Bangladeshi Students &amp; Families to the Global Stage
             </h2>
             <p className="text-sm leading-relaxed text-slate-600 font-bangla">
-              {company.name} ({company.nativeName}) সিলেট অঞ্চলের শিক্ষার্থীদের বিশ্বমানের উচ্চশিক্ষা ও আন্তর্জাতিক ভাষা দক্ষতা নিশ্চিত করার অগ্রদূত। বিয়ানীবাজারের প্রাণকেন্দ্র ইনার কলেজ রোডের আজির মার্কেট (২য় তলা) ও সমবায় মার্কেট (২য় তলা) ক্যাম্পাসে অবস্থিত আমাদের ল্যাব ও একাডেমি শত শত শিক্ষার্থীর স্বপ্নের ভিত্তি তৈরি করেছে।
+              {company.name} ({company.nativeName}) বাংলাদেশের শিক্ষার্থীদের জন্য আন্তর্জাতিক মানের উচ্চশিক্ষা, স্কলারশিপ ও ভিসা নিশ্চিতকরণে একটি নির্ভরযোগ্য ও ব্রিটিশ কাউন্সিল সার্টিফাইড প্রতিষ্ঠান। চট্টগ্রামের কাজীর দেউড়ির সিজেকেএস শপিং কমপ্লেক্স (৩য় তলা) এবং যুক্তরাজ্যের বার্মিংহামে অবস্থিত আমাদের অফিসের মাধ্যমে শিক্ষার্থীদের ভর্তির শুরু থেকে যুক্তরাজ্যে পৌঁছানো পর্যন্ত পূর্ণাঙ্গ সহায়তা প্রদান করা হয়।
             </p>
             <p className="text-sm leading-relaxed text-slate-600 font-bangla">
-              আমাদের আধুনিক কম্পিউটার-ডেলিভার্ড (CD) আইইএলটিএস ল্যাব, সাপ্তাহিক স্পিকার্স ম্যানিয়া স্টেজ বিতর্ক ও প্রেজেন্টেশন এবং কেমব্রিজ-প্রশিক্ষিত শিক্ষকদের আন্তরিক দিকনির্দেশনায় শিক্ষার্থীরা আইইএলটিএস-এ কাঙ্ক্ষিত ব্যান্ড স্কোর অর্জন করছেন।
+              আমরা শিক্ষার্থীদের কোনো সার্ভিস চার্জ বা ফাইল ওপেনিং চার্জ ছাড়াই ১০০% ফ্রি প্রসেসিং সেবা প্রদান করি। বিশেষ করে যুক্তরাজ্যের Master by Research (MRes) এবং PhD প্রোগ্রামে স্পাউস ও সন্তানদের সাথে নিয়ে ফুল-টাইম কাজের সুযোগসহ উচ্চশিক্ষার পথ উন্মোচন আমাদের অন্যতম বিশেষত্ব।
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2 pt-2">
               <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
                 <h4 className="font-display text-base font-bold text-slate-900">🎯 Our Mission</h4>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed font-bangla">
-                  শতভাগ সততা ও স্বচ্ছতার সাথে শিক্ষার্থীদের সঠিক বিশ্ববিদ্যালয় নির্বাচন, ভিসা প্রসেসিং ও ব্রিটিশ কাউন্সিলের আন্তর্জাতিক মানে আইইএলটিএস প্রশিক্ষণ দেওয়া।
+                  কোনো লুকানো খরচ বা সার্ভিস চার্জ ছাড়া শতভাগ স্বচ্ছতার সাথে শিক্ষার্থীদের জন্য শীর্ষ বিশ্ববিদ্যালয় ভর্তি, সর্বোচ্চ স্কলারশিপ এবং সঠিক ভিসা গাইডলাইন নিশ্চিত করা।
                 </p>
               </div>
 
               <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
                 <h4 className="font-display text-base font-bold text-slate-900">🔭 Our Vision</h4>
                 <p className="mt-2 text-xs text-slate-600 leading-relaxed font-bangla">
-                  বিয়ানীবাজার ও সিলেটের সর্বাধিক নির্ভরযোগ্য স্টাডি অ্যাব্রড প্রতিষ্ঠান হিসেবে প্রতিটি শিক্ষার্থীকে বিশ্ব নাগরিক হিসেবে গড়ে তোলা।
+                  বাংলাদেশ ও যুক্তরাজ্যে সর্বোচ্চ আস্থাভাজন শিক্ষা পরামর্শক হিসেবে শিক্ষার্থীদের বিশ্বমঞ্চে নেতৃত্ব দেওয়ার যোগ্য করে তোলা—&quot;Start Here, Go Anywhere!&quot;
                 </p>
               </div>
             </div>
 
-            <div className="rounded-2xl bg-gradient-to-r from-sky-50/70 via-slate-50 to-emerald-50/70 border border-slate-200 p-5">
-              <h4 className="font-display text-sm font-bold text-sky-800 mb-2">
-                🌟 The Core {company.name} Pillars:
+            <div className="rounded-2xl bg-gradient-to-r from-blue-50/70 via-slate-50 to-indigo-50/70 border border-slate-200 p-5">
+              <h4 className="font-display text-sm font-bold text-blue-900 mb-2">
+                🌟 The Core {company.name} Commitments:
               </h4>
               <BulletList
                 items={[
-                  "GET READY FOR THE WORLD: কোনো ফাইল ওপেনিং চার্জ ছাড়া সম্পূর্ণ ফ্রি বিশ্ববিদ্যালয় মূল্যায়ন।",
-                  "Beanibazar's First CD Lab: ৩০+ কম্পিউটারের আধুনিক ল্যাব ও ফুল লেন্থ রিয়েল টেস্ট সফটওয়্যার।",
-                  "IDP Authorized Partner: আইডিএলটিএস অফিসিয়াল এক্সাম রেজিস্ট্রেশন ও ভেন্যু সাপোর্ট।",
-                  "Band 7.0+ Cash Rewards: কৃতি শিক্ষার্থীদের নগদ অর্থ পুরস্কার ও গ্র্যান্ড সংবর্ধনা প্রদান।",
-                  "Speakers' Mania Fluency: স্পোকেন ইংলিশের জন্য সাপ্তাহিক স্টেজ ও মাইক প্রেজেন্টেশন সেশন।",
-                  "Beanibazar Campuses: আজির মার্কেট ও সমবায় মার্কেট, কলেজ রোডে সুপরিসর ক্যাম্পাস।",
+                  "Zero Service Charge ❌: ভিসার আগে বা পরে কোনো প্রকার সার্ভিস চার্জ বা ফাইল চার্জ নেওয়া হয় না।",
+                  "British Council Certified Agent: ব্রিটিশ কাউন্সিল প্রত্যয়িত আন্তর্জাতিক মানের পেশাদার কাউন্সেলিং।",
+                  "Fly With Dependent 👨‍👩‍👧‍👦: MRes ও PhD প্রোগ্রামে স্পাউসের ফুল-টাইম ওয়ার্ক রাইটসসহ সম্পূর্ণ ফাইল প্রসেসিং।",
+                  "Scholarships Up to £5,000 / 100%: শীর্ষ পার্টনার বিশ্ববিদ্যালয়গুলোতে সর্বোচ্চ স্কলারশিপ নিশ্চিতকরণ।",
+                  "Dual Global Presence: চট্টগ্রাম হেড অফিস ও ১৭ উডগেট, বার্মিংহাম অন-শোর সাপোর্ট অফিস।",
+                  "Language Academy: IELTS (Academic/General), Spoken English এবং Kids English কোর্স।",
                 ]}
               />
             </div>
@@ -189,49 +189,49 @@ function About() {
       {/* Leadership & Faculty Spotlight */}
       <section className="section-shell py-14 sm:py-20 border-t border-slate-200 bg-slate-50/50">
         <SectionHeading
-          eyebrow="Leadership & Mentors"
-          title="Meet Our Senior Instructors"
-          subtitle="Experienced educators and study abroad consultants dedicated to your success in Beanibazar."
+          eyebrow="Leadership & Accreditation"
+          title="Certified Educational Advisors"
+          subtitle="Experienced British Council Certified counselors and study abroad specialists dedicated to your academic journey."
         />
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 max-w-4xl mx-auto">
-          <div className="card-clean rounded-3xl p-7 border border-slate-200 bg-white shadow-sm hover:shadow-md hover:border-sky-500 transition-all flex flex-col justify-between">
+          <div className="card-clean rounded-3xl p-7 border border-slate-200 bg-white shadow-sm hover:shadow-md hover:border-blue-500 transition-all flex flex-col justify-between">
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="h-14 w-14 rounded-2xl bg-sky-100 border border-sky-300 flex items-center justify-center text-2xl font-black text-sky-700">
-                  SS
+                <div className="h-14 w-14 rounded-2xl bg-blue-100 border border-blue-300 flex items-center justify-center text-2xl font-black text-blue-700">
+                  AB
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-bold text-slate-900">Saleh Ahmed Shaheen</h3>
-                  <span className="text-xs font-semibold text-sky-600">CEO &amp; Senior Consultant</span>
+                  <h3 className="font-display text-lg font-bold text-slate-900">Abroad Blueprint Counseling Desk</h3>
+                  <span className="text-xs font-semibold text-blue-600">British Council Certified Counselors</span>
                 </div>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed font-bangla">
-                সিলেট অঞ্চলের স্টাডি অ্যাব্রড সেক্টরে দীর্ঘদিনের অভিজ্ঞতা সম্পন্ন। যুক্তরাজ্য, কানাডা, আমেরিকা ও অস্ট্রেলিয়ার বিশ্ববিদ্যালয় ভর্তি এবং ভিসা প্রক্রিয়া পরিচালনায় অগ্রগণ্য।
+                যুক্তরাজ্য, কানাডা, অস্ট্রেলিয়া ও ইউরোপের শীর্ষ বিশ্ববিদ্যালয়গুলোতে শিক্ষার্থীদের সরাসরি আবেদন, অফার লেটার, ক্যাশ (CAS) ও ভিসা প্রসেসিংয়ে সার্বক্ষণিক সহায়তা।
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-sky-700">
-              📍 Azir Market Main Campus, Beanibazar
+            <div className="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-blue-700">
+              📍 Head Office: CJKS Shopping Complex, Kazir Dewri, Chittagong
             </div>
           </div>
 
-          <div className="card-clean rounded-3xl p-7 border border-slate-200 bg-white shadow-sm hover:shadow-md hover:border-sky-500 transition-all flex flex-col justify-between">
+          <div className="card-clean rounded-3xl p-7 border border-slate-200 bg-white shadow-sm hover:shadow-md hover:border-blue-500 transition-all flex flex-col justify-between">
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="h-14 w-14 rounded-2xl bg-emerald-100 border border-emerald-300 flex items-center justify-center text-2xl font-black text-emerald-700">
-                  AT
+                <div className="h-14 w-14 rounded-2xl bg-indigo-100 border border-indigo-300 flex items-center justify-center text-2xl font-black text-indigo-700">
+                  UK
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-bold text-slate-900">Ahbabur Rahman Tahmid</h3>
-                  <span className="text-xs font-semibold text-emerald-600">Chief Instructor &amp; Writing Specialist</span>
+                  <h3 className="font-display text-lg font-bold text-slate-900">UK On-Shore Support Desk</h3>
+                  <span className="text-xs font-semibold text-indigo-600">Birmingham Liaison &amp; Student Welfare</span>
                 </div>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed font-bangla">
-                আইইএলটিএস রাইটিং ও রিডিংয়ের বিশেষজ্ঞ মেন্টর। শত শত শিক্ষার্থীকে ব্যান্ড ৭.০+ অর্জনে প্রশিক্ষণ দিয়েছেন এবং শিক্ষার্থীদের মাঝে দারুণ জনপ্রিয়।
+                যুক্তরাজ্যে পৌঁছানোর পর শিক্ষার্থীদের বিমানবন্দর অভ্যর্থনা পরামর্শ, আবাসন ব্যবস্থা এবং ডিপেন্ডেন্ট স্পাউস গাইডলাইনে সরাসরি সহায়তা।
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-emerald-700">
-              📍 CD IELTS Lab &amp; Academy Studio, Beanibazar
+            <div className="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-indigo-700">
+              📍 UK Office: 17, Woodgate, Birmingham, United Kingdom
             </div>
           </div>
         </div>
@@ -247,24 +247,24 @@ function About() {
         <SectionHeading
           eyebrow="Specialized Divisions"
           title="Our Operational Divisions"
-          subtitle="Comprehensive academic and consultancy wings serving undergraduate, postgraduate, and language learners."
+          subtitle="Comprehensive academic and consultancy wings serving undergraduate, postgraduate, research, and language learners."
         />
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {advisoryWings.map((wing) => (
             <div
               key={wing.title}
-              className="card-clean rounded-3xl p-6 flex flex-col justify-between border border-slate-200 hover:border-sky-500 shadow-sm hover:shadow-md transition-all bg-white"
+              className="card-clean rounded-3xl p-6 flex flex-col justify-between border border-slate-200 hover:border-blue-500 shadow-sm hover:shadow-md transition-all bg-white"
             >
               <div>
                 <div className="flex items-center justify-between pb-3 border-b border-slate-100">
                   <span className="text-2xl">{wing.icon}</span>
-                  <span className="rounded-full bg-sky-50 border border-sky-200 text-sky-800 text-[0.68rem] px-2.5 py-0.5 font-bold">{wing.badge}</span>
+                  <span className="rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-[0.68rem] px-2.5 py-0.5 font-bold">{wing.badge}</span>
                 </div>
                 <h3 className="mt-4 font-display text-base font-bold text-slate-900 leading-snug">
                   {wing.title}
                 </h3>
-                <p className="text-[0.68rem] font-bold text-sky-700 mt-0.5">📍 {wing.hub}</p>
+                <p className="text-[0.68rem] font-bold text-blue-700 mt-0.5">📍 {wing.hub}</p>
                 <p className="mt-3 text-xs text-slate-600 leading-relaxed">{wing.desc}</p>
               </div>
 
@@ -273,7 +273,7 @@ function About() {
                   href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Hello ${company.name}, I want to consult your "${wing.title}" division.`)}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-xs font-bold text-sky-600 hover:underline flex items-center justify-center gap-1.5"
+                  className="text-xs font-bold text-blue-600 hover:underline flex items-center justify-center gap-1.5"
                 >
                   <span>Connect with Division →</span>
                 </a>
@@ -286,9 +286,9 @@ function About() {
       {/* Verified Campuses & Office Gallery */}
       <section className="section-shell py-14 sm:py-20 border-t border-slate-200 bg-slate-50/50">
         <SectionHeading
-          eyebrow="Our Campuses"
-          title="Milestone Beanibazar Campuses"
-          subtitle="Explore our Main Campus & CD IELTS Lab at Azir Market and Admissions Annex at Somobay Market, College Road, Beanibazar, Sylhet."
+          eyebrow="Our Locations"
+          title="Abroad Blueprint Offices"
+          subtitle="Visit our Chittagong Head Office at CJKS Shopping Complex, Kazir Dewri or connect with our UK liaison desk in Birmingham."
         />
         <div className="mt-10">
           <OfficeGallery />

@@ -2,24 +2,27 @@ import { useState } from "react";
 import { company, destinations } from "@/lib/site-data";
 
 const field =
-  "w-full rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm text-slate-900 outline-none transition-all hover:bg-white focus:border-sky-600 focus:bg-white focus:ring-2 focus:ring-sky-500/10";
+  "w-full rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-3 text-sm text-slate-900 outline-none transition-all hover:bg-white focus:border-blue-600 focus:bg-white focus:ring-2 focus:ring-blue-500/10";
 const label = "mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700";
 
 const serviceOptions = [
+  "Study Abroad Admissions — UK (Undergraduate / Masters)",
+  "Fly with Dependent Track (MRes / DBA / PhD with Spouse Work Rights)",
+  "Study Abroad Admissions — Canada (DLI & SDS Stream)",
+  "Study Abroad Admissions — Australia (High Minimum Wage & Regional PSW)",
+  "Study Abroad Admissions — USA (STEM OPT & Scholarships)",
+  "Study Abroad Admissions — Europe (Germany, Malta, Cyprus)",
   "IELTS Academic Preparation (Target Band 7.0 - 8.5)",
   "IELTS General Training (Work & Migration Track)",
-  "Computer-Delivered (CD) IELTS Mock Test Lab",
-  "Spoken English & Fluency Studio (Speakers' Mania)",
-  "Milestone Junior (Kids English & Phonics)",
-  "IELTS Life Skills A1 / B1 (UK Spouse & Settlement)",
-  "Study Abroad Admissions — UK (Undergraduate / Masters)",
-  "Study Abroad Admissions — Canada, USA, Australia & Europe",
+  "Spoken English & Professional Communication",
+  "Kids English & Phonics Foundation",
+  "Scholarship Assessment (Up to £5,000 / 100%)",
 ];
 
 const officeOptions = [
-  "Azir Market Main Campus (2nd Floor, Inner College Road, Beanibazar, Sylhet)",
-  "Somobay Market Annex (2nd Floor, College Road, Beanibazar, Sylhet)",
-  "Online Consultation (WhatsApp / Zoom / Phone Call)",
+  "Chittagong Head Office (4091, CJKS Shopping Complex, 3rd Floor, Kazir Dewri)",
+  "UK Liaison Office (17, Woodgate, Birmingham, United Kingdom)",
+  "Online Consultation (WhatsApp Video / Zoom / Phone Call)",
 ];
 
 export function RegisterForm({ onDone }: { onDone?: () => void }) {
@@ -40,16 +43,16 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
 
   const whatsappHref = () => {
     const lines = [
-      `✨ Free Consultation Request — ${company.name}`,
+      `✨ Free Profile Assessment Request — ${company.name}`,
       `👤 Name: ${form.name}`,
       `📞 Phone: ${form.phone}`,
       form.email ? `✉️ Email: ${form.email}` : "",
       `🎯 Interested Service: ${form.service}`,
       `🌍 Target Destination: ${form.destination}`,
-      `🎓 Status/Background: ${form.currentStatus}`,
-      `🏢 Preferred Campus/Mode: ${form.office}`,
+      `🎓 Academic Status: ${form.currentStatus}`,
+      `🏢 Preferred Office/Mode: ${form.office}`,
       form.message ? `📝 Notes: ${form.message}` : "",
-      `\nI would like to schedule a free counseling session with ${company.name}.`,
+      `\nI would like to schedule a free profile evaluation with ${company.name} (No Service Charge).`,
     ].filter(Boolean);
     return `https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(lines.join("\n"))}`;
   };
@@ -63,28 +66,29 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
   if (sent) {
     return (
       <div className="py-10 text-center space-y-4">
-        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-sky-100 text-4xl shadow-inner">
+        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-blue-100 text-4xl shadow-inner">
           ✅
         </div>
         <h3 className="font-display text-2xl font-black text-slate-900">Appointment Requested! 🎉</h3>
         <p className="mx-auto max-w-md text-sm text-slate-600 leading-relaxed">
           Thank you, <strong className="text-slate-900">{form.name}</strong>! Your consultation request has been registered. An expert counselor from <strong>{company.name}</strong> will contact you on{" "}
-          <strong className="text-sky-600">{form.phone}</strong> shortly.
+          <strong className="text-blue-600">{form.phone}</strong> shortly.
         </p>
-        <div className="mt-2 rounded-2xl border border-sky-200 bg-sky-50/50 p-4 text-xs text-slate-800 text-left space-y-1">
+        <div className="mt-2 rounded-2xl border border-blue-200 bg-blue-50/50 p-4 text-xs text-slate-800 text-left space-y-1">
           <p>✔ {company.address.full}</p>
-          <p>✔ Get Ready For The World ({company.taglineBangla})</p>
-          <p>✔ Study Abroad: UK, Canada, USA, Australia &amp; Europe</p>
-          <p>✔ IELTS Academy, Beanibazar&apos;s 1st CD Lab &amp; Spoken English</p>
+          <p>✔ {company.slogan} ({company.taglineBangla})</p>
+          <p>✔ British Council Certified Agent · 100% Free Processing</p>
+          <p>✔ Study Abroad: UK, Canada, Australia, USA &amp; Europe</p>
+          <p>✔ IELTS Academy, Spoken English &amp; Kids English</p>
         </div>
         <div className="pt-2 flex flex-col gap-2">
           <a
             href={whatsappHref()}
             target="_blank"
             rel="noreferrer"
-            className="btn-primary text-xs py-3 justify-center shadow-md font-bold bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white border-none flex items-center gap-2"
+            className="btn-primary text-xs py-3 justify-center shadow-md font-bold bg-gradient-to-r from-blue-700 to-indigo-600 hover:from-blue-600 hover:to-indigo-500 text-white border-none flex items-center gap-2"
           >
-            💬 Open WhatsApp Chat with {company.name} Desk
+            💬 Open WhatsApp Chat with {company.name}
           </a>
           {onDone && (
             <button
@@ -103,14 +107,14 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
   return (
     <form onSubmit={handleSubmit} className="space-y-4 text-left">
       <div className="border-b border-slate-100 pb-3 mb-2">
-        <span className="text-[0.68rem] font-extrabold uppercase tracking-wider text-sky-600">
-          {company.name} ({company.taglineBangla})
+        <span className="text-[0.68rem] font-extrabold uppercase tracking-wider text-blue-600">
+          {company.name} · British Council Certified
         </span>
         <h3 className="font-display text-xl font-black text-slate-900">
-          Book Your Free Study Abroad &amp; IELTS Evaluation
+          Book Your Free Study Abroad &amp; Profile Evaluation
         </h3>
         <p className="text-xs text-slate-500 mt-0.5">
-          Beanibazar Campus: {company.address.short} · Hotlines: {company.phones[0]} / {company.phones[1]}
+          Chittagong Office: 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri · Hotlines: {company.phones[0]} / {company.phones[1]}
         </p>
       </div>
 
@@ -140,7 +144,7 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
             required
             value={form.phone}
             onChange={set("phone")}
-            placeholder="e.g. 01781-XXXXXX"
+            placeholder="e.g. 01961-XXXXXX"
             className={field}
           />
         </div>
@@ -149,7 +153,7 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="reg-service" className={label}>
-            Interested Service / Course
+            Interested Service / Program
           </label>
           <select id="reg-service" value={form.service} onChange={set("service")} className={field}>
             {serviceOptions.map((s) => (
@@ -176,7 +180,7 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
               </option>
             ))}
             <option value="Language Course (IELTS / Spoken / Kids)">
-              🎯 Language Training Only (Beanibazar Campus)
+              🎯 Language Training Only (Chittagong Campus / Online)
             </option>
             <option value="Other / Need Advice">🌍 Other / Need Advice</option>
           </select>
@@ -200,14 +204,14 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
             <option value="Bachelor's / Masters Graduate (UK / Canada / Australia Masters)">
               Bachelor&apos;s / Masters Graduate (UK / Canada / Australia Masters)
             </option>
-            <option value="IELTS Candidate (Mock Test / Exam Preparation Only)">
-              IELTS Candidate (Mock Test / CD Lab Only)
+            <option value="MRes / DBA / PhD Aspirant (Fly with Dependent)">
+              MRes / DBA / PhD Aspirant (Fly with Dependent 👨‍👩‍👧‍👦)
             </option>
-            <option value="Spoken English & Professional Fluency Candidate">
-              Spoken English &amp; Fluency Candidate
+            <option value="IELTS / Spoken English Candidate">
+              IELTS / Spoken English Candidate
             </option>
-            <option value="Parent for Milestone Junior Kids Academy">
-              Parent for Milestone Junior (Kids English)
+            <option value="Parent for Kids English & Phonics">
+              Parent for Kids English &amp; Phonics
             </option>
             <option value="Other / Need Guidance">Other / Need Guidance</option>
           </select>
@@ -215,7 +219,7 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
 
         <div>
           <label htmlFor="reg-office" className={label}>
-            Preferred Campus / Meeting Mode
+            Preferred Office / Meeting Mode
           </label>
           <select id="reg-office" value={form.office} onChange={set("office")} className={field}>
             {officeOptions.map((o) => (
@@ -251,7 +255,7 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
             rows={1}
             value={form.message}
             onChange={set("message")}
-            placeholder="Target intake, study gap, current English level, etc."
+            placeholder="Target intake, study gap, current English level, spouse details, etc."
             className={field}
           />
         </div>
@@ -259,15 +263,16 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
 
       <button
         type="submit"
-        className="btn-primary w-full text-xs py-3.5 mt-2 justify-center shadow-lg cursor-pointer font-bold bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white border-none flex items-center gap-2"
+        className="btn-primary w-full text-xs py-3.5 mt-2 justify-center shadow-lg cursor-pointer font-bold bg-gradient-to-r from-blue-700 to-indigo-600 hover:from-blue-600 hover:to-indigo-500 text-white border-none flex items-center gap-2"
       >
-        <span>Book Free Appointment</span>
+        <span>Book Free Appointment (0 BDT Service Fee)</span>
         <span>→</span>
       </button>
 
       <p className="text-center text-[0.7rem] text-slate-600">
-        🔒 100% Privacy Guaranteed · {company.name} · Campus: {company.address.full}
+        🔒 100% Privacy Guaranteed · {company.name} · {company.address.full}
       </p>
     </form>
   );
 }
+

@@ -11,10 +11,10 @@ export const Route = createFileRoute("/study-in-{$country}")({
   head: ({ loaderData }) => {
     const d = loaderData?.destination;
     const title = d
-      ? `Study in ${d.name} | ${company.name} — Admission & Visa Guidance | Beanibazar`
+      ? `Study in ${d.name} | ${company.name} — British Council Certified | Zero Service Charge`
       : `Study Abroad Destinations | ${company.name}`;
     const description = d
-      ? `${d.tagline}. University admissions, 100% genuine visa guidance, IELTS requirements, and Study Gap assessment for ${d.name} with ${company.name} (${company.taglineBangla}). Beanibazar Campuses: ${company.address.full}. Hotlines: ${company.phones[0]} / ${company.phones[1]}.`
+      ? `${d.tagline}. University admissions, genuine visa guidance, IELTS requirements, and dependent visa strategy for ${d.name} with ${company.name} (${company.taglineBangla}). 100% Free Processing. Head Office: ${company.address.full}. Hotlines: ${company.phones.join(", ")}.`
       : `Study abroad admissions and language academy coaching from ${company.name}.`;
     return {
       meta: [
@@ -42,7 +42,7 @@ function DestinationPage() {
         eyebrow={`${d.flag} ${d.region} · Official Destination`}
         title={`Study in ${d.name}`}
         subtitle={d.tagline}
-        image="/milestone-celebration.jpg"
+        image="/banner.jpg"
         imageAlt={`Study in ${d.name} — ${company.name}`}
       >
         <div className="space-y-6">
@@ -54,7 +54,10 @@ function DestinationPage() {
             ]}
           />
           <div className="flex flex-wrap gap-4">
-            <RegisterButton label={`Free ${d.name} Assessment`} className="px-8 py-3.5 bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white border-none" />
+            <RegisterButton
+              label={`Free ${d.name} Assessment`}
+              className="px-8 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white border-none shadow-md font-bold"
+            />
             <a
               href={whatsappHref()}
               target="_blank"
@@ -90,7 +93,7 @@ function DestinationPage() {
                   <span className="text-slate-500 block text-xs font-medium">
                     Post-Study Work Visa:
                   </span>
-                  <span className="font-bold text-sky-600 mt-1 block">{d.pswv}</span>
+                  <span className="font-bold text-blue-600 mt-1 block">{d.pswv}</span>
                 </div>
                 <div className="rounded-2xl bg-slate-50 p-4 border border-slate-200">
                   <span className="text-slate-500 block text-xs font-medium">Major Intakes:</span>
@@ -100,7 +103,7 @@ function DestinationPage() {
                 </div>
                 <div className="rounded-2xl bg-slate-50 p-4 border border-slate-200">
                   <span className="text-slate-500 block text-xs font-medium">Scholarships / Perks:</span>
-                  <span className="font-bold text-sky-700 mt-1 block">{d.scholarships}</span>
+                  <span className="font-bold text-blue-700 mt-1 block">{d.scholarships}</span>
                 </div>
                 <div className="rounded-2xl bg-slate-50 p-4 border border-slate-200">
                   <span className="text-slate-500 block text-xs font-medium">
@@ -137,7 +140,7 @@ function DestinationPage() {
                     key={uni}
                     className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 p-4"
                   >
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-sky-50 text-lg shadow-sm border border-sky-200 text-sky-600">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-lg shadow-sm border border-blue-200 text-blue-600">
                       🎓
                     </span>
                     <span className="text-xs font-bold text-slate-800">{uni}</span>
@@ -149,16 +152,16 @@ function DestinationPage() {
 
           {/* Right Sidebar: Assessment Form & Hotlines */}
           <aside className="space-y-6">
-            <div className="rounded-3xl p-6 sm:p-8 sticky top-24 border border-sky-200 bg-white shadow-md space-y-4">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-sky-50 border border-sky-200 px-3 py-1 text-xs font-bold text-sky-700">
-                Senior Counselor Support
+            <div className="rounded-3xl p-6 sm:p-8 sticky top-24 border border-blue-200 bg-white shadow-md space-y-4">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 border border-blue-200 px-3 py-1 text-xs font-bold text-blue-700">
+                British Council Certified Counselor Support
               </span>
               <h3 className="font-display text-lg font-black text-slate-900">
                 Apply for {d.name} with {company.name}
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-medium">
                 Connect directly with our senior foreign education counselors for university shortlisting,
-                IELTS score targets, study gap assessment, and fast-track offer letter &amp; visa filing.
+                IELTS score targets, dependent visa planning (MRes/PhD), and fast-track admission with 100% free processing.
               </p>
 
               <div className="space-y-2.5 pt-2">
@@ -180,19 +183,16 @@ function DestinationPage() {
 
               <div className="border-t border-slate-100 pt-4 text-xs text-slate-600 space-y-2">
                 <p>
-                  <strong>🏛️ Main Campus:</strong> {company.branches[0]?.address}
+                  <strong>🏛️ Head Office (BD):</strong> {company.branches[0]?.address}
                 </p>
                 <p>
-                  <strong>📍 Annex Campus:</strong> {company.branches[1]?.address}
-                </p>
-                <p>
-                  <strong>💻 CD IELTS Lab:</strong> Azir Market (2nd Floor), Beanibazar
+                  <strong>🇬🇧 UK Branch Office:</strong> {company.branches[1]?.address}
                 </p>
                 <p>
                   <strong>🕒 Counseling Hours:</strong> {company.hours}
                 </p>
-                <p className="text-sky-600 font-bold">
-                  ✓ Free 1-on-1 Profile Assessment Guaranteed
+                <p className="text-emerald-700 font-bold">
+                  ✓ 100% Free Processing · Zero Service Charge (ভিসার আগে বা পরে কোনো চার্জ নেই ❌)
                 </p>
               </div>
             </div>

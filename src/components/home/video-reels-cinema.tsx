@@ -10,7 +10,7 @@ export function VideoReelsCinema() {
   const currentVideo = videos[activeVideoIdx] || videos[0]!;
 
   return (
-    <section className="relative bg-[#060A13] py-16 sm:py-24 lg:py-32 text-white overflow-hidden border-t border-white/10">
+    <section className="relative bg-[#060A14] py-16 sm:py-24 lg:py-32 text-white overflow-hidden border-t border-white/10">
       {/* Animated Ambient Theater Lighting */}
       <motion.div
         animate={{
@@ -22,7 +22,7 @@ export function VideoReelsCinema() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-cyan-600/15 blur-[160px]"
+        className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-blue-600/20 blur-[160px]"
       />
       <motion.div
         animate={{
@@ -35,7 +35,7 @@ export function VideoReelsCinema() {
           ease: "easeInOut",
           delay: 2,
         }}
-        className="pointer-events-none absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-emerald-600/15 blur-[140px]"
+        className="pointer-events-none absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-amber-500/15 blur-[140px]"
       />
 
       <div className="section-shell relative z-10 px-4 sm:px-6">
@@ -45,7 +45,7 @@ export function VideoReelsCinema() {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] border border-cyan-500/25 px-3.5 py-1 text-xs font-bold text-cyan-400 mb-3 backdrop-blur-md"
+            className="inline-flex items-center gap-2 rounded-full bg-white/[0.05] border border-blue-500/30 px-3.5 py-1 text-xs font-bold text-blue-400 mb-3 backdrop-blur-md"
           >
             <IconSparkles className="w-3.5 h-3.5 text-amber-400" />
             <span>Official Video Proof & Facebook Broadcasts</span>
@@ -57,7 +57,7 @@ export function VideoReelsCinema() {
             transition={{ delay: 0.1 }}
             className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-white tracking-tight"
           >
-            See Real Results. Hear Real Students.
+            See Real Results. Hear Real Guidance.
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
@@ -66,13 +66,13 @@ export function VideoReelsCinema() {
             transition={{ delay: 0.2 }}
             className="mt-2.5 text-xs sm:text-sm text-slate-300 font-medium max-w-xl mx-auto leading-relaxed"
           >
-            Verified Facebook video broadcasts from Milestone Beanibazar campus. Real students taking Computer-Delivered IELTS mock tests, practicing spoken fluency, and receiving cash prize rewards for Band 7+ scores.
+            Verified Facebook broadcasts from Abroad Blueprint. Learn directly how students secure admissions with MRes scholarships, fly with dependents, and prepare for IELTS and Spoken English.
           </motion.p>
         </div>
 
         {/* Cinema Stage Container — Double-Bezel Architecture */}
         <div className="rounded-[1.75rem] sm:rounded-[2.5rem] bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-1.5 sm:p-3 border border-white/10 shadow-2xl backdrop-blur-2xl ring-1 ring-white/5">
-          <div className="rounded-[1.5rem] sm:rounded-[2rem] bg-[#0A1020]/95 border border-white/10 p-4 sm:p-7 lg:p-10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)]">
+          <div className="rounded-[1.5rem] sm:rounded-[2rem] bg-[#0A1224]/95 border border-white/10 p-4 sm:p-7 lg:p-10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)]">
             <div className="grid gap-6 lg:gap-8 lg:grid-cols-[1.2fr_0.8fr] items-center">
               {/* Left: Active Featured Video Player */}
               <div className="space-y-4">
@@ -84,19 +84,15 @@ export function VideoReelsCinema() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="w-full overflow-hidden flex items-center justify-center bg-black min-h-[440px] sm:min-h-[500px] p-2"
+                      className="w-full overflow-hidden flex items-center justify-center bg-black min-h-[460px] sm:min-h-[520px] p-2"
                     >
-                      <div
-                        className={`w-full ${
-                          currentVideo.aspect === "16:9" ? "max-w-[560px] aspect-[16/9]" : "max-w-[320px] aspect-[9/16]"
-                        } rounded-xl overflow-hidden shadow-2xl bg-black border border-white/10 flex items-center justify-center`}
-                      >
+                      <div className="w-full max-w-[280px] rounded-xl overflow-hidden shadow-2xl bg-black border border-white/10 flex items-center justify-center">
                         <iframe
                           key={currentVideo.id}
                           src={currentVideo.iframeSrc}
                           title={currentVideo.title}
-                          width={currentVideo.aspect === "16:9" ? "560" : "267"}
-                          height={currentVideo.aspect === "16:9" ? "314" : "476"}
+                          width={currentVideo.id === "3218021131830463" ? "267" : "273"}
+                          height="476"
                           style={{ border: "none", overflow: "hidden", maxWidth: "100%", maxHeight: "100%" }}
                           scrolling="no"
                           frameBorder="0"
@@ -121,11 +117,11 @@ export function VideoReelsCinema() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.97 }}
                     href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                      `Hello Milestone Beanibazar! I watched your video "${currentVideo.title}" and would like to enroll in courses.`,
+                      `Hello Abroad Blueprint! I watched your video "${currentVideo.title}" and would like admission counseling.`,
                     )}`}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn-primary text-xs py-2.5 px-4 font-bold rounded-xl inline-flex items-center justify-center gap-2 shadow-sm shrink-0 bg-[#0098da] hover:bg-[#0284c7] text-white"
+                    className="btn-primary text-xs py-2.5 px-4 font-bold rounded-xl inline-flex items-center justify-center gap-2 shadow-sm shrink-0 bg-[#0052cc] hover:bg-[#0043a8] text-white"
                   >
                     <IconWhatsApp className="w-3.5 h-3.5" />
                     <span>WhatsApp Counselor</span>
@@ -143,7 +139,7 @@ export function VideoReelsCinema() {
                     href={company.social.facebook}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-xs text-cyan-400 font-bold hover:underline"
+                    className="text-xs text-blue-400 font-bold hover:underline"
                   >
                     All Facebook Videos ↗
                   </a>
@@ -161,7 +157,7 @@ export function VideoReelsCinema() {
                         onClick={() => setActiveVideoIdx(idx)}
                         className={`w-full text-left p-3.5 sm:p-4 rounded-2xl border transition-all duration-300 cursor-pointer flex items-start gap-3 sm:gap-4 ${
                           active
-                            ? "bg-gradient-to-r from-cyan-600/25 to-blue-600/15 border-cyan-500/80 text-white ring-1 ring-cyan-500/40 shadow-md"
+                            ? "bg-gradient-to-r from-blue-600/30 to-indigo-600/20 border-blue-500/80 text-white ring-1 ring-blue-500/40 shadow-md"
                             : "bg-white/[0.03] border-white/10 text-slate-300 hover:bg-white/[0.06] hover:text-white"
                         }`}
                       >
@@ -171,7 +167,7 @@ export function VideoReelsCinema() {
 
                         <div className="space-y-0.5 sm:space-y-1 min-w-0">
                           <div className="flex items-center gap-2">
-                            <span className="text-[9px] uppercase font-bold tracking-wider rounded-md bg-white/10 px-2 py-0.5 text-cyan-300">
+                            <span className="text-[9px] uppercase font-bold tracking-wider rounded-md bg-white/10 px-2 py-0.5 text-blue-300">
                               {vid.badge}
                             </span>
                             {active && (
@@ -196,10 +192,10 @@ export function VideoReelsCinema() {
                 {/* Assurance Box */}
                 <div className="rounded-2xl bg-white/[0.04] p-3.5 sm:p-4 border border-white/10 space-y-1.5 text-xs">
                   <span className="text-amber-400 font-bold block">
-                    ★ Authentic Beanibazar Classroom & Award Broadcasts
+                    ★ British Council Certified Education Agency
                   </span>
                   <p className="text-slate-300 text-[11px] leading-relaxed">
-                    Watch our real students testing in the Computer-Delivered lab, participating in Speakers' Mania fluency sessions, and receiving cash prizes from CEO Saleh Ahmed Shaheen & Chief Instructor Ahbabur Rahman Tahmid.
+                    Watch our official updates on UK university admissions (Derby, Greenwich, Teesside, UEL, Cambridge ARU), MRes programs with dependent visa rights, and English preparation at Abroad Blueprint.
                   </p>
                 </div>
               </div>

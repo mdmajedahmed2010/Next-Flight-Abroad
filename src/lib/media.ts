@@ -1,26 +1,31 @@
 /**
- * MILESTONE BEANIBAZAR / MICU — Official Verified Media & Brand Assets.
+ * ABROAD BLUEPRINT — Official Verified Media & Brand Assets.
  *
  * Verified from:
- *  - Official Logo: /loogo.jpg (Round badge emblem with gold trim, "IELTS", "IELTS LIFE SKILLS", "SPOKEN ENGLISH", stylized green/cyan 'm', "milestone", "GET READY FOR THE WORLD", "MICU", "OFFICIAL PAGE")
- *  - Official Milestone Celebration Gathering Photo: /milestone-celebration.jpg (Giant 3D golden "MILESTONE" sculpture in Beanibazar with 100+ graduates holding certificates)
- *  - Official Facebook Page: https://www.facebook.com/milestonebeanibazar/
- *  - Main Campus: Azir Market (2nd Floor), 1 No. Goli, Inner College Road, Beanibazar, Sylhet
- *  - Annex Campus: Somobay Market (2nd Floor), College Road, Beanibazar, Sylhet
- *  - Hotlines: 01781-545490 · 01706-452949
- *  - Email: siddikurr806@gmail.com
+ *  - Official Logo: /assets/abroad-blueprint-logo.jpg (3D emblem with royal blue 'A', golden yellow 'B' with graduation cap, "ABROAD BLUEPRINT", "START HERE, GO ANYWHERE!")
+ *  - Official Cover Banner: /assets/abroad-blueprint-banner.jpg (World landmarks, hotline 8801961532479, Chittagong office address)
+ *  - Verified Visa Success 1: /assets/visa-success-nobin.jpg (Nobin Siddiky, Anglia Ruskin University Cambridge, PhD Management, Dependent Visa)
+ *  - Verified Visa Success 2: /assets/visa-success-ima.jpg (Mst. Ima Khatun, University of Greenwich London, MRes Chemistry, Dependent Visa)
+ *  - Official Facebook Page: https://www.facebook.com/AbroadBlueprint/
+ *  - Head Office: 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong-4000, Bangladesh
+ *  - UK Office: 17, Woodgate, Birmingham, United Kingdom
+ *  - Hotlines: +880 1961-532479 · +880 1643-829960 · +880 1302-092490 · +880 1616-338613 · +44 7587 358080
+ *  - Email: abroadblueprint@gmail.com
+ *  - Accreditation: British Council Certified Agent
  */
 
 export const mediaUrls: Record<string, string> = {
-  // Official Milestone Beanibazar Brand Assets
-  logo: "/loogo.jpg",
+  // Official Abroad Blueprint Brand Assets
+  logo: "/assets/abroad-blueprint-logo.jpg",
   "logo-fallback": "/logo.jpg",
-  banner: "/milestone-celebration.jpg",
-  celebration: "/milestone-celebration.jpg",
-  "hero-banner": "/milestone-celebration.jpg",
-  "hero-banner-brand": "/milestone-celebration.jpg",
+  banner: "/assets/abroad-blueprint-banner.jpg",
+  "hero-banner": "/assets/abroad-blueprint-banner.jpg",
+  "hero-banner-brand": "/assets/abroad-blueprint-banner.jpg",
+  "visa-nobin": "/assets/visa-success-nobin.jpg",
+  "visa-ima": "/assets/visa-success-ima.jpg",
 };
 
 export function getMediaUrl(key: string, fallback?: string): string {
-  return mediaUrls[key] || fallback || "/loogo.jpg";
+  return mediaUrls[key] || fallback || "/assets/abroad-blueprint-logo.jpg";
 }
+
