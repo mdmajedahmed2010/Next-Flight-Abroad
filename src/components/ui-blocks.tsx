@@ -154,14 +154,29 @@ export function IconWhatsApp({ className = "w-4 h-4" }: { className?: string }) 
 
 export const globalPartners = [
   {
-    name: "IDP Education Official Partner",
-    type: "Direct Exam Booking & Testing Support",
-    tag: "Authorized Partner",
+    name: "Greek Cyprus EU Work Permit",
+    type: "14 In-Demand Technical Trades (2026 Quota)",
+    tag: "Government Approved",
+  },
+  {
+    name: "Mongolia Greenhouse & Crane Logistics",
+    type: "Container Lifter & Farm Technicians ($800–$900)",
+    tag: "Verified Employer",
+  },
+  {
+    name: "Maldives Hospitality & Tourism",
+    type: "Resort Service & Graphic Design Jobs",
+    tag: "In-Person Handover",
+  },
+  {
+    name: "Worldwide Air Ticketing & Travel",
+    type: "Best International Airfares & Visit Visas",
+    tag: "আপনার ভ্রমণের সাথী ✈️",
   },
   {
     name: "United Kingdom Universities",
-    type: "1-Yr Master's & 2-Yr PSW Work Visa",
-    tag: "Sylhet Flagship",
+    type: "Undergrad, Master's & 2-Yr Graduate Route PSW",
+    tag: "Top Higher Study",
   },
   {
     name: "Canada Public DLIs & Colleges",
@@ -169,29 +184,14 @@ export const globalPartners = [
     tag: "Fast Study Permits",
   },
   {
-    name: "Australia Top Universities",
-    type: "CRICOS Approved & Subclass 500",
-    tag: "Extended PSW",
+    name: "Europe (Cyprus, Malta & Germany)",
+    type: "Affordable English Degrees & Schengen Access",
+    tag: "Global Admissions",
   },
   {
-    name: "USA Accredited Universities",
-    type: "STEM OPT 3-Yr & F-1 Coaching",
-    tag: "Scholarship Support",
-  },
-  {
-    name: "Europe (Cyprus, Malta & Schengen)",
-    type: "Affordable Tuition & High Visa Ratio",
-    tag: "Flexible Pathways",
-  },
-  {
-    name: "Cambridge Assessment English",
-    type: "Authentic IELTS Books 11–19",
-    tag: "Official Prep",
-  },
-  {
-    name: "British Council Certified Agency",
-    type: "Accredited Global Education Advisor",
-    tag: "Certified Agent",
+    name: "NextFlight BD Language Academy",
+    type: "IELTS Band 7.5+, Spoken Fluency & Kids Phonics",
+    tag: "Dhaka Campus & Online",
   },
 ];
 
@@ -464,7 +464,7 @@ export function UniversityMarquee() {
           Top Study &amp; Career <span className="text-blue-600">Destinations &amp; Partners</span>
         </h2>
         <p className="text-xs sm:text-sm text-slate-600 font-medium mt-2 leading-relaxed">
-          Comprehensive university admissions, Fly with Dependent programs, and British Council certified IELTS coaching for the United Kingdom, Canada, Australia, the USA, and Europe with 100% free processing and zero service charge.
+          Comprehensive overseas career placement (Greek Cyprus 14 Trades, Mongolia, Maldives), global study admissions (Cyprus, Europe, UK, Canada, USA), and NextFlight BD Language Academy training with 100% transparent processing.
         </p>
       </div>
 

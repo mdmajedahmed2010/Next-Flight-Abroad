@@ -22,8 +22,8 @@ export const Route = createFileRoute("/terms-of-use")({
 
 const sections = [
   {
-    title: "1. Scope of Educational Advisory Services",
-    body: `${company.name} (${company.taglineBangla}) provides specialized foreign university selection, direct application processing, scholarship facilitation, IELTS preparation, and visa guidance for the United Kingdom, Canada, USA, Australia, and Europe. Statutory third-party fees (such as official university tuition, embassy visa fees, medical exams, and test registration fees) are payable directly to the respective authorities.`,
+    title: "1. Scope of Overseas Advisory & Travel Services",
+    body: `${company.name} (${company.taglineBangla}) provides foreign university admission guidance, overseas employment & work permit documentation (Greek Cyprus, Maldives, Mongolia), international air ticketing, and language academy training (IELTS, Spoken English, Kids English). Statutory third-party fees (such as official university tuition, embassy visa fees, medical exams, government taxes, and test registration fees) are payable directly to the respective authorities.`,
   },
   {
     title: "2. Transparent Counseling Commitment",

@@ -29,15 +29,15 @@ const metrics = [
   },
 ];
 
-const partnerCredentials = [
-  { name: "British Council", country: "United Kingdom", type: "Officially Certified UK Education Agent" },
-  { name: "Anglia Ruskin University, Cambridge", country: "🇬🇧 Cambridge, UK", type: "PhD with Dependent — Verified Visa Grant" },
-  { name: "University of Greenwich", country: "🇬🇧 London, UK", type: "MRes Chemistry with Dependent — Verified Visa Grant" },
-  { name: "University of Derby", country: "🇬🇧 Derby, UK", type: "MRes Programs with £3,000 Scholarships" },
-  { name: "Teesside University", country: "🇬🇧 Middlesbrough, UK", type: "DBA 39-Month Doctorate — Post-PSW Pathway" },
-  { name: "University of East London (UEL)", country: "🇬🇧 London, UK", type: "Up to £5,000 Merit Scholarships" },
-  { name: "Aston University", country: "🇬🇧 Birmingham, UK", type: "Premier Research Master's & Technology Partner" },
-  { name: "DAAD Germany", country: "🇩🇪 Germany / Europe", type: "Fully Funded Scholarships & Tuition-Free Universities" },
+const serviceHighlights = [
+  { name: "Greek Cyprus EU Work Permit", country: "🇨🇾 European Union", type: "14 Trade Skill Work Permit · 2026 Urgent Quota" },
+  { name: "Mongolia Logistics & Farming", country: "🇲🇳 Mongolia", type: "Reach Stacker Crane Driver & Modern Greenhouse ($800–$900)" },
+  { name: "Maldives Work & Tourism", country: "🇲🇻 Maldives", type: "Resort Hospitality & Design · Direct Handover" },
+  { name: "Global Air Ticketing", country: "✈️ Worldwide Routes", type: "Best Airfare, Group Booking & Visit Visa" },
+  { name: "European Study Abroad", country: "🇪🇺 Cyprus / Germany / Malta", type: "Undergraduate & Master's Admissions & Credit Transfer" },
+  { name: "IELTS Preparation Academy", country: "🏆 Cambridge Aligned", type: "Academic & General Training (Band 7.5+ Target)" },
+  { name: "Spoken English Fluency", country: "🗣️ Corporate & Everyday", type: "Hesitation Removal & Practical Conversation" },
+  { name: "Kids English & Phonics Studio", country: "🧒 Ages 5–14", type: "Phonics, Sound Mastery & Confidence Building" },
 ];
 
 function AnimatedMetric({ value }: { value: string }) {
@@ -257,19 +257,19 @@ export function ProofAndCredentials() {
           </div>
         </div>
 
-        {/* Global Partner Credentials Marquee / Grid */}
+        {/* Global Core Pillars & Verified Services Grid */}
         <div className="space-y-4">
           <div className="flex items-center justify-between border-b border-white/10 pb-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
-              Institutional Partners & Certifications
+            <span className="text-xs font-bold uppercase tracking-wider text-slate-400 font-bangla">
+              নেক্সট ফ্লাইট বিডি-র মূল সেবা ও গন্তব্যসমূহ (Core Services &amp; Wings)
             </span>
             <span className="text-xs text-blue-400 font-bold">
-              UK · Australia · Canada · USA · Germany
+              Cyprus · Mongolia · Maldives · Europe · Travel · Academy
             </span>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-            {partnerCredentials.map((p) => (
+            {serviceHighlights.map((p) => (
               <div
                 key={p.name}
                 className="rounded-xl sm:rounded-2xl bg-white/[0.02] border border-white/10 p-3 sm:p-4 hover:border-blue-400/40 transition-colors"

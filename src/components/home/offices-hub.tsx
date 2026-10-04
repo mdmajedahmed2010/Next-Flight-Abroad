@@ -45,64 +45,66 @@ export function OfficesHub() {
           </motion.p>
         </div>
 
-        {/* Branch Selector Cards with Framer Motion layoutId */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto mb-6 sm:mb-8">
-          {branches.map((b, idx) => {
-            const active = activeBranchIdx === idx;
-            return (
-              <motion.button
-                whileHover={{ y: -3 }}
-                whileTap={{ scale: 0.98 }}
-                key={b.name}
-                type="button"
-                onClick={() => setActiveBranchIdx(idx)}
-                className={`relative p-4 sm:p-5 rounded-2xl sm:rounded-3xl border text-left transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden ${
-                  active
-                    ? "bg-slate-900 border-slate-900 text-white shadow-xl"
-                    : "bg-white border-slate-200 text-slate-800 hover:border-blue-400 hover:shadow-md"
-                }`}
-              >
-                {active && (
-                  <motion.div
-                    layoutId="activeOfficeIndicator"
-                    className="absolute inset-0 bg-slate-900 rounded-2xl sm:rounded-3xl -z-10"
-                    transition={{ type: "spring", stiffness: 350, damping: 30 }}
-                  />
-                )}
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span
-                      className={`rounded-full px-2.5 py-0.5 text-[9px] sm:text-[10px] font-bold ${
-                        active
-                          ? "bg-amber-400 text-slate-950 font-black"
-                          : "bg-blue-50 text-blue-700 border border-blue-200"
-                      }`}
-                    >
-                      {b.tag}
-                    </span>
-                    <span className="text-[11px] sm:text-xs font-bold">{b.city}</span>
-                  </div>
-                  <h3
-                    className={`font-display text-sm sm:text-base font-bold leading-snug line-clamp-1 ${
-                      active ? "text-white" : "text-slate-900"
-                    }`}
-                  >
-                    {b.name}
-                  </h3>
-                </div>
-
-                <div
-                  className={`mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t text-[10px] sm:text-[11px] font-medium flex items-center justify-between ${
-                    active ? "border-slate-800 text-slate-300" : "border-slate-100 text-slate-500"
+        {/* Branch Selector Cards with Framer Motion layoutId (shown when multiple branches exist) */}
+        {branches.length > 1 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto mb-6 sm:mb-8">
+            {branches.map((b, idx) => {
+              const active = activeBranchIdx === idx;
+              return (
+                <motion.button
+                  whileHover={{ y: -3 }}
+                  whileTap={{ scale: 0.98 }}
+                  key={b.name}
+                  type="button"
+                  onClick={() => setActiveBranchIdx(idx)}
+                  className={`relative p-4 sm:p-5 rounded-2xl sm:rounded-3xl border text-left transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden ${
+                    active
+                      ? "bg-slate-900 border-slate-900 text-white shadow-xl"
+                      : "bg-white border-slate-200 text-slate-800 hover:border-blue-400 hover:shadow-md"
                   }`}
                 >
-                  <span className="truncate">{b.short}</span>
-                  <span>{active ? "● Active View" : "Click to view details →"}</span>
-                </div>
-              </motion.button>
-            );
-          })}
-        </div>
+                  {active && (
+                    <motion.div
+                      layoutId="activeOfficeIndicator"
+                      className="absolute inset-0 bg-slate-900 rounded-2xl sm:rounded-3xl -z-10"
+                      transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                    />
+                  )}
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span
+                        className={`rounded-full px-2.5 py-0.5 text-[9px] sm:text-[10px] font-bold ${
+                          active
+                            ? "bg-amber-400 text-slate-950 font-black"
+                            : "bg-blue-50 text-blue-700 border border-blue-200"
+                        }`}
+                      >
+                        {b.tag}
+                      </span>
+                      <span className="text-[11px] sm:text-xs font-bold">{b.city}</span>
+                    </div>
+                    <h3
+                      className={`font-display text-sm sm:text-base font-bold leading-snug line-clamp-1 ${
+                        active ? "text-white" : "text-slate-900"
+                      }`}
+                    >
+                      {b.name}
+                    </h3>
+                  </div>
+
+                  <div
+                    className={`mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t text-[10px] sm:text-[11px] font-medium flex items-center justify-between ${
+                      active ? "border-slate-800 text-slate-300" : "border-slate-100 text-slate-500"
+                    }`}
+                  >
+                    <span className="truncate">{b.short}</span>
+                    <span>{active ? "● Active View" : "Click to view details →"}</span>
+                  </div>
+                </motion.button>
+              );
+            })}
+          </div>
+        )}
 
         {/* Active Branch Interactive Stage — Double-Bezel Architecture with AnimatePresence */}
         <div className="rounded-[1.75rem] sm:rounded-[2.5rem] bg-gradient-to-b from-slate-200/60 to-slate-100/40 p-1.5 sm:p-3 border border-slate-200 shadow-xl max-w-5xl mx-auto">
@@ -157,7 +159,7 @@ export function OfficesHub() {
                       Free Profile Assessment &amp; No File Opening Charge:
                     </span>
                     <p className="text-[11px] leading-relaxed text-slate-600">
-                      Bring your academic transcripts, certificates, and passport. Our British Council certified counselors will evaluate your direct admission eligibility, scholarship potential (up to £5,000 / 100%), and Dependent Visa pathways with zero service fees.
+                      Bring your academic certificates, technical credentials, and passport. Our experienced {company.name} counselors will evaluate your direct eligibility for Greek Cyprus (14 Trades), Mongolia (Greenhouse &amp; Container logistics), Maldives, Study Abroad programs, and Language Academy batches.
                     </p>
                   </div>
 

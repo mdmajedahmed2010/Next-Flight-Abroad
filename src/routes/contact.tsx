@@ -184,9 +184,10 @@ function Contact() {
             <ul className="mt-3 text-xs text-slate-300 space-y-2 leading-relaxed font-bangla">
               <li>• <strong>সরাসরি ঢাকা হেড অফিস:</strong> রাজ্জাক প্লাজা, ৩৮৩ (লিফট-১২), মগবাজার, ঢাকা-১২১৭।</li>
               <li>• <strong>গ্রিক সাইপ্রাস ২০২৬ ওয়ার্ক পারমিট:</strong> ১৪টি টেকনিক্যাল ট্রেডে ইউরোপিয়ান কাজের সুযোগ (বেতন ৮০০-১৫০০ ইউরো)।</li>
-              <li>• <strong>মালদ্বীপ ভিসা ও এমপ্লয়মেন্ট:</strong> সরাসরি রিয়েল ভিসা হ্যান্ডওভার ও অনুমোদিত কর্মসংস্থান।</li>
-              <li>• <strong>উচ্চশিক্ষা ও স্টাডি অ্যাব্রড:</strong> ইউকে, কানাডা, অস্ট্রেলিয়া, যুক্তরাষ্ট্র ও ইউরোপীয় বিশ্ববিদ্যালয় ভর্তি।</li>
-              <li>• <strong>আইইএলটিএস ও স্পোকেন ইংলিশ একাডেমি:</strong> একাডেমিক ও জেনারেল ট্রেনিং, ফ্লুয়েন্সি স্টুডিও এবং কিডস ইংলিশ।</li>
+              <li>• <strong>মঙ্গোলিয়া ও মালদ্বীপ এমপ্লয়মেন্ট:</strong> কন্টেইনার ক্রেন চালক, আধুনিক গ্রিনহাউস কর্মী এবং রিসোর্ট ও হোটেল সার্ভিস।</li>
+              <li>• <strong>ওয়ার্ল্ডওয়াইড এয়ার টিকেটিং:</strong> সেরা মূল্যে অভ্যন্তরীণ ও আন্তর্জাতিক এয়ার টিকিট এবং ট্রাভেল সাপোর্ট।</li>
+              <li>• <strong>উচ্চশিক্ষা ও স্টাডি অ্যাব্রড:</strong> সাইপ্রাস, ইউরোপ, ইউকে, কানাডা ও যুক্তরাষ্ট্রে বিশ্ববিদ্যালয় ভর্তি ও ভিসা।</li>
+              <li>• <strong>আইইএলটিএস ও ল্যাঙ্গুয়েজ একাডেমি:</strong> একাডেমিক ও জেনারেল আইইএলটিএস, স্পোকেন ফ্লুয়েন্সি এবং কিডস ইংলিশ।</li>
             </ul>
             <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
               <span className="text-slate-400">Facebook: @nextflightbd26 (7.7K+ Followers)</span>
@@ -278,9 +279,10 @@ function Contact() {
                     className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-blue-600 focus:bg-white transition-colors"
                   >
                     <option value="Greek Cyprus 14 Trade Work Permit 2026">🇨🇾 Greek Cyprus 14 Trade Work Permit 2026</option>
+                    <option value="Mongolia Work Permit (Crane & Greenhouse)">🇲🇳 Mongolia Work Permit (Crane &amp; Greenhouse)</option>
                     <option value="Maldives Employment Visa">🇲🇻 Maldives Employment Visa</option>
-                    <option value="Kuwait Delivery / Driver Visa">🇰🇼 Kuwait Delivery / Driver Visa</option>
-                    <option value="Study Abroad (UK, Canada, Europe, USA)">🎓 Study Abroad Admissions</option>
+                    <option value="Worldwide Air Ticketing & Travel">✈️ Worldwide Air Ticketing &amp; Travel</option>
+                    <option value="Study Abroad (Cyprus, Europe, UK, Canada)">🎓 Study Abroad Admissions</option>
                     <option value="IELTS Academic Preparation">📘 IELTS Academic Preparation</option>
                     <option value="IELTS General Training">📙 IELTS General Training</option>
                     <option value="Spoken English & Fluency">🗣️ Spoken English &amp; Fluency</option>
@@ -298,10 +300,12 @@ function Contact() {
                     className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-blue-600 focus:bg-white transition-colors"
                   >
                     <option value="Greek Cyprus 🇨🇾">Greek Cyprus 🇨🇾</option>
+                    <option value="Mongolia 🇲🇳">Mongolia 🇲🇳</option>
                     <option value="Maldives 🇲🇻">Maldives 🇲🇻</option>
+                    <option value="Air Ticketing & Travel ✈️">Air Ticketing &amp; Travel ✈️</option>
+                    <option value="Europe / Schengen 🇪🇺">Europe / Schengen 🇪🇺</option>
                     <option value="United Kingdom 🇬🇧">United Kingdom 🇬🇧</option>
                     <option value="Canada 🇨🇦">Canada 🇨🇦</option>
-                    <option value="Europe / Schengen 🇪🇺">Europe / Schengen 🇪🇺</option>
                     <option value="United States 🇺🇸">United States 🇺🇸</option>
                     <option value="Language Academy Only">🎯 Language Academy Only</option>
                   </select>

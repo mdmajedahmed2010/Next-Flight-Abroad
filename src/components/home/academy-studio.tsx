@@ -51,7 +51,7 @@ export function AcademyStudio() {
               className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 border border-blue-400/30 px-3.5 py-1 text-xs font-bold text-blue-400 backdrop-blur-md"
             >
               <IconSparkles className="w-3.5 h-3.5 text-blue-400" />
-              <span>Language &amp; Fluency Excellence · British Council Standard</span>
+              <span>Language &amp; Fluency Excellence · NextFlight BD Academy</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 14 }}
@@ -230,7 +230,7 @@ export function AcademyStudio() {
                       Curriculum &amp; Focus Areas
                     </h4>
                     <span className="text-xs text-blue-400 font-semibold">
-                      British Council &amp; Cambridge Standard
+                      Cambridge &amp; CEFR Standard Curriculum
                     </span>
                   </div>
 

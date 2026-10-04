@@ -54,6 +54,9 @@ export function SiteFooter() {
                 <span className="bg-blue-500/20 text-blue-300 border border-blue-400/30 px-2.5 py-1 rounded-full">
                   ★ Greek Cyprus 14 Trade Work Permits
                 </span>
+                <span className="bg-sky-400/20 text-sky-200 border border-sky-400/30 px-2.5 py-1 rounded-full">
+                  ★ Worldwide Air Ticketing ✈️
+                </span>
               </div>
 
               {/* Newsletter Subscription Box */}
@@ -128,6 +131,12 @@ export function SiteFooter() {
                   <Link to="/services" className="hover:text-emerald-300 transition-colors flex items-center gap-1.5 text-emerald-300 font-semibold">
                     <span className="text-emerald-400">›</span>
                     <span>Maldives & Mongolia Work Permit Processing</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="hover:text-amber-300 transition-colors flex items-center gap-1.5 text-amber-300 font-semibold">
+                    <span className="text-amber-400">›</span>
+                    <span>Worldwide Air Ticketing & Tourist Visas ✈️</span>
                   </Link>
                 </li>
                 <li className="pt-2 border-t border-white/10">

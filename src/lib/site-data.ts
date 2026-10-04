@@ -174,6 +174,8 @@ export const company = {
       role: "Central Counseling, Study Abroad Processing, IELTS Academy, Spoken English & Global Work Permits",
       leadPerson: "Senior Visa & Student Counseling Team",
       isPrimary: true,
+      primary: true,
+      tag: "Official Head Office (Dhaka)",
     },
   ],
 
@@ -404,7 +406,7 @@ export const academyCourses = [
       "Comprehensive, result-focused IELTS Academic preparation designed for students aiming for top universities in the UK, Canada, USA, Australia, and Europe. Covers Listening, Reading, Writing Task 1/2, and 1-on-1 Speaking mock interviews with Cambridge materials.",
     keyFeatures: [
       "Rigorous Writing Task 1 (graphs/charts) & Task 2 essay structure formulas",
-      "One-on-one individual speaking mock interviews with British Council standard assessment",
+      "One-on-one individual speaking mock interviews with official IELTS rubric assessment",
       "Reading scan-skim techniques and time management strategy drills",
       "Authentic Cambridge past test papers (Books 12-19) with in-depth error clinics",
       "Guidance for Computer-Delivered & Paper-Based formats + PTE / Duolingo alternatives",
@@ -549,7 +551,7 @@ export const destinationsData = [
       "MBA & International Business Management",
       "MSc Healthcare & Public Health Administration",
       "BSc/BEng Computer & Mechanical Engineering",
-      "Master of Research (MRes) & PhD Programs",
+      "MSc Project Management & Information Systems",
     ],
     popularFields: [
       "Business & Leadership",
@@ -1119,7 +1121,7 @@ export const services = [
     desc: "উচ্চশিক্ষা ও মাইগ্রেশনের জন্য ব্যান্ড ৭.০ থেকে ৮.৫ স্কোর অর্জনের লক্ষ্যে বিশেষায়িত ক্লাস। ক্যামব্রিজ ম্যাটেরিয়াল, ওয়ান-অন-ওয়ান স্পিকিং মক ও পূর্ণাঙ্গ প্র্যাকটিস সুবিধা।",
     features: [
       "Targeted Writing Task 1 & Task 2 structure formulas with individual feedback",
-      "One-on-one individual speaking mock interviews with British Council standard assessment",
+      "One-on-one individual speaking mock interviews with official IELTS rubric assessment",
       "Fast-track reading and listening techniques for maximum accuracy and speed",
       "Flexible alternative options: PTE Academic and Duolingo coaching",
     ],

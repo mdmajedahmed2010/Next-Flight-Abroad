@@ -23,15 +23,15 @@ export const Route = createFileRoute("/privacy-policy")({
 const sections = [
   {
     title: "1. Information We Collect",
-    body: `When you register with ${company.name} for IELTS training, English language courses, or study abroad university admissions (UK, Canada, USA, Australia, Europe), we collect relevant personal details including your name, phone/WhatsApp number, email address, academic transcripts, certificates, passport details, and destination preferences. We also collect minimal anonymous web analytics to ensure website security and optimal performance.`,
+    body: `When you register with ${company.name} for study abroad university admissions, overseas work permits (Greek Cyprus, Maldives, Mongolia), air ticketing, or IELTS & English language courses, we collect relevant personal details including your name, phone/WhatsApp number, email address, academic transcripts, certificates, passport details, and travel/study preferences. We also collect minimal anonymous web analytics to ensure website security and optimal performance.`,
   },
   {
     title: "2. How We Use Your Information",
-    body: `Your information is used strictly to provide profile evaluations, course enrollments, university admissions, scholarship applications, and visa documentation. All counseling is conducted transparently from our office at ${company.address.full}.`,
+    body: `Your information is used strictly to provide profile evaluations, course enrollments, university admissions, scholarship applications, work permit filing, and visa documentation. All counseling is conducted transparently from our office at ${company.address.full}.`,
   },
   {
     title: "3. Information Sharing & Third Parties",
-    body: "We share your documents solely with designated partner universities, British Council / IDP testing authorities, and official sovereign immigration authorities (e.g., UK Visas and Immigration) for university admission and visa processing upon your explicit consent. We NEVER sell, rent, or trade your personal information with third-party marketers or commercial brokers.",
+    body: "We share your documents solely with designated partner universities, authorized testing centers, partner employers, and official sovereign immigration authorities/embassies for admissions, work permits, and visa processing upon your explicit consent. We NEVER sell, rent, or trade your personal information with third-party marketers or commercial brokers.",
   },
   {
     title: "4. Data Storage & Confidentiality",

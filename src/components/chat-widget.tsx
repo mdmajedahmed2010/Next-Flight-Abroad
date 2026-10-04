@@ -7,7 +7,7 @@ export function ChatWidget() {
   const [showCallMenu, setShowCallMenu] = useState(false);
 
   const whatsappUrl = `https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-    `Hello ${company.name}! I would like to consult about study abroad, Cyprus work permit, and language training courses.`,
+    `Hello ${company.name}! I would like to inquire about your overseas services (Work Permits, Study Abroad, Air Ticketing, and IELTS/Language Academy).`,
   )}`;
 
   const messengerUrl = company.social.messenger;

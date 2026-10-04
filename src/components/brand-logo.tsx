@@ -78,7 +78,7 @@ export function BrandLogo({
               variant === "dark" ? "text-slate-400" : "text-slate-500",
             )}
           >
-            {subtitle || "Study Abroad · IELTS Academy · Global Careers"}
+            {subtitle || "Study Abroad · Work Permits · Air Ticketing · IELTS"}
           </span>
         </div>
       )}

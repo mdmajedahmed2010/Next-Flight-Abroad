@@ -70,7 +70,7 @@ export function InteractiveMatcher() {
               "IELTS Prep (Academic / General)",
               "Bachelor's Degree (Undergrad)",
               "Master's / MBA / Post-Grad",
-              "MRes / PhD (Fly with Dependent)",
+              "Greek Cyprus / Mongolia Work Permit",
             ].map((opt) => (
               <button
                 key={opt}

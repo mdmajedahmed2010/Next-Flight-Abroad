@@ -88,7 +88,7 @@ function About() {
               <div>
                 <h3 className="font-display text-xl font-bold text-slate-900">{company.name}</h3>
                 <span className="inline-block rounded-full bg-blue-50 border border-blue-200 px-3 py-0.5 text-xs font-bold text-blue-800 mt-1">
-                  British Council Certified Agent
+                  Trusted Overseas & Language Consultancy
                 </span>
               </div>
             </div>

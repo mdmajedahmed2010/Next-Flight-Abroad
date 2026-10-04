@@ -107,10 +107,10 @@ function Home() {
       {/* 1. Grand Opening: Hero Showcase with Double-Bezel Concierge & Celebration Banner */}
       <HeroShowcase />
 
-      {/* 2. The Proof Stage: Real Metrics, British Council Certification & Verified Visas */}
+      {/* 2. The Proof Stage: Real Metrics, Verified Work Permits & Global Admissions */}
       <ProofAndCredentials />
 
-      {/* 3. Asymmetrical Flagship Destination Bento Grid (UK Dependent, Canada, USA, Australia, Europe) */}
+      {/* 3. Flagship Bento Grid (Greek Cyprus 14 Trade, Mongolia, Maldives, Study Abroad, Air Ticketing) */}
       <DestinationBento />
 
       {/* 4. The Facebook Video Reels Cinema Theater Mode (Official Video Embeds) */}

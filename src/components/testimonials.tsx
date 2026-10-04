@@ -69,7 +69,7 @@ export function Testimonials() {
               transition={{ delay: 0.2 }}
               className="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed"
             >
-              Authentic feedback from students who achieved foreign university admissions, visa approvals, and Cambridge-standard IELTS scores through {company.name}.
+              Authentic feedback from students and professionals who achieved foreign university admissions, overseas work permits, visa approvals, and IELTS scores through {company.name}.
             </motion.p>
           </div>
 

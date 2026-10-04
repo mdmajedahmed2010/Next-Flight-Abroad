@@ -343,8 +343,8 @@ function Services() {
                 {
                   title: "United Kingdom (UK)",
                   icon: "🇬🇧",
-                  desc: "Flagship destination! Fly with Dependent in MRes & PhD, direct Undergrad & Master's, 2-Year PSW, and up to £5,000 merit scholarships.",
-                  badge: "Fly with Dependent 👨‍👩‍👧‍👦",
+                  desc: "Premier higher study pathway! Top UK universities, direct Undergrad & Master's admissions, 2-Year Graduate Route PSW, and profile-based merit scholarships.",
+                  badge: "2-Yr PSW & Direct Entry",
                 },
                 {
                   title: "Canada",
@@ -416,7 +416,7 @@ function Services() {
             Why Students Trust <span className="text-blue-600">{company.name}</span>
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 mt-1">
-            Compare our British Council accreditation, Fly with Dependent expertise, and zero service charges against traditional agencies.
+            Compare our verified European work permits, dedicated IELTS & Language Academy, global admissions, and transparent service standards.
           </p>
         </div>
 
@@ -497,7 +497,7 @@ function Services() {
             Frequently Asked Questions on Services
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 mt-1">
-            Clear, transparent answers about Fly with Dependent, zero service charge processing, and IELTS coaching.
+            Clear, transparent answers about work permits, university admissions, visa processing, and language academy batches.
           </p>
         </div>
 

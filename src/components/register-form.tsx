@@ -6,16 +6,18 @@ const field =
 const label = "mb-1.5 block text-xs font-bold uppercase tracking-wider text-slate-700";
 
 const serviceOptions = [
-  "Study Abroad Admissions — UK (Undergraduate / Masters)",
   "Greek Cyprus 14 Trade Work Permit (Urgent 2026 Quota)",
-  "Maldives & International Work Visas",
+  "Mongolia Work Permit (Modern Greenhouse & Crane Operator)",
+  "Maldives Hospitality & Skilled Work Visa",
+  "Worldwide Air Ticketing & Tourist Visas (আপনার ভ্রমণের সাথী ✈️)",
   "Study Abroad Admissions — Europe (Cyprus, Malta, Germany)",
+  "Study Abroad Admissions — UK (Undergraduate / Masters)",
   "Study Abroad Admissions — Canada & USA",
   "IELTS Academic Preparation (Target Band 7.0 - 8.5)",
   "IELTS General Training (Work & Migration Track)",
   "Spoken English & Communication Fluency",
   "Kids English & Phonics Studio (Ages 5-14)",
-  "Scholarship & Profile Evaluation (0 BDT Service Fee)",
+  "Free Profile Evaluation & Career Counseling",
 ];
 
 const officeOptions = [
@@ -75,9 +77,9 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
         <div className="mt-2 rounded-2xl border border-blue-200 bg-blue-50/50 p-4 text-xs text-slate-800 text-left space-y-1">
           <p>✔ {company.address.full}</p>
           <p>✔ {company.slogan} ({company.taglineBangla})</p>
-          <p>✔ British Council Certified Agent · 100% Free Processing</p>
-          <p>✔ Study Abroad: UK, Canada, Australia, USA &amp; Europe</p>
-          <p>✔ IELTS Academy, Spoken English &amp; Kids English</p>
+          <p>✔ Greek Cyprus (14 Trades), Mongolia &amp; Maldives Work Permits</p>
+          <p>✔ Study Abroad Admissions: Cyprus, Europe, UK, Canada &amp; USA</p>
+          <p>✔ IELTS Academy, Spoken English &amp; Kids English Studio</p>
         </div>
         <div className="pt-2 flex flex-col gap-2">
           <a
@@ -199,11 +201,14 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
             <option value="HSC / A-Level Completed (Bachelor's Abroad Aspirant)">
               HSC / A-Level Completed (Bachelor&apos;s Abroad Aspirant)
             </option>
-            <option value="Bachelor's / Masters Graduate (UK / Canada / Australia Masters)">
-              Bachelor&apos;s / Masters Graduate (UK / Canada / Australia Masters)
+            <option value="Skilled Worker / Technician (Greek Cyprus 14 Trades / Mongolia)">
+              Skilled Worker / Technician (Greek Cyprus 14 Trades / Mongolia 🇪🇺)
             </option>
-            <option value="MRes / DBA / PhD Aspirant (Fly with Dependent)">
-              MRes / DBA / PhD Aspirant (Fly with Dependent 👨‍👩‍👧‍👦)
+            <option value="Bachelor's / Masters Graduate (Study Abroad Aspirant)">
+              Bachelor&apos;s / Masters Graduate (Study Abroad Aspirant)
+            </option>
+            <option value="Air Ticketing & Travel Client">
+              Air Ticketing &amp; Travel Client (আপনার ভ্রমণের সাথী ✈️)
             </option>
             <option value="IELTS / Spoken English Candidate">
               IELTS / Spoken English Candidate

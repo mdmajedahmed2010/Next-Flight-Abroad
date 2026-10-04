@@ -123,7 +123,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           alternateName: "NextFlight BD (@nextflightbd26)",
           slogan: company.slogan,
           description:
-            "NextFlight BD (নেক্সট ফ্লাইট ওভারসিজ) is a premier overseas educational consultancy and language academy located at Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217, Bangladesh. Specializing in study abroad admissions, IELTS preparation, Spoken English, Kids English, and verified global skill work permits.",
+            "NextFlight BD (নেক্সট ফ্লাইট ওভারসিজ) is a trusted overseas educational consultancy, air ticketing partner, and language academy located at Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217, Bangladesh. Specializing in global university admissions, international airfares, IELTS preparation, Spoken English, and verified European & global work permits.",
           foundingDate: "Verified Consultancy",
           areaServed: ["Dhaka", "Chittagong", "Sylhet", "Bangladesh", "Worldwide"],
           email: company.email,

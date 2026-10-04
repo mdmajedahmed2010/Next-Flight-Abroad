@@ -154,14 +154,14 @@ function DestinationPage() {
           <aside className="space-y-6">
             <div className="rounded-3xl p-6 sm:p-8 sticky top-24 border border-blue-200 bg-white shadow-md space-y-4">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 border border-blue-200 px-3 py-1 text-xs font-bold text-blue-700">
-                British Council Certified Counselor Support
+                NextFlight BD Global Admission Guidance
               </span>
               <h3 className="font-display text-lg font-black text-slate-900">
                 Apply for {d.name} with {company.name}
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-medium">
                 Connect directly with our senior foreign education counselors for university shortlisting,
-                IELTS score targets, dependent visa planning (MRes/PhD), and fast-track admission with 100% free processing.
+                IELTS score targets, scholarship guidance, and fast-track admission with dedicated filing support.
               </p>
 
               <div className="space-y-2.5 pt-2">

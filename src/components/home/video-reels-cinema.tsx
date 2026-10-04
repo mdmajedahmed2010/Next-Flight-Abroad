@@ -66,7 +66,7 @@ export function VideoReelsCinema() {
             transition={{ delay: 0.2 }}
             className="mt-2.5 text-xs sm:text-sm text-slate-300 font-medium max-w-xl mx-auto leading-relaxed"
           >
-            Watch live visa handover celebrations and official announcements directly from our Facebook page (@nextflightbd26). Maldives, Greek Cyprus, Mongolia, and Kuwait genuine career pathways.
+            Watch live visa handover celebrations and official announcements directly from our Facebook page (@nextflightbd26). Maldives, Greek Cyprus 14 trades, and Mongolia verified career pathways.
           </motion.p>
         </div>
 

@@ -55,7 +55,7 @@ export function SiteHeader() {
             </a>
             <span className="text-slate-500 hidden md:inline">|</span>
             <span className="hidden md:inline-flex items-center gap-1 text-[0.68rem] bg-gradient-to-r from-sky-600 to-blue-700 text-white font-extrabold px-2.5 py-0.5 rounded-full shadow-xs">
-              ★ Study Abroad · IELTS Band 7.5+ · Spoken English · Kids English · Verified Work Visas
+              ★ Study Abroad · Work Permits · Air Ticketing · IELTS Academy · Spoken &amp; Kids English
             </span>
           </div>
 
@@ -86,7 +86,7 @@ export function SiteHeader() {
             <BrandLogo size={46} withText textClassName="flex" />
             <div className="hidden xl:block h-6 w-px bg-slate-200" />
             <span className="hidden xl:inline text-xs font-extrabold text-[#0f2b48] tracking-wider uppercase">
-              STUDY ABROAD · LANGUAGE ACADEMY · GLOBAL CAREERS
+              STUDY ABROAD · WORK PERMITS · AIR TICKETING · IELTS
             </span>
           </Link>
 
