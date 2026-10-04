@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { type ReactNode, useState } from "react";
 import { cn } from "@/lib/utils";
-import { company } from "@/lib/site-data";
+import { company, verifiedStats } from "@/lib/site-data";
 import { useRegisterModal } from "@/components/register-modal";
 import { motion } from "framer-motion";
 
@@ -154,44 +154,44 @@ export function IconWhatsApp({ className = "w-4 h-4" }: { className?: string }) 
 
 export const globalPartners = [
   {
-    name: "Greek Cyprus EU Work Permit",
-    type: "14 In-Demand Technical Trades (2026 Quota)",
-    tag: "Government Approved",
+    name: "South Korea (Kyungsung University, Busan)",
+    type: "30%–100% Scholarships · D-4-1 Language & D-2 Degrees",
+    tag: "Flagship Partner",
   },
   {
-    name: "Mongolia Greenhouse & Crane Logistics",
-    type: "Container Lifter & Farm Technicians ($800–$900)",
-    tag: "Verified Employer",
+    name: "Greece (European Union / Schengen)",
+    type: "100% Risk-Free Route · Pay Tuition After Visa · No IELTS",
+    tag: "Risk-Free Route",
   },
   {
-    name: "Maldives Hospitality & Tourism",
-    type: "Resort Service & Graphic Design Jobs",
-    tag: "In-Person Handover",
-  },
-  {
-    name: "Worldwide Air Ticketing & Travel",
-    type: "Best International Airfares & Visit Visas",
-    tag: "আপনার ভ্রমণের সাথী ✈️",
+    name: "Malta (Schengen Island)",
+    type: "English Medium · Study Gap Accepted · Student Work Rights",
+    tag: "Schengen Europe",
   },
   {
     name: "United Kingdom Universities",
-    type: "Undergrad, Master's & 2-Yr Graduate Route PSW",
-    tag: "Top Higher Study",
+    type: "2-Year Graduate Route PSW · Fast CAS · Up to £5k Scholarships",
+    tag: "World-Ranked",
   },
   {
-    name: "Canada Public DLIs & Colleges",
-    type: "Co-op & Up to 3-Year PGWP",
-    tag: "Fast Study Permits",
+    name: "United States (F-1 & STEM OPT)",
+    type: "3-Year STEM Work Rights · 1-on-1 Visa Mock Interviews",
+    tag: "Top STEM Degrees",
   },
   {
-    name: "Europe (Cyprus, Malta & Germany)",
-    type: "Affordable English Degrees & Schengen Access",
-    tag: "Global Admissions",
+    name: "Canada (DLI Colleges & PGWP)",
+    type: "Public Institutions · Up to 3-Year PGWP · PR Pathways",
+    tag: "High PR Points",
   },
   {
-    name: "NextFlight BD Language Academy",
-    type: "IELTS Band 7.5+, Spoken Fluency & Kids Phonics",
-    tag: "Dhaka Campus & Online",
+    name: "Australia Higher Education",
+    type: "CRICOS Approved Courses · Up to 4-Year Regional PSW",
+    tag: "High Minimum Wage",
+  },
+  {
+    name: "Next Flight Abroad Language Academy",
+    type: "IELTS Band 7.5+, Spoken English Fluency & Kids Phonics",
+    tag: "Cambridge Certified",
   },
 ];
 
@@ -228,8 +228,8 @@ export function PageHero({
 }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#070B16] via-[#0A1020] to-[#070B16] text-white py-12 sm:py-16 lg:py-20 border-b border-white/10">
-      <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-orange-500/15 blur-[140px]" />
-      <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-amber-500/15 blur-[140px]" />
+      <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-blue-600/15 blur-[140px]" />
+      <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-rose-600/15 blur-[140px]" />
 
       {image ? (
         <div
@@ -247,8 +247,8 @@ export function PageHero({
         >
           <div>
             {eyebrow ? (
-              <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-orange-400/40 bg-orange-500/15 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-orange-300 backdrop-blur-md">
-                <IconSparkles className="w-3.5 h-3.5 text-orange-400" />
+              <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-blue-400/40 bg-blue-500/15 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-blue-300 backdrop-blur-md">
+                <IconSparkles className="w-3.5 h-3.5 text-blue-400" />
                 <span>{eyebrow}</span>
               </div>
             ) : null}
@@ -268,7 +268,7 @@ export function PageHero({
 
           {image ? (
             <div className="relative hidden lg:block">
-              <div className="relative overflow-hidden rounded-3xl border border-sky-500/30 bg-slate-900/90 p-3 shadow-2xl backdrop-blur-xl">
+              <div className="relative overflow-hidden rounded-3xl border border-blue-500/30 bg-slate-900/90 p-3 shadow-2xl backdrop-blur-xl">
                 <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-slate-950">
                   <img
                     src={image}
@@ -279,10 +279,10 @@ export function PageHero({
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-white">
-                    <span className="rounded-full bg-slate-950/85 px-3 py-1 font-bold backdrop-blur-md border border-white/20 text-red-300">
+                    <span className="rounded-full bg-slate-950/85 px-3 py-1 font-bold backdrop-blur-md border border-white/20 text-rose-300">
                       {company.address.short}
                     </span>
-                    <span className="rounded-full bg-red-600 px-3 py-1 font-bold text-white shadow-sm">
+                    <span className="rounded-full bg-blue-600 px-3 py-1 font-bold text-white shadow-sm">
                       ● {company.name}
                     </span>
                   </div>
@@ -290,10 +290,10 @@ export function PageHero({
 
                 <div className="p-3 text-center">
                   <p className="text-xs font-bold text-white">
-                    {company.name} · Foreign Education Advisory & Language Academy
+                    {company.name} · Higher Education Advisory & Language Academy
                   </p>
                   <p className="text-[0.68rem] text-slate-400">
-                    Principal HQ · {company.tagline} · Hotline: {company.phones[0]}
+                    Khilgaon Central Office · {company.tagline} · Hotline: {company.phones[0]}
                   </p>
                 </div>
               </div>
@@ -312,11 +312,11 @@ export function Breadcrumbs({ items }: { items: { label: string; to?: string }[]
         <div key={item.label} className="flex items-center gap-2">
           {i > 0 && <span className="text-slate-600">/</span>}
           {item.to ? (
-            <Link to={item.to} className="transition-colors hover:text-sky-600">
+            <Link to={item.to} className="transition-colors hover:text-blue-400">
               {item.label}
             </Link>
           ) : (
-            <span className="font-semibold text-sky-600">{item.label}</span>
+            <span className="font-semibold text-blue-400">{item.label}</span>
           )}
         </div>
       ))}
@@ -345,8 +345,8 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3.5 py-1 text-xs font-bold text-sky-700">
-          <IconSparkles className="w-3.5 h-3.5 text-sky-600" />
+        <div className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-3.5 py-1 text-xs font-bold text-blue-400">
+          <IconSparkles className="w-3.5 h-3.5 text-blue-400" />
           <span>{eyebrow}</span>
         </div>
       ) : null}
@@ -380,17 +380,17 @@ export function StatsStrip() {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm"
+      className="rounded-3xl border border-white/10 bg-slate-900/90 p-6 sm:p-8 shadow-xl text-white"
     >
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
-        {company.stats.slice(0, 4).map((s, idx) => (
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+        {verifiedStats.map((s, idx) => (
           <div key={s.label} className={cn("text-center", idx > 0 ? "pt-4 sm:pt-0 sm:px-4" : "")}>
-            <div className="font-display text-3xl sm:text-4xl font-black text-sky-600 tracking-tight">
+            <div className="font-display text-3xl sm:text-4xl font-black text-blue-400 tracking-tight">
               {s.value}
             </div>
-            <div className="mt-1 text-xs sm:text-sm font-bold text-slate-800">{s.label}</div>
-            <span className="mt-2 inline-block rounded-full bg-sky-50 border border-sky-200 px-3 py-0.5 text-[0.68rem] font-bold text-sky-700">
-              {s.badge}
+            <div className="mt-1 text-xs sm:text-sm font-bold text-slate-200">{s.label}</div>
+            <span className="mt-2 inline-block rounded-full bg-blue-500/20 border border-blue-400/30 px-3 py-0.5 text-[0.68rem] font-bold text-blue-300">
+              {s.subtext}
             </span>
           </div>
         ))}
@@ -399,21 +399,23 @@ export function StatsStrip() {
   );
 }
 
-export function FaqList({ items }: { items: readonly { q: string; a: string }[] }) {
+export function FaqList({ items }: { items: readonly { q?: string; question?: string; a?: string; answer?: string }[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
     <div className="space-y-3">
       {items.map((item, idx) => {
         const isOpen = openIndex === idx;
+        const qText = item.q || item.question || "";
+        const aText = item.a || item.answer || "";
         return (
           <div
-            key={item.q}
+            key={qText || idx}
             className={cn(
               "rounded-2xl border transition-all duration-300 overflow-hidden",
               isOpen
-                ? "bg-white border-sky-500 shadow-md ring-1 ring-sky-500/20"
-                : "bg-white/80 border-slate-200 hover:border-slate-300 hover:bg-white",
+                ? "bg-white/[0.06] border-blue-400 shadow-md ring-1 ring-blue-400/30"
+                : "bg-white/[0.02] border-white/10 hover:border-white/20 hover:bg-white/[0.04]",
             )}
           >
             <button
@@ -421,13 +423,13 @@ export function FaqList({ items }: { items: readonly { q: string; a: string }[] 
               onClick={() => setOpenIndex(isOpen ? null : idx)}
               className="w-full text-left p-4 sm:p-5 flex items-center justify-between gap-4 cursor-pointer active:scale-[0.99] transition-transform"
             >
-              <span className="font-display text-sm sm:text-base font-bold text-slate-900">
-                {item.q}
+              <span className="font-display text-sm sm:text-base font-bold text-white">
+                {qText}
               </span>
               <span
                 className={cn(
                   "flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold transition-transform duration-300",
-                  isOpen ? "bg-sky-600 text-white rotate-180" : "bg-slate-100 text-slate-600",
+                  isOpen ? "bg-blue-600 text-white rotate-180" : "bg-white/10 text-slate-400",
                 )}
               >
                 ↓
@@ -441,8 +443,8 @@ export function FaqList({ items }: { items: readonly { q: string; a: string }[] 
               )}
             >
               <div className="overflow-hidden">
-                <div className="px-4 pb-5 sm:px-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3 font-medium">
-                  <p>{item.a}</p>
+                <div className="px-4 pb-5 sm:px-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-white/10 pt-3 font-medium whitespace-pre-line">
+                  <p>{aText}</p>
                 </div>
               </div>
             </div>
@@ -455,22 +457,22 @@ export function FaqList({ items }: { items: readonly { q: string; a: string }[] 
 
 export function UniversityMarquee() {
   return (
-    <section className="relative border-y border-slate-200/80 bg-white py-14 sm:py-20 overflow-hidden">
+    <section className="relative border-y border-white/10 bg-[#070B16] py-14 sm:py-20 overflow-hidden text-white">
       <div className="section-shell text-center max-w-2xl mx-auto mb-10 sm:mb-12">
-        <div className="inline-flex items-center gap-1.5 rounded-full bg-sky-50 border border-sky-200 px-3.5 py-1 text-xs font-bold text-sky-700 mb-3">
-          <span>GLOBAL INSTITUTIONS</span>
+        <div className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/15 border border-blue-400/30 px-3.5 py-1 text-xs font-bold text-blue-300 mb-3">
+          <span>GLOBAL RECOGNITION</span>
         </div>
-        <h2 className="font-display text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
-          Top Study &amp; Career <span className="text-blue-600">Destinations &amp; Partners</span>
+        <h2 className="font-display text-2xl sm:text-4xl font-black text-white tracking-tight">
+          Top Study Destinations &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-rose-400">Institutional Partners</span>
         </h2>
-        <p className="text-xs sm:text-sm text-slate-600 font-medium mt-2 leading-relaxed">
-          Comprehensive overseas career placement (Greek Cyprus 14 Trades, Mongolia, Maldives), global study admissions (Cyprus, Europe, UK, Canada, USA), and NextFlight BD Language Academy training with 100% transparent processing.
+        <p className="text-xs sm:text-sm text-slate-300 font-medium mt-2 leading-relaxed">
+          Direct institutional admissions in South Korea (Kyungsung University), Greece (100% risk-free), Malta, UK, USA, Canada, and Australia, backed by Next Flight Abroad Language Academy.
         </p>
       </div>
 
       <div className="relative">
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-white to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-[#070B16] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[#070B16] to-transparent" />
 
         <motion.div
           animate={{ x: [0, -50 + "%"] }}
@@ -480,11 +482,11 @@ export function UniversityMarquee() {
           {[...globalPartners, ...globalPartners].map((partner, i) => (
             <div
               key={`${partner.name}-${i}`}
-              className="flex items-center gap-3 rounded-2xl border border-slate-200/90 bg-slate-50/80 px-5 py-3 shadow-xs hover:shadow-md hover:bg-white transition-all whitespace-nowrap"
+              className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-3 shadow-md hover:bg-white/[0.08] hover:border-blue-400/50 transition-all whitespace-nowrap"
             >
-              <span className="flex h-2 w-2 rounded-full bg-blue-600" />
-              <span className="text-xs sm:text-sm font-bold text-slate-900">{partner.name}</span>
-              <span className="rounded-full bg-blue-50 px-2.5 py-0.5 text-[0.68rem] font-bold text-blue-700 border border-blue-200">
+              <span className="flex h-2 w-2 rounded-full bg-blue-400" />
+              <span className="text-xs sm:text-sm font-bold text-white">{partner.name}</span>
+              <span className="rounded-full bg-blue-500/20 px-2.5 py-0.5 text-[0.68rem] font-bold text-blue-300 border border-blue-400/30">
                 {partner.tag}
               </span>
             </div>
@@ -498,11 +500,11 @@ export function UniversityMarquee() {
 export function BulletList({ items }: { items?: readonly string[] }) {
   if (!items || !items.length) return null;
   return (
-    <ul className="space-y-2.5 text-xs sm:text-sm text-slate-600">
+    <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300">
       {items.map((item, i) => (
         <li key={i} className="flex items-start gap-2.5">
-          <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-blue-50 text-blue-600 text-[0.65rem] font-bold border border-blue-200">
-            <IconCheck className="w-3 text-blue-600" />
+          <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 text-[0.65rem] font-bold border border-blue-400/30">
+            <IconCheck className="w-3 text-blue-400" />
           </span>
           <span className="leading-relaxed font-medium">{item}</span>
         </li>
@@ -515,9 +517,9 @@ export function CtaBand() {
   const { open } = useRegisterModal();
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-[#0B1528] via-[#0F1E36] to-[#0B1528] text-white py-16 sm:py-24 border-t border-slate-800">
-      <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-blue-500/15 blur-[120px]" />
-      <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-amber-500/10 blur-[120px]" />
+    <section className="relative overflow-hidden bg-gradient-to-r from-[#070B16] via-[#0A1020] to-[#070B16] text-white py-16 sm:py-24 border-t border-white/10">
+      <div className="pointer-events-none absolute -left-20 top-0 h-96 w-96 rounded-full bg-blue-600/15 blur-[120px]" />
+      <div className="pointer-events-none absolute -right-20 bottom-0 h-96 w-96 rounded-full bg-rose-600/15 blur-[120px]" />
 
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -525,17 +527,17 @@ export function CtaBand() {
         viewport={{ once: true }}
         className="section-shell relative z-10 text-center max-w-3xl mx-auto space-y-6"
       >
-        <div className="inline-flex items-center gap-2 rounded-full border border-blue-500/40 bg-blue-500/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-300">
+        <div className="inline-flex items-center gap-2 rounded-full border border-blue-400/40 bg-blue-500/15 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-blue-300">
           <IconGlobe className="w-3.5 h-3.5 text-blue-400" />
-          <span>{company.name} ({company.taglineBangla}) · {company.tagline}</span>
+          <span>{company.name} · {company.tagline} ✈️</span>
         </div>
 
         <h2 className="font-display text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
-          Study Abroad · IELTS Academy · <span className="text-blue-400">Start Here, Go Anywhere!</span>
+          Fly Towards Your Global Future with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-rose-400">Zero Financial Risk</span>
         </h2>
 
         <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed font-medium">
-          Book your free advisory session with {company.name}. 100% genuine guidance for Study Abroad (UK, Canada, USA, Europe), Greek Cyprus Work Permit 2026, and IELTS &amp; Spoken English Academy. Free profile evaluation at Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217.
+          Take advantage of our "No Visa, No Payment" contract guarantee. Expert counseling for South Korea, Greece, Malta, UK, USA, Canada, and IELTS / English courses. Visit our central office at 338/14 Khilgaon (Beside Ansar Head Office), Dhaka.
         </p>
 
         <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 pt-2">
@@ -544,7 +546,7 @@ export function CtaBand() {
             whileTap={{ scale: 0.97 }}
             type="button"
             onClick={open}
-            className="btn-primary w-full xs:w-auto text-xs sm:text-sm py-3.5 px-8 shadow-xl cursor-pointer font-bold flex items-center justify-center gap-2 bg-gradient-to-r from-blue-700 to-indigo-600 hover:from-blue-600 hover:to-indigo-500 text-white border-none"
+            className="w-full xs:w-auto text-xs sm:text-sm py-3.5 px-8 shadow-xl cursor-pointer font-bold flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-rose-600 hover:from-blue-500 hover:to-rose-500 text-white border-none transition-all"
           >
             <span>Book Free Profile Assessment</span>
             <IconArrowRight className="w-4 h-4" />
@@ -552,14 +554,12 @@ export function CtaBand() {
           <motion.a
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.97 }}
-            href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-              `Hello ${company.name}! I would like to book a free consultation for Study Abroad and IELTS courses.`,
-            )}`}
+            href={company.social.whatsapp}
             target="_blank"
             rel="noreferrer"
-            className="btn-luxury-secondary w-full xs:w-auto text-xs sm:text-sm py-3.5 px-7 shadow-xl text-slate-900 cursor-pointer font-bold flex items-center justify-center gap-2"
+            className="w-full xs:w-auto text-xs sm:text-sm py-3.5 px-7 shadow-xl rounded-full bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-300 border border-emerald-500/40 cursor-pointer font-bold flex items-center justify-center gap-2 transition-all"
           >
-            <IconWhatsApp className="w-4 h-4 text-emerald-600" />
+            <IconWhatsApp className="w-4 h-4 text-emerald-400" />
             <span>WhatsApp {company.phones[0]}</span>
           </motion.a>
         </div>

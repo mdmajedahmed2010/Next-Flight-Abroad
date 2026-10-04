@@ -2,10 +2,10 @@ import { cn } from "@/lib/utils";
 import { company } from "@/lib/site-data";
 
 /**
- * NEXTFLIGHT BD — Official Brand Logo Component.
- * Displays the verified logo badge (/assets/nextflight-logo.jpg) with modern aerodynamic styling,
- * brand colors (Deep Navy #0F2B48, Flight Blue #0099E5, Sunset Orange #F97316),
- * and verified tagline "আপনার ভ্রমণের সাথী ✈️".
+ * NEXT FLIGHT ABROAD — Official Brand Logo Component.
+ * Displays the verified logo badge (/logo.jpg) with modern aerodynamic styling,
+ * brand colors (Deep Navy #0B132B, Cobalt Blue #2563EB, Crimson Red #E11D48, Metallic Gold #F59E0B),
+ * and official English motto "Fly Towards Your Global Future ✈️".
  */
 export function BrandLogo({
   className,
@@ -26,19 +26,17 @@ export function BrandLogo({
     <div className={cn("inline-flex items-center gap-2.5 sm:gap-3 select-none group", className)}>
       <div
         className={cn(
-          "relative inline-flex items-center justify-center shrink-0 overflow-hidden rounded-2xl bg-white border border-sky-400/40 shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-md p-1",
+          "relative inline-flex items-center justify-center shrink-0 overflow-hidden rounded-2xl bg-white border border-blue-400/40 shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-md p-1",
         )}
         style={{ width: size, height: size }}
       >
         <img
-          src="/assets/nextflight-logo.jpg"
+          src="/logo.jpg"
           alt={`${company.name} Official Logo`}
           width={size}
           height={size}
           className="h-full w-full object-contain rounded-xl"
-          onError={(e) => {
-            e.currentTarget.src = "/logo.jpg";
-          }}
+          loading="eager"
         />
       </div>
 
@@ -47,42 +45,40 @@ export function BrandLogo({
           <div className="flex items-center gap-1.5 leading-none">
             <span
               className={cn(
-                "font-display font-black text-lg sm:text-xl md:text-2xl tracking-tight lowercase",
-                variant === "dark" ? "text-white" : "text-[#0f2b48]",
+                "font-display font-black text-base sm:text-lg md:text-xl tracking-tight uppercase",
+                variant === "dark" ? "text-white" : "text-[#0B132B]",
               )}
             >
-              next<span className="text-[#0099e5]">flight</span>
+              NEXT<span className="text-rose-500"> FLIGHT</span>
             </span>
             <span
               className={cn(
-                "font-display font-black text-[0.62rem] sm:text-[0.68rem] px-1.5 py-0.5 rounded-md tracking-wider uppercase",
+                "font-display font-black text-[0.62rem] sm:text-[0.68rem] px-1.5 py-0.5 rounded-md tracking-widest uppercase",
                 variant === "dark"
-                  ? "bg-sky-500/20 text-sky-300 border border-sky-400/30"
-                  : "bg-sky-50 text-[#0f2b48] border border-sky-200 font-bold",
+                  ? "bg-rose-500/20 text-rose-300 border border-rose-400/30"
+                  : "bg-blue-50 text-blue-700 border border-blue-200 font-bold",
               )}
             >
-              BD
+              ABROAD
             </span>
           </div>
           <span
             className={cn(
-              "font-bangla font-semibold text-[0.68rem] sm:text-[0.74rem] tracking-[0.02em] truncate max-w-[200px] xs:max-w-[250px] sm:max-w-none mt-0.5",
-              variant === "dark" ? "text-sky-300" : "text-[#0099e5]",
+              "font-medium text-[0.66rem] sm:text-[0.72rem] tracking-tight truncate max-w-[200px] xs:max-w-[250px] sm:max-w-none mt-0.5",
+              variant === "dark" ? "text-blue-400" : "text-blue-600",
             )}
           >
-            {company.taglineBangla || "আপনার ভ্রমণের সাথী ✈️"}
+            {company.tagline} ✈️
           </span>
           <span
             className={cn(
-              "text-[0.52rem] sm:text-[0.58rem] tracking-[0.03em] font-medium truncate",
-              variant === "dark" ? "text-slate-400" : "text-slate-500",
+              "text-[0.52rem] sm:text-[0.58rem] tracking-wide font-medium truncate uppercase text-slate-400",
             )}
           >
-            {subtitle || "Study Abroad · Work Permits · Air Ticketing · IELTS"}
+            {subtitle || "Study Abroad · IELTS · Spoken English · Kids English"}
           </span>
         </div>
       )}
     </div>
   );
 }
-

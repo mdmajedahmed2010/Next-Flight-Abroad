@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 export function MobileDock() {
   const { open } = useRegisterModal();
 
-  const primaryPhone = company.phones[0] || "+880 1961-532479";
+  const primaryPhone = company.phones[0];
   const whatsappClean = company.whatsapp.replace(/[^0-9]/g, "");
 
   return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-2.5 pb-[max(0.65rem,env(safe-area-inset-bottom))] bg-[#0A1020]/95 backdrop-blur-2xl border-t border-white/10 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+    <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 p-2.5 pb-[max(0.65rem,env(safe-area-inset-bottom))] bg-[#070B16]/95 backdrop-blur-2xl border-t border-white/10 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
       <div className="grid grid-cols-3 gap-2 max-w-md mx-auto items-center">
         {/* 1. Direct Call Hotline */}
         <motion.a
@@ -26,7 +26,7 @@ export function MobileDock() {
         <motion.a
           whileTap={{ scale: 0.94 }}
           href={`https://wa.me/${whatsappClean}?text=${encodeURIComponent(
-            `Hello ${company.name}! I am on your website and want to consult about Study Abroad (UK, Canada, Europe) and IELTS batches.`,
+            `Hello ${company.name}! I am on your website and want to consult about Study Abroad (South Korea, Greece, UK, USA) and IELTS / English courses.`,
           )}`}
           target="_blank"
           rel="noreferrer"
@@ -41,13 +41,12 @@ export function MobileDock() {
           whileTap={{ scale: 0.94 }}
           type="button"
           onClick={() => open()}
-          className="flex flex-col items-center justify-center gap-1 py-2 px-1 rounded-xl bg-gradient-to-r from-blue-700 to-indigo-600 text-white shadow-lg shadow-blue-700/30 active:opacity-90 font-bold cursor-pointer"
+          className="flex flex-col items-center justify-center gap-1 py-2 px-1 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-rose-600 text-white shadow-lg shadow-blue-600/30 active:opacity-90 font-bold cursor-pointer"
         >
-          <span className="text-sm leading-none">✨</span>
+          <span className="text-sm leading-none">✈️</span>
           <span className="text-[10px] font-extrabold uppercase tracking-tight">Apply Free</span>
         </motion.button>
       </div>
     </div>
   );
 }
-

@@ -1,4 +1,4 @@
-import { company, manifesto } from "@/lib/site-data";
+import { company, whyChooseReasons } from "@/lib/site-data";
 import { useRegisterModal } from "@/components/register-modal";
 import { IconSparkles, IconCheck, IconArrowRight, IconWhatsApp } from "@/components/ui-blocks";
 import { motion } from "framer-motion";
@@ -32,7 +32,7 @@ export function HonestyManifesto() {
           ease: "easeInOut",
           delay: 2,
         }}
-        className="pointer-events-none absolute bottom-0 left-1/4 h-[400px] w-[400px] rounded-full bg-amber-500/10 blur-[130px]"
+        className="pointer-events-none absolute bottom-0 left-1/4 h-[400px] w-[400px] rounded-full bg-rose-600/10 blur-[130px]"
       />
 
       <div className="section-shell relative z-10 px-4 sm:px-6">
@@ -45,7 +45,7 @@ export function HonestyManifesto() {
             className="inline-flex items-center gap-2 rounded-full bg-blue-500/15 border border-blue-400/30 px-4 py-1 text-xs font-bold text-blue-300 mb-3 backdrop-blur-md"
           >
             <IconSparkles className="w-3.5 h-3.5 text-blue-400" />
-            <span>The NextFlight BD Standard of Integrity</span>
+            <span>The Next Flight Abroad Standard of Integrity</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 14 }}
@@ -54,24 +54,24 @@ export function HonestyManifesto() {
             transition={{ delay: 0.1 }}
             className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-white tracking-tight"
           >
-            Why Thousands Trust <span className="text-blue-400">{company.name}</span>
+            Why Thousands Trust <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-rose-400">{company.name}</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-3 text-xs sm:text-sm text-slate-300 font-medium max-w-xl mx-auto leading-relaxed font-bangla"
+            className="mt-3 text-xs sm:text-sm text-slate-300 font-medium max-w-xl mx-auto leading-relaxed"
           >
-            বিশ্বস্ত ভিসা প্রসেসিং, আইইএলটিএস ও স্পোকেন ইংলিশ ট্রেইনিং এবং ইউরোপ ও মধ্যপ্রাচ্যের অনুমোদিত ওয়ার্ক পারমিটের নির্ভরযোগ্য প্রতিষ্ঠান। প্রধান কার্যালয়: রাজ্জাক প্লাজা, মগবাজার, ঢাকা।
+            Ethical counseling, zero advance fees under our contract guarantee, and comprehensive support from application to arrival. Headquarters at Khilgaon, Dhaka.
           </motion.p>
         </div>
 
-        {/* 6 Pillars Grid with Double-Bezel Architecture & Framer Motion Stagger */}
+        {/* 6 Pillars Grid */}
         <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {manifesto.map((p, idx) => (
+          {whyChooseReasons.map((p, idx) => (
             <motion.div
-              key={p.id || p.title || idx}
+              key={p.title || idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -82,28 +82,25 @@ export function HonestyManifesto() {
               <div className="rounded-[1.35rem] bg-[#0A1020] p-5 sm:p-7 h-full flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl sm:text-3xl p-2 rounded-2xl bg-white/[0.05] border border-white/10">
-                      {p.icon || "✓"}
+                    <span className="text-2xl p-2 rounded-2xl bg-white/[0.05] border border-white/10">
+                      {idx === 0 ? "🛡️" : idx === 1 ? "🎓" : idx === 2 ? "🏆" : idx === 3 ? "🎙️" : idx === 4 ? "📜" : "📍"}
                     </span>
                     <span className="font-display font-black text-xl sm:text-2xl text-blue-500/40 group-hover:text-blue-400 transition-colors">
-                      {p.id || `0${idx + 1}`}
+                      {`0${idx + 1}`}
                     </span>
                   </div>
 
                   <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
                     {p.title}
                   </h3>
-                  <p className="font-bangla text-xs font-semibold text-amber-300">
-                    {p.bengali}
-                  </p>
                   <p className="text-xs text-slate-300 leading-relaxed font-medium">
-                    {p.desc}
+                    {p.description}
                   </p>
                 </div>
 
                 <div className="pt-3 border-t border-white/5 flex items-center gap-1.5 text-[11px] font-bold text-slate-400 group-hover:text-blue-400 transition-colors">
                   <IconCheck className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>NextFlight BD Official Commitment</span>
+                  <span>Next Flight Abroad Verified Standard</span>
                 </div>
               </div>
             </motion.div>
@@ -115,14 +112,14 @@ export function HonestyManifesto() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-12 sm:mt-16 rounded-3xl bg-gradient-to-r from-blue-600/15 via-indigo-600/10 to-transparent p-6 sm:p-8 border border-blue-500/20 backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-6"
+          className="mt-12 sm:mt-16 rounded-3xl bg-gradient-to-r from-blue-600/15 via-indigo-600/10 to-rose-600/10 p-6 sm:p-8 border border-blue-500/20 backdrop-blur-xl flex flex-col md:flex-row items-center justify-between gap-6"
         >
           <div className="space-y-1.5 text-center md:text-left">
             <h4 className="font-display text-lg sm:text-xl font-bold text-white">
-              আপনার বিশ্বস্ত ভ্রমণের ও ক্যারিয়ারের সাথী
+              Fly Towards Your Global Future with Complete Peace of Mind
             </h4>
-            <p className="text-xs sm:text-sm text-slate-300 font-medium font-bangla">
-              সরাসরি আমাদের ঢাকা অফিসে (মগবাজার) এসে পাসপোর্ট ও পেপারস সহ ফ্রি ফাইল মূল্যায়ন ও ক্যারিয়ার গাইডলাইন নিন।
+            <p className="text-xs sm:text-sm text-slate-300 font-medium">
+              Visit our central office at Khilgaon with your academic documents for a comprehensive, zero-obligation profile assessment.
             </p>
           </div>
 
@@ -132,7 +129,7 @@ export function HonestyManifesto() {
               whileTap={{ scale: 0.97 }}
               type="button"
               onClick={open}
-              className="btn-primary text-xs py-3 px-6 font-bold rounded-full flex items-center justify-center gap-2 shadow-lg cursor-pointer bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white border-none"
+              className="text-xs py-3 px-6 font-bold rounded-full flex items-center justify-center gap-2 shadow-lg cursor-pointer bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white border-none"
             >
               <span>Book Free Consultation</span>
               <IconArrowRight className="w-3.5 h-3.5" />
@@ -140,7 +137,7 @@ export function HonestyManifesto() {
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Hello ${company.name}! I want to book a study abroad and visa counseling session.`)}`}
+              href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Hello ${company.name}! I would like to book a free study abroad and visa counseling session.`)}`}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-xs font-bold text-white hover:bg-white/10 hover:border-blue-400 transition-colors"
@@ -154,4 +151,3 @@ export function HonestyManifesto() {
     </section>
   );
 }
-

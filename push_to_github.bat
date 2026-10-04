@@ -1,8 +1,8 @@
 @echo off
-title GitHub Push - NextFlight BD
+title GitHub Push - Next Flight Abroad
 color 0a
 echo ==========================================================
-echo   Pushing NextFlight BD Web Platform to GitHub:
+echo   Pushing Next Flight Abroad Web Platform to GitHub:
 echo ==========================================================
 echo.
 cd /d "C:\Users\Majed\Downloads\Alex-Global-Consultancy-main\Alex-Global-Consultancy-main"

@@ -82,35 +82,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: company.name },
       {
         property: "og:title",
-        content: "NextFlight BD | আপনার ভ্রমণের সাথী ✈️ | Study Abroad & Language Academy",
+        content: "Next Flight Abroad | Gateway to Global Education & Language Academy",
       },
       {
         property: "og:description",
         content:
-          "NextFlight BD (নেক্সট ফ্লাইট ওভারসিজ): Razzak Plaza, Moghbazar, Dhaka. Higher Study Abroad (UK, USA, Canada, Europe), IELTS Band 7.5+, Spoken English, Kids English, and verified Greek Cyprus, Maldives & Mongolia work permits.",
+          "Next Flight Abroad: Official Study Abroad Admissions (South Korea, Greece, Malta, UK, USA, Canada, Australia) with 'No Visa, No Payment' contract guarantee, plus premier IELTS & Language Academy. Head Office: Khilgaon, Dhaka.",
       },
-      { property: "og:image", content: "/assets/nextflight-banner.jpg" },
+      { property: "og:image", content: "/banner.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "NextFlight BD — আপনার ভ্রমণের সাথী | Study Abroad & Overseas Solutions",
+        content: "Next Flight Abroad — Gateway to Global Education",
       },
       {
         name: "twitter:description",
         content:
-          "NextFlight BD Moghbazar, Dhaka: Complete Study Abroad advisory, IELTS & Spoken English academy, Kids phonics, and verified overseas work permit pathways.",
+          "Next Flight Abroad Khilgaon, Dhaka: Complete Study Abroad advisory, 'No Visa, No Payment' contract guarantee, IELTS Band 7.5+, Spoken English, and Kids Academy.",
       },
-      { name: "twitter:image", content: "/assets/nextflight-banner.jpg" },
+      { name: "twitter:image", content: "/banner.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/assets/nextflight-logo.jpg", type: "image/jpeg" },
-      { rel: "apple-touch-icon", href: "/assets/nextflight-logo.jpg" },
+      { rel: "icon", href: "/logo.jpg", type: "image/jpeg" },
+      { rel: "apple-touch-icon", href: "/logo.jpg" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap",
       },
     ],
     scripts: [
@@ -120,10 +120,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "EducationalOrganization",
           name: company.legalName,
-          alternateName: "NextFlight BD (@nextflightbd26)",
+          alternateName: "Next Flight Abroad (@nextflightabroad)",
           slogan: company.slogan,
           description:
-            "NextFlight BD (নেক্সট ফ্লাইট ওভারসিজ) is a trusted overseas educational consultancy, air ticketing partner, and language academy located at Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217, Bangladesh. Specializing in global university admissions, international airfares, IELTS preparation, Spoken English, and verified European & global work permits.",
+            "Next Flight Abroad is an authorized overseas higher education consultancy and premier language academy headquartered at 338/14, Block-C, Khilgaon, Taltola, Dhaka-1219, Bangladesh (Beside Ansar Head Office). Specializing in university admissions for South Korea (Kyungsung University), Greece (100% Risk-Free), Malta, UK, USA, Canada, Australia, contract-backed 'No Visa, No Payment' facility, and comprehensive IELTS, Spoken English & Kids English programs.",
           foundingDate: "Verified Consultancy",
           areaServed: ["Dhaka", "Chittagong", "Sylhet", "Bangladesh", "Worldwide"],
           email: company.email,

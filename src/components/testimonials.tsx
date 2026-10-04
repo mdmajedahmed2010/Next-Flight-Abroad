@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { testimonials as studentTestimonials, company } from "@/lib/site-data";
+import { studentTestimonials, company } from "@/lib/site-data";
 import { IconSparkles, IconCheck } from "@/components/ui-blocks";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -37,7 +37,7 @@ export function Testimonials() {
           ease: "easeInOut",
           delay: 1.5,
         }}
-        className="pointer-events-none absolute top-1/2 right-0 -translate-y-1/2 h-[350px] w-[350px] rounded-full bg-amber-500/10 blur-[140px]"
+        className="pointer-events-none absolute top-1/2 right-0 -translate-y-1/2 h-[350px] w-[350px] rounded-full bg-rose-600/10 blur-[140px]"
       />
 
       <div className="section-shell relative z-10 px-4 sm:px-6">
@@ -50,7 +50,7 @@ export function Testimonials() {
               viewport={{ once: true }}
               className="inline-flex items-center gap-2 rounded-full bg-blue-500/15 border border-blue-400/30 px-3.5 py-1 text-xs font-bold text-blue-300 backdrop-blur-md"
             >
-              <IconSparkles className="w-3.5 h-3.5 text-amber-400" />
+              <IconSparkles className="w-3.5 h-3.5 text-blue-400" />
               <span>Verified Success Stories</span>
             </motion.div>
             <motion.h2
@@ -60,7 +60,7 @@ export function Testimonials() {
               transition={{ delay: 0.1 }}
               className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight"
             >
-              Real Students. <span className="text-amber-400">Verified Visas.</span>
+              Real Students. <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-rose-400">Verified Visas.</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 14 }}
@@ -69,7 +69,7 @@ export function Testimonials() {
               transition={{ delay: 0.2 }}
               className="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed"
             >
-              Authentic feedback from students and professionals who achieved foreign university admissions, overseas work permits, visa approvals, and IELTS scores through {company.name}.
+              Authentic feedback from students and families who secured international university admissions in South Korea, Greece, UK, and Malta, and achieved IELTS Band 7.5+ with {company.name}.
             </motion.p>
           </div>
 
@@ -98,7 +98,7 @@ export function Testimonials() {
           </div>
         </div>
 
-        {/* Testimonials Grid (Double-Bezel Agency Styling) */}
+        {/* Testimonials Grid */}
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -138,37 +138,30 @@ export function Testimonials() {
 
                       {/* Quotation Text */}
                       <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
-                        &ldquo;{r.quote}&rdquo;
+                        "{r.quote}"
                       </p>
-
-                      {/* Bengali Quote for cultural resonance */}
-                      {r.bengaliQuote && (
-                        <p className="text-xs text-amber-300/80 font-bangla italic border-l-2 border-amber-500/40 pl-3 leading-relaxed">
-                          {r.bengaliQuote}
-                        </p>
-                      )}
                     </div>
 
-                    {/* Student Signature Footer */}
-                    <div className="border-t border-white/5 pt-4 flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white font-black text-xs shadow-md">
+                    {/* Student Profile Info */}
+                    <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-3">
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div className="h-10 w-10 rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-xs font-black text-white shrink-0 shadow-md">
                           {initials}
                         </div>
                         <div className="min-w-0">
-                          <h4 className="text-xs font-bold text-white truncate group-hover:text-blue-400 transition-colors">
+                          <h4 className="font-display text-xs sm:text-sm font-bold text-white truncate">
                             {r.name}
                           </h4>
-                          <p className="text-[10px] text-slate-400 truncate">
-                            {r.program ? `${r.program} · ` : ""}{r.destination}
-                          </p>
+                          <span className="text-[10px] sm:text-[11px] text-blue-300 truncate block">
+                            {r.destination}
+                          </span>
                         </div>
                       </div>
 
-                      <span className="flex items-center gap-1 text-[10px] font-semibold text-emerald-400 shrink-0">
+                      <div className="shrink-0 flex items-center gap-1 text-[10px] text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
                         <IconCheck className="w-3 h-3" />
-                        <span>Verified</span>
-                      </span>
+                        <span>Enrolled</span>
+                      </div>
                     </div>
                   </div>
                 </motion.div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
-import { courses, company } from "@/lib/site-data";
+import { academyCourses, company } from "@/lib/site-data";
 import { useRegisterModal } from "@/components/register-modal";
 import { IconSparkles, IconCheck, IconArrowRight, IconWhatsApp } from "@/components/ui-blocks";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,11 +9,11 @@ export function AcademyStudio() {
   const { open } = useRegisterModal();
   const [activeCourseIdx, setActiveCourseIdx] = useState(0);
 
-  const currentCourse = courses[activeCourseIdx] || courses[0]!;
+  const currentCourse = academyCourses[activeCourseIdx] || academyCourses[0]!;
 
   return (
     <section className="relative bg-[#070B16] py-16 sm:py-24 lg:py-32 text-white overflow-hidden border-t border-white/10">
-      {/* Animated Soft Glow Ambient Orbs (Royal Blue & Gold) */}
+      {/* Animated Soft Glow Ambient Orbs (Blue & Rose) */}
       <motion.div
         animate={{
           scale: [1, 1.2, 1],
@@ -37,7 +37,7 @@ export function AcademyStudio() {
           ease: "easeInOut",
           delay: 1.5,
         }}
-        className="pointer-events-none absolute bottom-10 right-10 h-[450px] w-[450px] rounded-full bg-amber-500/15 blur-[140px]"
+        className="pointer-events-none absolute bottom-10 right-10 h-[450px] w-[450px] rounded-full bg-rose-600/15 blur-[140px]"
       />
 
       <div className="section-shell relative z-10 px-4 sm:px-6">
@@ -51,7 +51,7 @@ export function AcademyStudio() {
               className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 border border-blue-400/30 px-3.5 py-1 text-xs font-bold text-blue-400 backdrop-blur-md"
             >
               <IconSparkles className="w-3.5 h-3.5 text-blue-400" />
-              <span>Language &amp; Fluency Excellence · NextFlight BD Academy</span>
+              <span>Language & Fluency Excellence · Next Flight Abroad Academy</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 14 }}
@@ -60,16 +60,16 @@ export function AcademyStudio() {
               transition={{ delay: 0.1 }}
               className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight"
             >
-              {company.name} <span className="text-blue-400">Language Academy</span>
+              Next Flight Abroad <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-rose-400">Language Academy</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed font-bangla"
+              className="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed"
             >
-              প্রফেশনাল IELTS (Academic &amp; General Training), Spoken English Fluency, Kids English &amp; Phonics Studio এবং কর্পোরেট কমিউনিকেশন। আমাদের দক্ষ ট্রেইনারদের পরিচালনায় অফলাইন ক্লাস (মগবাজার, ঢাকা) ও ইন্টারেক্টিভ অনলাইন ব্যাচ।
+              Master English fluency and achieve IELTS Band 7.5+ with Cambridge-certified trainers. Offline smart classes at our Khilgaon center and flexible interactive online sessions.
             </motion.p>
           </div>
 
@@ -92,9 +92,9 @@ export function AcademyStudio() {
         {/* Double-Bezel Studio Architecture */}
         <div className="rounded-[1.75rem] sm:rounded-[2.5rem] bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-1.5 sm:p-3 border border-white/10 shadow-2xl backdrop-blur-2xl ring-1 ring-white/5">
           <div className="rounded-[1.5rem] sm:rounded-[2rem] bg-[#0A1020]/95 border border-white/10 p-4 sm:p-7 lg:p-10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)]">
-            {/* Interactive Course Selection Tabs with Framer Motion layoutId */}
-            <div className="grid grid-cols-2 lg:grid-cols-5 gap-2 sm:gap-2.5 pb-6 sm:pb-8 border-b border-white/10">
-              {courses.slice(0, 5).map((c, idx) => {
+            {/* Interactive Course Selection Tabs */}
+            <div className="grid grid-cols-2 lg:grid-cols-6 gap-2 sm:gap-2.5 pb-6 sm:pb-8 border-b border-white/10">
+              {academyCourses.map((c, idx) => {
                 const active = activeCourseIdx === idx;
                 return (
                   <button
@@ -116,7 +116,9 @@ export function AcademyStudio() {
                     )}
                     <div className="relative z-10">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-xl sm:text-2xl">{c.icon || "🎓"}</span>
+                        <span className="text-xl sm:text-2xl">
+                          {c.id.includes("ielts") ? "🏆" : c.id.includes("kids") ? "🧒" : c.id.includes("interview") ? "🎙️" : "🗣️"}
+                        </span>
                         <span className="rounded-full bg-white/10 px-2 py-0.5 text-[9px] sm:text-[10px] font-bold text-amber-300">
                           {c.badge}
                         </span>
@@ -141,128 +143,104 @@ export function AcademyStudio() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.3 }}
-                className="mt-6 sm:mt-8 grid gap-6 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr] items-start"
+                className="pt-6 sm:pt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
               >
-                {/* Left: Overview, Schedule & Highlights */}
-                <div className="space-y-5 sm:space-y-6">
+                {/* Left 7 Columns: Details, Features, Learning Outcomes */}
+                <div className="lg:col-span-7 space-y-6">
                   <div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-2xl">{currentCourse.icon || "🎓"}</span>
-                      <h3 className="font-display text-xl sm:text-3xl font-black text-white">
-                        {currentCourse.title}
-                      </h3>
+                    <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/20 text-blue-300 border border-blue-400/30 px-3 py-1 text-xs font-bold mb-3">
+                      <span>{currentCourse.category}</span>
+                      <span>•</span>
+                      <span>Target: {currentCourse.targetScore}</span>
                     </div>
-                    <p className="text-xs sm:text-sm font-semibold text-blue-300 mt-1">
-                      {currentCourse.subtitle || currentCourse.tagline}
-                    </p>
-                    <p className="text-xs sm:text-sm text-slate-300 mt-2.5 sm:mt-3 leading-relaxed font-medium">
-                      {currentCourse.description || currentCourse.desc}
+                    <h3 className="font-display text-xl sm:text-3xl font-black text-white">
+                      {currentCourse.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-300 mt-2.5 leading-relaxed font-medium">
+                      {currentCourse.summary}
                     </p>
                   </div>
 
-                  {/* Course Quick Facts Matrix */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
-                    <div className="rounded-xl bg-white/[0.04] p-2.5 sm:p-3 border border-white/10">
-                      <span className="text-[10px] text-slate-400 block">Duration:</span>
-                      <strong className="text-white block mt-0.5 text-xs sm:text-sm">{currentCourse.duration}</strong>
-                    </div>
-                    <div className="rounded-xl bg-white/[0.04] p-2.5 sm:p-3 border border-white/10">
-                      <span className="text-[10px] text-slate-400 block">Classes:</span>
-                      <strong className="text-blue-400 block mt-0.5 text-xs sm:text-sm">{currentCourse.classesCount || "36+ Classes"}</strong>
-                    </div>
-                    <div className="rounded-xl bg-white/[0.04] p-2.5 sm:p-3 border border-white/10">
-                      <span className="text-[10px] text-slate-400 block">Mock Tests:</span>
-                      <strong className="text-emerald-400 block mt-0.5 text-xs sm:text-sm">{currentCourse.mockTests || "Unlimited Lab"}</strong>
-                    </div>
-                    <div className="rounded-xl bg-white/[0.04] p-2.5 sm:p-3 border border-white/10">
-                      <span className="text-[10px] text-slate-400 block">Batch Size:</span>
-                      <strong className="text-amber-300 block mt-0.5 text-xs sm:text-sm">{currentCourse.batchSize || "Max 15 Seats"}</strong>
-                    </div>
-                  </div>
-
-                  {/* Key Course Highlights */}
-                  <div className="space-y-2">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block">
-                      Key Features &amp; Learning Inclusions:
-                    </span>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                      {(currentCourse.highlights ?? currentCourse.features ?? currentCourse.keyFeatures ?? []).slice(0, 4).map((h) => (
-                        <div key={h} className="flex items-start gap-2 rounded-xl bg-white/[0.03] p-2.5 border border-white/5 text-slate-300">
-                          <IconCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-                          <span className="text-[11px] leading-snug">{h}</span>
+                  {/* Key Features List */}
+                  <div>
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+                      Course Curriculum Highlights:
+                    </h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {currentCourse.keyFeatures.map((feat, fIdx) => (
+                        <div
+                          key={fIdx}
+                          className="flex items-start gap-2.5 p-3 rounded-xl bg-white/[0.03] border border-white/5 text-xs text-slate-200"
+                        >
+                          <IconCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                          <span className="leading-snug">{feat}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  {/* Enrollment Actions */}
-                  <div className="pt-2 flex flex-col xs:flex-row gap-2.5">
-                    <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.97 }}
-                      type="button"
-                      onClick={open}
-                      className="btn-primary text-xs py-3 px-5 font-bold rounded-xl flex items-center justify-center gap-2 shadow-lg cursor-pointer bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white border-none"
-                    >
-                      <span>Book Free Assessment &amp; Demo</span>
-                      <IconArrowRight className="w-3.5 h-3.5" />
-                    </motion.button>
-                    <motion.a
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.97 }}
-                      href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                        `Hello ${company.name}! I want to enroll in the ${currentCourse.title} course.`,
-                      )}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 border border-white/20 px-5 py-3 text-xs font-bold text-white hover:bg-white/20 transition-colors"
-                    >
-                      <IconWhatsApp className="w-3.5 h-3.5 text-emerald-400" />
-                      <span>Inquire on WhatsApp</span>
-                    </motion.a>
+                  {/* Intake & Schedule Status */}
+                  <div className="rounded-xl bg-blue-500/10 border border-blue-400/20 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+                    <div>
+                      <span className="text-slate-400 block text-[10px] uppercase font-bold">Batch Availability:</span>
+                      <span className="text-white font-bold">{currentCourse.intakeStatus}</span>
+                    </div>
+                    <div>
+                      <span className="text-slate-400 block text-[10px] uppercase font-bold">Class Format:</span>
+                      <span className="text-blue-300 font-bold">{currentCourse.classFormat}</span>
+                    </div>
                   </div>
                 </div>
 
-                {/* Right: Modules & Syllabus Breakdown */}
-                <div className="rounded-2xl bg-white/[0.03] border border-white/10 p-4 sm:p-6 space-y-4">
-                  <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                    <h4 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider text-white">
-                      Curriculum &amp; Focus Areas
-                    </h4>
-                    <span className="text-xs text-blue-400 font-semibold">
-                      Cambridge &amp; CEFR Standard Curriculum
+                {/* Right 5 Columns: Enrollment Card & Hotline */}
+                <div className="lg:col-span-5 rounded-2xl sm:rounded-3xl bg-slate-900 border border-white/10 p-5 sm:p-7 shadow-xl space-y-5">
+                  <div className="pb-4 border-b border-white/10">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">
+                      Target Audience:
                     </span>
-                  </div>
-
-                  <div className="space-y-2.5">
-                    {(currentCourse.modules || (currentCourse.keyFeatures || []).map((feat, idx) => ({
-                      name: `Phase ${idx + 1}`,
-                      desc: feat
-                    }))).map((mod, i) => (
-                      <div
-                        key={mod.name || i}
-                        className="rounded-xl bg-white/[0.04] p-3 border border-white/5 space-y-1"
-                      >
-                        <div className="flex items-center justify-between">
-                          <span className="font-bold text-xs text-white">
-                            {mod.name.startsWith("Phase") ? mod.name : `Module ${i + 1}: ${mod.name}`}
-                          </span>
-                          <span className="text-[10px] text-blue-400 font-semibold">Core Focus</span>
-                        </div>
-                        <p className="text-[11px] text-slate-400 leading-relaxed font-bangla">
-                          {mod.desc}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="rounded-xl bg-blue-500/10 border border-blue-500/20 p-3 text-xs text-slate-300 space-y-1">
-                    <span className="text-blue-300 font-bold block text-xs">
-                      Class Format &amp; Academy Campus:
-                    </span>
-                    <p className="text-[11px] leading-relaxed">
-                      {currentCourse.classSchedule || currentCourse.schedule} · Classroom training at NextFlight BD Head Office: Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217 &amp; Live Interactive Online Zoom.
+                    <p className="text-xs font-bold text-white mt-1">
+                      {currentCourse.audience}
                     </p>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-slate-400">Class Duration:</span>
+                      <span className="text-white font-bold">{currentCourse.duration}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-slate-400">Study Level:</span>
+                      <span className="text-white font-bold">{currentCourse.level}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-slate-400">Diagnostic Test:</span>
+                      <span className="text-emerald-400 font-bold">Free Evaluation Included</span>
+                    </div>
+                  </div>
+
+                  <div className="pt-2 space-y-3">
+                    <button
+                      type="button"
+                      onClick={open}
+                      className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs shadow-lg transition-all text-center flex items-center justify-center gap-2 cursor-pointer"
+                    >
+                      <span>Enroll in {currentCourse.title.split("(")[0]}</span>
+                      <IconArrowRight className="w-3.5 h-3.5" />
+                    </button>
+
+                    <a
+                      href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Hello ${company.name}! I want to know about course fees, class schedules and batch details for: ${currentCourse.title}.`)}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-full py-2.5 px-4 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 text-emerald-400 border border-emerald-500/30 font-bold text-xs transition-colors flex items-center justify-center gap-2"
+                    >
+                      <IconWhatsApp className="w-3.5 h-3.5" />
+                      <span>Inquire Course Fee on WhatsApp</span>
+                    </a>
+                  </div>
+
+                  <div className="pt-2 text-[0.68rem] text-slate-400 text-center leading-relaxed">
+                    Khilgaon Center: 338/14, Block-C, Khilgaon, Taltola (Beside Ansar Head Office)
                   </div>
                 </div>
               </motion.div>
@@ -273,4 +251,3 @@ export function AcademyStudio() {
     </section>
   );
 }
-

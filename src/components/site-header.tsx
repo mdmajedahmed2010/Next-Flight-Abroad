@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
-import { company, navItems, destinations, courses } from "@/lib/site-data";
+import { company, navigationItems, destinationsData, academyCourses } from "@/lib/site-data";
 import { useRegisterModal } from "@/components/register-modal";
 import { IconPhone, IconWhatsApp } from "@/components/ui-blocks";
 import { cn } from "@/lib/utils";
@@ -35,38 +35,46 @@ export function SiteHeader() {
   return (
     <div className="w-full">
       {/* 1. Global Top Notification Bar */}
-      <div className="bg-[#0f2b48] text-white text-xs py-2 relative z-50 border-b border-sky-400/20">
+      <div className="bg-[#0B132B] text-white text-xs py-2 relative z-50 border-b border-blue-500/20">
         <div className="section-shell flex items-center justify-between gap-3">
           {/* Left: Direct Phone & Hotlines */}
           <div className="flex items-center gap-3 sm:gap-4 text-[0.73rem] sm:text-xs">
             <a
               href={`tel:${company.phones[0].replace(/[^0-9]/g, "")}`}
-              className="flex items-center gap-1.5 font-bold text-slate-100 hover:text-sky-300 transition-colors"
+              className="flex items-center gap-1.5 font-bold text-slate-100 hover:text-blue-300 transition-colors"
             >
-              <IconPhone className="w-3.5 h-3.5 text-sky-400" />
+              <IconPhone className="w-3.5 h-3.5 text-blue-400" />
               <span>Hotline: {company.phones[0]}</span>
             </a>
-            <span className="text-slate-500 hidden xs:inline">|</span>
+            <span className="text-slate-600 hidden xs:inline">|</span>
             <a
               href={`tel:${company.phones[1].replace(/[^0-9]/g, "")}`}
-              className="hidden xs:flex items-center gap-1 text-slate-300 hover:text-sky-300 transition-colors"
+              className="hidden xs:flex items-center gap-1 text-slate-300 hover:text-blue-300 transition-colors"
             >
               <span>{company.phones[1]}</span>
             </a>
-            <span className="text-slate-500 hidden md:inline">|</span>
-            <span className="hidden md:inline-flex items-center gap-1 text-[0.68rem] bg-gradient-to-r from-sky-600 to-blue-700 text-white font-extrabold px-2.5 py-0.5 rounded-full shadow-xs">
-              ★ Study Abroad · Work Permits · Air Ticketing · IELTS Academy · Spoken &amp; Kids English
+            <span className="text-slate-600 hidden md:inline">|</span>
+            <span className="hidden md:inline-flex items-center gap-1 text-[0.68rem] bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-extrabold px-2.5 py-0.5 rounded-full shadow-xs">
+              ★ "No Visa, No Payment" Contract Guarantee · Zero Advance Risk
             </span>
           </div>
 
-          {/* Right: Office Location & Slogan */}
-          <div className="flex items-center gap-2 text-[0.7rem] sm:text-[0.75rem] text-slate-200">
-            <span className="text-sky-400">📍</span>
-            <span className="truncate">Razzak Plaza (Lift-12), Moghbazar, Dhaka</span>
+          {/* Right: Office Location & WhatsApp */}
+          <div className="flex items-center gap-3 text-[0.7rem] sm:text-[0.75rem] text-slate-200">
+            <div className="flex items-center gap-1.5 truncate">
+              <span className="text-rose-400">📍</span>
+              <span className="truncate">338/14 Khilgaon (Beside Ansar Head Office), Dhaka</span>
+            </div>
             <span className="hidden lg:inline text-slate-600">|</span>
-            <span className="hidden lg:inline text-sky-300 font-bangla font-bold text-[0.72rem] bg-sky-400/10 px-2.5 py-0.5 rounded-full border border-sky-400/30">
-              আপনার ভ্রমণের সাথী ✈️
-            </span>
+            <a
+              href={company.social.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden lg:inline-flex items-center gap-1.5 text-emerald-400 font-bold hover:underline"
+            >
+              <IconWhatsApp className="w-3.5 h-3.5" />
+              <span>WhatsApp Active</span>
+            </a>
           </div>
         </div>
       </div>
@@ -76,27 +84,22 @@ export function SiteHeader() {
         className={cn(
           "sticky top-0 z-40 transition-all duration-300 w-full",
           scrolled
-            ? "bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-[0_8px_25px_rgb(0,0,0,0.06)] py-2.5 sm:py-3"
-            : "bg-white border-b border-slate-200/80 py-3 sm:py-3.5",
+            ? "bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_30px_rgb(0,0,0,0.3)] py-2.5 sm:py-3 text-white"
+            : "bg-[#070B16] border-b border-white/10 py-3 sm:py-3.5 text-white",
         )}
       >
         <div className="section-shell flex items-center justify-between gap-3">
           {/* Brand Logo with Tagline */}
           <Link to="/" className="group flex items-center gap-3 shrink-0">
-            <BrandLogo size={46} withText textClassName="flex" />
-            <div className="hidden xl:block h-6 w-px bg-slate-200" />
-            <span className="hidden xl:inline text-xs font-extrabold text-[#0f2b48] tracking-wider uppercase">
-              STUDY ABROAD · WORK PERMITS · AIR TICKETING · IELTS
-            </span>
+            <BrandLogo size={46} withText variant="dark" textClassName="flex" />
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden items-center gap-1 xl:gap-1.5 lg:flex">
-            {navItems.map((item) => {
+          <nav className="hidden items-center gap-1 xl:gap-2 lg:flex">
+            {navigationItems.map((item) => {
               const hasChildren = item.children && item.children.length > 0;
               const isDest = item.label.includes("Study") || item.label.includes("Destinations");
-              const isCourses = item.label.includes("Courses") || item.label.includes("Academy") || item.label.includes("Language");
-              const isWork = item.label.includes("Work") || item.label.includes("Permits");
+              const isCourses = item.label.includes("Academy") || item.label.includes("Language");
 
               if (hasChildren) {
                 return (
@@ -108,152 +111,105 @@ export function SiteHeader() {
                   >
                     <Link
                       to={item.to}
-                      className="inline-flex items-center gap-1 rounded-full px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-sky-50 hover:text-[#0099e5] transition-colors whitespace-nowrap"
+                      className="inline-flex items-center gap-1 rounded-full px-3.5 py-2 text-xs font-bold text-slate-300 hover:text-white hover:bg-white/10 transition-colors whitespace-nowrap"
                     >
                       <span>{item.label}</span>
-                      <span className="text-[0.65rem] opacity-50">▾</span>
+                      <span className="text-[0.65rem] opacity-60">▾</span>
                     </Link>
 
                     {/* Mega Dropdown for Study Abroad Destinations */}
                     {isDest && activeDropdown === item.label && (
-                      <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[580px] rounded-2xl bg-white p-4 shadow-2xl border border-slate-200 grid grid-cols-2 gap-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                        <div className="col-span-2 pb-2 mb-1 border-b border-slate-100 flex items-center justify-between">
-                          <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
-                            Study Destinations & Visas
+                      <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[600px] rounded-2xl bg-slate-900 p-4 shadow-2xl border border-white/15 grid grid-cols-2 gap-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                        <div className="col-span-2 pb-2 mb-1 border-b border-white/10 flex items-center justify-between">
+                          <span className="text-xs font-extrabold uppercase tracking-wider text-slate-400">
+                            Global Study Destinations
                           </span>
-                          <span className="text-[0.7rem] text-[#0f2b48] font-bold bg-sky-50 px-2.5 py-0.5 rounded-full border border-sky-200">
-                            🇬🇧 UK · 🇪🇺 Europe & Cyprus · 🇨🇦 Canada · 🇺🇸 USA · 🇦🇺 Australia
+                          <span className="text-[0.7rem] text-blue-300 font-bold bg-blue-500/20 px-2.5 py-0.5 rounded-full border border-blue-400/30">
+                            🇰🇷 South Korea · 🇬🇷 Greece · 🇲🇹 Malta · 🇬🇧 UK · 🇺🇸 USA
                           </span>
                         </div>
-                        {destinations.slice(0, 8).map((d: any) => (
+                        {destinationsData.map((d) => (
                           <Link
                             key={d.slug}
                             to="/study-in-{$country}"
                             params={{ country: d.slug }}
-                            className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-sky-50/80 transition-colors group"
+                            className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/10 transition-colors group"
                             onClick={() => setActiveDropdown(null)}
                           >
                             <span className="text-xl shrink-0 mt-0.5">{d.flag}</span>
                             <div className="min-w-0">
-                              <div className="text-xs font-bold text-slate-900 group-hover:text-[#0099e5] flex items-center gap-1.5">
-                                <span>{d.country || d.name}</span>
-                                <span className="text-[0.6rem] bg-sky-100 text-[#0099e5] px-1.5 py-0.2 rounded font-semibold truncate max-w-[130px]">
-                                  {d.slug === "uk" ? "Popular" : "Featured"}
+                              <div className="text-xs font-bold text-white group-hover:text-blue-400 flex items-center gap-1.5">
+                                <span>{d.name}</span>
+                                <span className="text-[0.6rem] bg-blue-500/20 text-blue-300 border border-blue-400/30 px-1.5 py-0.2 rounded font-semibold truncate max-w-[130px]">
+                                  {d.slug === "south-korea" ? "Flagship Partner" : d.slug === "greece" ? "100% Risk Free" : "Featured"}
                                 </span>
                               </div>
-                              <p className="text-[0.7rem] text-slate-500 truncate max-w-[210px]">
+                              <p className="text-[0.7rem] text-slate-400 truncate max-w-[220px]">
                                 {d.tagline}
                               </p>
                             </div>
                           </Link>
                         ))}
-                        <div className="col-span-2 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
+                        <div className="col-span-2 pt-2 border-t border-white/10 flex items-center justify-between text-xs">
                           <Link
                             to="/destinations"
-                            className="font-bold text-[#0099e5] hover:text-[#0284c7] flex items-center gap-1"
+                            className="font-bold text-blue-400 hover:text-blue-300 flex items-center gap-1"
                             onClick={() => setActiveDropdown(null)}
                           >
-                            <span>Explore all destination pathways</span>
+                            <span>View all countries & university admissions</span>
                             <span>→</span>
                           </Link>
                           <span className="text-[0.7rem] text-slate-400 font-medium">
-                            NextFlight BD · Razzak Plaza, Moghbazar, Dhaka
+                            Next Flight Abroad · Khilgaon, Dhaka
                           </span>
                         </div>
                       </div>
                     )}
 
-                    {/* Dropdown for Language Academy & English Courses */}
+                    {/* Mega Dropdown for Language Academy */}
                     {isCourses && activeDropdown === item.label && (
-                      <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[500px] rounded-2xl bg-white p-4 shadow-2xl border border-slate-200 grid grid-cols-1 gap-1.5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                        <div className="pb-2 mb-1 border-b border-slate-100 flex items-center justify-between">
-                          <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
-                            Language Academy & Test Prep
+                      <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[560px] rounded-2xl bg-slate-900 p-4 shadow-2xl border border-white/15 grid grid-cols-2 gap-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                        <div className="col-span-2 pb-2 mb-1 border-b border-white/10 flex items-center justify-between">
+                          <span className="text-xs font-extrabold uppercase tracking-wider text-slate-400">
+                            Language & Fluency Academy
                           </span>
-                          <span className="text-[0.7rem] text-[#0f2b48] font-bold bg-sky-50 px-2.5 py-0.5 rounded-full border border-sky-200">
-                            IELTS Academic · General · Spoken · Kids English
+                          <span className="text-[0.7rem] text-emerald-300 font-bold bg-emerald-500/20 px-2.5 py-0.5 rounded-full border border-emerald-400/30">
+                            IELTS · Spoken English · Kids English
                           </span>
                         </div>
-                        {courses.slice(0, 5).map((c: any) => (
+                        {academyCourses.map((c) => (
                           <Link
-                            key={c.slug}
+                            key={c.id}
                             to="/services"
-                            className="flex items-center justify-between p-2 rounded-xl hover:bg-sky-50/80 transition-colors group"
+                            className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/10 transition-colors group"
                             onClick={() => setActiveDropdown(null)}
                           >
-                            <div className="flex items-center gap-2.5 min-w-0">
-                              <span className="text-lg shrink-0">📘</span>
-                              <div className="truncate">
-                                <span className="text-xs font-bold text-slate-900 group-hover:text-[#0099e5] block truncate">
-                                  {c.title}
-                                </span>
-                                <span className="text-[0.68rem] text-slate-500 block truncate">
-                                  {c.duration} · {c.targetScore || c.level}
-                                </span>
-                              </div>
+                            <div className="h-8 w-8 rounded-lg bg-blue-500/20 border border-blue-400/30 flex items-center justify-center text-xs font-bold text-blue-300 shrink-0 mt-0.5">
+                              {c.id.includes("ielts") ? "7.5+" : c.id.includes("kids") ? "Kids" : "Fluency"}
                             </div>
-                            <span className="text-[0.65rem] bg-sky-100 text-[#0099e5] font-bold px-2 py-0.5 rounded-full shrink-0">
-                              {c.badge}
-                            </span>
+                            <div className="min-w-0">
+                              <div className="text-xs font-bold text-white group-hover:text-blue-400 flex items-center gap-1.5">
+                                <span className="truncate">{c.title}</span>
+                              </div>
+                              <p className="text-[0.7rem] text-slate-400 truncate max-w-[210px]">
+                                {c.duration}
+                              </p>
+                            </div>
                           </Link>
                         ))}
-                      </div>
-                    )}
-
-                    {/* Dropdown for Work Permits */}
-                    {isWork && activeDropdown === item.label && (
-                      <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[460px] rounded-2xl bg-white p-4 shadow-2xl border border-slate-200 grid grid-cols-1 gap-1.5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                        <div className="pb-2 mb-1 border-b border-slate-100 flex items-center justify-between">
-                          <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
-                            Global Skill Work Permits
-                          </span>
-                          <span className="text-[0.7rem] text-emerald-800 font-bold bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
-                            Verified Employer Contracts & Visa Grants
+                        <div className="col-span-2 pt-2 border-t border-white/10 flex items-center justify-between text-xs">
+                          <Link
+                            to="/services"
+                            className="font-bold text-blue-400 hover:text-blue-300 flex items-center gap-1"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            <span>Explore all courses & batch timings</span>
+                            <span>→</span>
+                          </Link>
+                          <span className="text-[0.7rem] text-slate-400 font-medium">
+                            Free Diagnostic Assessment Available
                           </span>
                         </div>
-                        {item.children?.map((child: any) => (
-                          <Link
-                            key={child.label}
-                            to={child.to}
-                            params={child.params}
-                            className="flex items-center justify-between p-2.5 rounded-xl hover:bg-emerald-50/80 transition-colors group"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            <div className="flex items-center gap-2.5">
-                              <span className="text-lg">💼</span>
-                              <span className="text-xs font-bold text-slate-800 group-hover:text-emerald-700">
-                                {child.label}
-                              </span>
-                            </div>
-                            {child.badge && (
-                              <span className="text-[0.65rem] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">
-                                {child.badge}
-                              </span>
-                            )}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-
-                    {/* Standard Dropdown for Other Links */}
-                    {!isDest && !isCourses && !isWork && activeDropdown === item.label && (
-                      <div className="absolute left-0 top-full mt-1 w-64 rounded-2xl bg-white p-2 shadow-xl border border-slate-200 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                        {item.children?.map((child: any) => (
-                          <Link
-                            key={child.label}
-                            to={child.to}
-                            params={child.params}
-                            className="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0099e5] transition-colors"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            <span>{child.label}</span>
-                            {child.badge && (
-                              <span className="text-[0.65rem] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded font-bold">
-                                {child.badge}
-                              </span>
-                            )}
-                          </Link>
-                        ))}
                       </div>
                     )}
                   </div>
@@ -264,7 +220,7 @@ export function SiteHeader() {
                 <Link
                   key={item.label}
                   to={item.to}
-                  className="rounded-full px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-sky-50 hover:text-[#0099e5] transition-colors whitespace-nowrap"
+                  className="rounded-full px-3 py-2 text-xs font-bold text-slate-300 hover:text-white hover:bg-white/10 transition-colors whitespace-nowrap"
                 >
                   {item.label}
                 </Link>
@@ -272,37 +228,37 @@ export function SiteHeader() {
             })}
           </nav>
 
-          {/* Right Action: WhatsApp & Free Assessment Modal */}
-          <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+          {/* Right Action Buttons */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* WhatsApp Quick Link */}
             <a
-              href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                "Hello NextFlight BD! I would like to inquire about Study Abroad, IELTS, Spoken English, and Work Permit opportunities.",
-              )}`}
+              href={company.social.whatsapp}
               target="_blank"
-              rel="noreferrer"
-              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 px-3.5 py-2 rounded-full transition-colors active:scale-95 shadow-sm"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-emerald-600/20 border border-emerald-500/40 text-emerald-400 hover:bg-emerald-600/30 px-3.5 py-2 text-xs font-bold transition-all"
             >
-              <IconWhatsApp className="w-4 h-4 text-emerald-600" />
-              <span className="hidden xl:inline">WhatsApp</span>
+              <IconWhatsApp className="w-3.5 h-3.5" />
+              <span>WhatsApp</span>
             </a>
 
+            {/* Assessment CTA Button */}
             <button
               type="button"
-              onClick={() => open()}
-              className="btn-primary text-xs py-2 px-4 sm:px-5 shadow-sm active:scale-95 transition-all flex items-center gap-1.5 cursor-pointer bg-gradient-to-r from-[#0f2b48] to-[#0099e5] hover:from-[#0a1c30] hover:to-[#0284c7] text-white border-none rounded-full"
+              onClick={open}
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-rose-600 px-4 sm:px-5 py-2 sm:py-2.5 text-xs font-black text-white shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer whitespace-nowrap"
             >
-              <span>Free Consultation</span>
-              <span>→</span>
+              <span>Free Assessment</span>
+              <span className="text-sm">✈️</span>
             </button>
 
-            {/* Mobile Hamburger Toggle */}
+            {/* Mobile Hamburger Button */}
             <button
               type="button"
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50 transition-colors cursor-pointer"
-              aria-label="Toggle navigation menu"
+              className="inline-flex items-center justify-center lg:hidden p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
+              aria-label="Toggle Navigation Menu"
             >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {mobileOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -312,129 +268,147 @@ export function SiteHeader() {
             </button>
           </div>
         </div>
-
-        {/* Mobile Navigation Drawer with Framer Motion Spring */}
-        <AnimatePresence>
-          {mobileOpen && (
-            <>
-              {/* Backdrop */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setMobileOpen(false)}
-                className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 lg:hidden"
-              />
-
-              {/* Drawer Container */}
-              <motion.div
-                initial={{ x: "100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "100%" }}
-                transition={{ type: "spring", damping: 28, stiffness: 280 }}
-                className="fixed top-0 right-0 bottom-0 w-[85vw] max-w-md bg-white shadow-2xl z-50 flex flex-col justify-between overflow-y-auto lg:hidden"
-              >
-                {/* Drawer Header */}
-                <div className="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
-                  <BrandLogo size={38} withText />
-                  <button
-                    type="button"
-                    onClick={() => setMobileOpen(false)}
-                    className="p-2 rounded-full hover:bg-slate-200 text-slate-600 transition-colors cursor-pointer"
-                    aria-label="Close menu"
-                  >
-                    ✕
-                  </button>
-                </div>
-
-                {/* Nav Links */}
-                <div className="p-4 space-y-4 flex-1">
-                  <div className="space-y-1">
-                    {navItems.map((item) => (
-                      <div key={item.label} className="border-b border-slate-100 pb-2 mb-2">
-                        <Link
-                          to={item.to}
-                          className="block px-2 py-2 text-sm font-extrabold text-[#0f2b48] hover:text-[#0099e5]"
-                          onClick={() => setMobileOpen(false)}
-                        >
-                          {item.label}
-                        </Link>
-                        {item.children && (
-                          <div className="pl-3 space-y-1 mt-1">
-                            {item.children.slice(0, 6).map((child: any) => (
-                              <Link
-                                key={child.label}
-                                to={child.to}
-                                params={child.params}
-                                className="flex items-center justify-between px-2 py-1.5 text-xs font-semibold text-slate-600 hover:text-[#0099e5] hover:bg-sky-50 rounded-lg"
-                                onClick={() => setMobileOpen(false)}
-                              >
-                                <span>{child.label}</span>
-                                {child.badge && (
-                                  <span className="text-[0.62rem] bg-sky-100 text-[#0099e5] px-1.5 py-0.5 rounded font-bold">
-                                    {child.badge}
-                                  </span>
-                                )}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Hotlines & Office Location in Drawer */}
-                  <div className="rounded-2xl bg-sky-50/80 border border-sky-200 p-3.5 space-y-2">
-                    <span className="text-[0.7rem] font-black uppercase tracking-wider text-[#0f2b48] block">
-                      NextFlight BD Head Office (Dhaka)
-                    </span>
-                    <p className="text-xs text-slate-700 font-medium leading-relaxed">
-                      Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217, Bangladesh.
-                    </p>
-                    <p className="text-[0.72rem] text-slate-600 font-bangla">
-                      বিদেশে উচ্চশিক্ষা, আইইএলটিএস, স্পোকেন ইংলিশ, কিডস একাডেমি ও ইউরোপীয় কাজের ভিসা পরামর্শ।
-                    </p>
-                  </div>
-                </div>
-
-                {/* Drawer Footer Actions */}
-                <div className="p-4 border-t border-slate-200 bg-slate-50 space-y-2.5">
-                  <a
-                    href={`tel:${company.phones[0].replace(/[^0-9]/g, "")}`}
-                    className="flex items-center justify-center gap-2 py-2.5 text-xs font-bold text-white bg-[#0f2b48] rounded-xl shadow-xs"
-                  >
-                    <IconPhone className="w-4 h-4 text-sky-400" />
-                    <span>Call Hotline: {company.phones[0]}</span>
-                  </a>
-
-                  <a
-                    href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                      "Hello NextFlight BD! I am inquiring from the website mobile menu.",
-                    )}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="flex items-center justify-center gap-2 py-2.5 text-xs font-bold text-white bg-emerald-600 rounded-xl shadow-xs"
-                  >
-                    <IconWhatsApp className="w-4 h-4 text-white" />
-                    <span>WhatsApp ({company.whatsappFormatted})</span>
-                  </a>
-
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setMobileOpen(false);
-                      open();
-                    }}
-                    className="w-full py-2.5 text-xs font-extrabold text-white bg-gradient-to-r from-[#0f2b48] to-[#0099e5] rounded-xl shadow-sm cursor-pointer"
-                  >
-                    Book Free Consultation
-                  </button>
-                </div>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
       </header>
+
+      {/* 3. Mobile Navigation Drawer */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/70 backdrop-blur-md lg:hidden"
+            onClick={() => setMobileOpen(false)}
+          >
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="absolute right-0 top-0 bottom-0 w-[85%] max-w-[360px] bg-slate-900 border-l border-white/10 p-5 overflow-y-auto text-white"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Drawer Header */}
+              <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+                <BrandLogo size={40} withText variant="dark" />
+                <button
+                  type="button"
+                  onClick={() => setMobileOpen(false)}
+                  className="p-2 rounded-xl bg-white/10 text-slate-300 hover:text-white"
+                >
+                  ✕
+                </button>
+              </div>
+
+              {/* Verified Contract Notice */}
+              <div className="rounded-xl bg-blue-500/10 border border-blue-400/20 p-3 mb-4 text-xs text-blue-300">
+                <span className="font-bold">★ "No Visa, No Payment" Model:</span>
+                <p className="text-[0.7rem] text-slate-300 mt-1">
+                  Pay consultancy service fees strictly after visa approval. Zero advance risk for students!
+                </p>
+              </div>
+
+              {/* Navigation Links */}
+              <div className="space-y-1 mb-6">
+                <Link
+                  to="/"
+                  className="block px-3 py-2.5 rounded-xl font-bold text-sm text-slate-200 hover:bg-white/10"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Home
+                </Link>
+                <Link
+                  to="/destinations"
+                  className="block px-3 py-2.5 rounded-xl font-bold text-sm text-slate-200 hover:bg-white/10"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Study Abroad Destinations
+                </Link>
+
+                {/* Sub destinations */}
+                <div className="pl-4 space-y-1 my-1">
+                  {destinationsData.map((d) => (
+                    <Link
+                      key={d.slug}
+                      to="/study-in-{$country}"
+                      params={{ country: d.slug }}
+                      className="block px-3 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-blue-300 hover:bg-white/5"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {d.flag} {d.name}
+                    </Link>
+                  ))}
+                </div>
+
+                <Link
+                  to="/services"
+                  className="block px-3 py-2.5 rounded-xl font-bold text-sm text-slate-200 hover:bg-white/10"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Language Academy & Services
+                </Link>
+                <Link
+                  to="/offers"
+                  className="block px-3 py-2.5 rounded-xl font-bold text-sm text-slate-200 hover:bg-white/10"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Upcoming Batches & Offers
+                </Link>
+                <Link
+                  to="/about"
+                  className="block px-3 py-2.5 rounded-xl font-bold text-sm text-slate-200 hover:bg-white/10"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  About Next Flight Abroad
+                </Link>
+                <Link
+                  to="/contact"
+                  className="block px-3 py-2.5 rounded-xl font-bold text-sm text-slate-200 hover:bg-white/10"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Contact & Khilgaon Office
+                </Link>
+              </div>
+
+              {/* Drawer Actions */}
+              <div className="space-y-2 pt-4 border-t border-white/10">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMobileOpen(false);
+                    open();
+                  }}
+                  className="w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 font-bold text-sm text-white shadow-lg text-center"
+                >
+                  Book Free Assessment ✈️
+                </button>
+                <a
+                  href={`tel:${company.phones[0].replace(/[^0-9]/g, "")}`}
+                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-white/10 font-bold text-xs text-slate-200 hover:bg-white/20"
+                >
+                  <IconPhone className="w-3.5 h-3.5 text-blue-400" />
+                  <span>Call {company.phones[0]}</span>
+                </a>
+                <a
+                  href={company.social.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-emerald-600/20 text-emerald-400 font-bold text-xs hover:bg-emerald-600/30"
+                >
+                  <IconWhatsApp className="w-3.5 h-3.5" />
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
+
+              {/* Office Address Footer */}
+              <div className="mt-6 text-[0.68rem] text-slate-400 leading-relaxed text-center">
+                <p className="font-bold text-white mb-0.5">Next Flight Abroad Central Office</p>
+                <p>338/14, Block-C, Khilgaon, Taltola, Dhaka-1219 (Beside Ansar Head Office)</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

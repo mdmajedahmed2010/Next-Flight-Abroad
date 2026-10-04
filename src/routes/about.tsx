@@ -7,28 +7,31 @@ import {
   PageHero,
   SectionHeading,
   StatsStrip,
+  IconSparkles,
 } from "@/components/ui-blocks";
 import { OfficeGallery } from "@/components/office-gallery";
 import { company } from "@/lib/site-data";
+import { motion } from "framer-motion";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       {
-        title: `About Us | ${company.name} — ${company.tagline} · ঢাকা হেড অফিস`,
+        title: `About Us | ${company.name} — ${company.tagline} · Dhaka Head Office`,
       },
       {
         name: "description",
-        content: `About ${company.name} (${company.nativeName}) — ${company.taglineBangla}। স্টাডি অ্যাব্রড, আইইএলটিএস, স্পোকেন ইংলিশ, কিডস ইংলিশ এবং গ্রিক সাইপ্রাস ও মালদ্বীপ কাজের ভিসা কাউন্সেলিং। প্রধান কার্যালয়: ${company.address.full}। হটলাইন: ${company.phones.join(", ")}।`,
+        content: `About ${company.name}: Authorized study abroad admissions (South Korea, Greece, Malta, UK, USA, Canada, Australia), 'No Visa, No Payment' contract guarantee, and premier Language Academy for IELTS Band 7.5+, Spoken English, and Kids Academy. Head Office: ${company.address.full}.`,
       },
       {
         property: "og:title",
-        content: `About ${company.name} — আপনার ভ্রমণের সাথী ✈️`,
+        content: `About ${company.name} — Gateway to Global Education ✈️`,
       },
       {
         property: "og:description",
-        content: `Official profile of ${company.name} (নেক্সট ফ্লাইট ওভারসিজ)। বিশ্বস্ত স্টাডি অ্যাব্রড, আইইএলটিএস এবং ইউরোপীয় ওয়ার্ক পারমিট কাউন্সেলিং সেন্টার। হেড অফিস: রাজ্জাক প্লাজা, মগবাজার, ঢাকা।`,
+        content: `Official profile of ${company.name}. Trusted higher education consultancy and language academy headquartered in Khilgaon, Dhaka.`,
       },
+      { property: "og:image", content: "/banner.jpg" },
     ],
   }),
   component: About,
@@ -36,43 +39,43 @@ export const Route = createFileRoute("/about")({
 
 const advisoryWings = [
   {
-    title: "Global Higher Education Wing",
-    hub: "ঢাকা হেড অফিস (মগবাজার)",
-    badge: "UK, Canada, Europe, USA",
+    title: "South Korea & Global Admissions Wing",
+    hub: "Central Counseling Desk (Khilgaon)",
+    badge: "South Korea, UK, USA, Canada",
     icon: "✈️",
-    desc: "যুক্তরাজ্য, কানাডা, অস্ট্রেলিয়া ও ইউরোপের শীর্ষ বিশ্ববিদ্যালয়গুলোতে অ্যাডমিশন ও পূর্ণাঙ্গ ভিসা প্রসেসিং সেবা।",
+    desc: "Direct admissions for Kyungsung University (Busan) with 30% to 100% scholarships, alongside premier UK, USA, and Canadian university processing.",
   },
   {
-    title: "European Work Permit 2026 Wing",
-    hub: "গ্রিক সাইপ্রাস ও ইউরোপিয়ান ডেস্ক",
-    badge: "১৪ ট্রেড কাজের সুযোগ 🇪🇺",
-    icon: "🏗️",
-    desc: "গ্রিক সাইপ্রাস ২০২৬ ওয়ার্ক পারমিটে ১৪টি ট্রেডে দক্ষ ও সাধারণ কর্মীদের জন্য দ্রুত ৩-৪ মাসের ভিসা প্রসেসিং।",
+    title: "European Risk-Free Pathways Wing",
+    hub: "Schengen & Greece Desk",
+    badge: "100% Risk-Free European Route 🇪🇺",
+    icon: "🏛️",
+    desc: "Greece study pathway with NO IELTS requirement and tuition payable strictly after visa issuance, granting unrestricted access across 29 Schengen countries.",
   },
   {
     title: "Language Academy (IELTS & Spoken)",
-    hub: "ঢাকা ক্যাম্পাস ও অনলাইন স্টুডিও",
-    badge: "IELTS 7.5+ & Spoken Fluency",
+    hub: "Khilgaon Campus & Online Studio",
+    badge: "Band 7.5+ Mentorship",
     icon: "🗣️",
-    desc: "অভিজ্ঞ ট্রেইনারদের পরিচালনায় IELTS Academic, General Training এবং প্রফেশনাল Spoken English কোর্স।",
+    desc: "Certified British Council/IDP trained mentors providing rigorous preparation for IELTS Academic, General Training, and professional Spoken English fluency.",
   },
   {
-    title: "Kids English & Phonics Studio",
-    hub: "শিশু-কিশোর স্পেশাল ব্যাচ",
-    badge: "বয়স ৫–১৪ বছর 🧒",
+    title: "Kids English & Junior Phonics Studio",
+    hub: "Junior Development Center",
+    badge: "Ages 5–14 Years 🧒",
     icon: "🌟",
-    desc: "ফোনিক্স বেসড কিডস ইংলিশ, নির্ভুল উচ্চারণ ও ছোটবেলা থেকেই কনফিডেন্ট স্পিকিং স্কিল ডেভেলপমেন্ট।",
+    desc: "Phonics-based foundation, natural accent modeling, vocabulary expansion, and public speaking confidence for young learners.",
   },
 ];
 
 function About() {
   return (
-    <>
+    <div className="min-h-screen bg-[#070B16] text-slate-100">
       <PageHero
         eyebrow="Our Story & Philosophy"
-        title={company.name}
-        subtitle={`${company.taglineBangla} ✈️ স্টাডি অ্যাব্রড, আইইএলটিএস, স্পোকেন ইংলিশ এবং ইউরোপীয় কাজের ভিসা কাউন্সেলিংয়ে আপনার সবচেয়ে বিশ্বস্ত ও নির্ভরযোগ্য সঙ্গী।`}
-        image="/assets/nextflight-banner.jpg"
+        title={company.name.toUpperCase()}
+        subtitle={`${company.slogan} — Your most reliable, contract-backed partner for overseas university admissions, IELTS mastery, and European pathways.`}
+        image="/banner.jpg"
         imageAlt={`${company.name} official banner with world landmarks and contact information`}
       >
         <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "About Us" }]} />
@@ -82,101 +85,104 @@ function About() {
       <section className="section-shell py-14 sm:py-20">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           {/* Quick Profile Card */}
-          <div className="card-clean rounded-3xl p-8 border border-slate-200/90 shadow-lg bg-white">
-            <div className="flex items-center gap-4 border-b border-slate-100 pb-6">
+          <div className="rounded-3xl p-8 border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.02] shadow-2xl backdrop-blur-sm">
+            <div className="flex items-center gap-4 border-b border-white/10 pb-6">
               <BrandLogo size={56} />
               <div>
-                <h3 className="font-display text-xl font-bold text-slate-900">{company.name}</h3>
-                <span className="inline-block rounded-full bg-blue-50 border border-blue-200 px-3 py-0.5 text-xs font-bold text-blue-800 mt-1">
-                  Trusted Overseas & Language Consultancy
+                <h3 className="font-display text-xl font-bold text-white">{company.name}</h3>
+                <span className="inline-block rounded-full bg-blue-500/15 border border-blue-400/30 px-3 py-0.5 text-xs font-bold text-blue-300 mt-1">
+                  Authorized Study Abroad &amp; Language Academy
                 </span>
               </div>
             </div>
 
             <dl className="mt-6 space-y-4 text-xs sm:text-sm">
-              <div className="flex justify-between border-b border-slate-100 pb-3">
-                <dt className="text-slate-500 font-medium">Official Brand</dt>
-                <dd className="font-bold text-slate-900 text-right">{company.name}</dd>
+              <div className="flex justify-between border-b border-white/5 pb-3">
+                <dt className="text-slate-400 font-medium">Official Brand</dt>
+                <dd className="font-bold text-white text-right">{company.name}</dd>
               </div>
-              <div className="flex justify-between border-b border-slate-100 pb-3">
-                <dt className="text-slate-500 font-medium">Head Office (Dhaka)</dt>
-                <dd className="font-bold text-slate-900 text-right max-w-[260px]">
+              <div className="flex justify-between border-b border-white/5 pb-3">
+                <dt className="text-slate-400 font-medium">Head Office (Dhaka)</dt>
+                <dd className="font-bold text-slate-200 text-right max-w-[260px]">
                   {company.address.full}
                 </dd>
               </div>
-              <div className="flex justify-between border-b border-slate-100 pb-3">
-                <dt className="text-slate-500 font-medium">Office Hours</dt>
-                <dd className="font-bold text-slate-900 text-right max-w-[260px]">
-                  {company.branches[0].hours}
+              <div className="flex justify-between border-b border-white/5 pb-3">
+                <dt className="text-slate-400 font-medium">Office Hours</dt>
+                <dd className="font-bold text-slate-200 text-right">
+                  {company.hours}
                 </dd>
               </div>
-              <div className="flex justify-between border-b border-slate-100 pb-3">
-                <dt className="text-slate-500 font-medium">Core Services</dt>
-                <dd className="font-bold text-blue-700 text-right">
-                  Study Abroad · IELTS · Greek Cyprus Work Permit 2026
+              <div className="flex justify-between border-b border-white/5 pb-3">
+                <dt className="text-slate-400 font-medium">Core Services</dt>
+                <dd className="font-bold text-blue-400 text-right">
+                  South Korea · Greece · UK · USA · IELTS
                 </dd>
               </div>
-              <div className="flex justify-between border-b border-slate-100 pb-3">
-                <dt className="text-slate-500 font-medium">Official Contact</dt>
-                <dd className="font-bold text-emerald-700 text-right">
-                  {company.phones.slice(0, 2).join(" · ")}
+              <div className="flex justify-between border-b border-white/5 pb-3">
+                <dt className="text-slate-400 font-medium">Hotlines &amp; WhatsApp</dt>
+                <dd className="font-bold text-emerald-400 text-right">
+                  {company.phones[0]}
                 </dd>
               </div>
               <div className="flex justify-between pt-1">
-                <dt className="text-slate-500 font-medium">Official Email</dt>
-                <dd className="font-bold text-slate-900 text-right">
+                <dt className="text-slate-400 font-medium">Official Email</dt>
+                <dd className="font-bold text-slate-200 text-right">
                   {company.email}
                 </dd>
               </div>
             </dl>
 
-            <div className="mt-8 rounded-2xl bg-blue-50/80 p-4 border border-blue-200">
-              <p className="text-xs font-bold text-slate-900 mb-1">Official Brand Slogan:</p>
-              <p className="text-xs italic text-blue-950 font-bold">&quot;{company.slogan}&quot; — {company.taglineBangla}</p>
+            <div className="mt-8 rounded-2xl bg-blue-500/10 p-4 border border-blue-400/20">
+              <p className="text-xs font-bold text-blue-300 mb-1">Official Brand Slogan:</p>
+              <p className="text-xs italic text-white font-bold">&quot;{company.slogan}&quot;</p>
             </div>
           </div>
 
           {/* Right Column: Mission, Vision & Guiding Principles */}
           <div className="space-y-6">
-            <span className="badge-clean text-blue-700 bg-blue-50 border border-blue-200">Our Vision &amp; Mission</span>
-            <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-slate-900">
-              ভ্রমণ ও ক্যারিয়ারে আপনার নির্ভরযোগ্য পথপ্রদর্শক
+            <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/15 border border-blue-400/30 px-3.5 py-1 text-xs font-bold text-blue-400">
+              <IconSparkles className="w-3.5 h-3.5 text-blue-400" />
+              <span>Our Vision &amp; Mission</span>
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-white">
+              Guiding Your Global Academic Journey With Integrity
             </h2>
-            <p className="text-sm leading-relaxed text-slate-600 font-bangla">
-              {company.name} ({company.nativeName}) শিক্ষার্থীদের জন্য আন্তর্জাতিক মানের উচ্চশিক্ষা, বিশ্বস্ত ভিসা প্রসেসিং, আইইএলটিএস ও স্পোকেন ইংলিশ ট্রেনিং এবং ইউরোপীয় ওয়ার্ক পারমিটের এক নির্ভরযোগ্য ঠিকানা। রাজধানী ঢাকার মগবাজারস্থ রাজ্জাক প্লাজা (লিফট-১২)-এ আমাদের প্রধান কার্যালয় থেকে প্রতিদিন বহু শিক্ষার্থী ও বিদেশযাত্রী সঠিক দিকনির্দেশনা গ্রহণ করছেন।
+            <p className="text-sm leading-relaxed text-slate-300 font-medium">
+              {company.name} was established with a singular, unwavering mission: to provide ambitious students and professionals with transparent, contract-guaranteed guidance for overseas higher education and language mastery. Headquartered in Khilgaon, Dhaka, we take pride in delivering results without ambiguity.
             </p>
-            <p className="text-sm leading-relaxed text-slate-600 font-bangla">
-              আমরা সম্পূর্ণ স্বচ্ছ প্রক্রিয়ায় স্টাডি অ্যাব্রড, গ্রিক সাইপ্রাস ২০২৬-এর ১৪টি ট্রেডে কাজের ভিসা, মালদ্বীপ সহ মধ্যপ্রাচ্য ও ইউরোপের অনুমোদিত ভিসা প্রসেসিং করে থাকি। সাথে রয়েছে আইইএলটিএস, স্পোকেন ইংলিশ এবং বাচ্চাদের জন্য কিডস ইংলিশের বিশেষ ব্যাচ।
+            <p className="text-sm leading-relaxed text-slate-300 font-medium">
+              Unlike ordinary consultancies that demand large non-refundable deposits upfront, {company.name} operates on a strict &quot;No Visa, No Payment&quot; policy for our contract visa facility. Our students pay consultancy service fees strictly after their visas are successfully granted.
             </p>
 
             <div className="grid gap-4 sm:grid-cols-2 pt-2">
-              <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                <h4 className="font-display text-base font-bold text-slate-900">🎯 Our Mission</h4>
-                <p className="mt-2 text-xs text-slate-600 leading-relaxed font-bangla">
-                  সঠিক তথ্য ও নির্ভরযোগ্য প্রসেসিংয়ের মাধ্যমে প্রতিটি শিক্ষার্থী এবং কর্মপ্রত্যাশীর বিদেশযাত্রাকে নিরাপদ, স্বচ্ছ ও সফল করা।
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-sm">
+                <h4 className="font-display text-base font-bold text-white">🎯 Our Mission</h4>
+                <p className="mt-2 text-xs text-slate-300 leading-relaxed font-medium">
+                  To eliminate financial risk and confusion in overseas education by delivering legally protected, transparent admissions and high-band IELTS training.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                <h4 className="font-display text-base font-bold text-slate-900">🔭 Our Vision</h4>
-                <p className="mt-2 text-xs text-slate-600 leading-relaxed font-bangla">
-                  বাংলাদেশের অন্যতম শীর্ষস্থানীয় গ্লোবাল এডুকেশন ও ওভারসিজ সলিউশন ব্র্যান্ড হিসেবে নিজেকে প্রতিষ্ঠিত রাখা—&quot;আপনার ভ্রমণের সাথী ✈️&quot;।
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-sm">
+                <h4 className="font-display text-base font-bold text-white">🔭 Our Vision</h4>
+                <p className="mt-2 text-xs text-slate-300 leading-relaxed font-medium">
+                  To be Bangladesh&apos;s most trusted and ethical global education brand, recognized worldwide for transparency, student success, and language excellence.
                 </p>
               </div>
             </div>
 
-            <div className="rounded-2xl bg-gradient-to-r from-blue-50/70 via-slate-50 to-indigo-50/70 border border-slate-200 p-5">
-              <h4 className="font-display text-sm font-bold text-blue-900 mb-2">
+            <div className="rounded-2xl bg-gradient-to-r from-blue-900/20 via-black/40 to-indigo-900/20 border border-white/10 p-5">
+              <h4 className="font-display text-sm font-bold text-blue-400 mb-2">
                 🌟 The Core {company.name} Commitments:
               </h4>
               <BulletList
                 items={[
-                  "সরাসরি মগবাজার ঢাকা হেড অফিস: মুখোমুখি কাউন্সিলিং এবং নির্ভুল ফাইল যাচাই।",
-                  "গ্রিক সাইপ্রাস ২০২৬ ওয়ার্ক পারমিট: ইউরোপীয় কান্ট্রিতে ১৪টি ক্যাটাগরিতে কাজ ও থাকার সুবিধা।",
-                  "স্টাডি অ্যাব্রড সলিউশন: ইউকে, কানাডা, অস্ট্রেলিয়া ও ইউরোপের শীর্ষ ইউনিভার্সিটিতে ভর্তির সুযোগ।",
-                  "আইইএলটিএস ও স্পোকেন একাডেমি: অভিজ্ঞ ট্রেইনারের পরিচালনায় অফলাইন ও অনলাইন স্পেশাল ব্যাচ।",
-                  "কিডস ইংলিশ ও ফোনিক্স স্টুডিও: ছোটবেলা থেকেই শিশুদের শুদ্ধ উচ্চারণ ও ফ্লুয়েন্ট কমিউনিকেশন।",
-                  "স্বচ্ছ ও আন্তরিক সেবা: প্রতিটি ফাইল আন্তরিকতা ও শতভাগ দায়িত্বশীলতার সাথে প্রসেস করা হয়।",
+                  "Central Dhaka Head Office: 338/14, Block-C, Khilgaon, Taltola, Dhaka (Beside Ansar Head Office).",
+                  "'No Visa, No Payment' Contract: Formal legal agreement where consultancy fees are due strictly post-visa.",
+                  "South Korea Flagship: Kyungsung University (Busan) language and degree programs with up to 100% scholarships.",
+                  "Greece Risk-Free European Pathway: 100% risk-free, NO IELTS, tuition payable strictly after visa issuance.",
+                  "Certified Language Academy: IELTS Academic & General Band 7.5+ coaching and Kids English & Phonics Studio.",
+                  "Honest Profile Evaluation: We never give false hopes; every profile receives genuine merit-based assessment.",
                 ]}
               />
             </div>
@@ -185,50 +191,50 @@ function About() {
       </section>
 
       {/* Leadership & Advisory Spotlight */}
-      <section className="section-shell py-14 sm:py-20 border-t border-slate-200 bg-slate-50/50">
+      <section className="section-shell py-14 sm:py-20 border-t border-white/10 bg-[#0A1020]">
         <SectionHeading
           eyebrow="Leadership & Advisory"
-          title="Dedicated Counselors & Advisors"
-          subtitle="Experienced study abroad specialists, language mentors, and overseas employment advisors dedicated to your global journey."
+          title="Dedicated Counselors & Academic Mentors"
+          subtitle="Experienced study abroad strategists, language mentors, and certified visa consultants dedicated to your success."
         />
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 max-w-4xl mx-auto">
-          <div className="card-clean rounded-3xl p-7 border border-slate-200 bg-white shadow-sm hover:shadow-md hover:border-blue-500 transition-all flex flex-col justify-between">
+          <div className="rounded-3xl p-7 border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.02] shadow-xl hover:border-blue-500/50 transition-all flex flex-col justify-between">
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="h-14 w-14 rounded-2xl bg-blue-100 border border-blue-300 flex items-center justify-center text-2xl font-black text-blue-700">
-                  NF
+                <div className="h-14 w-14 rounded-2xl bg-blue-500/20 border border-blue-400/30 flex items-center justify-center text-2xl font-black text-blue-400">
+                  NFA
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-bold text-slate-900">{company.name} Counseling Desk</h3>
-                  <span className="text-xs font-semibold text-blue-600">Higher Education &amp; Admissions</span>
+                  <h3 className="font-display text-lg font-bold text-white">{company.name} Higher Education Desk</h3>
+                  <span className="text-xs font-semibold text-blue-400">Global Admissions &amp; Visa Filing</span>
                 </div>
               </div>
-              <p className="text-xs text-slate-600 leading-relaxed font-bangla">
-                যুক্তরাজ্য, কানাডা, যুক্তরাষ্ট্র ও ইউরোপের শীর্ষ বিশ্ববিদ্যালয়গুলোতে শিক্ষার্থীদের সরাসরি আবেদন, অফার লেটার ও ভিসা প্রসেসিংয়ে সার্বক্ষণিক সহায়তা।
+              <p className="text-xs text-slate-300 leading-relaxed font-medium">
+                Comprehensive profile shortlisting, SOP drafting, financial documentation, and visa filing for South Korea, Greece, Malta, UK, USA, Canada, and Australia.
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-blue-700">
-              📍 Head Office: Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka
+            <div className="mt-4 pt-3 border-t border-white/10 text-xs font-bold text-blue-300">
+              📍 Head Office: 338/14, Block-C, Khilgaon, Dhaka
             </div>
           </div>
 
-          <div className="card-clean rounded-3xl p-7 border border-slate-200 bg-white shadow-sm hover:shadow-md hover:border-blue-500 transition-all flex flex-col justify-between">
+          <div className="rounded-3xl p-7 border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.02] shadow-xl hover:border-blue-500/50 transition-all flex flex-col justify-between">
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <div className="h-14 w-14 rounded-2xl bg-indigo-100 border border-indigo-300 flex items-center justify-center text-2xl font-black text-indigo-700">
-                  WP
+                <div className="h-14 w-14 rounded-2xl bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center text-2xl font-black text-indigo-400">
+                  LA
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-bold text-slate-900">Overseas Work Permit Desk</h3>
-                  <span className="text-xs font-semibold text-indigo-600">Greek Cyprus 2026 &amp; Global Permits</span>
+                  <h3 className="font-display text-lg font-bold text-white">Language &amp; IELTS Academy Desk</h3>
+                  <span className="text-xs font-semibold text-indigo-400">Band 7.5+ &amp; Kids English Phonics</span>
                 </div>
               </div>
-              <p className="text-xs text-slate-600 leading-relaxed font-bangla">
-                গ্রিক সাইপ্রাস ২০২৬-এর ১৪টি ট্রেডে অনুমোদিত কাজের ভিসা, মালদ্বীপ ও মধ্যপ্রাচ্যে বৈধ কর্মসংস্থান প্রক্রিয়ায় স্বচ্ছ ও নির্ভরযোগ্য গাইডলাইন।
+              <p className="text-xs text-slate-300 leading-relaxed font-medium">
+                Certified instructors providing diagnostic mock tests, speaking interview simulations, writing review, and foundational phonics for juniors (ages 5–14).
               </p>
             </div>
-            <div className="mt-4 pt-3 border-t border-slate-100 text-xs font-bold text-indigo-700">
+            <div className="mt-4 pt-3 border-t border-white/10 text-xs font-bold text-indigo-300">
               📍 Direct WhatsApp: {company.whatsapp}
             </div>
           </div>
@@ -236,12 +242,12 @@ function About() {
       </section>
 
       {/* Stats Strip */}
-      <section className="section-shell py-10 sm:py-14 border-t border-slate-200">
+      <section className="section-shell py-10 sm:py-14 border-t border-white/10">
         <StatsStrip />
       </section>
 
       {/* Operational Wings */}
-      <section className="section-shell py-14 sm:py-20 border-t border-slate-200">
+      <section className="section-shell py-14 sm:py-20 border-t border-white/10 bg-[#0A1020]">
         <SectionHeading
           eyebrow="Specialized Divisions"
           title="Our Operational Divisions"
@@ -252,26 +258,26 @@ function About() {
           {advisoryWings.map((wing) => (
             <div
               key={wing.title}
-              className="card-clean rounded-3xl p-6 flex flex-col justify-between border border-slate-200 hover:border-blue-500 shadow-sm hover:shadow-md transition-all bg-white"
+              className="rounded-3xl p-6 flex flex-col justify-between border border-white/10 bg-gradient-to-b from-white/[0.05] to-white/[0.02] hover:border-blue-500/50 shadow-xl transition-all"
             >
               <div>
-                <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-                  <span className="text-2xl">{wing.icon}</span>
-                  <span className="rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-[0.68rem] px-2.5 py-0.5 font-bold">{wing.badge}</span>
+                <div className="flex items-center justify-between pb-3 border-b border-white/10">
+                  <span className="text-3xl">{wing.icon}</span>
+                  <span className="rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-[0.68rem] px-2.5 py-0.5 font-bold">{wing.badge}</span>
                 </div>
-                <h3 className="mt-4 font-display text-base font-bold text-slate-900 leading-snug">
+                <h3 className="mt-4 font-display text-base font-bold text-white leading-snug">
                   {wing.title}
                 </h3>
-                <p className="text-[0.68rem] font-bold text-blue-700 mt-0.5">📍 {wing.hub}</p>
-                <p className="mt-3 text-xs text-slate-600 leading-relaxed">{wing.desc}</p>
+                <p className="text-[0.68rem] font-bold text-blue-400 mt-1">📍 {wing.hub}</p>
+                <p className="mt-3 text-xs text-slate-300 leading-relaxed font-medium">{wing.desc}</p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-slate-100">
+              <div className="mt-6 pt-4 border-t border-white/10">
                 <a
                   href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Hello ${company.name}, I want to consult your "${wing.title}" division.`)}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-xs font-bold text-blue-600 hover:underline flex items-center justify-center gap-1.5"
+                  className="text-xs font-bold text-blue-400 hover:text-blue-300 flex items-center justify-center gap-1.5"
                 >
                   <span>Connect with Division →</span>
                 </a>
@@ -282,10 +288,10 @@ function About() {
       </section>
 
       {/* Verified Campuses & Office Gallery */}
-      <section className="section-shell py-14 sm:py-20 border-t border-slate-200 bg-slate-50/50">
+      <section className="section-shell py-14 sm:py-20 border-t border-white/10">
         <SectionHeading
-          eyebrow="Our Locations"
-          title={`${company.name} Center`}
+          eyebrow="Our Location"
+          title={`${company.name} Central Hub`}
           subtitle={`Visit our Head Office at ${company.address.full} or connect with our counselors online.`}
         />
         <div className="mt-10">
@@ -295,6 +301,6 @@ function About() {
 
       {/* Final CTA */}
       <CtaBand />
-    </>
+    </div>
   );
 }

@@ -1,28 +1,24 @@
 /**
- * NEXTFLIGHT BD — Official Verified Media & Brand Assets.
+ * NEXT FLIGHT ABROAD — Official Verified Media & Brand Assets.
  *
  * Verified from:
- *  - Official Logo: /assets/nextflight-logo.jpg (Navy & Sky Blue typography with airplane flight arc, "nextflight BD")
- *  - Official Cover Banner: /assets/nextflight-banner.jpg (Nextflight BD - আপনার ভ্রমণের সাথী, traveler, globe, airplane, clouds)
- *  - Official Facebook Page: https://www.facebook.com/nextflightbd26/
- *  - Head Office: Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217, Bangladesh
- *  - Hotlines: +880 1711-253602 · 01911-928159 · 01756-251900 · 01941-318665 · 01785-250347 · 01339771499
- *  - Email: shahinalammuna@gmail.com
- *  - YouTube: https://www.youtube.com/@NextFlightBD
+ *  - Official Logo: /logo.jpg
+ *  - Official Cover Banner: /banner.jpg
+ *  - Official Facebook Page: https://www.facebook.com/nextflightabroad/
+ *  - Head Office: 338/14, Block-C, Khilgaon, Taltola, Dhaka-1219, Bangladesh (Beside Ansar Head Office, Khilgaon)
+ *  - Hotlines: +880 1568-019270 · +880 1903-152643 · +880 1843-376714 · +880 1705-614388
+ *  - Email: nextflightabroad@gmail.com
  */
 
 export const mediaUrls: Record<string, string> = {
-  // Official NextFlight BD Brand Assets
-  logo: "/assets/nextflight-logo.jpg",
+  // Official Next Flight Abroad Brand Assets
+  logo: "/logo.jpg",
   "logo-fallback": "/logo.jpg",
-  banner: "/assets/nextflight-banner.jpg",
-  "hero-banner": "/assets/nextflight-banner.jpg",
-  "hero-banner-brand": "/assets/nextflight-banner.jpg",
-  "visa-nobin": "/assets/visa-success-nobin.jpg",
-  "visa-ima": "/assets/visa-success-ima.jpg",
+  banner: "/banner.jpg",
+  "hero-banner": "/banner.jpg",
+  "hero-banner-brand": "/banner.jpg",
 };
 
 export function getMediaUrl(key: string, fallback?: string): string {
-  return mediaUrls[key] || fallback || "/assets/nextflight-logo.jpg";
+  return mediaUrls[key] || fallback || "/logo.jpg";
 }
-

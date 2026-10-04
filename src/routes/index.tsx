@@ -17,17 +17,17 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: `${company.name} | Study Abroad, IELTS Academy & Overseas Employment Solutions`,
+        title: `${company.name} | Study Abroad Admissions, Language Academy & Contract Visa Facility`,
       },
       {
         name: "description",
-        content: `${company.name} — ${company.tagline}. Study Abroad (UK, Europe, Canada, USA), IELTS Academic & General, Spoken English, Kids English, and Greek Cyprus 14 Trade Work Permit 2026. Head Office: ${company.address.full}. Hotlines: ${company.phones.join(", ")}.`,
+        content: `${company.name} — ${company.tagline}. Premier study abroad pathways (South Korea, Greece, Malta, UK, USA, Canada, Australia) with 'No Visa, No Payment' guarantee, and certified IELTS Band 7.5+ & Kids Academy. Head Office: ${company.address.full}. Hotlines: ${company.phones.join(", ")}.`,
       },
-      { property: "og:title", content: `${company.name} — আপনার ভ্রমণের সাথী ✈️` },
+      { property: "og:title", content: `${company.name} — Gateway to Global Education ✈️` },
       {
         name: "og:description",
         content:
-          "নেক্সট ফ্লাইট ওভারসিজ — স্টাডি অ্যাব্রড, আইইএলটিএস, স্পোকেন ইংলিশ, কিডস ইংলিশ এবং ইউরোপীয় কাজের ভিসা (গ্রিক সাইপ্রাস ২০২৬) কাউন্সেলিং। প্রধান কার্যালয়: রাজ্জাক প্লাজা, মগবাজার, ঢাকা।",
+          "Next Flight Abroad: Authorized university admissions (South Korea Kyungsung University, Greece 100% Risk-Free, UK, USA), IELTS Band 7.5+, Spoken English, and contract-backed 'No Visa, No Payment' facility.",
       },
     ],
   }),
@@ -40,10 +40,10 @@ function Home() {
 
   const faqCategories = [
     "All",
-    "Study Abroad (UK, Europe, Canada, USA)",
-    "IELTS & English Academy",
-    "Work Permits (Greek Cyprus, Maldives)",
-    "Dhaka Office & Counseling",
+    "No Visa, No Payment Guarantee",
+    "South Korea & Greece Pathways",
+    "IELTS & Language Academy",
+    "Khilgaon Office & Admissions",
   ];
 
   const filteredFaqs =
@@ -52,20 +52,31 @@ function Home() {
       : faqs.filter((f) => {
           const lowerQ = (f.q || f.question || "").toLowerCase();
           const lowerA = (f.a || f.answer || "").toLowerCase();
-          if (activeFaqCategory === "Study Abroad (UK, Europe, Canada, USA)")
+          if (activeFaqCategory === "No Visa, No Payment Guarantee")
             return (
-              lowerQ.includes("study") ||
-              lowerA.includes("study") ||
-              lowerQ.includes("uk") ||
-              lowerA.includes("uk") ||
-              lowerQ.includes("canada") ||
-              lowerA.includes("canada") ||
-              lowerQ.includes("university") ||
-              lowerA.includes("university") ||
-              lowerQ.includes("scholarship") ||
-              lowerA.includes("scholarship")
+              lowerQ.includes("contract") ||
+              lowerA.includes("contract") ||
+              lowerQ.includes("payment") ||
+              lowerA.includes("payment") ||
+              lowerQ.includes("guarantee") ||
+              lowerA.includes("guarantee") ||
+              lowerQ.includes("risk") ||
+              lowerA.includes("risk")
             );
-          if (activeFaqCategory === "IELTS & English Academy")
+          if (activeFaqCategory === "South Korea & Greece Pathways")
+            return (
+              lowerQ.includes("korea") ||
+              lowerA.includes("korea") ||
+              lowerQ.includes("greece") ||
+              lowerA.includes("greece") ||
+              lowerQ.includes("kyungsung") ||
+              lowerA.includes("kyungsung") ||
+              lowerQ.includes("malta") ||
+              lowerA.includes("malta") ||
+              lowerQ.includes("schengen") ||
+              lowerA.includes("schengen")
+            );
+          if (activeFaqCategory === "IELTS & Language Academy")
             return (
               lowerQ.includes("ielts") ||
               lowerA.includes("ielts") ||
@@ -77,27 +88,18 @@ function Home() {
               lowerA.includes("kid") ||
               lowerQ.includes("grammar")
             );
-          if (activeFaqCategory === "Work Permits (Greek Cyprus, Maldives)")
-            return (
-              lowerQ.includes("cyprus") ||
-              lowerA.includes("cyprus") ||
-              lowerQ.includes("work") ||
-              lowerA.includes("work") ||
-              lowerQ.includes("maldives") ||
-              lowerA.includes("maldives") ||
-              lowerQ.includes("permit") ||
-              lowerA.includes("permit")
-            );
-          if (activeFaqCategory === "Dhaka Office & Counseling")
+          if (activeFaqCategory === "Khilgaon Office & Admissions")
             return (
               lowerQ.includes("office") ||
               lowerA.includes("office") ||
-              lowerQ.includes("moghbazar") ||
-              lowerA.includes("moghbazar") ||
+              lowerQ.includes("khilgaon") ||
+              lowerA.includes("khilgaon") ||
               lowerQ.includes("counseling") ||
               lowerA.includes("counseling") ||
               lowerQ.includes("fee") ||
-              lowerA.includes("fee")
+              lowerA.includes("fee") ||
+              lowerQ.includes("apply") ||
+              lowerA.includes("apply")
             );
           return true;
         });
@@ -110,19 +112,19 @@ function Home() {
       {/* 2. The Proof Stage: Real Metrics, Verified Work Permits & Global Admissions */}
       <ProofAndCredentials />
 
-      {/* 3. Flagship Bento Grid (Greek Cyprus 14 Trade, Mongolia, Maldives, Study Abroad, Air Ticketing) */}
+      {/* 3. Flagship Bento Grid (South Korea, Greece, Malta, UK, USA) */}
       <DestinationBento />
 
       {/* 4. The Facebook Video Reels Cinema Theater Mode (Official Video Embeds) */}
       <VideoReelsCinema />
 
-      {/* 5. NextFlight BD Language & IELTS Academy Studio */}
+      {/* 5. Next Flight Abroad Language & IELTS Academy Studio */}
       <AcademyStudio />
 
-      {/* 6. Strategic Presence: Dhaka Head Office (Moghbazar) */}
+      {/* 6. Strategic Presence: Dhaka Head Office (Khilgaon) */}
       <OfficesHub />
 
-      {/* 7. The NextFlight BD Standard & Core Commitments */}
+      {/* 7. The Next Flight Abroad Standard & Core Commitments */}
       <HonestyManifesto />
 
       {/* 8. Voice of Real Students: Verified Success Stories */}
@@ -139,8 +141,8 @@ function Home() {
             <h2 className="font-display text-3xl sm:text-5xl font-black text-white tracking-tight">
               Frequently Asked <span className="text-blue-400">Questions</span>
             </h2>
-            <p className="text-xs sm:text-sm text-slate-300 mt-2 font-medium font-bangla">
-              স্টাডি অ্যাব্রড, আইইএলটিএস ও স্পোকেন ইংলিশ কোর্স, গ্রিক সাইপ্রাস ও মালদ্বীপ কাজের ভিসা এবং আমাদের ঢাকা হেড অফিস সম্পর্কিত সাধারণ প্রশ্ন ও উত্তর।
+            <p className="text-xs sm:text-sm text-slate-300 mt-2 font-medium">
+              Everything you need to know about our 'No Visa, No Payment' contract guarantee, South Korea & Greece study pathways, IELTS scoring, and Khilgaon Dhaka office counseling.
             </p>
           </div>
 
@@ -219,7 +221,7 @@ function Home() {
                         transition={{ duration: 0.25, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed font-medium border-t border-white/5 whitespace-pre-line font-bangla">
+                        <div className="px-4 sm:px-5 pb-4 sm:pb-5 pt-1 text-xs sm:text-sm text-slate-300 leading-relaxed font-medium border-t border-white/5 whitespace-pre-line">
                           {aText}
                         </div>
                       </motion.div>

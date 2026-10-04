@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { BrandLogo } from "@/components/brand-logo";
-import { company } from "@/lib/site-data";
+import { company, destinationsData, academyCourses } from "@/lib/site-data";
 import { useState } from "react";
 import { StaggerContainer, StaggerItem } from "@/components/motion-wrapper";
 import { IconPhone, IconWhatsApp } from "@/components/ui-blocks";
@@ -19,9 +19,10 @@ export function SiteFooter() {
   };
 
   return (
-    <footer className="bg-[#0a1c30] text-white pt-16 pb-24 md:pb-16 text-xs relative overflow-hidden border-t border-sky-400/20">
-      {/* Subtle Dark Pattern */}
-      <div className="absolute inset-0 bg-radial-pattern opacity-10 pointer-events-none" />
+    <footer className="bg-[#070B16] text-white pt-16 pb-24 md:pb-16 text-xs relative overflow-hidden border-t border-white/10">
+      {/* Subtle Radial Glow */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-rose-600/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="section-shell relative z-10">
         {/* Main 3-Column Footer Grid */}
@@ -37,40 +38,37 @@ export function SiteFooter() {
               </Link>
 
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-md font-medium">
-                {company.tagline}. {company.bengaliHeadline}
+                {company.subheadline}
               </p>
 
               {/* Verified USPs Strip */}
               <div className="flex flex-wrap gap-2 text-[0.7rem] font-bold">
-                <span className="bg-sky-500/20 text-sky-300 border border-sky-400/30 px-2.5 py-1 rounded-full">
-                  ★ Study Abroad Advisory
+                <span className="bg-blue-500/20 text-blue-300 border border-blue-400/30 px-2.5 py-1 rounded-full">
+                  ★ "No Visa, No Payment" Model
+                </span>
+                <span className="bg-rose-500/20 text-rose-300 border border-rose-400/30 px-2.5 py-1 rounded-full">
+                  ★ South Korea & Greece Specialist
                 </span>
                 <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-2.5 py-1 rounded-full">
-                  ★ IELTS Band 7.5+ Studio
+                  ★ IELTS Band 7.5+ Masterclass
                 </span>
                 <span className="bg-amber-500/20 text-amber-300 border border-amber-400/30 px-2.5 py-1 rounded-full">
                   ★ Spoken English & Kids Phonics
-                </span>
-                <span className="bg-blue-500/20 text-blue-300 border border-blue-400/30 px-2.5 py-1 rounded-full">
-                  ★ Greek Cyprus 14 Trade Work Permits
-                </span>
-                <span className="bg-sky-400/20 text-sky-200 border border-sky-400/30 px-2.5 py-1 rounded-full">
-                  ★ Worldwide Air Ticketing ✈️
                 </span>
               </div>
 
               {/* Newsletter Subscription Box */}
               <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md max-w-md">
                 <div className="text-sm font-bold text-white mb-1">
-                  Stay Updated on Overseas Admissions & Work Quotas
+                  Stay Updated on Overseas Admissions & Scholarships
                 </div>
                 <p className="text-[0.73rem] text-slate-400 mb-3.5">
-                  Subscribe for verified alerts on UK, European, Canadian intakes, Greek Cyprus trade quotas, Maldives work permits, and new language batches.
+                  Subscribe for verified alerts on South Korea (Kyungsung University), Greece, UK, USA, Canada, and Australia intakes, plus language batch updates.
                 </p>
 
                 {subscribed ? (
                   <div className="rounded-xl bg-emerald-500/20 border border-emerald-400/40 p-2.5 text-center text-xs font-bold text-emerald-200">
-                    ✓ Thank you! You are subscribed to NextFlight BD updates.
+                    ✓ Thank you! You are subscribed to Next Flight Abroad updates.
                   </div>
                 ) : (
                   <form onSubmit={handleSubscribe} className="flex gap-2">
@@ -80,11 +78,11 @@ export function SiteFooter() {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email address"
-                      className="flex-1 rounded-xl border border-white/20 bg-black/40 px-3.5 py-2.5 text-xs text-white placeholder:text-slate-500 outline-none focus:border-sky-400 focus:ring-1 focus:ring-sky-400/30"
+                      className="flex-1 rounded-xl border border-white/20 bg-black/40 px-3.5 py-2.5 text-xs text-white placeholder:text-slate-500 outline-none focus:border-blue-400 focus:ring-1 focus:ring-blue-400/30"
                     />
                     <button
                       type="submit"
-                      className="rounded-xl bg-[#0099e5] hover:bg-[#0284c7] px-4 py-2.5 text-xs font-bold text-white shadow-md transition-colors flex items-center gap-1.5 shrink-0 cursor-pointer"
+                      className="rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 px-4 py-2.5 text-xs font-bold text-white shadow-md transition-all flex items-center gap-1.5 shrink-0 cursor-pointer"
                     >
                       <span>Subscribe</span>
                       <span>→</span>
@@ -99,199 +97,184 @@ export function SiteFooter() {
           <StaggerItem direction="up" distance={24}>
             <div className="space-y-4">
               <div className="text-sm font-bold text-white tracking-wide uppercase">
-                Academic & Overseas Services
+                Study Abroad & Courses
               </div>
 
               <ul className="space-y-2 text-xs text-slate-300 font-medium">
                 <li>
-                  <Link to="/services" className="hover:text-sky-300 transition-colors flex items-center gap-1.5 font-bold text-white">
-                    <span className="text-sky-400">›</span>
-                    <span>IELTS Academic & General Training (Band 7.5+)</span>
+                  <Link to="/study-in-{$country}" params={{ country: "south-korea" }} className="hover:text-blue-300 transition-colors flex items-center gap-1.5 font-bold text-white">
+                    <span className="text-blue-400">›</span>
+                    <span>Study in South Korea (Kyungsung University, Busan)</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="hover:text-sky-300 transition-colors flex items-center gap-1.5 text-sky-300 font-semibold">
-                    <span className="text-sky-400">›</span>
+                  <Link to="/study-in-{$country}" params={{ country: "greece" }} className="hover:text-rose-300 transition-colors flex items-center gap-1.5 text-rose-300 font-semibold">
+                    <span className="text-rose-400">›</span>
+                    <span>Study in Greece (100% Risk Free, No IELTS)</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/study-in-{$country}" params={{ country: "malta" }} className="hover:text-blue-300 transition-colors flex items-center gap-1.5 text-blue-300 font-semibold">
+                    <span className="text-blue-400">›</span>
+                    <span>Study in Malta (Schengen Europe & Work Rights)</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/study-in-{$country}" params={{ country: "uk" }} className="hover:text-blue-300 transition-colors flex items-center gap-1.5 text-slate-300">
+                    <span className="text-blue-400">›</span>
+                    <span>Study in UK (2-Year Graduate Route PSW)</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/study-in-{$country}" params={{ country: "usa" }} className="hover:text-blue-300 transition-colors flex items-center gap-1.5 text-slate-300">
+                    <span className="text-blue-400">›</span>
+                    <span>Study in USA (3-Year STEM OPT & Scholarships)</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-emerald-300 transition-colors flex items-center gap-1.5 text-emerald-300 font-semibold">
+                    <span className="text-emerald-400">›</span>
+                    <span>IELTS Academic Masterclass (Band 7.5+)</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/services" className="hover:text-amber-300 transition-colors flex items-center gap-1.5 text-amber-300 font-semibold">
+                    <span className="text-amber-400">›</span>
                     <span>Spoken English & Fluency Studio</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="hover:text-sky-300 transition-colors flex items-center gap-1.5 text-sky-300 font-semibold">
-                    <span className="text-sky-400">›</span>
-                    <span>Kids English & Junior Phonics Studio (5-14)</span>
+                  <Link to="/services" className="hover:text-purple-300 transition-colors flex items-center gap-1.5 text-purple-300 font-semibold">
+                    <span className="text-purple-400">›</span>
+                    <span>Kids English & Junior Phonics (Ages 5-14)</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="hover:text-emerald-300 transition-colors flex items-center gap-1.5 text-emerald-300 font-semibold">
-                    <span className="text-emerald-400">›</span>
-                    <span>Greek Cyprus Skill Work Permit 2026 (14 Trades)</span>
+                  <Link to="/offers" className="hover:text-blue-300 transition-colors flex items-center gap-1.5 text-slate-300">
+                    <span className="text-blue-400">›</span>
+                    <span>Upcoming Batches & Scholarship Waivers</span>
                   </Link>
                 </li>
                 <li>
-                  <Link to="/services" className="hover:text-emerald-300 transition-colors flex items-center gap-1.5 text-emerald-300 font-semibold">
-                    <span className="text-emerald-400">›</span>
-                    <span>Maldives & Mongolia Work Permit Processing</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contact" className="hover:text-amber-300 transition-colors flex items-center gap-1.5 text-amber-300 font-semibold">
-                    <span className="text-amber-400">›</span>
-                    <span>Worldwide Air Ticketing & Tourist Visas ✈️</span>
-                  </Link>
-                </li>
-                <li className="pt-2 border-t border-white/10">
-                  <Link to="/study-in-{$country}" params={{ country: "uk" }} className="hover:text-sky-300 transition-colors flex items-center gap-1.5">
-                    <span className="text-sky-400">›</span>
-                    <span>Study in United Kingdom 🇬🇧 (Admissions & PSW)</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/study-in-{$country}" params={{ country: "europe" }} className="hover:text-sky-300 transition-colors flex items-center gap-1.5">
-                    <span className="text-sky-400">›</span>
-                    <span>Study in Europe 🇪🇺 (Cyprus, Germany, Malta)</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/study-in-{$country}" params={{ country: "canada" }} className="hover:text-sky-300 transition-colors flex items-center gap-1.5">
-                    <span className="text-sky-400">›</span>
-                    <span>Study in Canada 🇨🇦 (Public DLIs & PGWP)</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/study-in-{$country}" params={{ country: "usa" }} className="hover:text-sky-300 transition-colors flex items-center gap-1.5">
-                    <span className="text-sky-400">›</span>
-                    <span>Study in USA 🇺🇸 (STEM OPT & Scholarships)</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/study-in-{$country}" params={{ country: "australia" }} className="hover:text-sky-300 transition-colors flex items-center gap-1.5">
-                    <span className="text-sky-400">›</span>
-                    <span>Study in Australia 🇦🇺 (CRICOS & Work Rights)</span>
+                  <Link to="/about" className="hover:text-blue-300 transition-colors flex items-center gap-1.5 text-slate-300">
+                    <span className="text-blue-400">›</span>
+                    <span>About Next Flight Abroad & Founders</span>
                   </Link>
                 </li>
               </ul>
             </div>
           </StaggerItem>
 
-          {/* Column 3: Verified Head Office & Contacts */}
+          {/* Column 3: Contact Details & Central Office */}
           <StaggerItem direction="up" distance={24}>
             <div className="space-y-4">
               <div className="text-sm font-bold text-white tracking-wide uppercase">
-                Dhaka Head Office & Contacts
+                Khilgaon Central Office
               </div>
 
               <div className="rounded-2xl border border-white/10 bg-white/5 p-4 space-y-3">
-                {/* Bangladesh Head Office */}
                 <div className="flex items-start gap-2.5">
-                  <span className="text-base text-sky-400 shrink-0 mt-0.5">📍</span>
+                  <span className="text-rose-400 text-sm mt-0.5">📍</span>
                   <div>
-                    <div className="font-bold text-white text-xs">
-                      NextFlight BD Head Office (Dhaka)
-                    </div>
-                    <div className="text-[0.72rem] text-slate-300 mt-1 leading-relaxed">
-                      Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217, Bangladesh
-                    </div>
-                    <div className="text-[0.68rem] text-sky-300 font-medium mt-1 font-bangla">
-                      আপনার ভ্রমণের বিশ্বস্ত সাথী ✈️
+                    <div className="text-white font-bold text-xs">Next Flight Abroad Central Hub</div>
+                    <div className="text-slate-300 text-[0.73rem] leading-relaxed mt-0.5">
+                      {company.address.full}
                     </div>
                   </div>
                 </div>
 
-                <div className="pt-2 border-t border-white/10 space-y-1.5 text-[0.73rem]">
-                  <div className="flex items-center gap-2 text-slate-300">
-                    <IconPhone className="w-3.5 h-3.5 text-sky-400 shrink-0" />
-                    <span className="font-bold text-white">Hotlines:</span>
-                    <a href={`tel:${company.phones[0].replace(/[^0-9]/g, "")}`} className="hover:text-sky-300 font-semibold">
-                      {company.phones[0]}
-                    </a>
-                    <span>·</span>
-                    <a href={`tel:${company.phones[1].replace(/[^0-9]/g, "")}`} className="hover:text-sky-300 font-semibold">
-                      {company.phones[1]}
-                    </a>
+                <div className="flex items-start gap-2.5 pt-2 border-t border-white/10">
+                  <span className="text-blue-400 text-sm mt-0.5">📞</span>
+                  <div>
+                    <div className="text-white font-bold text-xs">Official Hotlines</div>
+                    <div className="text-slate-300 text-[0.73rem] space-y-0.5 mt-0.5">
+                      <div>Primary: <a href={`tel:${company.phones[0]}`} className="hover:text-blue-400 font-bold">{company.phones[0]}</a></div>
+                      <div>Secondary: <a href={`tel:${company.phones[1]}`} className="hover:text-blue-400">{company.phones[1]}</a></div>
+                      <div>Inquiries: <a href={`tel:${company.phones[2]}`} className="hover:text-blue-400">{company.phones[2]}</a></div>
+                    </div>
                   </div>
+                </div>
 
-                  <div className="flex items-center gap-2 text-slate-300">
-                    <span className="text-sky-400 font-bold">Additional:</span>
-                    <a href={`tel:${company.phones[2].replace(/[^0-9]/g, "")}`} className="hover:text-sky-300">
-                      {company.phones[2]}
-                    </a>
-                    <span>·</span>
-                    <a href={`tel:${company.phones[3].replace(/[^0-9]/g, "")}`} className="hover:text-sky-300">
-                      {company.phones[3]}
-                    </a>
-                  </div>
-
-                  <div className="flex items-center gap-2 text-slate-300">
-                    <IconWhatsApp className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                    <span className="font-bold text-white">WhatsApp:</span>
+                <div className="flex items-center gap-2.5 pt-2 border-t border-white/10">
+                  <span className="text-emerald-400 text-sm">💬</span>
+                  <div className="text-[0.73rem] text-slate-300">
+                    <span>WhatsApp: </span>
                     <a
-                      href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}`}
+                      href={company.social.whatsapp}
                       target="_blank"
-                      rel="noreferrer"
-                      className="hover:text-emerald-300 font-semibold"
+                      rel="noopener noreferrer"
+                      className="text-emerald-400 font-bold hover:underline"
                     >
                       {company.whatsappFormatted}
                     </a>
                   </div>
+                </div>
 
-                  <div className="flex items-center gap-2 text-slate-300">
-                    <span className="text-sky-400">✉</span>
-                    <span className="font-bold text-white">Email:</span>
-                    <a href={`mailto:${company.email}`} className="hover:text-sky-300">
+                <div className="flex items-center gap-2.5 pt-2 border-t border-white/10">
+                  <span className="text-blue-400 text-sm">✉️</span>
+                  <div className="text-[0.73rem] text-slate-300">
+                    <span>Email: </span>
+                    <a href={`mailto:${company.email}`} className="text-blue-300 hover:underline">
                       {company.email}
                     </a>
                   </div>
+                </div>
 
-                  <div className="flex items-center gap-2 text-slate-300">
-                    <span className="text-amber-400">⏰</span>
-                    <span className="font-bold text-white">Hours:</span>
-                    <span>{company.hours}</span>
-                  </div>
+                <div className="pt-2 border-t border-white/10 text-[0.7rem] text-slate-400">
+                  <span>Visiting Hours: {company.hours}</span>
                 </div>
               </div>
 
-              {/* Social Media Links */}
-              <div className="pt-2 flex flex-wrap items-center gap-2.5">
+              {/* Direct Buttons */}
+              <div className="flex gap-2">
                 <a
-                  href={company.social.facebook}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full bg-blue-600/30 hover:bg-blue-600 px-3.5 py-1.5 text-xs font-bold text-white transition-colors flex items-center gap-1.5 border border-blue-400/30"
+                  href={`tel:${company.phones[0].replace(/[^0-9]/g, "")}`}
+                  className="flex-1 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 py-2.5 text-center font-bold text-xs text-white transition-colors flex items-center justify-center gap-1.5"
                 >
-                  <span>Facebook (@nextflightbd26)</span>
-                  <span className="text-[0.65rem]">↗</span>
+                  <IconPhone className="w-3.5 h-3.5 text-blue-400" />
+                  <span>Call Office</span>
                 </a>
                 <a
-                  href={company.social.youtube}
+                  href={company.social.whatsapp}
                   target="_blank"
-                  rel="noreferrer"
-                  className="rounded-full bg-red-600/30 hover:bg-red-600 px-3.5 py-1.5 text-xs font-bold text-white transition-colors flex items-center gap-1.5 border border-red-400/30"
+                  rel="noopener noreferrer"
+                  className="flex-1 rounded-xl bg-emerald-600 hover:bg-emerald-500 py-2.5 text-center font-bold text-xs text-white transition-colors flex items-center justify-center gap-1.5 shadow-md shadow-emerald-600/30"
                 >
-                  <span>YouTube (@NextFlightBD)</span>
-                  <span className="text-[0.65rem]">↗</span>
+                  <IconWhatsApp className="w-3.5 h-3.5" />
+                  <span>WhatsApp</span>
                 </a>
               </div>
             </div>
           </StaggerItem>
         </StaggerContainer>
 
-        {/* Bottom Bar: Copyright & Legal */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[0.72rem] text-slate-400">
+        {/* Bottom Strip */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[0.7rem] text-slate-400">
           <div>
-            © {new Date().getFullYear()} {company.name} ({company.nativeName}). All rights reserved. {company.slogan}.
+            © {new Date().getFullYear()} {company.legalName}. All rights reserved.
           </div>
-          <div className="flex items-center gap-4 font-medium">
+
+          <div className="flex flex-wrap items-center gap-4 font-medium">
             <Link to="/privacy-policy" className="hover:text-white transition-colors">
               Privacy Policy
             </Link>
-            <span>·</span>
+            <span>•</span>
             <Link to="/terms-of-use" className="hover:text-white transition-colors">
-              Terms of Use
+              Terms & Conditions
             </Link>
-            <span>·</span>
-            <Link to="/contact" className="hover:text-white transition-colors">
-              Contact Us
+            <span>•</span>
+            <Link to="/about" className="hover:text-white transition-colors">
+              Company Credentials
             </Link>
+            <span>•</span>
+            <a
+              href={company.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:underline font-bold"
+            >
+              Facebook Page
+            </a>
           </div>
         </div>
       </div>
