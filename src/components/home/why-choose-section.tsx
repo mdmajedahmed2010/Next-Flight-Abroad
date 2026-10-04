@@ -62,10 +62,10 @@ export function WhyChooseSection() {
       <div className="section-shell">
         {/* Title with Framer Motion */}
         <MotionHeading
-          tag="— WHY ABROAD BLUEPRINT —"
+          tag={`— WHY ${company.name.toUpperCase()} —`}
           title="Why Choose"
-          highlight="Abroad Blueprint?"
-          description="Start Here, Go Anywhere! British Council Certified guidance, dual offices in Chittagong and Birmingham UK, and zero service charges from application to visa arrival."
+          highlight={`${company.name}?`}
+          description="আপনার ভ্রমণের সাথী ✈️! Dedicated guidance for Study Abroad, Greek Cyprus Work Permits 2026, and Language Academy with genuine counselors at our Dhaka Moghbazar Head Office."
           tagColor="text-blue-600"
           highlightColor="text-blue-600"
         />

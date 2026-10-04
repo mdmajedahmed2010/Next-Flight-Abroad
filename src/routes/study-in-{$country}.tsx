@@ -11,10 +11,10 @@ export const Route = createFileRoute("/study-in-{$country}")({
   head: ({ loaderData }) => {
     const d = loaderData?.destination;
     const title = d
-      ? `Study in ${d.name} | ${company.name} — British Council Certified | Zero Service Charge`
+      ? `Study in ${d.name} | ${company.name} — ${company.taglineBangla}`
       : `Study Abroad Destinations | ${company.name}`;
     const description = d
-      ? `${d.tagline}. University admissions, genuine visa guidance, IELTS requirements, and dependent visa strategy for ${d.name} with ${company.name} (${company.taglineBangla}). 100% Free Processing. Head Office: ${company.address.full}. Hotlines: ${company.phones.join(", ")}.`
+      ? `${d.tagline}. University admissions, genuine visa guidance, IELTS requirements, and application strategy for ${d.name} with ${company.name} (${company.taglineBangla}). Head Office: ${company.address.full}. Hotlines: ${company.phones.join(", ")}.`
       : `Study abroad admissions and language academy coaching from ${company.name}.`;
     return {
       meta: [
@@ -42,7 +42,7 @@ function DestinationPage() {
         eyebrow={`${d.flag} ${d.region} · Official Destination`}
         title={`Study in ${d.name}`}
         subtitle={d.tagline}
-        image="/banner.jpg"
+        image="/assets/nextflight-banner.jpg"
         imageAlt={`Study in ${d.name} — ${company.name}`}
       >
         <div className="space-y-6">

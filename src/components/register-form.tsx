@@ -7,22 +7,20 @@ const label = "mb-1.5 block text-xs font-bold uppercase tracking-wider text-slat
 
 const serviceOptions = [
   "Study Abroad Admissions — UK (Undergraduate / Masters)",
-  "Fly with Dependent Track (MRes / DBA / PhD with Spouse Work Rights)",
-  "Study Abroad Admissions — Canada (DLI & SDS Stream)",
-  "Study Abroad Admissions — Australia (High Minimum Wage & Regional PSW)",
-  "Study Abroad Admissions — USA (STEM OPT & Scholarships)",
-  "Study Abroad Admissions — Europe (Germany, Malta, Cyprus)",
+  "Greek Cyprus 14 Trade Work Permit (Urgent 2026 Quota)",
+  "Maldives & International Work Visas",
+  "Study Abroad Admissions — Europe (Cyprus, Malta, Germany)",
+  "Study Abroad Admissions — Canada & USA",
   "IELTS Academic Preparation (Target Band 7.0 - 8.5)",
   "IELTS General Training (Work & Migration Track)",
-  "Spoken English & Professional Communication",
-  "Kids English & Phonics Foundation",
-  "Scholarship Assessment (Up to £5,000 / 100%)",
+  "Spoken English & Communication Fluency",
+  "Kids English & Phonics Studio (Ages 5-14)",
+  "Scholarship & Profile Evaluation (0 BDT Service Fee)",
 ];
 
 const officeOptions = [
-  "Chittagong Head Office (4091, CJKS Shopping Complex, 3rd Floor, Kazir Dewri)",
-  "UK Liaison Office (17, Woodgate, Birmingham, United Kingdom)",
-  "Online Consultation (WhatsApp Video / Zoom / Phone Call)",
+  "Dhaka Head Office (Razzak Plaza, 383 Lift-12, Moghbazar, Dhaka-1217)",
+  "Online Consultation (WhatsApp Video / Zoom / Direct Hotline Call)",
 ];
 
 export function RegisterForm({ onDone }: { onDone?: () => void }) {
@@ -108,13 +106,13 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
     <form onSubmit={handleSubmit} className="space-y-4 text-left">
       <div className="border-b border-slate-100 pb-3 mb-2">
         <span className="text-[0.68rem] font-extrabold uppercase tracking-wider text-blue-600">
-          {company.name} · British Council Certified
+          {company.name} · {company.taglineBangla}
         </span>
         <h3 className="font-display text-xl font-black text-slate-900">
-          Book Your Free Study Abroad &amp; Profile Evaluation
+          Book Your Free Assessment &amp; Consultation
         </h3>
         <p className="text-xs text-slate-500 mt-0.5">
-          Chittagong Office: 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri · Hotlines: {company.phones[0]} / {company.phones[1]}
+          Dhaka Head Office: Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217 · Hotlines: {company.phones[0]} / {company.phones[1]}
         </p>
       </div>
 
@@ -180,7 +178,7 @@ export function RegisterForm({ onDone }: { onDone?: () => void }) {
               </option>
             ))}
             <option value="Language Course (IELTS / Spoken / Kids)">
-              🎯 Language Training Only (Chittagong Campus / Online)
+              🎯 Language Training Only (Dhaka Campus / Online)
             </option>
             <option value="Other / Need Advice">🌍 Other / Need Advice</option>
           </select>

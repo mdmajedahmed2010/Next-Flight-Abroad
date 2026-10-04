@@ -35,37 +35,37 @@ export function SiteHeader() {
   return (
     <div className="w-full">
       {/* 1. Global Top Notification Bar */}
-      <div className="bg-[#0a192f] text-white text-xs py-2 relative z-50 border-b border-blue-500/20">
+      <div className="bg-[#0f2b48] text-white text-xs py-2 relative z-50 border-b border-sky-400/20">
         <div className="section-shell flex items-center justify-between gap-3">
           {/* Left: Direct Phone & Hotlines */}
           <div className="flex items-center gap-3 sm:gap-4 text-[0.73rem] sm:text-xs">
             <a
               href={`tel:${company.phones[0].replace(/[^0-9]/g, "")}`}
-              className="flex items-center gap-1.5 font-bold text-slate-100 hover:text-[#fbbf24] transition-colors"
+              className="flex items-center gap-1.5 font-bold text-slate-100 hover:text-sky-300 transition-colors"
             >
-              <IconPhone className="w-3.5 h-3.5 text-amber-400" />
-              <span>BD: {company.phones[0]}</span>
+              <IconPhone className="w-3.5 h-3.5 text-sky-400" />
+              <span>Hotline: {company.phones[0]}</span>
             </a>
-            <span className="text-slate-600 hidden xs:inline">|</span>
+            <span className="text-slate-500 hidden xs:inline">|</span>
             <a
-              href={`tel:${company.ukPhone.replace(/[^0-9]/g, "")}`}
-              className="hidden xs:flex items-center gap-1 text-slate-300 hover:text-[#fbbf24] transition-colors"
+              href={`tel:${company.phones[1].replace(/[^0-9]/g, "")}`}
+              className="hidden xs:flex items-center gap-1 text-slate-300 hover:text-sky-300 transition-colors"
             >
-              <span>UK: {company.ukPhone}</span>
+              <span>{company.phones[1]}</span>
             </a>
-            <span className="text-slate-600 hidden md:inline">|</span>
-            <span className="hidden md:inline-flex items-center gap-1 text-[0.68rem] bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-extrabold px-2.5 py-0.5 rounded-full shadow-xs">
-              ★ British Council Certified Agent · No Service Charge · Fly with Dependent
+            <span className="text-slate-500 hidden md:inline">|</span>
+            <span className="hidden md:inline-flex items-center gap-1 text-[0.68rem] bg-gradient-to-r from-sky-600 to-blue-700 text-white font-extrabold px-2.5 py-0.5 rounded-full shadow-xs">
+              ★ Study Abroad · IELTS Band 7.5+ · Spoken English · Kids English · Verified Work Visas
             </span>
           </div>
 
-          {/* Right: Office Location & Motto */}
-          <div className="flex items-center gap-2 text-[0.7rem] sm:text-[0.75rem] text-slate-300">
-            <span className="text-amber-400">📍</span>
-            <span className="truncate">CJKS Shopping Complex (3rd Fl), Kazir Dewri, Chittagong</span>
+          {/* Right: Office Location & Slogan */}
+          <div className="flex items-center gap-2 text-[0.7rem] sm:text-[0.75rem] text-slate-200">
+            <span className="text-sky-400">📍</span>
+            <span className="truncate">Razzak Plaza (Lift-12), Moghbazar, Dhaka</span>
             <span className="hidden lg:inline text-slate-600">|</span>
-            <span className="hidden lg:inline text-amber-300 font-bold text-[0.68rem] bg-amber-400/10 px-2.5 py-0.5 rounded-full border border-amber-400/30">
-              Start Here, Go Anywhere! 🌍
+            <span className="hidden lg:inline text-sky-300 font-bangla font-bold text-[0.72rem] bg-sky-400/10 px-2.5 py-0.5 rounded-full border border-sky-400/30">
+              আপনার ভ্রমণের সাথী ✈️
             </span>
           </div>
         </div>
@@ -85,8 +85,8 @@ export function SiteHeader() {
           <Link to="/" className="group flex items-center gap-3 shrink-0">
             <BrandLogo size={46} withText textClassName="flex" />
             <div className="hidden xl:block h-6 w-px bg-slate-200" />
-            <span className="hidden xl:inline text-xs font-extrabold text-[#0052cc] tracking-wider uppercase">
-              STUDY ABROAD & ENGLISH ACADEMY
+            <span className="hidden xl:inline text-xs font-extrabold text-[#0f2b48] tracking-wider uppercase">
+              STUDY ABROAD · LANGUAGE ACADEMY · GLOBAL CAREERS
             </span>
           </Link>
 
@@ -95,7 +95,8 @@ export function SiteHeader() {
             {navItems.map((item) => {
               const hasChildren = item.children && item.children.length > 0;
               const isDest = item.label.includes("Study") || item.label.includes("Destinations");
-              const isCourses = item.label.includes("Courses") || item.label.includes("Academy") || item.label.includes("English");
+              const isCourses = item.label.includes("Courses") || item.label.includes("Academy") || item.label.includes("Language");
+              const isWork = item.label.includes("Work") || item.label.includes("Permits");
 
               if (hasChildren) {
                 return (
@@ -107,7 +108,7 @@ export function SiteHeader() {
                   >
                     <Link
                       to={item.to}
-                      className="inline-flex items-center gap-1 rounded-full px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-blue-50 hover:text-[#0052cc] transition-colors whitespace-nowrap"
+                      className="inline-flex items-center gap-1 rounded-full px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-sky-50 hover:text-[#0099e5] transition-colors whitespace-nowrap"
                     >
                       <span>{item.label}</span>
                       <span className="text-[0.65rem] opacity-50">▾</span>
@@ -120,8 +121,8 @@ export function SiteHeader() {
                           <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
                             Study Destinations & Visas
                           </span>
-                          <span className="text-[0.7rem] text-[#0052cc] font-bold bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-200">
-                            🇬🇧 UK · 🇦🇺 Australia · 🇨🇦 Canada · 🇺🇸 USA · 🇪🇺 Europe
+                          <span className="text-[0.7rem] text-[#0f2b48] font-bold bg-sky-50 px-2.5 py-0.5 rounded-full border border-sky-200">
+                            🇬🇧 UK · 🇪🇺 Europe & Cyprus · 🇨🇦 Canada · 🇺🇸 USA · 🇦🇺 Australia
                           </span>
                         </div>
                         {destinations.slice(0, 8).map((d: any) => (
@@ -129,15 +130,15 @@ export function SiteHeader() {
                             key={d.slug}
                             to="/study-in-{$country}"
                             params={{ country: d.slug }}
-                            className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-blue-50/80 transition-colors group"
+                            className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-sky-50/80 transition-colors group"
                             onClick={() => setActiveDropdown(null)}
                           >
                             <span className="text-xl shrink-0 mt-0.5">{d.flag}</span>
                             <div className="min-w-0">
-                              <div className="text-xs font-bold text-slate-900 group-hover:text-[#0052cc] flex items-center gap-1.5">
+                              <div className="text-xs font-bold text-slate-900 group-hover:text-[#0099e5] flex items-center gap-1.5">
                                 <span>{d.country || d.name}</span>
-                                <span className="text-[0.6rem] bg-blue-100 text-[#0052cc] px-1.5 py-0.2 rounded font-semibold truncate max-w-[130px]">
-                                  {d.slug === "uk" ? "Flagship" : "Featured"}
+                                <span className="text-[0.6rem] bg-sky-100 text-[#0099e5] px-1.5 py-0.2 rounded font-semibold truncate max-w-[130px]">
+                                  {d.slug === "uk" ? "Popular" : "Featured"}
                                 </span>
                               </div>
                               <p className="text-[0.7rem] text-slate-500 truncate max-w-[210px]">
@@ -149,14 +150,14 @@ export function SiteHeader() {
                         <div className="col-span-2 pt-2 border-t border-slate-100 flex items-center justify-between text-xs">
                           <Link
                             to="/destinations"
-                            className="font-bold text-[#0052cc] hover:text-[#0043a8] flex items-center gap-1"
+                            className="font-bold text-[#0099e5] hover:text-[#0284c7] flex items-center gap-1"
                             onClick={() => setActiveDropdown(null)}
                           >
                             <span>Explore all destination pathways</span>
                             <span>→</span>
                           </Link>
                           <span className="text-[0.7rem] text-slate-400 font-medium">
-                            Abroad Blueprint · Kazir Dewri, Chittagong
+                            NextFlight BD · Razzak Plaza, Moghbazar, Dhaka
                           </span>
                         </div>
                       </div>
@@ -164,26 +165,26 @@ export function SiteHeader() {
 
                     {/* Dropdown for Language Academy & English Courses */}
                     {isCourses && activeDropdown === item.label && (
-                      <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[480px] rounded-2xl bg-white p-4 shadow-2xl border border-slate-200 grid grid-cols-1 gap-1.5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                      <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[500px] rounded-2xl bg-white p-4 shadow-2xl border border-slate-200 grid grid-cols-1 gap-1.5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                         <div className="pb-2 mb-1 border-b border-slate-100 flex items-center justify-between">
                           <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
                             Language Academy & Test Prep
                           </span>
-                          <span className="text-[0.7rem] text-blue-900 font-bold bg-blue-50 px-2.5 py-0.5 rounded-full border border-blue-200">
-                            IELTS · Spoken English · Kids English · Fly with Dependent
+                          <span className="text-[0.7rem] text-[#0f2b48] font-bold bg-sky-50 px-2.5 py-0.5 rounded-full border border-sky-200">
+                            IELTS Academic · General · Spoken · Kids English
                           </span>
                         </div>
-                        {courses.map((c: any) => (
+                        {courses.slice(0, 5).map((c: any) => (
                           <Link
                             key={c.slug}
                             to="/services"
-                            className="flex items-center justify-between p-2 rounded-xl hover:bg-blue-50/80 transition-colors group"
+                            className="flex items-center justify-between p-2 rounded-xl hover:bg-sky-50/80 transition-colors group"
                             onClick={() => setActiveDropdown(null)}
                           >
                             <div className="flex items-center gap-2.5 min-w-0">
-                              <span className="text-lg shrink-0">🎓</span>
+                              <span className="text-lg shrink-0">📘</span>
                               <div className="truncate">
-                                <span className="text-xs font-bold text-slate-900 group-hover:text-[#0052cc] block truncate">
+                                <span className="text-xs font-bold text-slate-900 group-hover:text-[#0099e5] block truncate">
                                   {c.title}
                                 </span>
                                 <span className="text-[0.68rem] text-slate-500 block truncate">
@@ -191,7 +192,7 @@ export function SiteHeader() {
                                 </span>
                               </div>
                             </div>
-                            <span className="text-[0.65rem] bg-blue-100 text-[#0052cc] font-bold px-2 py-0.5 rounded-full shrink-0">
+                            <span className="text-[0.65rem] bg-sky-100 text-[#0099e5] font-bold px-2 py-0.5 rounded-full shrink-0">
                               {c.badge}
                             </span>
                           </Link>
@@ -199,15 +200,50 @@ export function SiteHeader() {
                       </div>
                     )}
 
+                    {/* Dropdown for Work Permits */}
+                    {isWork && activeDropdown === item.label && (
+                      <div className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[460px] rounded-2xl bg-white p-4 shadow-2xl border border-slate-200 grid grid-cols-1 gap-1.5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                        <div className="pb-2 mb-1 border-b border-slate-100 flex items-center justify-between">
+                          <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
+                            Global Skill Work Permits
+                          </span>
+                          <span className="text-[0.7rem] text-emerald-800 font-bold bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                            Verified Employer Contracts & Visa Grants
+                          </span>
+                        </div>
+                        {item.children?.map((child: any) => (
+                          <Link
+                            key={child.label}
+                            to={child.to}
+                            params={child.params}
+                            className="flex items-center justify-between p-2.5 rounded-xl hover:bg-emerald-50/80 transition-colors group"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            <div className="flex items-center gap-2.5">
+                              <span className="text-lg">💼</span>
+                              <span className="text-xs font-bold text-slate-800 group-hover:text-emerald-700">
+                                {child.label}
+                              </span>
+                            </div>
+                            {child.badge && (
+                              <span className="text-[0.65rem] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded-full">
+                                {child.badge}
+                              </span>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+
                     {/* Standard Dropdown for Other Links */}
-                    {!isDest && !isCourses && activeDropdown === item.label && (
+                    {!isDest && !isCourses && !isWork && activeDropdown === item.label && (
                       <div className="absolute left-0 top-full mt-1 w-64 rounded-2xl bg-white p-2 shadow-xl border border-slate-200 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                         {item.children?.map((child: any) => (
                           <Link
                             key={child.label}
                             to={child.to}
                             params={child.params}
-                            className="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-blue-50 hover:text-[#0052cc] transition-colors"
+                            className="flex items-center justify-between rounded-xl px-3 py-2 text-xs font-semibold text-slate-700 hover:bg-sky-50 hover:text-[#0099e5] transition-colors"
                             onClick={() => setActiveDropdown(null)}
                           >
                             <span>{child.label}</span>
@@ -228,7 +264,7 @@ export function SiteHeader() {
                 <Link
                   key={item.label}
                   to={item.to}
-                  className="rounded-full px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-blue-50 hover:text-[#0052cc] transition-colors whitespace-nowrap"
+                  className="rounded-full px-3.5 py-2 text-xs font-bold text-slate-700 hover:bg-sky-50 hover:text-[#0099e5] transition-colors whitespace-nowrap"
                 >
                   {item.label}
                 </Link>
@@ -240,7 +276,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
             <a
               href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                "Hello Abroad Blueprint! I would like to inquire about Study in UK, IELTS, Spoken English, and Dependent Visa options.",
+                "Hello NextFlight BD! I would like to inquire about Study Abroad, IELTS, Spoken English, and Work Permit opportunities.",
               )}`}
               target="_blank"
               rel="noreferrer"
@@ -253,9 +289,9 @@ export function SiteHeader() {
             <button
               type="button"
               onClick={() => open()}
-              className="btn-primary text-xs py-2 px-4 sm:px-5 shadow-sm active:scale-95 transition-all flex items-center gap-1.5 cursor-pointer bg-gradient-to-r from-[#0052cc] to-blue-600 hover:from-[#0043a8] hover:to-blue-700 text-white border-none rounded-full"
+              className="btn-primary text-xs py-2 px-4 sm:px-5 shadow-sm active:scale-95 transition-all flex items-center gap-1.5 cursor-pointer bg-gradient-to-r from-[#0f2b48] to-[#0099e5] hover:from-[#0a1c30] hover:to-[#0284c7] text-white border-none rounded-full"
             >
-              <span>Free Assessment</span>
+              <span>Free Consultation</span>
               <span>→</span>
             </button>
 
@@ -318,7 +354,7 @@ export function SiteHeader() {
                       <div key={item.label} className="border-b border-slate-100 pb-2 mb-2">
                         <Link
                           to={item.to}
-                          className="block px-2 py-2 text-sm font-extrabold text-[#0a192f] hover:text-[#0052cc]"
+                          className="block px-2 py-2 text-sm font-extrabold text-[#0f2b48] hover:text-[#0099e5]"
                           onClick={() => setMobileOpen(false)}
                         >
                           {item.label}
@@ -330,12 +366,12 @@ export function SiteHeader() {
                                 key={child.label}
                                 to={child.to}
                                 params={child.params}
-                                className="flex items-center justify-between px-2 py-1.5 text-xs font-semibold text-slate-600 hover:text-[#0052cc] hover:bg-blue-50 rounded-lg"
+                                className="flex items-center justify-between px-2 py-1.5 text-xs font-semibold text-slate-600 hover:text-[#0099e5] hover:bg-sky-50 rounded-lg"
                                 onClick={() => setMobileOpen(false)}
                               >
                                 <span>{child.label}</span>
                                 {child.badge && (
-                                  <span className="text-[0.62rem] bg-blue-100 text-[#0052cc] px-1.5 py-0.5 rounded font-bold">
+                                  <span className="text-[0.62rem] bg-sky-100 text-[#0099e5] px-1.5 py-0.5 rounded font-bold">
                                     {child.badge}
                                   </span>
                                 )}
@@ -347,16 +383,16 @@ export function SiteHeader() {
                     ))}
                   </div>
 
-                  {/* Hotlines & Office Locations in Drawer */}
-                  <div className="rounded-2xl bg-blue-50/80 border border-blue-200 p-3.5 space-y-2">
-                    <span className="text-[0.7rem] font-black uppercase tracking-wider text-[#0052cc] block">
-                      Abroad Blueprint Chittagong Office
+                  {/* Hotlines & Office Location in Drawer */}
+                  <div className="rounded-2xl bg-sky-50/80 border border-sky-200 p-3.5 space-y-2">
+                    <span className="text-[0.7rem] font-black uppercase tracking-wider text-[#0f2b48] block">
+                      NextFlight BD Head Office (Dhaka)
                     </span>
                     <p className="text-xs text-slate-700 font-medium leading-relaxed">
-                      4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong, Bangladesh.
+                      Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217, Bangladesh.
                     </p>
-                    <p className="text-[0.72rem] text-slate-500 font-bangla">
-                      ব্রিটিশ কাউন্সিল সার্টিফাইড অভিজ্ঞ পরামর্শক দ্বারা ইউকে, অস্ট্রেলিয়া, কানাডা ও ইউরোপে ১০০% ফ্রি প্রসেসিং।
+                    <p className="text-[0.72rem] text-slate-600 font-bangla">
+                      বিদেশে উচ্চশিক্ষা, আইইএলটিএস, স্পোকেন ইংলিশ, কিডস একাডেমি ও ইউরোপীয় কাজের ভিসা পরামর্শ।
                     </p>
                   </div>
                 </div>
@@ -365,15 +401,15 @@ export function SiteHeader() {
                 <div className="p-4 border-t border-slate-200 bg-slate-50 space-y-2.5">
                   <a
                     href={`tel:${company.phones[0].replace(/[^0-9]/g, "")}`}
-                    className="flex items-center justify-center gap-2 py-2.5 text-xs font-bold text-white bg-[#0a192f] rounded-xl shadow-xs"
+                    className="flex items-center justify-center gap-2 py-2.5 text-xs font-bold text-white bg-[#0f2b48] rounded-xl shadow-xs"
                   >
-                    <IconPhone className="w-4 h-4 text-amber-400" />
-                    <span>Call Chittagong: {company.phones[0]}</span>
+                    <IconPhone className="w-4 h-4 text-sky-400" />
+                    <span>Call Hotline: {company.phones[0]}</span>
                   </a>
 
                   <a
                     href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                      "Hello Abroad Blueprint! I am inquiring from the website mobile menu.",
+                      "Hello NextFlight BD! I am inquiring from the website mobile menu.",
                     )}`}
                     target="_blank"
                     rel="noreferrer"
@@ -389,9 +425,9 @@ export function SiteHeader() {
                       setMobileOpen(false);
                       open();
                     }}
-                    className="w-full py-2.5 text-xs font-extrabold text-white bg-[#0052cc] hover:bg-[#0043a8] rounded-xl shadow-sm cursor-pointer"
+                    className="w-full py-2.5 text-xs font-extrabold text-white bg-gradient-to-r from-[#0f2b48] to-[#0099e5] rounded-xl shadow-sm cursor-pointer"
                   >
-                    Book Free Profile Assessment
+                    Book Free Consultation
                   </button>
                 </div>
               </motion.div>

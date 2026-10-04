@@ -80,26 +80,32 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: company.legalName },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: company.name },
-      { property: "og:title", content: "Abroad Blueprint | Study Abroad & English Academy" },
+      {
+        property: "og:title",
+        content: "NextFlight BD | আপনার ভ্রমণের সাথী ✈️ | Study Abroad & Language Academy",
+      },
       {
         property: "og:description",
         content:
-          "British Council Certified Agent. 100% Free Processing, No Service Charge. Study in UK, Australia, Canada, USA & Europe. Fly with Dependent & IELTS Mastery.",
+          "NextFlight BD (নেক্সট ফ্লাইট ওভারসিজ): Razzak Plaza, Moghbazar, Dhaka. Higher Study Abroad (UK, USA, Canada, Europe), IELTS Band 7.5+, Spoken English, Kids English, and verified Greek Cyprus, Maldives & Mongolia work permits.",
       },
-      { property: "og:image", content: "/assets/abroad-blueprint-banner.jpg" },
+      { property: "og:image", content: "/assets/nextflight-banner.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Abroad Blueprint | Start Here, Go Anywhere!" },
+      {
+        name: "twitter:title",
+        content: "NextFlight BD — আপনার ভ্রমণের সাথী | Study Abroad & Overseas Solutions",
+      },
       {
         name: "twitter:description",
         content:
-          "Study Abroad Expert in Chittagong & UK. Admissions for UK, Australia, Canada, USA & Europe with dependent visa options and IELTS coaching.",
+          "NextFlight BD Moghbazar, Dhaka: Complete Study Abroad advisory, IELTS & Spoken English academy, Kids phonics, and verified overseas work permit pathways.",
       },
-      { name: "twitter:image", content: "/assets/abroad-blueprint-banner.jpg" },
+      { name: "twitter:image", content: "/assets/nextflight-banner.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/assets/abroad-blueprint-logo.jpg", type: "image/jpeg" },
-      { rel: "apple-touch-icon", href: "/assets/abroad-blueprint-logo.jpg" },
+      { rel: "icon", href: "/assets/nextflight-logo.jpg", type: "image/jpeg" },
+      { rel: "apple-touch-icon", href: "/assets/nextflight-logo.jpg" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
@@ -114,16 +120,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "EducationalOrganization",
           name: company.legalName,
-          alternateName: "Abroad Blueprint (@AbroadBlueprint)",
+          alternateName: "NextFlight BD (@nextflightbd26)",
           slogan: company.slogan,
           description:
-            "Abroad Blueprint is a British Council Certified educational consultancy and English language academy located at 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong, Bangladesh, and 17 Woodgate, Birmingham, UK. Specializing in study abroad admissions, MRes/DBA/PhD dependent visas, scholarships up to 50%-100%, and IELTS/Spoken/Kids English.",
+            "NextFlight BD (নেক্সট ফ্লাইট ওভারসিজ) is a premier overseas educational consultancy and language academy located at Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217, Bangladesh. Specializing in study abroad admissions, IELTS preparation, Spoken English, Kids English, and verified global skill work permits.",
           foundingDate: "Verified Consultancy",
-          areaServed: ["Chittagong", "Dhaka", "Sylhet", "Bangladesh", "United Kingdom", "Worldwide"],
+          areaServed: ["Dhaka", "Chittagong", "Sylhet", "Bangladesh", "Worldwide"],
           email: company.email,
           telephone: company.phones,
-          openingHours: "Sa-Th 10:00-19:30",
-          sameAs: [company.social.facebook],
+          openingHours: "Sa-Th 09:30-19:30",
+          sameAs: [company.social.facebook, company.social.youtube],
           hasMap: company.mapsUrl,
           geo: {
             "@type": "GeoCoordinates",

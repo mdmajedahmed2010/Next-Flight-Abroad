@@ -26,12 +26,12 @@ const sections = [
     body: `${company.name} (${company.taglineBangla}) provides specialized foreign university selection, direct application processing, scholarship facilitation, IELTS preparation, and visa guidance for the United Kingdom, Canada, USA, Australia, and Europe. Statutory third-party fees (such as official university tuition, embassy visa fees, medical exams, and test registration fees) are payable directly to the respective authorities.`,
   },
   {
-    title: "2. Zero Service Charge & Free Processing Commitment",
-    body: `Under our core philosophy "${company.tagline}" (${company.taglineBangla}), all student profile assessments, university application submissions, offer letter follow-ups, and visa file preparations are provided 100% free of charge with zero service charge before or after visa issuance (ভিসার আগে বা পরে কোনো সার্ভিস চার্জ নেই ❌).`,
+    title: "2. Transparent Counseling Commitment",
+    body: `Under our core philosophy "${company.tagline}" (${company.taglineBangla}), all profile assessments, counseling sessions, document verification, and guidance are provided transparently and ethically.`,
   },
   {
     title: "3. Document Authenticity & Applicant Responsibility",
-    body: `Applicants and students are solely responsible for the accuracy and authenticity of all academic certificates, marks transcripts, language scorecards, and financial documentation provided. ${company.name} adheres strictly to British Council Certified ethical counseling standards with zero tolerance for fraudulent submissions.`,
+    body: `Applicants and clients are solely responsible for the accuracy and authenticity of all academic certificates, marks transcripts, language scorecards, employment credentials, and financial documentation provided. ${company.name} adheres strictly to ethical counseling standards with zero tolerance for fraudulent submissions.`,
   },
   {
     title: "4. Sovereign Visa Decisions Disclaimer",

@@ -6,15 +6,15 @@ import { company } from "@/lib/site-data";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: `Contact Us | ${company.name} — Head Office Chittagong & UK Branch` },
+      { title: `Contact Us | ${company.name} — Head Office Moghbazar, Dhaka` },
       {
         name: "description",
-        content: `Contact ${company.name} (${company.taglineBangla}). Head Office: ${company.address.full}. UK Branch: ${company.branches[1].address}. Hotlines: ${company.phones.join(", ")}. Email: ${company.email}. British Council Certified Agent. 100% Free Processing & Zero Service Charge.`,
+        content: `Contact ${company.name} (${company.taglineBangla}). Head Office: ${company.address.full}. Hotlines: ${company.phones.join(", ")}. Email: ${company.email}. Verified Study Abroad, IELTS Academy, and Greek Cyprus Work Permit 2026.`,
       },
-      { property: "og:title", content: `Contact ${company.name} — Chittagong & Birmingham Offices` },
+      { property: "og:title", content: `Contact ${company.name} — Dhaka Head Office` },
       {
         name: "og:description",
-        content: `Visit our Chittagong Head Office at CJKS Shopping Complex (Kazir Dewri) or our UK office in Birmingham for verified study abroad counseling, UK MRes dependent admissions, and IELTS preparation.`,
+        content: `Visit our Dhaka Head Office at ${company.address.full} for verified study abroad counseling, IELTS preparation, and overseas work permit processing.`,
       },
     ],
   }),
@@ -26,14 +26,14 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
-    program: "Study in UK (Fly with Dependent / MRes)",
-    destination: "United Kingdom 🇬🇧 (Flagship)",
+    program: "Greek Cyprus 14 Trade Work Permit 2026",
+    destination: "Greek Cyprus 🇨🇾",
     notes: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = `Hello ${company.name}!\n\nI want to book a free profile assessment from your website contact page:\n• Name: ${formData.name}\n• Phone: ${formData.phone}\n• Selected Program: ${formData.program}\n• Target Destination: ${formData.destination}\n• Query / Background: ${formData.notes || "N/A"}`;
+    const text = `Hello ${company.name}!\n\nI want to book an assessment from your website contact page:\n• Name: ${formData.name}\n• Phone: ${formData.phone}\n• Selected Program: ${formData.program}\n• Target Destination: ${formData.destination}\n• Query / Background: ${formData.notes || "N/A"}`;
     window.open(
       `https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(text)}`,
       "_blank",
@@ -44,11 +44,11 @@ function Contact() {
   return (
     <>
       <PageHero
-        eyebrow="British Council Certified · Zero Service Charge"
+        eyebrow="NextFlight BD · আপনার ভ্রমণের সাথী ✈️"
         title={`Connect With ${company.name}`}
-        subtitle="আমাদের চট্টগ্রাম প্রধান কার্যালয় (সিজেকেএস শপিং কমপ্লেক্স, ৩য় তলা, কাজীর দেউড়ী) অথবা যুক্তরাজ্যের বার্মিংহাম অফিসে সরাসরি আসুন। ভিসার আগে বা পরে কোনো সার্ভিস চার্জ নেই। শুরু করুন এখান থেকেই, পৌঁছে যান বিশ্বমঞ্চে!"
-        image="/banner.jpg"
-        imageAlt={`${company.name} official consultation offices in Chittagong and Birmingham`}
+        subtitle={`আমাদের প্রধান কার্যালয়: ${company.address.full}। সরাসরি অফিসে এসে ফাইল যাচাই, স্টাডি অ্যাব্রড, আইইএলটিএস এবং ইউরোপীয় ওয়ার্ক পারমিটের সঠিক পরামর্শ নিন।`}
+        image="/assets/nextflight-banner.jpg"
+        imageAlt={`${company.name} official consultation office in Moghbazar, Dhaka`}
       >
         <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Contact Us" }]} />
       </PageHero>
@@ -57,13 +57,13 @@ function Contact() {
       <section className="section-shell py-12">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="badge-clean text-xs text-blue-700 bg-blue-50 border border-blue-200">
-            Official Global Offices
+            Official Counseling Center
           </span>
           <h2 className="mt-2 font-display text-2xl sm:text-3xl font-extrabold text-slate-900">
-            Visit Our Chittagong &amp; UK Offices
+            Visit Our Dhaka Head Office
           </h2>
-          <p className="mt-2 text-xs sm:text-sm text-slate-600">
-            Walk in for honest, 100% free profile evaluation, university matching, and dependent visa strategy from British Council Certified Counselors.
+          <p className="mt-2 text-xs sm:text-sm text-slate-600 font-bangla">
+            সরাসরি রাজ্জাক প্লাজা, মগবাজার অফিসে এসে অভিজ্ঞ কাউন্সিলরদের সাথে আলোচনা করুন এবং বিশ্বস্ত ভিসা সেবা গ্রহণ করুন।
           </p>
         </div>
 
@@ -114,7 +114,7 @@ function Contact() {
 
               <div className="mt-6 pt-3 border-t border-slate-100 flex flex-col gap-2">
                 <a
-                  href={`https://wa.me/${(branch.primary ? company.whatsapp : branch.phone).replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Hello ${company.name}, I want to visit or inquire with your ${branch.name}.`)}`}
+                  href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Hello ${company.name}, I want to visit your ${branch.name}.`)}`}
                   target="_blank"
                   rel="noreferrer"
                   className="btn-primary w-full text-center text-xs py-2.5 font-bold shadow-sm rounded-xl cursor-pointer bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white border-none flex items-center justify-center gap-1.5"
@@ -142,10 +142,10 @@ function Contact() {
               <div className="flex items-center justify-between">
                 <div>
                   <h3 className="font-display font-bold text-lg text-slate-900">
-                    Chittagong Head Office Map
+                    Dhaka Head Office Map
                   </h3>
                   <p className="text-xs text-slate-500 mt-0.5">
-                    4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong
+                    {company.address.full}
                   </p>
                 </div>
                 <a
@@ -161,7 +161,7 @@ function Contact() {
             <div className="h-72 sm:h-80 w-full overflow-hidden rounded-2xl">
               <iframe
                 src={company.mapsEmbed}
-                title={`${company.name} Chittagong Head Office Map`}
+                title={`${company.name} Dhaka Head Office Map`}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -181,16 +181,15 @@ function Contact() {
             <h3 className="font-display font-bold text-lg text-white mt-2">
               Why Consult With {company.name}?
             </h3>
-            <ul className="mt-3 text-xs text-slate-300 space-y-2 leading-relaxed">
-              <li>• <strong>British Council Certified:</strong> Certified counselors offering verified guidance for top universities.</li>
-              <li>• <strong>Zero Service Charge:</strong> No file opening charge and absolutely zero service fee before or after visa (ভিসার আগে বা পরে কোনো সার্ভিস চার্জ নেই ❌).</li>
-              <li>• <strong>Fly with Dependent (UK MRes &amp; PhD):</strong> Specialists in Master by Research and Doctoral programs with full spouse work permit and free schooling for children.</li>
-              <li>• <strong>Scholarships up to £5,000+:</strong> Merit scholarships with Greenwich, Derby, Anglia Ruskin Cambridge, and partner universities.</li>
-              <li>• <strong>UK Branch Support:</strong> Onshore post-arrival assistance right from Birmingham, United Kingdom.</li>
-              <li>• <strong>IELTS &amp; English Academy:</strong> Intensive academic preparation, Spoken English, and Kids English courses.</li>
+            <ul className="mt-3 text-xs text-slate-300 space-y-2 leading-relaxed font-bangla">
+              <li>• <strong>সরাসরি ঢাকা হেড অফিস:</strong> রাজ্জাক প্লাজা, ৩৮৩ (লিফট-১২), মগবাজার, ঢাকা-১২১৭।</li>
+              <li>• <strong>গ্রিক সাইপ্রাস ২০২৬ ওয়ার্ক পারমিট:</strong> ১৪টি টেকনিক্যাল ট্রেডে ইউরোপিয়ান কাজের সুযোগ (বেতন ৮০০-১৫০০ ইউরো)।</li>
+              <li>• <strong>মালদ্বীপ ভিসা ও এমপ্লয়মেন্ট:</strong> সরাসরি রিয়েল ভিসা হ্যান্ডওভার ও অনুমোদিত কর্মসংস্থান।</li>
+              <li>• <strong>উচ্চশিক্ষা ও স্টাডি অ্যাব্রড:</strong> ইউকে, কানাডা, অস্ট্রেলিয়া, যুক্তরাষ্ট্র ও ইউরোপীয় বিশ্ববিদ্যালয় ভর্তি।</li>
+              <li>• <strong>আইইএলটিএস ও স্পোকেন ইংলিশ একাডেমি:</strong> একাডেমিক ও জেনারেল ট্রেনিং, ফ্লুয়েন্সি স্টুডিও এবং কিডস ইংলিশ।</li>
             </ul>
             <div className="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between text-xs">
-              <span className="text-slate-400">Facebook: @AbroadBlueprint (18K+ Followers)</span>
+              <span className="text-slate-400">Facebook: @nextflightbd26 (7.7K+ Followers)</span>
               <a
                 href={company.social.facebook}
                 target="_blank"
@@ -206,14 +205,14 @@ function Contact() {
         {/* Right Column: Interactive Consultation Booking Form */}
         <div className="card-clean rounded-3xl p-8 border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-100 pb-4">
-            <span className="badge-clean text-blue-700 bg-blue-50 border border-blue-200">
-              100% Free Profile Assessment · 0 BDT Service Fee
+            <span className="badge-clean text-blue-700 bg-blue-50 border border-blue-200 font-bangla">
+              সরাসরি অফিস ফাইল অ্যাসেসমেন্ট
             </span>
             <h2 className="mt-3 font-display text-2xl font-extrabold text-slate-900">
               Send Your Inquiry / Book Counseling
             </h2>
             <p className="mt-1 text-xs text-slate-600">
-              Fill in your details to immediately connect with an {company.name} senior counselor on WhatsApp.
+              Fill in your details to immediately connect with an {company.name} counselor on WhatsApp.
             </p>
           </div>
 
@@ -249,7 +248,7 @@ function Contact() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="e.g. Nobin Siddiky"
+                  placeholder="e.g. আপনার পূর্ণ নাম"
                   className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-blue-600 focus:bg-white transition-colors"
                 />
               </div>
@@ -263,7 +262,7 @@ function Contact() {
                   required
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  placeholder="e.g. 01961-532479"
+                  placeholder="e.g. 01711-253602"
                   className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-blue-600 focus:bg-white transition-colors"
                 />
               </div>
@@ -278,16 +277,14 @@ function Contact() {
                     onChange={(e) => setFormData({ ...formData, program: e.target.value })}
                     className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-blue-600 focus:bg-white transition-colors"
                   >
-                    <option value="Study in UK (Fly with Dependent / MRes)">🇬🇧 Study in UK (Fly with Dependent / MRes)</option>
-                    <option value="Study in UK (Standard Masters / Undergraduate)">🇬🇧 Study in UK (Undergrad / Postgrad)</option>
-                    <option value="Study in Canada (SDS & Non-SDS)">🇨🇦 Study in Canada</option>
-                    <option value="Study in Australia (Subclass 500)">🇦🇺 Study in Australia</option>
-                    <option value="Study in USA (F1 Visa)">🇺🇸 Study in USA</option>
-                    <option value="Study in Europe / Schengen">🇪🇺 Study in Europe</option>
-                    <option value="IELTS Academic Preparation">🎓 IELTS Academic Preparation</option>
-                    <option value="IELTS General Training">🌍 IELTS General Training</option>
-                    <option value="Spoken English & Communication">🎤 Spoken English &amp; Fluency</option>
-                    <option value="Kids English & Phonics">🧒 Kids English &amp; Phonics</option>
+                    <option value="Greek Cyprus 14 Trade Work Permit 2026">🇨🇾 Greek Cyprus 14 Trade Work Permit 2026</option>
+                    <option value="Maldives Employment Visa">🇲🇻 Maldives Employment Visa</option>
+                    <option value="Kuwait Delivery / Driver Visa">🇰🇼 Kuwait Delivery / Driver Visa</option>
+                    <option value="Study Abroad (UK, Canada, Europe, USA)">🎓 Study Abroad Admissions</option>
+                    <option value="IELTS Academic Preparation">📘 IELTS Academic Preparation</option>
+                    <option value="IELTS General Training">📙 IELTS General Training</option>
+                    <option value="Spoken English & Fluency">🗣️ Spoken English &amp; Fluency</option>
+                    <option value="Kids English & Phonics (5-14 yrs)">🧒 Kids English &amp; Phonics</option>
                   </select>
                 </div>
 
@@ -300,25 +297,26 @@ function Contact() {
                     onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
                     className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-blue-600 focus:bg-white transition-colors"
                   >
-                    <option value="United Kingdom 🇬🇧 (Flagship)">United Kingdom 🇬🇧 (Flagship)</option>
+                    <option value="Greek Cyprus 🇨🇾">Greek Cyprus 🇨🇾</option>
+                    <option value="Maldives 🇲🇻">Maldives 🇲🇻</option>
+                    <option value="United Kingdom 🇬🇧">United Kingdom 🇬🇧</option>
                     <option value="Canada 🇨🇦">Canada 🇨🇦</option>
-                    <option value="United States 🇺🇸">United States 🇺🇸</option>
-                    <option value="Australia 🇦🇺">Australia 🇦🇺</option>
                     <option value="Europe / Schengen 🇪🇺">Europe / Schengen 🇪🇺</option>
-                    <option value="Language Training Only">🎯 Language Training Only</option>
+                    <option value="United States 🇺🇸">United States 🇺🇸</option>
+                    <option value="Language Academy Only">🎯 Language Academy Only</option>
                   </select>
                 </div>
               </div>
 
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
-                  Your Academic Background or Specific Query
+                  Your Background or Specific Query
                 </label>
                 <textarea
                   rows={3}
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  placeholder="e.g. Completed Bachelor's/Master's. Interested in UK MRes with spouse and child, upcoming intake, scholarships, or IELTS course..."
+                  placeholder="আপনার শিক্ষাগত যোগ্যতা, কাজের অভিজ্ঞতা বা কোনো নির্দিষ্ট প্রশ্ন থাকলে লিখুন..."
                   className="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs sm:text-sm text-slate-900 outline-none focus:border-blue-600 focus:bg-white transition-colors"
                 />
               </div>
@@ -328,12 +326,12 @@ function Contact() {
                   type="submit"
                   className="btn-primary w-full text-xs sm:text-sm py-3.5 shadow-md cursor-pointer font-bold bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-500 hover:to-indigo-600 text-white border-none"
                 >
-                  Send Inquiry to WhatsApp ({company.phones[0]}) →
+                  Send Inquiry to WhatsApp ({company.whatsapp}) →
                 </button>
               </div>
 
-              <p className="text-[0.68rem] text-slate-500 text-center pt-1">
-                🔒 100% Free Processing · No Service Charge (ভিসার আগে বা পরে কোনো চার্জ নেই) · CJKS Complex, Kazir Dewri, Chittagong.
+              <p className="text-[0.68rem] text-slate-500 text-center pt-1 font-bangla">
+                🔒 বিশ্বস্ত ভিসা কাউন্সেলিং · রাজ্জাক প্লাজা, ৩৮৩ (লিফট-১২), মগবাজার, ঢাকা-১২১৭।
               </p>
             </form>
           )}

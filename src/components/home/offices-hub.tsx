@@ -23,7 +23,7 @@ export function OfficesHub() {
             className="inline-flex items-center gap-2 rounded-full bg-blue-100/80 border border-blue-200 px-3.5 py-1 text-xs font-bold text-blue-900 mb-3"
           >
             <IconSparkles className="w-3.5 h-3.5 text-blue-600" />
-            <span>Dual Global Presence · Chittagong &amp; Birmingham</span>
+            <span>Official Counseling &amp; Visa Center · Moghbazar, Dhaka</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 14 }}
@@ -32,16 +32,16 @@ export function OfficesHub() {
             transition={{ delay: 0.1 }}
             className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-slate-900 tracking-tight"
           >
-            Visit Our <span className="text-blue-600">Official Counseling Centers</span>
+            Visit Our <span className="text-blue-600">Head Office in Dhaka</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-2.5 text-xs sm:text-sm text-slate-600 font-medium max-w-xl mx-auto leading-relaxed"
+            className="mt-2.5 text-xs sm:text-sm text-slate-600 font-medium max-w-xl mx-auto leading-relaxed font-bangla"
           >
-            Connect directly with British Council Certified counselors at CJKS Shopping Complex, Kazir Dewri, Chittagong or our on-shore liaison office in Birmingham, UK. 100% Free Processing &amp; No Service Charge.
+            আমাদের প্রধান কার্যালয়: রাজ্জাক প্লাজা, ৩৮৩ (লিফট-১২), মগবাজার, ঢাকা-১২১৭। সরাসরি এসে ফাইল অ্যাসেসমেন্ট, স্টাডি অ্যাব্রড, আইইএলটিএস ও গ্লোবাল ওয়ার্ক পারমিটের সঠিক পরামর্শ নিন।
           </motion.p>
         </div>
 
@@ -178,7 +178,7 @@ export function OfficesHub() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.97 }}
                       href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                        `Hello Abroad Blueprint! I would like to visit the ${currentBranch.name}.`,
+                        `Hello ${company.name}! I would like to visit the ${currentBranch.name} at Razzak Plaza, Moghbazar.`,
                       )}`}
                       target="_blank"
                       rel="noreferrer"
@@ -217,9 +217,7 @@ export function OfficesHub() {
                       <div>
                         <span className="text-slate-500 block text-[10px]">Hotlines:</span>
                         <span className="font-bold text-slate-800 text-xs">
-                          {currentBranch.city === "Chittagong"
-                            ? "+880 1961-532479 · +880 1643-829960"
-                            : "+44 7587 358080"}
+                          {currentBranch.phone || company.phones.slice(0, 2).join(" · ")}
                         </span>
                       </div>
                     </div>
@@ -235,8 +233,8 @@ export function OfficesHub() {
                     <div className="flex items-center gap-3">
                       <span className="text-base shrink-0">🎓</span>
                       <div>
-                        <span className="text-slate-500 block text-[10px]">Accreditation &amp; Policy:</span>
-                        <span className="font-bold text-slate-800 text-xs">British Council Certified · No Service Charge</span>
+                        <span className="text-slate-500 block text-[10px]">Commitment:</span>
+                        <span className="font-bold text-slate-800 text-xs">সরাসরি রিয়েল ভিসা ও ফাইল প্রসেসিং · বিশ্বস্ত সেবা</span>
                       </div>
                     </div>
                   </div>

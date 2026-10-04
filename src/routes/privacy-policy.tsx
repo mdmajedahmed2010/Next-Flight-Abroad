@@ -27,7 +27,7 @@ const sections = [
   },
   {
     title: "2. How We Use Your Information",
-    body: `Your information is used strictly to provide profile evaluations, course enrollments, university admissions, scholarship applications, and visa documentation. All counseling is conducted transparently from our offices at ${company.address.full} and our UK Branch in Birmingham.`,
+    body: `Your information is used strictly to provide profile evaluations, course enrollments, university admissions, scholarship applications, and visa documentation. All counseling is conducted transparently from our office at ${company.address.full}.`,
   },
   {
     title: "3. Information Sharing & Third Parties",

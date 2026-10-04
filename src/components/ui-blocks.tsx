@@ -535,7 +535,7 @@ export function CtaBand() {
         </h2>
 
         <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed font-medium">
-          Book your free advisory session with {company.name}. 100% genuine guidance for Study Abroad (UK, Canada, USA, Australia, Europe), Fly with Dependent (MRes &amp; PhD), and IELTS Academic &amp; General. Free profile evaluation at 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong.
+          Book your free advisory session with {company.name}. 100% genuine guidance for Study Abroad (UK, Canada, USA, Europe), Greek Cyprus Work Permit 2026, and IELTS &amp; Spoken English Academy. Free profile evaluation at Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217.
         </p>
 
         <div className="flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 pt-2">

@@ -50,7 +50,7 @@ export function InteractiveMatcher() {
           </h2>
           <p className="mt-1 max-w-2xl text-xs sm:text-sm text-slate-600 leading-relaxed">
             Select your academic degree level, GPA, English status, and
-            budget to discover matched pathways across the UK, Canada, USA, Australia, and Europe with Abroad Blueprint.
+            budget to discover matched pathways across the UK, Canada, USA, and Europe with {company.name}.
           </p>
         </div>
         <div className="rounded-2xl border border-slate-800 bg-slate-950 px-4 py-2 text-xs font-bold text-white">
@@ -126,7 +126,7 @@ export function InteractiveMatcher() {
               "IELTS 7.0 – 8.5+ (High Direct Entry)",
               "IELTS 6.0 – 6.5 (Standard Entry)",
               "Without IELTS (MOI / English Waiver)",
-              "Enrolling in Abroad Blueprint Batch",
+              "Enrolling in NextFlight BD Academy Batch",
             ].map((opt) => (
               <button
                 key={opt}

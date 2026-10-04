@@ -17,18 +17,17 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: `${company.name} | Study Abroad Consultancy & IELTS Language Academy`,
+        title: `${company.name} | Study Abroad, IELTS Academy & Overseas Employment Solutions`,
       },
       {
         name: "description",
-        content:
-          `${company.name} — ${company.tagline}. British Council Certified Agent. 100% Free Processing, Zero Service Charge (ভিসার আগে বা পরে কোনো সার্ভিস চার্জ নেই ❌). UK Fly with Dependent (MRes/PhD), Canada, USA, Australia admissions. Head Office: ${company.address.full}. UK Office: ${company.branches[1].address}. Hotlines: ${company.phones.join(", ")}.`,
+        content: `${company.name} — ${company.tagline}. Study Abroad (UK, Europe, Canada, USA), IELTS Academic & General, Spoken English, Kids English, and Greek Cyprus 14 Trade Work Permit 2026. Head Office: ${company.address.full}. Hotlines: ${company.phones.join(", ")}.`,
       },
-      { property: "og:title", content: `${company.name} — Study Abroad & IELTS Language Academy` },
+      { property: "og:title", content: `${company.name} — আপনার ভ্রমণের সাথী ✈️` },
       {
         name: "og:description",
         content:
-          "Start Here, Go Anywhere! British Council Certified Study Abroad Consultancy and Language Academy. Zero Service Charge. Head Office in Chittagong & Branch in Birmingham, UK.",
+          "নেক্সট ফ্লাইট ওভারসিজ — স্টাডি অ্যাব্রড, আইইএলটিএস, স্পোকেন ইংলিশ, কিডস ইংলিশ এবং ইউরোপীয় কাজের ভিসা (গ্রিক সাইপ্রাস ২০২৬) কাউন্সেলিং। প্রধান কার্যালয়: রাজ্জাক প্লাজা, মগবাজার, ঢাকা।",
       },
     ],
   }),
@@ -41,10 +40,10 @@ function Home() {
 
   const faqCategories = [
     "All",
-    "Study Abroad (UK, Canada, USA)",
-    "Fly with Dependent (MRes/PhD)",
+    "Study Abroad (UK, Europe, Canada, USA)",
     "IELTS & English Academy",
-    "Offices & Zero Fee Policy",
+    "Work Permits (Greek Cyprus, Maldives)",
+    "Dhaka Office & Counseling",
   ];
 
   const filteredFaqs =
@@ -53,29 +52,18 @@ function Home() {
       : faqs.filter((f) => {
           const lowerQ = (f.q || f.question || "").toLowerCase();
           const lowerA = (f.a || f.answer || "").toLowerCase();
-          if (activeFaqCategory === "Study Abroad (UK, Canada, USA)")
+          if (activeFaqCategory === "Study Abroad (UK, Europe, Canada, USA)")
             return (
+              lowerQ.includes("study") ||
+              lowerA.includes("study") ||
               lowerQ.includes("uk") ||
               lowerA.includes("uk") ||
-              lowerQ.includes("visa") ||
-              lowerA.includes("visa") ||
               lowerQ.includes("canada") ||
               lowerA.includes("canada") ||
-              lowerQ.includes("country") ||
+              lowerQ.includes("university") ||
               lowerA.includes("university") ||
+              lowerQ.includes("scholarship") ||
               lowerA.includes("scholarship")
-            );
-          if (activeFaqCategory === "Fly with Dependent (MRes/PhD)")
-            return (
-              lowerQ.includes("dependent") ||
-              lowerA.includes("dependent") ||
-              lowerQ.includes("spouse") ||
-              lowerA.includes("spouse") ||
-              lowerQ.includes("mres") ||
-              lowerA.includes("mres") ||
-              lowerQ.includes("phd") ||
-              lowerA.includes("phd") ||
-              lowerA.includes("child")
             );
           if (activeFaqCategory === "IELTS & English Academy")
             return (
@@ -85,21 +73,31 @@ function Home() {
               lowerA.includes("english") ||
               lowerQ.includes("spoken") ||
               lowerA.includes("spoken") ||
-              lowerQ.includes("kids") ||
-              lowerA.includes("kids")
+              lowerQ.includes("kid") ||
+              lowerA.includes("kid") ||
+              lowerQ.includes("grammar")
             );
-          if (activeFaqCategory === "Offices & Zero Fee Policy")
+          if (activeFaqCategory === "Work Permits (Greek Cyprus, Maldives)")
             return (
-              lowerQ.includes("charge") ||
-              lowerA.includes("charge") ||
-              lowerQ.includes("fee") ||
-              lowerA.includes("fee") ||
+              lowerQ.includes("cyprus") ||
+              lowerA.includes("cyprus") ||
+              lowerQ.includes("work") ||
+              lowerA.includes("work") ||
+              lowerQ.includes("maldives") ||
+              lowerA.includes("maldives") ||
+              lowerQ.includes("permit") ||
+              lowerA.includes("permit")
+            );
+          if (activeFaqCategory === "Dhaka Office & Counseling")
+            return (
               lowerQ.includes("office") ||
               lowerA.includes("office") ||
-              lowerQ.includes("chittagong") ||
-              lowerA.includes("chittagong") ||
-              lowerQ.includes("birmingham") ||
-              lowerA.includes("uk")
+              lowerQ.includes("moghbazar") ||
+              lowerA.includes("moghbazar") ||
+              lowerQ.includes("counseling") ||
+              lowerA.includes("counseling") ||
+              lowerQ.includes("fee") ||
+              lowerA.includes("fee")
             );
           return true;
         });
@@ -118,13 +116,13 @@ function Home() {
       {/* 4. The Facebook Video Reels Cinema Theater Mode (Official Video Embeds) */}
       <VideoReelsCinema />
 
-      {/* 5. Abroad Blueprint Language & IELTS Academy Studio */}
+      {/* 5. NextFlight BD Language & IELTS Academy Studio */}
       <AcademyStudio />
 
-      {/* 6. Strategic Presence: Chittagong Head Office & Birmingham UK Branch */}
+      {/* 6. Strategic Presence: Dhaka Head Office (Moghbazar) */}
       <OfficesHub />
 
-      {/* 7. The Abroad Blueprint Standard & Core Commitments */}
+      {/* 7. The NextFlight BD Standard & Core Commitments */}
       <HonestyManifesto />
 
       {/* 8. Voice of Real Students: Verified Success Stories */}
@@ -141,8 +139,8 @@ function Home() {
             <h2 className="font-display text-3xl sm:text-5xl font-black text-white tracking-tight">
               Frequently Asked <span className="text-blue-400">Questions</span>
             </h2>
-            <p className="text-xs sm:text-sm text-slate-300 mt-2 font-medium">
-              Direct, transparent answers regarding IELTS coaching, UK MRes dependent visas, Study Abroad admissions, and our Chittagong &amp; UK offices.
+            <p className="text-xs sm:text-sm text-slate-300 mt-2 font-medium font-bangla">
+              স্টাডি অ্যাব্রড, আইইএলটিএস ও স্পোকেন ইংলিশ কোর্স, গ্রিক সাইপ্রাস ও মালদ্বীপ কাজের ভিসা এবং আমাদের ঢাকা হেড অফিস সম্পর্কিত সাধারণ প্রশ্ন ও উত্তর।
             </p>
           </div>
 

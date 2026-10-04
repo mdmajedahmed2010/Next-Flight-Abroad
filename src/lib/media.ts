@@ -1,31 +1,28 @@
 /**
- * ABROAD BLUEPRINT — Official Verified Media & Brand Assets.
+ * NEXTFLIGHT BD — Official Verified Media & Brand Assets.
  *
  * Verified from:
- *  - Official Logo: /assets/abroad-blueprint-logo.jpg (3D emblem with royal blue 'A', golden yellow 'B' with graduation cap, "ABROAD BLUEPRINT", "START HERE, GO ANYWHERE!")
- *  - Official Cover Banner: /assets/abroad-blueprint-banner.jpg (World landmarks, hotline 8801961532479, Chittagong office address)
- *  - Verified Visa Success 1: /assets/visa-success-nobin.jpg (Nobin Siddiky, Anglia Ruskin University Cambridge, PhD Management, Dependent Visa)
- *  - Verified Visa Success 2: /assets/visa-success-ima.jpg (Mst. Ima Khatun, University of Greenwich London, MRes Chemistry, Dependent Visa)
- *  - Official Facebook Page: https://www.facebook.com/AbroadBlueprint/
- *  - Head Office: 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong-4000, Bangladesh
- *  - UK Office: 17, Woodgate, Birmingham, United Kingdom
- *  - Hotlines: +880 1961-532479 · +880 1643-829960 · +880 1302-092490 · +880 1616-338613 · +44 7587 358080
- *  - Email: abroadblueprint@gmail.com
- *  - Accreditation: British Council Certified Agent
+ *  - Official Logo: /assets/nextflight-logo.jpg (Navy & Sky Blue typography with airplane flight arc, "nextflight BD")
+ *  - Official Cover Banner: /assets/nextflight-banner.jpg (Nextflight BD - আপনার ভ্রমণের সাথী, traveler, globe, airplane, clouds)
+ *  - Official Facebook Page: https://www.facebook.com/nextflightbd26/
+ *  - Head Office: Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217, Bangladesh
+ *  - Hotlines: +880 1711-253602 · 01911-928159 · 01756-251900 · 01941-318665 · 01785-250347 · 01339771499
+ *  - Email: shahinalammuna@gmail.com
+ *  - YouTube: https://www.youtube.com/@NextFlightBD
  */
 
 export const mediaUrls: Record<string, string> = {
-  // Official Abroad Blueprint Brand Assets
-  logo: "/assets/abroad-blueprint-logo.jpg",
+  // Official NextFlight BD Brand Assets
+  logo: "/assets/nextflight-logo.jpg",
   "logo-fallback": "/logo.jpg",
-  banner: "/assets/abroad-blueprint-banner.jpg",
-  "hero-banner": "/assets/abroad-blueprint-banner.jpg",
-  "hero-banner-brand": "/assets/abroad-blueprint-banner.jpg",
+  banner: "/assets/nextflight-banner.jpg",
+  "hero-banner": "/assets/nextflight-banner.jpg",
+  "hero-banner-brand": "/assets/nextflight-banner.jpg",
   "visa-nobin": "/assets/visa-success-nobin.jpg",
   "visa-ima": "/assets/visa-success-ima.jpg",
 };
 
 export function getMediaUrl(key: string, fallback?: string): string {
-  return mediaUrls[key] || fallback || "/assets/abroad-blueprint-logo.jpg";
+  return mediaUrls[key] || fallback || "/assets/nextflight-logo.jpg";
 }
 

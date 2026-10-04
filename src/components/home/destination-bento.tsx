@@ -39,9 +39,9 @@ export function DestinationBento() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed"
+              className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed font-bangla"
             >
-              Start here, go anywhere! Abroad Blueprint provides British Council Certified guidance for the UK, Canada, Australia, USA, and Europe with zero service charge and full spouse dependent support.
+              আপনার বিশ্বস্ত ভ্রমণের ও উচ্চশিক্ষার সাথী! {company.name} প্রদান করে ইউকে, কানাডা, অস্ট্রেলিয়া, যুক্তরাষ্ট্র, এবং ইউরোপ ও সাইপ্রাস সহ শীর্ষ গন্তব্যে উচ্চশিক্ষা ও ভিসা কাউন্সেলিং।
             </motion.p>
           </div>
 
@@ -128,7 +128,7 @@ export function DestinationBento() {
                   <IconArrowRight className="w-3.5 h-3.5" />
                 </button>
                 <a
-                  href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello Abroad Blueprint! I want to apply for UK university admissions with scholarship and dependent visa guidance.")}`}
+                  href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Hello ${company.name}! I want to apply for UK university admissions with scholarship and visa guidance.`)}`}
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 border border-white/20 px-5 py-3 text-xs font-bold text-white hover:bg-white/20 transition-colors"
@@ -200,7 +200,7 @@ export function DestinationBento() {
                   <IconArrowRight className="w-3.5 h-3.5" />
                 </Link>
                 <a
-                  href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello Abroad Blueprint! I want to inquire about studying in Canada.")}`}
+                  href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Hello ${company.name}! I want to inquire about studying in Canada.`)}`}
                   target="_blank"
                   rel="noreferrer"
                   className="w-full rounded-xl border border-slate-300 bg-white py-3 px-4 text-center text-xs font-bold text-slate-800 hover:border-blue-500 transition-colors flex items-center justify-center gap-1.5"
@@ -272,7 +272,7 @@ export function DestinationBento() {
                 United States (USA)
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                High scholarship potential, world-class research facilities, and 36-month STEM OPT work authorization. Abroad Blueprint conducts comprehensive F-1 visa interview prep.
+                High scholarship potential, world-class research facilities, and 36-month STEM OPT work authorization. {company.name} conducts comprehensive F-1 visa interview prep.
               </p>
               <div className="rounded-xl bg-slate-50 p-3 text-xs space-y-1 text-slate-700 border border-slate-100">
                 <p>• <strong>Scholarships:</strong> Up to $10,000 – $25,000/yr</p>

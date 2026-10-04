@@ -60,16 +60,16 @@ export function AcademyStudio() {
               transition={{ delay: 0.1 }}
               className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight"
             >
-              Abroad Blueprint <span className="text-blue-400">Language Academy</span>
+              {company.name} <span className="text-blue-400">Language Academy</span>
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed"
+              className="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed font-bangla"
             >
-              Comprehensive IELTS (Academic &amp; General), Spoken English Fluency, Kids English &amp; Phonics, and Pearson PTE coaching taught by certified English trainers. Offline classes at Kazir Dewri, Chittagong and interactive online sessions.
+              প্রফেশনাল IELTS (Academic &amp; General Training), Spoken English Fluency, Kids English &amp; Phonics Studio এবং কর্পোরেট কমিউনিকেশন। আমাদের দক্ষ ট্রেইনারদের পরিচালনায় অফলাইন ক্লাস (মগবাজার, ঢাকা) ও ইন্টারেক্টিভ অনলাইন ব্যাচ।
             </motion.p>
           </div>
 
@@ -211,7 +211,7 @@ export function AcademyStudio() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.97 }}
                       href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                        `Hello Abroad Blueprint! I want to enroll in the ${currentCourse.title} course.`,
+                        `Hello ${company.name}! I want to enroll in the ${currentCourse.title} course.`,
                       )}`}
                       target="_blank"
                       rel="noreferrer"
@@ -261,7 +261,7 @@ export function AcademyStudio() {
                       Class Format &amp; Academy Campus:
                     </span>
                     <p className="text-[11px] leading-relaxed">
-                      {currentCourse.classSchedule || currentCourse.schedule} · Classroom training at 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong &amp; Live Interactive Online Zoom.
+                      {currentCourse.classSchedule || currentCourse.schedule} · Classroom training at NextFlight BD Head Office: Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217 &amp; Live Interactive Online Zoom.
                     </p>
                   </div>
                 </div>

@@ -7,15 +7,15 @@ import { motion } from "framer-motion";
 export const Route = createFileRoute("/offers")({
   head: () => ({
     meta: [
-      { title: `Upcoming Intakes, Scholarships & Academy Batches | ${company.name}` },
+      { title: `Upcoming Batches, Intakes & Work Permit Offers | ${company.name}` },
       {
         name: "description",
-        content: `Explore active global study abroad intakes, UK MRes Fly with Dependent scholarships (up to £5,000), IELTS Academic batches, Spoken English, and Kids English courses at ${company.name}. 100% Free Processing · Zero Service Charge.`,
+        content: `Explore active Greek Cyprus 14 Trade Work Permit 2026 batches, global study abroad intakes, IELTS Academic & General, Spoken English, and Kids English courses at ${company.name}. Head Office: ${company.address.full}.`,
       },
       { property: "og:title", content: `Upcoming Batches, Intakes & Offers | ${company.name}` },
       {
         name: "og:description",
-        content: `Register for upcoming university intakes, MRes dependent research degrees, and language courses at ${company.name} (${company.taglineBangla}) — Start Here, Go Anywhere!`,
+        content: `Register for upcoming work permit quotas, university intakes, and language courses at ${company.name} (${company.taglineBangla}) — আপনার ভ্রমণের সাথী ✈️!`,
       },
     ],
   }),
@@ -26,11 +26,11 @@ function Offers() {
   return (
     <>
       <PageHero
-        eyebrow="Admissions, Intakes & Scholarships"
-        title="UPCOMING INTAKES, SCHOLARSHIPS & BATCHES"
-        subtitle={`Explore upcoming UK, Canada, USA & Australia intake deadlines, Fly with Dependent research degrees, university scholarships up to £5,000, and language academy batches at ${company.name}. 100% Free Processing · 0 BDT Service Fee.`}
-        image="/banner.jpg"
-        imageAlt={`${company.name} active intakes, scholarships and academy batches`}
+        eyebrow="Admissions, Work Permits & Language Batches"
+        title="UPCOMING INTAKES, OFFERS & BATCHES"
+        subtitle={`Explore upcoming Greek Cyprus 14 Trade Work Permit 2026 slots, university intakes across the UK, Canada, USA & Europe, and language academy batches at ${company.name}.`}
+        image="/assets/nextflight-banner.jpg"
+        imageAlt={`${company.name} active intakes, work permits and academy batches`}
       >
         <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Intakes & Offers" }]} />
       </PageHero>
@@ -39,8 +39,8 @@ function Offers() {
       <section className="section-shell py-14 sm:py-20">
         <SectionHeading
           eyebrow="Active Opportunities"
-          title="Current Intakes, Scholarship Windows & Batches"
-          subtitle={`All opportunities below are actively accepting applications with British Council Certified counseling, authentic document guidance, and 100% free visa processing at our Chittagong & UK offices.`}
+          title="Current Intakes, Work Permit Windows & Batches"
+          subtitle={`All opportunities below are actively accepting applications with genuine counseling, document guidance, and direct processing at our Dhaka Head Office (Moghbazar).`}
         />
 
         <StaggerContainer staggerDelay={0.08} className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">

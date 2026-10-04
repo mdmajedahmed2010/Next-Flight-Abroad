@@ -9,12 +9,12 @@ export const Route = createFileRoute("/destinations")({
       { title: `Study Destinations & Global Admissions | ${company.name}` },
       {
         name: "description",
-        content: `Explore global study destinations guided by ${company.name}: United Kingdom (Flagship Fly with Dependent MRes/PhD), Canada, United States, Australia, and Europe. 100% Free Processing, Zero Service Charge. Offices in Chittagong & UK. Hotlines: ${company.phones.join(", ")}.`,
+        content: `Explore global study destinations guided by ${company.name}: United Kingdom, Canada, United States, Australia, and Europe & Cyprus. Head Office: ${company.address.full}. Hotlines: ${company.phones.join(", ")}.`,
       },
       { property: "og:title", content: `Study Destinations & Global Admissions | ${company.name}` },
       {
         name: "og:description",
-        content: `Your Gateway to Foreign University Admissions with ${company.name} (${company.taglineBangla}) — Start Here, Go Anywhere!`,
+        content: `Your Gateway to Foreign University Admissions with ${company.name} (${company.taglineBangla}) — আপনার ভ্রমণের সাথী ✈️!`,
       },
     ],
   }),
@@ -44,10 +44,10 @@ function Destinations() {
   return (
     <>
       <PageHero
-        eyebrow="British Council Certified Network"
+        eyebrow={`Global Pathways · ${company.taglineBangla}`}
         title="Official Study Destinations & Visa Pathways"
-        subtitle={`Explore university admission criteria, IELTS requirements, post-study work rights (PSW / PGWP / OPT), living costs, and visa guidelines guided by ${company.name}. 100% Free Processing · 0 BDT Service Fee.`}
-        image="/banner.jpg"
+        subtitle={`Explore university admission criteria, IELTS requirements, post-study work rights, living costs, and visa guidelines guided by ${company.name}.`}
+        image="/assets/nextflight-banner.jpg"
         imageAlt={`${company.name} study destinations`}
       >
         <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Destinations" }]} />
@@ -92,8 +92,8 @@ function Destinations() {
             Showing <strong>{filtered.length}</strong> of {destinations.length} verified
             destinations
           </p>
-          <span className="text-blue-700 font-bold">
-            ✓ 100% Free Profile Assessment at CJKS Shopping Complex, Kazir Dewri, Chittagong
+          <span className="text-blue-700 font-bold font-bangla">
+            ✓ সরাসরি ফাইল অ্যাসেসমেন্ট: রাজ্জাক প্লাজা, ৩৮৩ (লিফট-১২), মগবাজার, ঢাকা-১২১৭
           </span>
         </div>
 

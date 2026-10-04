@@ -45,7 +45,7 @@ export function HonestyManifesto() {
             className="inline-flex items-center gap-2 rounded-full bg-blue-500/15 border border-blue-400/30 px-4 py-1 text-xs font-bold text-blue-300 mb-3 backdrop-blur-md"
           >
             <IconSparkles className="w-3.5 h-3.5 text-blue-400" />
-            <span>The Abroad Blueprint Standard of Integrity</span>
+            <span>The NextFlight BD Standard of Integrity</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 14 }}
@@ -54,16 +54,16 @@ export function HonestyManifesto() {
             transition={{ delay: 0.1 }}
             className="font-display text-2xl xs:text-3xl sm:text-5xl font-black text-white tracking-tight"
           >
-            Why Ambitious Students Trust <span className="text-blue-400">Abroad Blueprint</span>
+            Why Thousands Trust <span className="text-blue-400">{company.name}</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-3 text-xs sm:text-sm text-slate-300 font-medium max-w-xl mx-auto leading-relaxed"
+            className="mt-3 text-xs sm:text-sm text-slate-300 font-medium max-w-xl mx-auto leading-relaxed font-bangla"
           >
-            Built on British Council Certified ethics, 100% free processing with zero service charge, and dual offices in Chittagong and Birmingham, UK.
+            বিশ্বস্ত ভিসা প্রসেসিং, আইইএলটিএস ও স্পোকেন ইংলিশ ট্রেইনিং এবং ইউরোপ ও মধ্যপ্রাচ্যের অনুমোদিত ওয়ার্ক পারমিটের নির্ভরযোগ্য প্রতিষ্ঠান। প্রধান কার্যালয়: রাজ্জাক প্লাজা, মগবাজার, ঢাকা।
           </motion.p>
         </div>
 
@@ -103,7 +103,7 @@ export function HonestyManifesto() {
 
                 <div className="pt-3 border-t border-white/5 flex items-center gap-1.5 text-[11px] font-bold text-slate-400 group-hover:text-blue-400 transition-colors">
                   <IconCheck className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Verified Blueprint Commitment</span>
+                  <span>NextFlight BD Official Commitment</span>
                 </div>
               </div>
             </motion.div>
@@ -119,10 +119,10 @@ export function HonestyManifesto() {
         >
           <div className="space-y-1.5 text-center md:text-left">
             <h4 className="font-display text-lg sm:text-xl font-bold text-white">
-              Ready to Start Here and Go Anywhere?
+              আপনার বিশ্বস্ত ভ্রমণের ও ক্যারিয়ারের সাথী
             </h4>
-            <p className="text-xs sm:text-sm text-slate-300 font-medium">
-              Schedule a free profile assessment with our British Council certified counselors at CJKS Shopping Complex, Kazir Dewri, Chittagong.
+            <p className="text-xs sm:text-sm text-slate-300 font-medium font-bangla">
+              সরাসরি আমাদের ঢাকা অফিসে (মগবাজার) এসে পাসপোর্ট ও পেপারস সহ ফ্রি ফাইল মূল্যায়ন ও ক্যারিয়ার গাইডলাইন নিন।
             </p>
           </div>
 
@@ -140,7 +140,7 @@ export function HonestyManifesto() {
             <motion.a
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
-              href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent("Hello Abroad Blueprint! I want to book a free study abroad and IELTS counseling session.")}`}
+              href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(`Hello ${company.name}! I want to book a study abroad and visa counseling session.`)}`}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-xs font-bold text-white hover:bg-white/10 hover:border-blue-400 transition-colors"

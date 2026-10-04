@@ -7,7 +7,7 @@ export function ChatWidget() {
   const [showCallMenu, setShowCallMenu] = useState(false);
 
   const whatsappUrl = `https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-    `Hello Abroad Blueprint! I would like to consult about study abroad admissions and IELTS courses.`,
+    `Hello ${company.name}! I would like to consult about study abroad, Cyprus work permit, and language training courses.`,
   )}`;
 
   const messengerUrl = company.social.messenger;
@@ -27,7 +27,7 @@ export function ChatWidget() {
             {/* Action 1: Facebook Messenger */}
             <div className="group relative flex items-center">
               <span className="pointer-events-none absolute right-full mr-3 hidden rounded-xl bg-slate-900/90 px-3 py-1.5 text-xs font-bold text-white shadow-md backdrop-blur whitespace-nowrap opacity-0 transition-all group-hover:opacity-100 sm:block">
-                Facebook (@AbroadBlueprint)
+                Facebook (@nextflightbd26)
               </span>
               <motion.a
                 whileHover={{ scale: 1.08 }}
@@ -47,7 +47,7 @@ export function ChatWidget() {
             {/* Action 2: Direct Phone Call Hotlines */}
             <div className="group relative flex items-center">
               <span className="pointer-events-none absolute right-full mr-3 hidden rounded-xl bg-slate-900/90 px-3 py-1.5 text-xs font-bold text-white shadow-md backdrop-blur whitespace-nowrap opacity-0 transition-all group-hover:opacity-100 sm:block">
-                Hotlines (Chittagong &amp; UK)
+                হটলাইন (ঢাকা হেড অফিস)
               </span>
               <motion.button
                 whileHover={{ scale: 1.08 }}
@@ -79,19 +79,19 @@ export function ChatWidget() {
                         href={`tel:${company.phones[0].replace(/[^0-9]/g, "")}`}
                         className="block rounded-xl border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-center text-xs font-bold text-slate-800 hover:border-blue-500 hover:text-blue-600 transition-colors"
                       >
-                        📞 {company.phones[0]} (চট্টগ্রাম হেড অফিস)
+                        📞 {company.phones[0]} (ঢাকা হেড অফিস / WhatsApp)
                       </a>
                       <a
                         href={`tel:${company.phones[1].replace(/[^0-9]/g, "")}`}
                         className="block rounded-xl border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-center text-xs font-bold text-slate-800 hover:border-blue-500 hover:text-blue-600 transition-colors"
                       >
-                        📞 {company.phones[1]} (চট্টগ্রাম হেল্পডেস্ক)
+                        📞 {company.phones[1]} (ঢাকা হেল্পডেস্ক)
                       </a>
                       <a
-                        href={`tel:${company.phones[4].replace(/[^0-9]/g, "")}`}
-                        className="block rounded-xl border border-blue-200 bg-blue-50/50 px-2.5 py-1.5 text-center text-xs font-bold text-blue-900 hover:border-blue-500 transition-colors"
+                        href={`tel:${company.phones[2].replace(/[^0-9]/g, "")}`}
+                        className="block rounded-xl border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-center text-xs font-bold text-slate-800 hover:border-blue-500 hover:text-blue-600 transition-colors"
                       >
-                        🇬🇧 {company.phones[4]} (UK On-shore Office)
+                        📞 {company.phones[2]} (কাউন্সেলিং হেল্পলাইন)
                       </a>
                     </div>
                   </motion.div>

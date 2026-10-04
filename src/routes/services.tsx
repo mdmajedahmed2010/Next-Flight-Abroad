@@ -17,18 +17,16 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       {
-        title: `Services & Language Academy | ${company.name} — Study Abroad & IELTS | Chittagong & UK`,
+        title: `Services & Language Academy | ${company.name} — Study Abroad, IELTS & Work Permits | Dhaka`,
       },
       {
         name: "description",
-        content:
-          `Explore ${company.name} services: British Council Certified Study Abroad Admissions (UK, Canada, Australia, USA, Europe), Fly with Dependent (MRes & PhD), IELTS Academic & General, Spoken English, and Kids English. 100% Free Processing & Zero Service Charge. Head Office: 4091, CJKS Shopping Complex, Kazir Dewri, Chittagong. Hotlines: ${company.phones[0]} / ${company.phones[1]}.`,
+        content: `Explore ${company.name} services: Study Abroad Admissions (UK, Canada, Europe, USA), Greek Cyprus 14 Trade Work Permit 2026, Maldives, IELTS Academic & General, Spoken English, and Kids English. Head Office: ${company.address.full}. Hotlines: ${company.phones.join(", ")}.`,
       },
       { property: "og:title", content: `Services & Language Academy | ${company.name}` },
       {
         property: "og:description",
-        content:
-          `Official services of ${company.name}. Start Here, Go Anywhere! British Council Certified admissions, Fly with Dependent MRes programs, IELTS prep, and zero service charges in Chittagong & Birmingham UK.`,
+        content: `Official services of ${company.name}. আপনার ভ্রমণের সাথী ✈️! Study Abroad, IELTS prep, Greek Cyprus Work Permit 2026, and Moghbazar Dhaka head office.`,
       },
     ],
   }),
@@ -38,70 +36,64 @@ export const Route = createFileRoute("/services")({
 const serviceCategories = [
   { id: "all", label: "All Services" },
   { id: "study-abroad", label: "Study Abroad Admissions" },
-  { id: "dependent-track", label: "Fly with Dependent 👨‍👩‍👧‍👦" },
+  { id: "work-permits", label: "Greek Cyprus 2026 & Work Permits 🇨🇾" },
   { id: "ielts-academy", label: "IELTS & Language Academy" },
-  { id: "visa-consultancy", label: "Visa Filing & Pre-Departure" },
+  { id: "visa-consultancy", label: "Visa Processing & Counseling" },
 ];
 
 const comparisonData = [
   {
-    feature: "Service Charge & File Opening Fee",
-    blueprint: "100% FREE — Zero service charge and zero file opening fees before or after visa",
-    traditional: "Demand huge advance file opening fees and unexpected post-visa commission deductions",
+    feature: "Head Office Location",
+    blueprint: "Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217 — Face-to-face consultation",
+    traditional: "Temporary agents with unclear physical office identity and shifting addresses",
     highlight: true,
   },
   {
-    feature: "Agent Certification & Ethics",
-    blueprint: "Official British Council Certified Agent with trained educational counselors",
-    traditional: "Unregistered third-party middlemen without formal training or official certification",
+    feature: "European Work Permits 2026",
+    blueprint: "Greek Cyprus 14 Trade official recruitment, Maldives handover, verified records",
+    traditional: "Unregistered fake promises, unauthorized middlemen with zero accountability",
     highlight: true,
   },
   {
-    feature: "Fly With Dependent Expertise",
-    blueprint: "Specialized admissions in UK MRes, DBA & PhD with spouse full-time work rights",
-    traditional: "Limited to ordinary taught programs where spouse accompaniment is restricted",
-    highlight: true,
-  },
-  {
-    feature: "Scholarship Maximization",
-    blueprint: "Direct partner university tie-ups delivering £3,000–£5,000 and up to 50%–100% waivers",
-    traditional: "Generic admissions with little to no effort to negotiate student scholarships",
+    feature: "Global Study Abroad",
+    blueprint: "Premier university options across UK, Canada, Australia, USA, and Europe",
+    traditional: "Limited to ordinary sub-par colleges with high refusal risks",
     highlight: true,
   },
   {
     feature: "Language & IELTS Academy",
-    blueprint: "IELTS (Academic & General), Spoken English Fluency, and Kids English Foundation",
-    traditional: "Consultancy only; outsourced coaching with disconnected application support",
+    blueprint: "IELTS (Academic & General), Spoken English Fluency, and Kids English & Phonics Studio",
+    traditional: "Consultancy only; outsourced coaching with disconnected student progress",
     highlight: true,
   },
   {
-    feature: "Dual Global Offices",
-    blueprint: "Head Office at Kazir Dewri, Chittagong & On-shore Liaison Office in Birmingham, UK",
-    traditional: "Single local room with zero on-ground support once the student lands abroad",
+    feature: "Active Social Proof & Transparency",
+    blueprint: "7.7K+ active Facebook community, authentic handover reels, transparent communication",
+    traditional: "No verified video proof or verifiable public track record",
     highlight: true,
   },
 ];
 
 const serviceFaqs = [
   {
-    q: "Why is Abroad Blueprint's processing 100% free with no service charge?",
-    a: "Abroad Blueprint operates as an authorized representative of partner universities across the UK, Canada, Australia, and Europe. Our institution-funded advisory model means students receive complete profile assessment, admission processing, and visa filing with 0 BDT service fee and zero file opening charges.",
+    q: "Where is NextFlight BD's head office located?",
+    a: "Our Bangladesh Head Office is located at Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217, Bangladesh. Students and work permit applicants can visit us Saturday through Thursday.",
   },
   {
-    q: "How does the 'Fly with Dependent' pathway work for UK studies?",
-    a: "Under UKVI guidelines, international students enrolled in Master by Research (MRes), DBA, or PhD programs are legally permitted to bring their spouse and dependent children. The spouse is granted full-time employment rights in the UK, and children can attend government schools. Abroad Blueprint specializes in research proposal matching and MRes university placement.",
+    q: "How does the Greek Cyprus 14 Trade Work Permit 2026 program work?",
+    a: "Greek Cyprus 2026 is an official work permit covering 14 technical and vocational trades with monthly salaries ranging from €800 to €1500, including employer-provided accommodation, food, and health insurance. Fast processing of 3–4 months.",
   },
   {
-    q: "Can I apply for UK universities through Abroad Blueprint without IELTS?",
-    a: "Yes! Several leading UK partner universities accept Medium of Instruction (MOI) certificates from recognized Bangladeshi universities or satisfactory English scores in HSC/A-Levels for qualifying undergraduate and master's candidates. Visit our Chittagong office for a free assessment.",
+    q: "What English language courses are offered by NextFlight BD?",
+    a: "We offer comprehensive IELTS Academic, IELTS General Training, Spoken English Fluency Studio, and Kids English & Phonics Studio (ages 5–14) taught by certified and experienced trainers with both offline (Moghbazar) and online batches.",
   },
   {
-    q: "What scholarships are available for Bangladeshi students?",
-    a: "Our partner institutions in the UK, Canada, and Europe offer merit-based scholarships ranging from £1,500 to £5,000, and up to 50%–100% tuition waivers for eligible candidates. We ensure students apply within early-bird scholarship deadlines.",
+    q: "Can I apply for overseas university admissions through NextFlight BD?",
+    a: "Yes! We represent leading partner universities across the UK, Canada, Australia, USA, and Europe. We assist with profile evaluation, offer letters, scholarships, and complete student visa filing.",
   },
   {
-    q: "Where is Abroad Blueprint located and how can I visit?",
-    a: "Our Bangladesh Head Office is located at 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong-4000. Our UK Liaison Office is located at 17, Woodgate, Birmingham, United Kingdom. Walk-ins and appointments are welcome Saturday through Thursday.",
+    q: "How can I contact NextFlight BD or book an appointment?",
+    a: "You can visit our Moghbazar Dhaka office directly or reach out via our official hotlines: 01711-253602 (WhatsApp), 01911-928159, 01756-251900, 01941-318665, 01785-250347, or 01339-771499.",
   },
 ];
 
@@ -115,10 +107,10 @@ function Services() {
       {/* 1. High-Impact Page Hero with Breadcrumbs */}
       <PageHero
         eyebrow="Study Abroad & Language Academy"
-        title="GLOBAL ADMISSIONS & LANGUAGE EXCELLENCE"
-        subtitle="Abroad Blueprint provides British Council Certified admissions to premier universities across the UK, Canada, Australia, USA, and Europe, alongside specialized Fly with Dependent pathways and IELTS coaching."
-        image="/assets/abroad-blueprint-banner.jpg"
-        imageAlt="Abroad Blueprint official banner with world landmarks"
+        title="GLOBAL ADMISSIONS, WORK PERMITS & LANGUAGE ACADEMY"
+        subtitle={`${company.name} (${company.taglineBangla}) — উচ্চশিক্ষা ভর্তি, গ্রিক সাইপ্রাস ২০২৬-এর ১৪টি ট্রেডে কাজের ভিসা এবং আইইএলটিএস ও স্পোকেন ইংলিশের পূর্ণাঙ্গ সলিউশন।`}
+        image="/assets/nextflight-banner.jpg"
+        imageAlt={`${company.name} official banner`}
       >
         <div className="space-y-6">
           <Breadcrumbs items={[{ label: "Home", to: "/" }, { label: "Services" }]} />
@@ -133,7 +125,7 @@ function Services() {
             </button>
             <a
               href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                `Hello ${company.name}! I would like to inquire about Study Abroad admissions and IELTS batches.`,
+                `Hello ${company.name}! I would like to inquire about your services.`,
               )}`}
               target="_blank"
               rel="noreferrer"
@@ -172,19 +164,19 @@ function Services() {
       {/* 3. Core Study Abroad & Advisory Services Grid */}
       {(activeCategory === "all" ||
         activeCategory === "study-abroad" ||
-        activeCategory === "dependent-track" ||
+        activeCategory === "work-permits" ||
         activeCategory === "visa-consultancy") && (
         <section className="section-shell py-16">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-200 px-3.5 py-1 text-xs font-bold text-blue-800 mb-3">
               <IconSparkles className="w-3.5 h-3.5 text-blue-600" />
-              <span>Start Here, Go Anywhere!</span>
+              <span>আপনার ভ্রমণের সাথী ✈️</span>
             </div>
             <h2 className="font-display text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
               Comprehensive Study Abroad <span className="text-blue-600">&amp; Visa Services</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 mt-2 font-bangla">
-              চট্টগ্রামের কাজীর দেউড়ি সিজেকেএস শপিং কমপ্লেক্স (৩য় তলা) প্রধান কার্যালয়ে সরাসরি এসে অভিজ্ঞ ব্রিটিশ কাউন্সিল সার্টিফাইড কাউন্সেলরদের সাথে কথা বলুন। শতভাগ ফ্রি প্রসেসিং।
+              আমাদের প্রধান কার্যালয়: রাজ্জাক প্লাজা, ৩৮৩ (লিফট-১২), মগবাজার, ঢাকা-১২১৭। সরাসরি এসে অভিজ্ঞ কাউন্সিলরদের সাথে কথা বলুন।
             </p>
           </div>
 
@@ -238,13 +230,13 @@ function Services() {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 border border-blue-200 px-3.5 py-1 text-xs font-bold text-blue-800 mb-3">
               <IconSparkles className="w-3.5 h-3.5 text-blue-600" />
-              <span>Abroad Blueprint Language Academy</span>
+              <span>{company.name} Language Academy</span>
             </div>
             <h2 className="font-display text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
               Premier IELTS &amp; Fluency <span className="text-blue-600">Training Courses</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 mt-2 font-bangla">
-              আইইএলটিএস একাডেমিক ও জেনারেল, স্পোকেন ইংলিশ ফ্লুয়েন্সি এবং শিশুদের ফনিক্স ও বেসিক ইংলিশ কোর্সে চট্টগ্রাম ক্যাম্পাসে ও অনলাইনে ক্লাস চলছে।
+              আইইএলটিএস একাডেমিক ও জেনারেল, স্পোকেন ইংলিশ ফ্লুয়েন্সি এবং শিশুদের ফনিক্স ও বেসিক ইংলিশ কোর্সে ঢাকা ক্যাম্পাস (মগবাজার) ও অনলাইনে স্পেশাল ব্যাচে ভর্তি চলছে।
             </p>
           </div>
 
@@ -475,8 +467,8 @@ function Services() {
           <h2 className="font-display text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
             Our Proven 4-Step Global Roadmap
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 mt-1">
-            From free profile evaluation in Chittagong to IELTS coaching, university offer letters, and visa approval.
+          <p className="text-xs sm:text-sm text-slate-600 mt-1 font-bangla">
+            ঢাকা হেড অফিসে সরাসরি ফাইল যাচাই থেকে শুরু করে আইইএলটিএস ট্রেইনিং, ওয়ার্ক পারমিট ও ভিসা ডেলিভারির পূর্ণাঙ্গ ধাপ।
           </p>
         </div>
 

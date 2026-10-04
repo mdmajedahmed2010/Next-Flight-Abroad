@@ -1,9 +1,10 @@
-# 🌍 Abroad Blueprint — Study Abroad & Language Academy
+# ✈️ NextFlight BD (নেক্সট ফ্লাইট ওভারসিজ) — "আপনার ভ্রমণের সাথী ✈️"
 
-> Official Web Application & Knowledge Portal for **Abroad Blueprint** (Head Office: 4091, CJKS Shopping Complex, 3rd Floor, Kazir Dewri, Chittagong, Bangladesh & UK Branch: 17 Woodgate, Birmingham, United Kingdom).
+> Official Web Application & Knowledge Portal for **NextFlight BD** (Head Office: Razzak Plaza, 383 Lift-12, Moghbazar, Dhaka-1217, Bangladesh).
 
-[![British Council Certified](https://img.shields.io/badge/British%20Council-Certified%20Agent-0052cc.svg)](https://www.facebook.com/AbroadBlueprint/)
-[![Zero Service Charge](https://img.shields.io/badge/Service%20Charge-0%20BDT%20(Free)-16a34a.svg)](https://www.facebook.com/AbroadBlueprint/)
+[![Facebook Followers](https://img.shields.io/badge/Facebook-7.7K%2B%20Followers-1877F2.svg)](https://www.facebook.com/nextflightbd26/)
+[![Zero Service Charge](https://img.shields.io/badge/Study%20Abroad-Admissions-0099e5.svg)](https://www.facebook.com/nextflightbd26/)
+[![Work Permit 2026](https://img.shields.io/badge/Cyprus%20Work%20Permit-14%20Trades-f97316.svg)](https://www.facebook.com/nextflightbd26/)
 [![Framework](https://img.shields.io/badge/TanStack-Router%20%2B%20Start-blue.svg)](https://tanstack.com/router)
 [![Tailwind CSS v4](https://img.shields.io/badge/Tailwind-CSS%20v4-38bdf8.svg)](https://tailwindcss.com/)
 
@@ -11,34 +12,46 @@
 
 ## 🌟 Brand Overview
 
-- **Brand Name**: Abroad Blueprint
-- **Slogan / Tagline**: "Start Here, Go Anywhere! 🌍" (Bengali: "শুরু করুন এখান থেকেই, পৌঁছে যান বিশ্বমঞ্চে!")
-- **Accreditation**: British Council Certified Agent (`#British_Council_Certified_Agent`)
-- **Core Value Proposition**: 
-  - 100% Free Processing & Zero Service Charge (ভিসার আগে বা পরে কোনো সার্ভিস চার্জ নেই ❌)
-  - No File Opening Charges ❌
-  - Complete Application & Visa Guidance Free of Cost
-- **Signature Specialty**: **Fly with Dependent 👨‍👩‍👧‍👦**
-  - Master by Research (MRes), DBA, and PhD programs with full spouse work permits and children schooling in the UK.
-  - Partner university scholarships: £3,000 to £5,000 (Derby, Greenwich, UEL, Teesside, Anglia Ruskin Cambridge).
+- **Brand Name**: NextFlight BD (নেক্সট ফ্লাইট ওভারসিজ)
+- **Tagline / Slogan**: "আপনার ভ্রমণের সাথী ✈️" (Your Trusted Journey Partner)
+- **Category**: Travel & Overseas Employment / Study Abroad Consultancy & Language Academy
+- **Official Facebook**: [facebook.com/nextflightbd26](https://www.facebook.com/nextflightbd26/) (7.7K+ Followers)
+- **Official YouTube**: [NextFlight BD Official Channel](https://www.youtube.com/@nextflightbd)
+- **Email**: `shahinalammuna@gmail.com`
 
 ---
 
-## 🏢 Official Offices & Contacts
+## 🎯 Verified Services
 
-### 🇧🇩 Chittagong Head Office (Bangladesh)
-- **Address**: 4091, CJKS Shopping Complex (3rd Floor), Kazir Dewri, Chittagong-4000, Bangladesh
-- **Hotlines**: `+880 1961-532479`, `+880 1643-829960`, `+880 1302-092490`, `+880 1616-338613`
-- **WhatsApp**: `+880 1961-532479`
-- **Hours**: Saturday – Thursday (10:00 AM – 7:30 PM)
+1. **European Work Permits (Urgent 2026 Quotas)**:
+   - **Greek Cyprus (14 Trade Categories)**: Factory worker, construction, agriculture, hospitality, driver, mechanic, plumbing, welding, electrician, warehouse, food processing, cleaning, security, logistics.
+   - Comprehensive embassy processing, legal contract verification, pre-departure briefing.
+2. **International Employment & Visa Processing**:
+   - Maldives work visa processing & official passport/air-ticket handover.
+   - Middle East & international career pathways (Kuwait, Mongolia).
+3. **Study Abroad Global Admissions**:
+   - United Kingdom (UK), Canada, USA, Europe (Germany, Cyprus, Malta).
+   - Undergraduate, Postgraduate, MRes/PhD research tracks, partner scholarships.
+4. **NextFlight BD Language Academy (Dhaka Campus & Online)**:
+   - **IELTS Academic Preparation**: Direct university entry, target band 7.0 - 8.5+.
+   - **IELTS General Training**: Skilled migration & foreign work permit certification.
+   - **Spoken English Fluency Studio**: Everyday and workplace English communication.
+   - **Kids English & Phonics Studio (Ages 5–14)**: Sound mastery, spelling, confidence building.
 
-### 🇬🇧 UK Branch Office (United Kingdom)
-- **Address**: 17, Woodgate, Birmingham, United Kingdom
-- **Phone**: `+44 7587 358080`
-- **Hours**: Monday – Friday (9:30 AM – 5:30 PM GMT)
+---
 
-- **Official Email**: `abroadblueprint@gmail.com`
-- **Official Facebook**: [facebook.com/AbroadBlueprint](https://www.facebook.com/AbroadBlueprint/) (18,700+ Followers)
+## 🏢 Head Office & Hotlines
+
+### 🇧🇩 Dhaka Head Office (Bangladesh)
+- **Address**: Razzak Plaza, 383 (Lift-12), Moghbazar, Dhaka-1217, Bangladesh
+- **Primary WhatsApp / Hotline**: `+880 1711-253602`
+- **Official Hotlines**:
+  - `+880 1911-928159`
+  - `+880 1756-251900`
+  - `+880 1941-318665`
+  - `+880 1785-250347`
+  - `+880 1339-771499`
+- **Office Hours**: Saturday – Thursday (10:00 AM – 7:30 PM BST)
 
 ---
 
@@ -46,8 +59,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/mdmajedahmed2010/Abroad-Blueprint.git
-cd Abroad-Blueprint
+git clone https://github.com/mdmajedahmed2010/NextFlight-BD.git
+cd NextFlight-BD
 
 # Install dependencies
 npm install
@@ -63,4 +76,4 @@ npm run build
 
 ## 🛡️ License
 
-Private and proprietary to **Abroad Blueprint**. All rights reserved.
+Private and proprietary to **NextFlight BD**. All rights reserved.

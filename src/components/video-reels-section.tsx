@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function VideoReelsSection({
   title = "Official Facebook Video Broadcasts & Visa Insights",
-  subtitle = "Watch real student admissions guidance, study in UK insights, and visa updates directly from Abroad Blueprint.",
+  subtitle = `Watch real visa handovers, Greek Cyprus work permits, and study admissions insights directly from ${company.name}.`,
 }: {
   title?: string;
   subtitle?: string;
@@ -29,7 +29,7 @@ export function VideoReelsSection({
           {subtitle}
         </p>
         <p className="text-xs text-slate-500 font-bangla mt-1">
-          ইউকে ও অন্যান্য দেশে পরিবারসহ উচ্চশিক্ষা (Fly with Dependent), স্কলারশিপ ও ভিসা প্রসেসিং নিয়ে সরাসরি ফেসবুক ভিডিও দেখুন।
+          মালদ্বীপে ভিসা হস্তান্তর, গ্রিক সাইপ্রাস ওয়ার্ক পারমিট ২০২৬ ও স্টাডি ভিসা প্রসেসিং নিয়ে সরাসরি ফেসবুক ভিডিও দেখুন।
         </p>
       </div>
 
@@ -96,7 +96,7 @@ export function VideoReelsSection({
 
                   <a
                     href={`https://wa.me/${company.whatsapp.replace(/[^0-9]/g, "")}?text=${encodeURIComponent(
-                      `Hello Abroad Blueprint! I saw your video "${reel.title}" and would like admission counseling.`,
+                      `Hello ${company.name}! I saw your video "${reel.title}" and would like counseling.`,
                     )}`}
                     target="_blank"
                     rel="noreferrer"

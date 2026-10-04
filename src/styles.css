@@ -9,29 +9,29 @@
   --font-serif: "Playfair Display", Georgia, serif;
   --font-bangla: "Hind Siliguri", "Plus Jakarta Sans", sans-serif;
 
-  /* ABROAD BLUEPRINT Official Brand Palette */
-  /* Royal / Cobalt Blue (#0052CC / #0866FF), Amber Gold (#F59E0B / #FBBF24), Deep Navy (#0A192F / #0F172A) */
-  --color-ab-blue: #0052cc;
-  --color-ab-blue-dark: #0043a8;
-  --color-ab-blue-deep: #003380;
-  --color-ab-blue-light: #2563eb;
-  --color-ab-blue-bright: #3b82f6;
-  --color-ab-blue-soft: #eff6ff;
+  /* NEXTFLIGHT BD Official Brand Palette */
+  /* Flight Sky Blue (#0099E5 / #0284C7), Sunset Orange (#F97316 / #FB923C), Deep Navy (#0F2B48 / #0A1C30) */
+  --color-ab-blue: #0099e5;
+  --color-ab-blue-dark: #0284c7;
+  --color-ab-blue-deep: #0369a1;
+  --color-ab-blue-light: #38bdf8;
+  --color-ab-blue-bright: #0ea5e9;
+  --color-ab-blue-soft: #f0f9ff;
 
-  --color-ab-gold: #f59e0b;
-  --color-ab-gold-dark: #d97706;
-  --color-ab-gold-bright: #fbbf24;
-  --color-ab-gold-deep: #b45309;
-  --color-ab-gold-soft: #fffbeb;
+  --color-ab-gold: #f97316;
+  --color-ab-gold-dark: #ea580c;
+  --color-ab-gold-bright: #fb923c;
+  --color-ab-gold-deep: #c2410c;
+  --color-ab-gold-soft: #fff7ed;
 
-  --color-ab-navy: #0a192f;
-  --color-ab-navy-dark: #060e1a;
-  --color-ab-navy-midnight: #040912;
-  --color-ab-navy-light: #132238;
+  --color-ab-navy: #0f2b48;
+  --color-ab-navy-dark: #0a1c30;
+  --color-ab-navy-midnight: #061220;
+  --color-ab-navy-light: #1e3a5f;
   --color-ab-navy-soft: #f8fafc;
 
-  --color-ab-emerald: #16a34a;
-  --color-ab-emerald-soft: #f0fdf4;
+  --color-ab-emerald: #10b981;
+  --color-ab-emerald-soft: #ecfdf5;
 
   /* Backward Compatibility Aliases for components */
   --color-milestone-cyan: #0052cc;
